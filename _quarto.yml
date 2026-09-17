@@ -1,0 +1,78 @@
+project:
+  type: book
+  output-dir: _book
+  resources:
+    - data/
+  # --- Custom domain note -------------------------------------------------
+  # To keep a custom domain across re-publishes, edit the CNAME file (put your
+  # bare domain in it, e.g. rbook.example.com) and then UNCOMMENT the two lines
+  # below so Quarto copies CNAME into the built site on every render. Leave them
+  # commented until your domain is real, or your first deploy will break.
+  # resources:
+  #   - CNAME
+
+book:
+  title: "Applied Data Science for Higher Education with R"
+  subtitle: "A practical, open book for pragmatic data science."
+  author: "Michael Littrell"
+  date: today
+  cover-image: images/cover_v1.png
+  # favicon: images/favicon.png 
+  site-url: https://mlittrell-ttu.github.io/data-science-higher-ed/   
+  repo-url: https://github.com/mlittrell-ttu/data-science-higher-ed
+  repo-branch: main
+  repo-actions: [edit, issue, source]            # adds "Edit this page" links
+  search: true
+  page-navigation: true
+  sidebar:
+    style: docked
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - part: "Part I — Foundations"
+      chapters:
+        - 01-what-is-data-science.qmd
+        - 02-data-in-higher-ed.qmd
+        - 03-data-sources.qmd
+    - part: "Part II — Working in R"
+      chapters:
+        - 04-getting-started.qmd
+        - 05-tidyverse.qmd
+        - 06-visualization.qmd
+    - part: "Part III — Modeling, Packages, and Practice"
+      chapters:
+        - 07-tidymodels.qmd
+        - 08-packages.qmd
+        - 09-projects-and-lifecycle.qmd
+    - summary.qmd
+    - references.qmd
+  appendices:
+    - setup.qmd
+  page-footer:
+    center: "© 2026 Michael Littrell. Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)."
+
+bibliography: references.bib
+# csl: apa.csl   # APA fits higher ed. Download apa.csl from the CSL project into
+                 # this folder, then uncomment. Without it, Quarto uses Chicago.
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    toc: true
+    number-sections: true
+  # PDF output is optional and needs a LaTeX install: run `quarto install tinytex`.
+  # pdf:
+  # documentclass: scrbook
+
+execute:
+  freeze: auto      # a chapter re-renders only when its own code changes
+  echo: true
+  warning: false
+  message: false
+
+editor: source

@@ -1,0 +1,15 @@
+# Quarto build output (do NOT ignore _freeze/ — commit it, see README)
+/.quarto/
+/_book/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# OS
+.DS_Store
+Thumbs.db
+
+**/*.quarto_ipynb

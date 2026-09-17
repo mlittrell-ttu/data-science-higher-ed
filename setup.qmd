@@ -1,0 +1,15 @@
+# Setup {.unnumbered}
+
+What readers install before Chapter 1.
+
+1. **R** — <https://cran.r-project.org/>
+2. **An editor** — RStudio or Positron
+3. **Quarto** — <https://quarto.org/> (bundled with recent RStudio)
+4. **Packages**
+
+```{r}
+#| eval: false
+install.packages(c("tidyverse", "tidymodels"))
+```
+
+*TODO — trim to exactly what your book uses.*

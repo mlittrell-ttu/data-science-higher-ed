@@ -1,0 +1,28 @@
+on:
+  push:
+    branches: [main]
+
+name: Render and publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # This runs WITHOUT installing R because the rendered results live in
+      # _freeze/. Render once locally (`quarto render`), commit the _freeze/
+      # folder, push, and CI reuses it. If a chapter isn't frozen, CI will try
+      # to run R and fail — so render locally first.
+      - name: Publish to GitHub Pages (gh-pages branch)
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,39 @@
+# Introduction {.unnumbered}
+
+## Who is this book for?
+This free book is for the applied data professional in higher education including workers engaged with areas like institutional research, assessment, enrollment management, and student affairs. However, it is also relevant to anyone wanting to learn more about applied data science, the R language, and its usage for data tasks.
+
+
+## Why would I want to read this book? Excel seems just fine.
+Using a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are executed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work is often predicated on the recollection of the individual who accomplished the task with the GUI.
+
+## Wait. We can use code to work with data? Isn't that for making apps?
+Programming languages such as R or Python are great for working with data, but the coding work produced can also be thought of as relevant to the creation of helpful data apps too.
+
+## What about tools like Stata that have a GUI to click and also uses script files?
+Tools like these are proprietary and cost money, sometimes substantial amounts. Companies that own such products often gate features so that you are limited in what you can produce. Want to create machine learning models? That capability can be a separate add-on that costs extra beyond your currently purchased product. 
+
+Using a free and open source (FOS) language like R, an accompanying FOS developer program like RStudio, and the numerous FOS packages available means you can use the entire product for free with no restrictions. R is frequently updated and can be used across many different file types, meaning a proficient R user can produce output for most any applications such as Excel or Stata. This interoperability can be very helpful for professionals working across instituions, departments, vendors, and companies where  a variety of tools are used.
+
+
+## Why another R book?
+Book resources available generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. For this reason, explicit connections to the R code presented are made throughout the text. 
+
+## What will I be able to do by reading this book and practicing its content?
+- Understand applied data science generally and within the context of higher education.
+- Gain insights about the types of data used in higher education and the systems that store them.
+- Wrangle and clean data.
+- Accomplish work more efficiently with R that is typically performed in Excel.
+- Create your own applications, machine learning models, databases, and packages.
+- Understand data science and its relationship to research.
+- Create great looking data visualizations.
+- Retrieve data from a variety of sources including APIs and SQL databases.
+
+
+
+## Acknowledgements
+*TODO.*
+
+## License
+This book is licensed under CC 4.0. 
+[![Creative Commons License](images/by_nc_nd.svg){width="88px"}](https://creativecommons.org/licenses/by-nc-nd/4.0/)
