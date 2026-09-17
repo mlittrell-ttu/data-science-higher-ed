@@ -1,0 +1,300 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "",
+    "text": "Introduction",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#who-is-this-book-for",
+    "href": "index.html#who-is-this-book-for",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "Who is this book for?",
+    "text": "Who is this book for?\nThis free book is for the applied data professional in higher education including workers engaged with areas like institutional research, assessment, enrollment management, and student affairs. However, it is also relevant to anyone wanting to learn more about applied data science, the R language, and its usage for data tasks.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#why-would-i-want-to-read-this-book-excel-seems-just-fine.",
+    "href": "index.html#why-would-i-want-to-read-this-book-excel-seems-just-fine.",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "Why would I want to read this book? Excel seems just fine.",
+    "text": "Why would I want to read this book? Excel seems just fine.\nUsing a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are executed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work is often predicated on the recollection of the individual who accomplished the task with the GUI.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps",
+    "href": "index.html#wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "Wait. We can use code to work with data? Isn’t that for making apps?",
+    "text": "Wait. We can use code to work with data? Isn’t that for making apps?\nProgramming languages such as R or Python are great for working with data, but the coding work produced can also be thought of as relevant to the creation of helpful data apps too.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files",
+    "href": "index.html#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "What about tools like Stata that have a GUI to click and also uses script files?",
+    "text": "What about tools like Stata that have a GUI to click and also uses script files?\nTools like these are proprietary and cost money, sometimes substantial amounts. Companies that own such products often gate features so that you are limited in what you can produce. Want to create machine learning models? That capability can be a separate add-on that costs extra beyond your currently purchased product.\nUsing a free and open source (FOS) language like R, an accompanying FOS developer program like RStudio, and the numerous FOS packages available means you can use the entire product for free with no restrictions. R is frequently updated and can be used across many different file types, meaning a proficient R user can produce output for most any applications such as Excel or Stata. This interoperability can be very helpful for professionals working across instituions, departments, vendors, and companies where a variety of tools are used.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#why-another-r-book",
+    "href": "index.html#why-another-r-book",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "Why another R book?",
+    "text": "Why another R book?\nBook resources available generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. For this reason, explicit connections to the R code presented are made throughout the text.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content",
+    "href": "index.html#what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "What will I be able to do by reading this book and practicing its content?",
+    "text": "What will I be able to do by reading this book and practicing its content?\n\nUnderstand applied data science generally and within the context of higher education.\nGain insights about the types of data used in higher education and the systems that store them.\nWrangle and clean data.\nAccomplish work more efficiently with R that is typically performed in Excel.\nCreate your own applications, machine learning models, databases, and packages.\nUnderstand data science and its relationship to research.\nCreate great looking data visualizations.\nRetrieve data from a variety of sources including APIs and SQL databases.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nTODO.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Applied Data Science for Higher Education with R",
+    "section": "License",
+    "text": "License\nThis book is licensed under CC 4.0.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html",
+    "href": "01-what-is-data-science.html",
+    "title": "1  Data Science Explained",
+    "section": "",
+    "text": "1.1 What is higher education?\nThe UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning battery offered at institutions beyond secondary education. For the learner and as a general insight, there are basically two threads that run through higher education—career training and learning to think. Sometimes these domains directly overlap, like where a liberal arts student learns to read thoroughly and syntopically in a humanities course, and such a skill transfers over cleanly to a career as a lawyer. Other times courses exist to enrich the lived experience of the student—like an 18th century poetry course—and such knowledge might not map neatly to a career outcome, at least in an easily quantifiable way. The other thread foregrounds the job as its main impetus, training students to perform tasks such as in a computer science course.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#what-is-data",
+    "href": "01-what-is-data-science.html#what-is-data",
+    "title": "1  Data Science Explained",
+    "section": "1.2 What is data?",
+    "text": "1.2 What is data?\nData are (plural of datum) recorded observations about the world (Witte & Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system’s discussion board, or pictures of cats. Data can be encountered—like campus weather patterns—or constructed—such as end-of-course feedback.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#what-is-science",
+    "href": "01-what-is-data-science.html#what-is-science",
+    "title": "1  Data Science Explained",
+    "section": "1.3 What is science?",
+    "text": "1.3 What is science?\nScience is a knowledge system that is positioned in the experiential and observable world (Britannica, 2026). Importantly, the knowledge generated can be verified and even proven false by others.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#what-is-data-science",
+    "href": "01-what-is-data-science.html#what-is-data-science",
+    "title": "1  Data Science Explained",
+    "section": "1.4 What is data science?",
+    "text": "1.4 What is data science?\nData science is the discipline of learning from data (Grus, 2019). Essential to its practice is the notion of auditability, where practitioners approach data science work in a way that can be verified by others.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#what-is-applied-data-science",
+    "href": "01-what-is-data-science.html#what-is-applied-data-science",
+    "title": "1  Data Science Explained",
+    "section": "1.5 What is applied data science?",
+    "text": "1.5 What is applied data science?\nApplied data science is defined in many ways if one sources the definition online. It can also be largely dependent on where the term is utilized if seeking a use-case explanation. Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). This output could be for example, a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve the university rooted in verifiable data science.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#what-is-applied-data-science-in-higher-education",
+    "href": "01-what-is-data-science.html#what-is-applied-data-science-in-higher-education",
+    "title": "1  Data Science Explained",
+    "section": "1.6 What is applied data science in higher education?",
+    "text": "1.6 What is applied data science in higher education?\nApplied data science within the higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different pursuits are undertaken that all qualify as data science. These include:\n\nInferential Research\n\nA systematic investigation of a topic to understand relationships and differences in variables (Larimore, 2021). Such work is frequently driven by theories, hypotheses, and research questions. Inferential work is about understanding why.\n\nData analytics\n\nThe process of examining existing datasets to surface patterns and associations (Tableau, 2026). It is undertaken to know what happened and to answer operationalized questions of interest, not for the production of generalizable knowledge.\n\nMachine learning\n\nCommonly, these are methods that use datasets to train an algorithmic model to predict a continuous or categorical outcome variable, without explicitly programming the computer (Microsoft, 2026). Machine learning is often driven by the performance of the model where accuracy is often most important so that predictions in the applied setting are helpful. Other varieties exist for identifying patterns or teaching a computer to make decisions through rote trial and error.\n\nData mining\n\nData mining makes use of large datasets to unearth unknown patterns and groups in data. It is driven by discovery and not neccessarily a hypothesis.\n\n\n\n1.6.1 Methods\nThe table here shows an example of each method discussed for conducting data science:\n\n\n\nTable 1.1: Data science activity in higher education.\n\n\n\n\n\n\n\n\n\nMethod\nWhat could this look like in higher education?\n\n\n\n\nInferential Research\nA study is conducted to understand the association between class size and gpa.\n\n\nData Analytics\nUniversity website traffic is analyzed and the most utilized sections are improved.\n\n\nMachine Learning\nA model is created to predict enrollment numbers for next semester.\n\n\nData Mining\nAll university LMS activity stream data from the previous 10 years are mined for insights.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#data-science-projects",
+    "href": "01-what-is-data-science.html#data-science-projects",
+    "title": "1  Data Science Explained",
+    "section": "1.7 Data science projects",
+    "text": "1.7 Data science projects\nData science projects are the heart of the application of data science in the real world. They are engaged with to solve a problem for key stakeholders, such as increasing enrollment numbers, identifying students at risk of withdrawing, or increasing graduation rates among first-generation students.\n\n1.7.1 Define the data science problem (Phase One)\nGood data science starts by thoroughly understanding the issues faced and careful planning. Example iterative steps in a data science project workflow is presented in the table here. Importantly these steps may not occur in sequence and can be revisited as needed, which is likely often depending on the project.\n\n\n\nTable 1.2: Steps for the problem phase.\n\n\n\n\n\n\n\n\n\n\nStage\nAction\nConsiderations\n\n\n\n\nFrame the problem\nState the pain point and explore the problem at a high level\nWhat is the issue experienced?\n\n\nGather context\nExplore the problem and solution space at depth through techniques such as interviews and surveys.\nSeek to understand why the issue is important to the stakeholders.\n\n\nDevelop a plan and assess feasibility\nCompare different solution possibilities considering the available data, effort, and expertise.\nFrequently, lower effort work that is of high importance is prioritized.\n\n\nAlign Stakeholders\nUpdate and involve stakeholders throughout the project.\nThis step is highly iterative and can be accomplished with standard methods or for-purpose solutions such as project management apps.\n\n\n\n\n\n\n\n\n1.7.2 Execute the work (Phase Two)\nThe next phase is about accomplishing the data work. It can broadly happen across actions with and about the data that include ingesting, storing, cleaning, analyzing, communicating results, implementing, and iterating.\n\nIngest\n\nCapture the data from sources such as from surveys or learning management systems.\n\nStore\n\nThe data needs to be kept somewhere that is reliable and secure, such as a database which we will discuss in the next chapter.\n\nClean\n\nWrangle and clean the data—such as by fixing missing values or errors—so it can be effectively worked with.\n\nAnalyze\n\nExplore the data and create visualizations and models to solve problems.\n\nCommunicate\n\nReport and present findings to stakeholders for buy-in and to plan actions.\n\nImplement\n\nBring to fruition the insights from the data via output such as process changes, assistive programs, or software.\n\nIterate\n\nMonitor and assess the implementation, reworking and revising as needed by stakeholders.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#the-applied-data-scientist-in-higher-education",
+    "href": "01-what-is-data-science.html#the-applied-data-scientist-in-higher-education",
+    "title": "1  Data Science Explained",
+    "section": "1.8 The applied data scientist in higher education",
+    "text": "1.8 The applied data scientist in higher education\nApplied data science in higher education sits at the intersection of applied coding, applied statistics knowledge, and higher education domain knowledge. Working with data via code is highly efficient and provides a means for auditability through transparent scripts. Knowledge of statistical methods enables sound reasoning for deriving insights from data. The domain knowledge in higher education is what gives pragmatic meaning to the outputs of a data science project.\n\n\n\n\n\n\nFigure 1.1: The three domains of applied data science in higher education.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "01-what-is-data-science.html#chapter-1-exercises",
+    "href": "01-what-is-data-science.html#chapter-1-exercises",
+    "title": "1  Data Science Explained",
+    "section": "1.9 Chapter 1 Exercises:",
+    "text": "1.9 Chapter 1 Exercises:\n\n\n\n\n\n\nNoteExercises\n\n\n\n\nEnrollment data exploration. Use this small higher education dataset to answer the following. You can use any program you’re comfortable with (e.g., Excel, SPSS, or R).\n\nUnderstanding student workload variation. As a new academic advisor, you want to get a sense of how spread out your students’ course loads are before your first round of meetings. Some students may be barely enrolled while others may be overloaded — both groups might need outreach for very different reasons. What is the range of credits enrolled (lowest to highest), and what does that spread suggest about the kinds of conversations you should be prepared to have? What additional data not in the dataset could help you answer this question?\nEstimating a typical credit load. Your dean asks, “What’s a typical credit load for our students this term?” before a budget conversation about instructional capacity. What is the average credit load, and — looking back at the range from part a — is the average actually a fair representation of “typical” here, or does the spread complicate that story?\nResource allocation across programs. The student services office is deciding where to assign three new peer mentors and wants the placements to reflect where the students actually are. Build a bar graph showing the number of students in each program. Based on the chart, where would you place the mentors, and what is one piece of information not in this dataset that would change your recommendation?\n\nConsult the literature. Find a scholarly article about the applied usage of data science in higher education written in the last four years. I recommend looking on Google Scholar. Create a one page document answering the following questions. Also provide a correctly formated APA citation with a link to the article.\n\nSummarize the problem. What institutional problem or question of interest was addressed by the authors?\nIdentify methods used. What methods (e.g., data mining) were utilized in the paper and how?\nTrack the workflow. How does the article relate to the data science project workflow (e.g., framing the problem, analyzing the data)? What parts are mentioned explicitly? Which were implied or omitted?\nTrustworthyness What steps did the authors take to ensure that their results were trustworthy and addressed the problem? What was discussed and what was left out?",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
+    ]
+  },
+  {
+    "objectID": "02-data-in-higher-ed.html",
+    "href": "02-data-in-higher-ed.html",
+    "title": "2  How data are used in higher education",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How data are used in higher education</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html",
+    "href": "03-data-sources.html",
+    "title": "3  Where the data come from",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Where the data come from</span>"
+    ]
+  },
+  {
+    "objectID": "04-getting-started.html",
+    "href": "04-getting-started.html",
+    "title": "4  Getting started with R",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part II — Working in R",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Getting started with R</span>"
+    ]
+  },
+  {
+    "objectID": "05-tidyverse.html",
+    "href": "05-tidyverse.html",
+    "title": "5  Transforming data with the tidyverse",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part II — Working in R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Transforming data with the tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "06-visualization.html",
+    "href": "06-visualization.html",
+    "title": "6  Visualizing data with ggplot2",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part II — Working in R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Visualizing data with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "07-tidymodels.html",
+    "href": "07-tidymodels.html",
+    "title": "7  Modeling with tidymodels",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part III — Modeling, Packages, and Practice",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Modeling with tidymodels</span>"
+    ]
+  },
+  {
+    "objectID": "08-packages.html",
+    "href": "08-packages.html",
+    "title": "8  Building your own R package",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part III — Modeling, Packages, and Practice",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Building your own R package</span>"
+    ]
+  },
+  {
+    "objectID": "09-projects-and-lifecycle.html",
+    "href": "09-projects-and-lifecycle.html",
+    "title": "9  Managing projects and the data science lifecycle",
+    "section": "",
+    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "crumbs": [
+      "Part III — Modeling, Packages, and Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Managing projects and the data science lifecycle</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "Pull the threads together and point readers to what’s next. TODO.",
+    "crumbs": [
+      "Conclusion"
+    ]
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Setup",
+    "section": "",
+    "text": "What readers install before Chapter 1.\n\nR — https://cran.r-project.org/\nAn editor — RStudio or Positron\nQuarto — https://quarto.org/ (bundled with recent RStudio)\nPackages\n\n\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n\nTODO — trim to exactly what your book uses.",
+    "crumbs": [
+      "Appendices",
+      "Setup"
+    ]
+  }
+]
