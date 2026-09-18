@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; How data are used in higher education – Applied Data Science for Higher Education with R</title>
+<title>2&nbsp; Data Details – Applied Data Science for Higher Education with R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./02-data-in-higher-ed.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How data are used in higher education</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./02-data-in-higher-ed.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-data-in-higher-ed.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How data are used in higher education</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -240,15 +240,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-are-data" id="toc-what-are-data" class="nav-link active" data-scroll-target="#what-are-data"><span class="header-section-number">2.1</span> What are data?</a></li>
+  <li><a href="#data-and-information" id="toc-data-and-information" class="nav-link" data-scroll-target="#data-and-information"><span class="header-section-number">2.2</span> Data and information</a></li>
+  <li><a href="#data-characteristics" id="toc-data-characteristics" class="nav-link" data-scroll-target="#data-characteristics"><span class="header-section-number">2.3</span> Data characteristics</a></li>
+  <li><a href="#common-data-sizes" id="toc-common-data-sizes" class="nav-link" data-scroll-target="#common-data-sizes"><span class="header-section-number">2.4</span> Common data sizes</a></li>
+  <li><a href="#data-access-types" id="toc-data-access-types" class="nav-link" data-scroll-target="#data-access-types"><span class="header-section-number">2.5</span> Data access types</a>
+  <ul class="collapse">
+  <li><a href="#publicly-available-data" id="toc-publicly-available-data" class="nav-link" data-scroll-target="#publicly-available-data"><span class="header-section-number">2.5.1</span> Publicly available data</a></li>
+  </ul></li>
+  <li><a href="#sec-restricted-data" id="toc-sec-restricted-data" class="nav-link" data-scroll-target="#sec-restricted-data"><span class="header-section-number">2.6</span> Restricted data</a>
+  <ul class="collapse">
+  <li><a href="#institutional-data" id="toc-institutional-data" class="nav-link" data-scroll-target="#institutional-data"><span class="header-section-number">2.6.1</span> Institutional data</a></li>
+  <li><a href="#protected-data" id="toc-protected-data" class="nav-link" data-scroll-target="#protected-data"><span class="header-section-number">2.6.2</span> Protected data</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./02-data-in-higher-ed.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How data are used in higher education</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./02-data-in-higher-ed.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-data-in-he" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How data are used in higher education</span></span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></h1>
 </div>
 
 
@@ -265,39 +283,323 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="what-are-data" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="what-are-data"><span class="header-section-number">2.1</span> What are data?</h2>
+<p>As was mentioned in the first chapter, data are observations about the world and can take many forms. Data can be collected through manual means such as surveys or interviews. It can be collected more incidentally such as through capturing publicly available comments on social media platforms. Within the digital environment, data are being captured about everything we do. For example, learning management systems collect data about the number of times a student logs in, the number of times they view a video, the amount of time they spend on the platform, and many other statistics. In short, data are everywhere and is constantly be generating.</p>
+</section>
+<section id="data-and-information" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="data-and-information"><span class="header-section-number">2.2</span> Data and information</h2>
+<p>Data are the raw unprocessed figures, such as the GPAs for students sitting in a database. Information is data that have been organized to be put to use. The average GPA of all math majors for the fall semester is 3.1—this could be considered information.</p>
+</section>
+<section id="data-characteristics" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="data-characteristics"><span class="header-section-number">2.3</span> Data characteristics</h2>
+<p>Data characteristics are the qualities of the data you would assess to understand it. You can start with these characteristics to initially start engaging with data work.</p>
+<dl>
+<dt>Volume</dt>
+<dd>
+The amount of data. Some datasets are small (a class survey), while others are very large (millions of student records across states).
+</dd>
+<dt>Variety</dt>
+<dd>
+The many formats data can take — numbers, text, images, audio, video, and more. It can also be structured (neatly organized in tables) or unstructured (like unprocessed social media posts).
+</dd>
+<dt>Velocity</dt>
+<dd>
+How fast data is generated and processed. Some data is collected in real time (like sensor data or live polling), while other data is more static.
+</dd>
+<dt>Veracity</dt>
+<dd>
+The accuracy and trustworthiness of the data. Poor-quality or messy data can lead to misleading results.
+</dd>
+<dt>Value</dt>
+<dd>
+Whether data are useful. Just collecting data isn’t enough — it needs to help answer questions or solve problems.
+</dd>
+</dl>
+</section>
+<section id="common-data-sizes" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="common-data-sizes"><span class="header-section-number">2.4</span> Common data sizes</h2>
+<p>Data are stored electronically so they persist and can be accessed later. This can occur locally on your own computer, on-premisis such as on a university owned server, or in the “cloud” where the server is owned and maintained by a company. All of these data have size considerations that need to be taken into account. Presented on the table here are example size terms with how they might be considered practically.</p>
+<div id="tbl-data-size" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Common data size terms.
+</figcaption>
+<div aria-describedby="tbl-data-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 19%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Size Term</th>
+<th style="text-align: left;">Approx. Size</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Byte (B)</td>
+<td style="text-align: left;">1 character</td>
+<td style="text-align: left;">A single letter or symbol</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kilobyte (KB)</td>
+<td style="text-align: left;">1,000 bytes</td>
+<td style="text-align: left;">A short email or text document</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Megabyte (MB)</td>
+<td style="text-align: left;">1,000 KB</td>
+<td style="text-align: left;">A high-resolution photo or MP3 song</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gigabyte (GB)</td>
+<td style="text-align: left;">1,000 MB</td>
+<td style="text-align: left;">A short HD video or full-length movie</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Terabyte (TB)</td>
+<td style="text-align: left;">1,000 GB</td>
+<td style="text-align: left;">A hard drive or a university’s annual data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Petabyte (PB)</td>
+<td style="text-align: left;">1,000 TB</td>
+<td style="text-align: left;">Data from large-scale systems</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Learning objectives
+</figure>
 </div>
+<p>##Where data are stored</p>
+<p>It can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.</p>
+<div id="tbl-storage-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-storage-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.2: Common data storage ways in higher education.
+</figcaption>
+<div aria-describedby="tbl-storage-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 25%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Storage Format</th>
+<th style="text-align: left;">Details</th>
+<th style="text-align: left;">Higher Edu Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Flat file</td>
+<td style="text-align: left;">A small file such as a CSV file</td>
+<td style="text-align: left;">A course roster exported from an LMS system</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spreadsheet</td>
+<td style="text-align: left;">A tabular file for light data work, often in Excel</td>
+<td style="text-align: left;">A department chair’s list of courses and their teachers</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Database (DB)</td>
+<td style="text-align: left;">Tables linked by keys and queried with SQL; Often on dedicated servers</td>
+<td style="text-align: left;">A student records system containing enrollment data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data warehouse</td>
+<td style="text-align: left;">A large repository that collates data from many systems</td>
+<td style="text-align: left;">An institutional research repository containing SIS, LMS, and enrollment data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cloud</td>
+<td style="text-align: left;">Data hosted and maintained by a third party that are accessed via the internet</td>
+<td style="text-align: left;">Survey responses collected in a cloud-hosted application, such as Qualtrics</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">In-process database</td>
+<td style="text-align: left;">A DB that runs in your program via an individual file</td>
+<td style="text-align: left;">Requesting data from the IPEDS system for benchmarking analysis</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="callout-body-container callout-body">
-<p>After this chapter you will be able to:</p>
-<ul>
-<li><em>TODO</em></li>
-<li><em>TODO</em></li>
-</ul>
+</figure>
 </div>
+<p>Each storage approach mentioned has advantages and disadvantages around such variables as size, difficulty of query, reliability, and privacy. Each format has its place in the data science project workflow.</p>
+</section>
+<section id="data-access-types" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="data-access-types"><span class="header-section-number">2.5</span> Data access types</h2>
+<p>When working with data in higher education it is important to always understand the permissions and rules associated with it. Some data can be downloaded by the general public and utilized mostly without restriction. For other data, permissions must be granted and certain legal protections must be considered. The rules about access to data and the related restrictions shape all of the work that can be done, so it must be considered up front in the process.</p>
+<section id="publicly-available-data" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="publicly-available-data"><span class="header-section-number">2.5.1</span> Publicly available data</h3>
+<p>Publicly available data can typically be obtained without permission. In higher education there are many datasets that are accessible by the public but they come in two forms generally. <strong>Official</strong> public data (OPD) are yielded through rigorous validated processes to ensure it is trustworthy and reliable. <strong>Unofficial</strong> public data (UPD) are shared informally. Such data are likely to be less reliable and require careful scrutiny to understand their quality.</p>
+<section id="official-public-data" class="level4" data-number="2.5.1.1">
+<h4 data-number="2.5.1.1" class="anchored" data-anchor-id="official-public-data"><span class="header-section-number">2.5.1.1</span> Official public data</h4>
+<p>Official public datasets are the products of intensive inspection and are published authoritative agencies such as the Integrated Postsecondary Data System (IPEDS). All U.S. colleges and universities that receive federal financial aid are required to report data to IPEDS annually. Data represented there come from over 6,000 institutions and includes variables such as graduation and retention rates, tuition costs, and enrollment numbers. Such standardized reporting allows for institutions to be benchmarked against other similar colleges across various important features. Some sources of relevant student data are presented in the table here.</p>
+<div id="tbl-official-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-official-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.3: Official public HE data.
+</figcaption>
+<div aria-describedby="tbl-official-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 29%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Source Org</th>
+<th style="text-align: left;">Details</th>
+<th style="text-align: left;">Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">IPEDS</td>
+<td style="text-align: left;">Reported annually by most U.S. institutions; run by NCES</td>
+<td style="text-align: left;">Benchmarking against other schools</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">College Scorecard</td>
+<td style="text-align: left;">Department of Education data that combines IPEDS with financial aid data and tax records</td>
+<td style="text-align: left;">Comparing student outcomes like repayment of loans and salary; Public reporting</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">National Student Clearinghouse</td>
+<td style="text-align: left;">Nonprofit org that has enrollment and degree records for most of U.S. students</td>
+<td style="text-align: left;">Tracking student outcomes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">U.S. Census Bureau</td>
+<td style="text-align: left;">Population and demographic data</td>
+<td style="text-align: left;">Contextualizing institutional factors</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bureau of Labor Statistics</td>
+<td style="text-align: left;">Wage, employment, and occupational data</td>
+<td style="text-align: left;">Connecting degree programs to workforce demand and career outcomes</td>
+</tr>
+</tbody>
+</table>
 </div>
-<p><em>TODO — write this chapter. Reuse the patterns from <span class="quarto-unresolved-ref">?sec-what-is-ds</span>: labelled code chunks, <code>@fig-</code> / <code>@tbl-</code> cross-references, <code>@key</code> citations, and <code>.callout-note</code> exercises.</em></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exercise
+</section>
+<section id="unofficial-public-data" class="level4" data-number="2.5.1.2">
+<h4 data-number="2.5.1.2" class="anchored" data-anchor-id="unofficial-public-data"><span class="header-section-number">2.5.1.2</span> Unofficial public data</h4>
+<p>Unofficial public datasets are also available generally but may or may not be based on a formal trustworthy process. Data like this are useful in several capacities. If they are verified and validated, they can be genuinely informative. Otherwise they can be helpful for learning, creating prototypes, and exploring.</p>
+<div id="tbl-unofficial-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unofficial-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.4: Unofficial public HE data.
+</figcaption>
+<div aria-describedby="tbl-unofficial-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Source</th>
+<th style="text-align: left;">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Kaggle</td>
+<td style="text-align: left;">Online community datasets</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Google Dataset Search</td>
+<td style="text-align: left;">Indexed datasets online</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OULAD</td>
+<td style="text-align: left;">Open university shared LMS data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Harvard Dataverse</td>
+<td style="text-align: left;">Open repository for published research data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UCI Machine Learning Repository</td>
+<td style="text-align: left;">Datasets for machine learning</td>
+</tr>
+</tbody>
+</table>
 </div>
+</figure>
 </div>
-<div class="callout-body-container callout-body">
-<p><em>TODO.</em></p>
+</section>
+</section>
+</section>
+<section id="sec-restricted-data" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-restricted-data"><span class="header-section-number">2.6</span> Restricted data</h2>
+<p>Compared to publicly available data, restricted data come with obligations and rules. Often access requires special permissions.</p>
+<section id="institutional-data" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="institutional-data"><span class="header-section-number">2.6.1</span> Institutional data</h3>
+<p>Institutional data is internal to a university and its processes. Often this is housed on university servers or on secured cloud systems. These data are related to important aspects of a school such as enrollment numbers, budgets, and accreditation metrics. As this data is so highly sensitive, access is based on roles assigned to university stakeholders, where a faculty member may have access to different data compared to a department chair. Some example systems and the type of data they may house are presented on the table in this section.</p>
+<div id="tbl-institutional-systems" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-institutional-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.5: Institutional system examples and their data.
+</figcaption>
+<div aria-describedby="tbl-institutional-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Student Information Systems (SIS)</td>
+<td style="text-align: left;">Student data such as grades and attendance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Learning Management Systems (LMS)</td>
+<td style="text-align: left;">Teaching and learning resources with related activity data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Enterprise Resource Planning (ERP)</td>
+<td style="text-align: left;">Business activity and transactions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Financial Aid System</td>
+<td style="text-align: left;">Student awards and disbursements</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HR System</td>
+<td style="text-align: left;">Employee records</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Customer Relationship Management (CRM)</td>
+<td style="text-align: left;">Prospective student and alumni data</td>
+</tr>
+</tbody>
+</table>
 </div>
+</figure>
 </div>
+</section>
+<section id="protected-data" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="protected-data"><span class="header-section-number">2.6.2</span> Protected data</h3>
+<p>Some institutional data are both restricted and protected legally. For instance, the <strong>Family Educational Rights and Privacy Act</strong> limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the <strong>Health Insurance Portability and Accountability Act</strong> (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -720,7 +1022,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 Michael Littrell. Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

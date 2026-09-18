@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Michael Littrell">
-<meta name="dcterms.date" content="2026-09-17">
+<meta name="dcterms.date" content="2026-09-18">
 
 <title>Applied Data Science for Higher Education with R</title>
 <style>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-data-in-higher-ed.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How data are used in higher education</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,7 +254,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files" id="toc-what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files" class="nav-link" data-scroll-target="#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files">What about tools like Stata that have a GUI to click and also uses script files?</a></li>
   <li><a href="#why-another-r-book" id="toc-why-another-r-book" class="nav-link" data-scroll-target="#why-another-r-book">Why another R book?</a></li>
   <li><a href="#what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content" id="toc-what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content" class="nav-link" data-scroll-target="#what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content">What will I be able to do by reading this book and practicing its content?</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
   </ul></li>
   </ul>
@@ -283,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 17, 2026</p>
+      <p class="date">September 18, 2026</p>
     </div>
   </div>
   
@@ -300,11 +299,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="unnumbered">Introduction</h1><p><img src="images/cover_v1.png" title="Applied Data Science for Higher Education with R" class="quarto-cover-image nolightbox img-fluid"></p>
 <section id="who-is-this-book-for" class="level2">
 <h2 class="anchored" data-anchor-id="who-is-this-book-for">Who is this book for?</h2>
-<p>This free book is for the applied data professional in higher education including workers engaged with areas like institutional research, assessment, enrollment management, and student affairs. However, it is also relevant to anyone wanting to learn more about applied data science, the R language, and its usage for data tasks.</p>
+<p>This free book is meant for higher education professionals who may work in a variety of areas such as institutional research, assessment, enrollment management, or student affairs. Its main purpose is to be very practical. This text could also be relevant to anyone wanting to learn more about applied data science, the R language, and how to use it for data tasks.</p>
 </section>
 <section id="why-would-i-want-to-read-this-book-excel-seems-just-fine." class="level2">
 <h2 class="anchored" data-anchor-id="why-would-i-want-to-read-this-book-excel-seems-just-fine.">Why would I want to read this book? Excel seems just fine.</h2>
-<p>Using a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are executed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work is often predicated on the recollection of the individual who accomplished the task with the GUI.</p>
+<p>Using a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are performed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work often relies on the recollection of the individual who accomplished the task with the GUI. “I remember dragging this column in from the spring report—I’m sure of it!”</p>
 </section>
 <section id="wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps" class="level2">
 <h2 class="anchored" data-anchor-id="wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps">Wait. We can use code to work with data? Isn’t that for making apps?</h2>
@@ -317,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="why-another-r-book" class="level2">
 <h2 class="anchored" data-anchor-id="why-another-r-book">Why another R book?</h2>
-<p>Book resources available generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. For this reason, explicit connections to the R code presented are made throughout the text.</p>
+<p>Books about R that I have encountered generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. I crafted this book to overcome the limitations mentioned, to teach my own courses about data science in higher education, and to make explicit connections from AI to R coding to support learners.</p>
 </section>
 <section id="what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content" class="level2">
 <h2 class="anchored" data-anchor-id="what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content">What will I be able to do by reading this book and practicing its content?</h2>
@@ -331,10 +330,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Create great looking data visualizations.</li>
 <li>Retrieve data from a variety of sources including APIs and SQL databases.</li>
 </ul>
-</section>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p><em>TODO.</em></p>
 </section>
 <section id="license" class="level2">
 <h2 class="anchored" data-anchor-id="license">License</h2>

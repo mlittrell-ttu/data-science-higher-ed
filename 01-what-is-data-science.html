@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-data-in-higher-ed.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How data are used in higher education</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -246,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-is-higher-education" id="toc-what-is-higher-education" class="nav-link active" data-scroll-target="#what-is-higher-education"><span class="header-section-number">1.1</span> What is higher education?</a></li>
-  <li><a href="#what-is-data" id="toc-what-is-data" class="nav-link" data-scroll-target="#what-is-data"><span class="header-section-number">1.2</span> What is data?</a></li>
+  <li><a href="#what-are-data" id="toc-what-are-data" class="nav-link" data-scroll-target="#what-are-data"><span class="header-section-number">1.2</span> What are data?</a></li>
   <li><a href="#what-is-science" id="toc-what-is-science" class="nav-link" data-scroll-target="#what-is-science"><span class="header-section-number">1.3</span> What is science?</a></li>
   <li><a href="#what-is-data-science" id="toc-what-is-data-science" class="nav-link" data-scroll-target="#what-is-data-science"><span class="header-section-number">1.4</span> What is data science?</a></li>
   <li><a href="#what-is-applied-data-science" id="toc-what-is-applied-data-science" class="nav-link" data-scroll-target="#what-is-applied-data-science"><span class="header-section-number">1.5</span> What is applied data science?</a></li>
@@ -260,7 +260,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#execute-the-work-phase-two" id="toc-execute-the-work-phase-two" class="nav-link" data-scroll-target="#execute-the-work-phase-two"><span class="header-section-number">1.7.2</span> Execute the work (Phase Two)</a></li>
   </ul></li>
   <li><a href="#the-applied-data-scientist-in-higher-education" id="toc-the-applied-data-scientist-in-higher-education" class="nav-link" data-scroll-target="#the-applied-data-scientist-in-higher-education"><span class="header-section-number">1.8</span> The applied data scientist in higher education</a></li>
-  <li><a href="#chapter-1-exercises" id="toc-chapter-1-exercises" class="nav-link" data-scroll-target="#chapter-1-exercises"><span class="header-section-number">1.9</span> Chapter 1 Exercises:</a></li>
+  <li><a href="#the-data-pyramid" id="toc-the-data-pyramid" class="nav-link" data-scroll-target="#the-data-pyramid"><span class="header-section-number">1.9</span> The Data Pyramid</a></li>
+  <li><a href="#chapter-1-exercises" id="toc-chapter-1-exercises" class="nav-link" data-scroll-target="#chapter-1-exercises"><span class="header-section-number">1.10</span> Chapter 1 Exercises:</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/01-what-is-data-science.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/01-what-is-data-science.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -288,11 +289,74 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-is-higher-education" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="what-is-higher-education"><span class="header-section-number">1.1</span> What is higher education?</h2>
-<p>The UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning battery offered at institutions beyond secondary education. For the learner and as a general insight, there are basically two threads that run through higher education—career training and learning to think. Sometimes these domains directly overlap, like where a liberal arts student learns to read thoroughly and syntopically in a humanities course, and such a skill transfers over cleanly to a career as a lawyer. Other times courses exist to enrich the lived experience of the student—like an 18th century poetry course—and such knowledge might not map neatly to a career outcome, at least in an easily quantifiable way. The other thread foregrounds the job as its main impetus, training students to perform tasks such as in a computer science course.</p>
+<p>The UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For the applied data professional, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.</p>
+<div id="tbl-uni-structure" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-uni-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.1: Levels of university structure with leadership stakeholders example data and concerns.
+</figcaption>
+<div aria-describedby="tbl-uni-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 30%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Leader</th>
+<th style="text-align: left;">Example Data</th>
+<th style="text-align: left;">Example Concern</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Institution</td>
+<td style="text-align: left;">President / Board</td>
+<td style="text-align: left;">Enrollment totals, budget, IPEDS</td>
+<td style="text-align: left;">Will overall enrollment totals be sustainable next semester?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division / Administrative Unit</td>
+<td style="text-align: left;">Provost / Vice Presidents</td>
+<td style="text-align: left;">Retention, research funds, staffing</td>
+<td style="text-align: left;">Which colleges need retention support?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">College</td>
+<td style="text-align: left;">Dean</td>
+<td style="text-align: left;">Credit hours, graduation rates, faculty course loads</td>
+<td style="text-align: left;">Which degree programs graduate the most students in four years?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Department</td>
+<td style="text-align: left;">Chair</td>
+<td style="text-align: left;">Course grades, Course completion rates, majors offered</td>
+<td style="text-align: left;">Which courses can be offered more frequently to meet demand?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Program</td>
+<td style="text-align: left;">Program Director</td>
+<td style="text-align: left;">Student matriculation, program outcomes</td>
+<td style="text-align: left;">Are first generation students struggling with specific courses?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Support Offices</td>
+<td style="text-align: left;">Director</td>
+<td style="text-align: left;">Applications, financial aid, IT tickets, alumni gifts</td>
+<td style="text-align: left;">Do we have enough available financial aid for rural student applicants?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="what-is-data" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="what-is-data"><span class="header-section-number">1.2</span> What is data?</h2>
-<p>Data are (plural of datum) recorded observations about the world (Witte &amp; Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system’s discussion board, or pictures of cats. Data can be encountered—like campus weather patterns—or constructed—such as end-of-course feedback.</p>
+<section id="what-are-data" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="what-are-data"><span class="header-section-number">1.2</span> What are data?</h2>
+<p>Data are recorded observations about the world (Witte &amp; Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system’s discussion board, or pictures of cats. Data can be encountered—like campus weather patterns—or constructed—such as end-of-course feedback.</p>
 </section>
 <section id="what-is-science" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="what-is-science"><span class="header-section-number">1.3</span> What is science?</h2>
@@ -304,11 +368,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-is-applied-data-science" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="what-is-applied-data-science"><span class="header-section-number">1.5</span> What is applied data science?</h2>
-<p>Applied data science is defined in many ways if one sources the definition online. It can also be largely dependent on where the term is utilized if seeking a use-case explanation. Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). This output could be for example, a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve the university rooted in verifiable data science.</p>
+<p>Applied data science is defined in many ways. Its definition can be dependent on where the term is used. Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). For example, this output could be a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve a university rooted in verifiable data science.</p>
 </section>
 <section id="what-is-applied-data-science-in-higher-education" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="what-is-applied-data-science-in-higher-education"><span class="header-section-number">1.6</span> What is applied data science in higher education?</h2>
-<p>Applied data science within the higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different pursuits are undertaken that all qualify as data science. These include:</p>
+<p>Applied data science in a higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different activities may be undertaken that all qualify as data science. These include:</p>
 <dl>
 <dt>Inferential Research</dt>
 <dd>
@@ -316,7 +380,7 @@ A systematic investigation of a topic to understand relationships and difference
 </dd>
 <dt>Data analytics</dt>
 <dd>
-The process of examining existing datasets to surface patterns and associations (Tableau, 2026). It is undertaken to know <em>what</em> happened and to answer operationalized questions of interest, not for the production of generalizable knowledge.
+The process of examining existing datasets to surface patterns and associations (Tableau, 2026). It is undertaken to know <em>what</em> happened and to answer operationalized questions of interest, not typically for the production of generalizable knowledge.
 </dd>
 <dt>Machine learning</dt>
 <dd>
@@ -324,7 +388,7 @@ Commonly, these are methods that use datasets to train an algorithmic model to p
 </dd>
 <dt>Data mining</dt>
 <dd>
-Data mining makes use of large datasets to unearth unknown patterns and groups in data. It is driven by discovery and not neccessarily a hypothesis.
+Data mining makes use of large datasets to unearth unknown patterns and groups in data. It is driven by discovery and not necessarily a hypothesis.
 </dd>
 </dl>
 <section id="methods" class="level3" data-number="1.6.1">
@@ -333,7 +397,7 @@ Data mining makes use of large datasets to unearth unknown patterns and groups i
 <div id="tbl-ds-activities" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ds-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1.1: Data science activity in higher education.
+Table&nbsp;1.2: Data science activity in higher education.
 </figcaption>
 <div aria-describedby="tbl-ds-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -380,7 +444,7 @@ Table&nbsp;1.1: Data science activity in higher education.
 <div id="tbl-ds-p1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ds-p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1.2: Steps for the problem phase.
+Table&nbsp;1.3: Steps for the problem phase.
 </figcaption>
 <div aria-describedby="tbl-ds-p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -460,7 +524,7 @@ Monitor and assess the implementation, reworking and revising as needed by stake
 </section>
 <section id="the-applied-data-scientist-in-higher-education" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="the-applied-data-scientist-in-higher-education"><span class="header-section-number">1.8</span> The applied data scientist in higher education</h2>
-<p>Applied data science in higher education sits at the intersection of applied coding, applied statistics knowledge, and higher education domain knowledge. Working with data via code is highly efficient and provides a means for auditability through transparent scripts. Knowledge of statistical methods enables sound reasoning for deriving insights from data. The domain knowledge in higher education is what gives pragmatic meaning to the outputs of a data science project.</p>
+<p>Applied data science in higher education sits at the intersection of applied coding, applied statistics knowledge, and higher education domain knowledge (Conway, 2010). Working with data via code is highly efficient and provides a means for auditability through transparent scripts. Knowledge of statistical methods enables sound reasoning for deriving insights from data. The domain knowledge in higher education is what gives pragmatic meaning to the outputs of a data science project.</p>
 <div id="fig-ds-venn" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ds-venn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -472,8 +536,22 @@ Figure&nbsp;1.1: The three domains of applied data science in higher education.
 </figure>
 </div>
 </section>
-<section id="chapter-1-exercises" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="chapter-1-exercises"><span class="header-section-number">1.9</span> Chapter 1 Exercises:</h2>
+<section id="the-data-pyramid" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="the-data-pyramid"><span class="header-section-number">1.9</span> The Data Pyramid</h2>
+<p>The data pyramid offers a more compact way of thinking about data and how the applied data scientist operates within the real-world. It starts with the anecdotal experiences we might encounter in our everyday work environments, such as suspecting that a resources section of a departmental website could be helpful to students, but is going underutilized. To confirm, we then proceed to collect traffic data and survey responses. The raw data are then organized and cleaned so that they can be analyzed for patterns and relationships. In our example, maybe they show us that students who visit the website are not being funneled to the resources section. As a meaningful insight, we might decide to include a direct path to the resources section as part of the default experience when visiting the website.</p>
+<div id="fig-data-pyramid" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-data-pyramid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_1_ds-pyramid.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data-pyramid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: The data science pyramid that flows from raw signals to insights to serve stakeholders
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="chapter-1-exercises" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="chapter-1-exercises"><span class="header-section-number">1.10</span> Chapter 1 Exercises:</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -913,8 +991,8 @@ Figure&nbsp;1.1: The three domains of applied data science in higher education.
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02-data-in-higher-ed.html" class="pagination-link" aria-label="How data are used in higher education">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How data are used in higher education</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02-data-in-higher-ed.html" class="pagination-link" aria-label="Data Details">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
