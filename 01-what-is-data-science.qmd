@@ -1,10 +1,21 @@
 # Data Science Explained
 
 ## What is higher education?
-The UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning battery offered at institutions beyond secondary education. For the learner and as a general insight, there are basically two threads that run through higher education—career training and learning to think. Sometimes these domains directly overlap, like where a liberal arts student learns to read thoroughly and syntopically in a humanities course, and such a skill transfers over cleanly to a career as a lawyer. Other times courses exist to enrich the lived experience of the student—like an 18th century poetry course—and such knowledge might not map neatly to a career outcome, at least in an easily quantifiable way. The other thread foregrounds the job as its main impetus, training students to perform tasks such as in a computer science course.
+The UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For the applied data professional, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.
 
-## What is data?
-Data are (plural of datum) recorded observations about the world (Witte & Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system's discussion board, or pictures of cats. Data can be encountered—like campus weather patterns—or constructed—such as end-of-course feedback.
+| Level | Leader | Example Data | Example Concern |
+|:------|:-------|:-------------|:----------------|
+| Institution | President / Board | Enrollment totals, budget, IPEDS | Will overall enrollment totals be sustainable next semester? |
+| Division / Administrative Unit  | Provost / Vice Presidents | Retention, research funds, staffing | Which colleges need retention support? |
+| College | Dean | Credit hours, graduation rates, faculty course loads | Which degree programs graduate the most students in four years? |
+| Department | Chair | Course grades, Course completion rates, majors offered | Which courses can be offered more frequently to meet demand?|
+| Program | Program Director | Student matriculation, program outcomes | Are first generation students struggling with specific courses? |
+| Support Offices | Director | Applications, financial aid, IT tickets, alumni gifts | Do we have enough available financial aid for rural student applicants? |
+
+: Levels of university structure with leadership stakeholders example data and concerns. {#tbl-uni-structure}
+
+## What are data?
+Data are recorded observations about the world (Witte & Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system's discussion board, or pictures of cats. Data can be encountered—like campus weather patterns—or constructed—such as end-of-course feedback.
 
 ## What is science?
 Science is a knowledge system that is positioned in the experiential and observable world (Britannica, 2026). Importantly, the knowledge generated can be verified and even proven false by others.
@@ -13,22 +24,22 @@ Science is a knowledge system that is positioned in the experiential and observa
 Data science is the discipline of learning from data (Grus, 2019). Essential to its practice is the notion of **auditability**, where practitioners approach data science work in a way that can be verified by others.  
 
 ## What is applied data science?
-Applied data science is defined in many ways if one sources the definition online. It can also be largely dependent on where the term is utilized if seeking a use-case explanation. Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). This output could be for example, a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve the university rooted in verifiable data science.
+Applied data science is defined in many ways. Its definition can be dependent on where the term is used.  Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). For example, this output could be a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve a university rooted in verifiable data science.
 
 ## What is applied data science in higher education?
-Applied data science within the higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different pursuits are undertaken that all qualify as data science. These include:
+Applied data science in a higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different activities may be undertaken that all qualify as data science. These include:
 
 Inferential Research
 : A systematic investigation of a topic to understand relationships and differences in variables (Larimore, 2021). Such work is frequently driven by theories, hypotheses, and research questions. Inferential work is about understanding *why*.
 
 Data analytics
-: The process of examining existing datasets to surface patterns and associations (Tableau, 2026). It is undertaken to know *what* happened and to answer operationalized questions of interest, not for the production of generalizable knowledge.
+: The process of examining existing datasets to surface patterns and associations (Tableau, 2026). It is undertaken to know *what* happened and to answer operationalized questions of interest, not typically for the production of generalizable knowledge.
 
 Machine learning
 : Commonly, these are methods that use datasets to train an algorithmic model to predict a continuous or categorical outcome variable, without explicitly programming the computer (Microsoft, 2026). Machine learning is often driven by the performance of the model where accuracy is often most important so that predictions in the applied setting are helpful. Other varieties exist for identifying patterns or teaching a computer to make decisions through rote trial and error.
 
 Data mining
-: Data mining makes use of large datasets to unearth unknown patterns and groups in data. It is driven by discovery and not neccessarily a hypothesis.
+: Data mining makes use of large datasets to unearth unknown patterns and groups in data. It is driven by discovery and not necessarily a hypothesis.
 
 ### Methods
 The table here shows an example of each method discussed for conducting data science:
@@ -88,11 +99,14 @@ Iterate
 
 ## The applied data scientist in higher education
 
-Applied data science in higher education sits at the intersection of applied coding, applied statistics knowledge, and higher education domain knowledge. Working with data via code is highly efficient and provides a means for auditability through transparent scripts. Knowledge of statistical methods enables sound reasoning for deriving insights from data. The domain knowledge in higher education is what gives pragmatic meaning to the outputs of a data science project.
+Applied data science in higher education sits at the intersection of applied coding, applied statistics knowledge, and higher education domain knowledge (Conway, 2010). Working with data via code is highly efficient and provides a means for auditability through transparent scripts. Knowledge of statistical methods enables sound reasoning for deriving insights from data. The domain knowledge in higher education is what gives pragmatic meaning to the outputs of a data science project.
 
 ![The three domains of applied data science in higher education.](images/chp_1_ds-venn.png){#fig-ds-venn width="425px" height="400px" fig-align="center"}
 
+## The Data Pyramid
+The data pyramid offers a more compact way of thinking about data and how the applied data scientist operates within the real-world. It starts with the anecdotal experiences we might encounter in our everyday work environments, such as suspecting that a resources section of a departmental website could be helpful to students, but is going underutilized. To confirm, we then proceed to collect traffic data and survey responses. The raw data are then organized and cleaned so that they can be analyzed for patterns and relationships. In our example, maybe they show us that students who visit the website are not being funneled to the resources section. As a meaningful insight, we might decide to include a direct path to the resources section as part of the default experience when visiting the website.
 
+![The data science pyramid that flows from raw signals to insights to serve stakeholders](images/chp_1_ds-pyramid.png){#fig-data-pyramid width="700px" fig-align="center"}
 
 ## Chapter 1 Exercises:
 

@@ -1,11 +1,11 @@
 # Introduction {.unnumbered}
 
 ## Who is this book for?
-This free book is for the applied data professional in higher education including workers engaged with areas like institutional research, assessment, enrollment management, and student affairs. However, it is also relevant to anyone wanting to learn more about applied data science, the R language, and its usage for data tasks.
+This free book is meant for higher education professionals who may work in a variety of areas such as institutional research, assessment, enrollment management, or student affairs. Its main purpose is to be very practical. This text could also be relevant to anyone wanting to learn more about applied data science, the R language, and how to use it for data tasks.
 
 
 ## Why would I want to read this book? Excel seems just fine.
-Using a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are executed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work is often predicated on the recollection of the individual who accomplished the task with the GUI.
+Using a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are performed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work often relies on the recollection of the individual who accomplished the task with the GUI. "I remember dragging this column in from the spring report—I'm sure of it!"
 
 ## Wait. We can use code to work with data? Isn't that for making apps?
 Programming languages such as R or Python are great for working with data, but the coding work produced can also be thought of as relevant to the creation of helpful data apps too.
@@ -17,7 +17,7 @@ Using a free and open source (FOS) language like R, an accompanying FOS develope
 
 
 ## Why another R book?
-Book resources available generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. For this reason, explicit connections to the R code presented are made throughout the text. 
+Books about R that I have encountered generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. I crafted this book to overcome the limitations mentioned, to teach my own courses about data science in higher education, and to make explicit connections from AI to R coding to support learners.
 
 ## What will I be able to do by reading this book and practicing its content?
 - Understand applied data science generally and within the context of higher education.
@@ -28,11 +28,6 @@ Book resources available generally are often not meant for the practical user wh
 - Understand data science and its relationship to research.
 - Create great looking data visualizations.
 - Retrieve data from a variety of sources including APIs and SQL databases.
-
-
-
-## Acknowledgements
-*TODO.*
 
 ## License
 This book is licensed under CC 4.0. 

@@ -1,18 +1,122 @@
-# How data are used in higher education {#sec-data-in-he}
+# Data Details
 
-::: {.callout-tip}
-## Learning objectives
-After this chapter you will be able to:
+## What are data?
+As was mentioned in the first chapter, data are observations about the world and can take many forms. Data can be collected through manual means such as surveys or interviews. It can be collected more incidentally such as through capturing publicly available comments on social media platforms. Within the digital environment, data are being captured about everything we do. For example, learning management systems collect data about the number of times a student logs in, the number of times they view a video, the amount of time they spend on the platform, and many other statistics. In short, data are everywhere and is constantly be generating.
 
-- *TODO*
-- *TODO*
-:::
+## Data and information
+Data are the raw unprocessed figures, such as the GPAs for students sitting in a database. Information is data that have been organized to be put to use. The average GPA of all math majors for the fall semester is 3.1—this could be considered information.
 
-*TODO — write this chapter. Reuse the patterns from @sec-what-is-ds: labelled
-code chunks, `@fig-` / `@tbl-` cross-references, `@key` citations, and
-`.callout-note` exercises.*
+## Data characteristics
+Data characteristics are the qualities of the data you would assess to understand it. You can start with these characteristics to initially start engaging with data work.
 
-::: {.callout-note}
-## Exercise
-*TODO.*
-:::
+Volume
+: The amount of data. Some datasets are small (a class survey), while others are very large (millions of student records across states).
+
+Variety
+: The many formats data can take — numbers, text, images, audio, video, and more. It can also be structured (neatly organized in tables) or unstructured (like unprocessed social media posts).
+
+Velocity
+: How fast data is generated and processed. Some data is collected in real time (like sensor data or live polling), while other data is more static.
+
+Veracity
+: The accuracy and trustworthiness of the data. Poor-quality or messy data can lead to misleading results.
+
+Value
+: Whether data are useful. Just collecting data isn't enough — it needs to help answer questions or solve problems.
+
+## Common data sizes
+Data are stored electronically so they persist and can be accessed later. This can occur locally on your own computer, on-premisis such as on a university owned server, or in the "cloud" where the server is owned and maintained by a company. All of these data have size considerations that need to be taken into account. Presented on the table here are example size terms with how they might be considered practically. 
+
+
+| Size Term     | Approx. Size | Example                                  |
+|:--------------|:-------------|:-----------------------------------------|
+| Byte (B)      | 1 character  | A single letter or symbol                |
+| Kilobyte (KB) | 1,000 bytes  | A short email or text document           |
+| Megabyte (MB) | 1,000 KB     | A high-resolution photo or MP3 song      |
+| Gigabyte (GB) | 1,000 MB     | A short HD video or full-length movie    |
+| Terabyte (TB) | 1,000 GB     | A hard drive or a university's annual data|
+| Petabyte (PB) | 1,000 TB     | Data from large-scale systems            |
+
+: Common data size terms. {#tbl-data-size}
+
+##Where data are stored
+
+It can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.
+
+| Storage Format | Details | Higher Edu Example |
+|:---------------|:-----------|:------------------|
+| Flat file | A small file such as a CSV file | A course roster exported from an LMS system|
+| Spreadsheet | A tabular file for light data work, often in Excel| A department chair's list of courses and their teachers|
+| Database (DB) | Tables linked by keys and queried with SQL; Often on dedicated servers | A student records system containing enrollment data |
+| Data warehouse | A large repository that collates data from many systems| An institutional research repository containing SIS, LMS, and enrollment data |
+| Cloud | Data hosted and maintained by a third party that are accessed via the internet | Survey responses collected in a cloud-hosted application, such as Qualtrics |
+| In-process database | A DB that runs in your program via an individual file  | Requesting data from the IPEDS system for benchmarking analysis|
+
+: Common data storage ways in higher education. {#tbl-storage-types}
+
+Each storage approach mentioned has advantages and disadvantages around such variables as size, difficulty of query, reliability, and privacy. Each format has its place in the data science project workflow.
+
+
+## Data access types
+When working with data in higher education it is important to always understand the permissions and rules associated with it. Some data can be downloaded by the general public and utilized mostly without restriction. For other data, permissions must be granted and certain legal protections must be considered. The rules about access to data and the related restrictions shape all of the work that can be done, so it must be considered up front in the process. 
+
+### Publicly available data 
+Publicly available data can typically be obtained without permission. In higher education there are many datasets that are accessible by the public but they come in two forms generally. **Official** public data (OPD) are yielded through rigorous validated processes to ensure it is trustworthy and reliable. **Unofficial** public data (UPD) are shared informally. Such data are likely to be less reliable and require careful scrutiny to understand their quality.
+
+
+#### Official public data
+Official public datasets are the products of intensive inspection and are published authoritative agencies such as the Integrated Postsecondary Data System (IPEDS). All U.S. colleges and universities that receive federal financial aid are required to report data to IPEDS annually. Data represented there come from over 6,000 institutions and includes variables such as graduation and retention rates, tuition costs, and enrollment numbers. Such standardized reporting allows for institutions to be benchmarked against other similar colleges across various important features. Some sources of relevant student data are presented in the table here.
+
+| Source Org | Details | Use Case |
+|:-----------|:--------|:---------|
+| IPEDS | Reported annually by most U.S. institutions; run by NCES | Benchmarking against other schools|
+| College Scorecard | Department of Education data that combines IPEDS with financial aid data and tax records | Comparing student outcomes like repayment of loans and salary; Public reporting |
+| National Student Clearinghouse | Nonprofit org that has enrollment and degree records for most of U.S. students | Tracking student outcomes |
+| U.S. Census Bureau | Population and demographic data | Contextualizing institutional factors |
+| Bureau of Labor Statistics | Wage, employment, and occupational data | Connecting degree programs to workforce demand and career outcomes |
+
+: Official public HE data. {#tbl-official-data}
+
+
+
+#### Unofficial public data
+Unofficial public datasets are also available generally but may or may not be based on a formal trustworthy process. Data like this are useful in several capacities. If they are verified and validated, they can be genuinely informative. Otherwise they can be helpful for learning, creating prototypes, and exploring.
+
+
+| Source | Details |
+|:-------|:--------|
+| Kaggle | Online community datasets |
+| Google Dataset Search | Indexed datasets online |
+| OULAD | Open university shared LMS data |
+| Harvard Dataverse | Open repository for published research data |
+| UCI Machine Learning Repository | Datasets for machine learning |
+
+: Unofficial public HE data. {#tbl-unofficial-data}
+
+
+## Restricted data {#sec-restricted-data}
+Compared to publicly available data, restricted data come with obligations and rules. Often access requires special permissions.
+
+
+### Institutional data
+Institutional data is internal to a university and its processes. Often this is housed on university servers or on secured cloud systems. These data are related to important aspects of a school such as enrollment numbers, budgets, and accreditation metrics. As this data is so highly sensitive, access is based on roles assigned to university stakeholders, where a faculty member may have access to different data compared to a department chair. Some example systems and the type of data they may house are presented on the table in this section.
+
+| System | Data |
+|:-------|:-----|
+| Student Information Systems (SIS) | Student data such as grades and attendance |
+| Learning Management Systems (LMS) | Teaching and learning resources with related activity data |
+| Enterprise Resource Planning (ERP)| Business activity and transactions |
+| Financial Aid System | Student awards and disbursements |
+| HR System | Employee records |
+| Customer Relationship Management (CRM)| Prospective student and alumni data |
+
+: Institutional system examples and their data. {#tbl-institutional-systems}
+
+
+### Protected data 
+Some institutional data are both restricted and protected legally. For instance, the **Family Educational Rights and Privacy Act** limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the **Health Insurance Portability and Accountability Act** (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects.
+
+
+
+
+
