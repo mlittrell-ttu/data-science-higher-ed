@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Where the data come from – Applied Data Science for Higher Education with R</title>
+<title>3&nbsp; Intro to R – Applied Data Science for Higher Education with R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Where the data come from</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-data-sources.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Where the data come from</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></span></a>
   </div>
 </li>
       </ul>
@@ -240,15 +240,68 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link active" data-scroll-target="#what-is-r"><span class="header-section-number">3.1</span> What is R?</a>
+  <ul class="collapse">
+  <li><a href="#a-brief-history-of-r" id="toc-a-brief-history-of-r" class="nav-link" data-scroll-target="#a-brief-history-of-r"><span class="header-section-number">3.1.1</span> A brief history of R</a></li>
+  <li><a href="#r-and-higher-education" id="toc-r-and-higher-education" class="nav-link" data-scroll-target="#r-and-higher-education"><span class="header-section-number">3.1.2</span> R and higher education</a></li>
+  <li><a href="#r-and-ides" id="toc-r-and-ides" class="nav-link" data-scroll-target="#r-and-ides"><span class="header-section-number">3.1.3</span> R and IDEs</a></li>
+  </ul></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="header-section-number">3.2</span> RStudio</a>
+  <ul class="collapse">
+  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install"><span class="header-section-number">3.2.1</span> Install</a></li>
+  </ul></li>
+  <li><a href="#r-and-ai" id="toc-r-and-ai" class="nav-link" data-scroll-target="#r-and-ai"><span class="header-section-number">3.3</span> R and AI</a></li>
+  <li><a href="#the-r-environment" id="toc-the-r-environment" class="nav-link" data-scroll-target="#the-r-environment"><span class="header-section-number">3.4</span> The R environment</a>
+  <ul class="collapse">
+  <li><a href="#the-console-and-running-code" id="toc-the-console-and-running-code" class="nav-link" data-scroll-target="#the-console-and-running-code"><span class="header-section-number">3.4.1</span> The console and running code</a></li>
+  <li><a href="#scripts-and-reproducibility" id="toc-scripts-and-reproducibility" class="nav-link" data-scroll-target="#scripts-and-reproducibility"><span class="header-section-number">3.4.2</span> Scripts and reproducibility</a></li>
+  <li><a href="#packages-extending-r" id="toc-packages-extending-r" class="nav-link" data-scroll-target="#packages-extending-r"><span class="header-section-number">3.4.3</span> Packages — extending R</a></li>
+  </ul></li>
+  <li><a href="#r-as-a-calculator" id="toc-r-as-a-calculator" class="nav-link" data-scroll-target="#r-as-a-calculator"><span class="header-section-number">3.5</span> R as a calculator</a>
+  <ul class="collapse">
+  <li><a href="#arithmetic-operators--" id="toc-arithmetic-operators--" class="nav-link" data-scroll-target="#arithmetic-operators--"><span class="header-section-number">3.5.1</span> Arithmetic operators (+ - * / ^ %%)</a></li>
+  <li><a href="#order-of-operations" id="toc-order-of-operations" class="nav-link" data-scroll-target="#order-of-operations"><span class="header-section-number">3.5.2</span> Order of operations</a></li>
+  <li><a href="#comparison-and-logical-operators" id="toc-comparison-and-logical-operators" class="nav-link" data-scroll-target="#comparison-and-logical-operators"><span class="header-section-number">3.5.3</span> Comparison and logical operators (&gt; &lt; == != &amp; |)</a></li>
+  </ul></li>
+  <li><a href="#objects-and-data-types" id="toc-objects-and-data-types" class="nav-link" data-scroll-target="#objects-and-data-types"><span class="header-section-number">3.6</span> Objects and data types</a>
+  <ul class="collapse">
+  <li><a href="#assigning-values--" id="toc-assigning-values--" class="nav-link" data-scroll-target="#assigning-values--"><span class="header-section-number">3.6.1</span> Assigning values (&lt;-)</a></li>
+  <li><a href="#numeric-character-logical-factor" id="toc-numeric-character-logical-factor" class="nav-link" data-scroll-target="#numeric-character-logical-factor"><span class="header-section-number">3.6.2</span> Numeric, character, logical, factor</a></li>
+  <li><a href="#vectors-rs-core-building-block" id="toc-vectors-rs-core-building-block" class="nav-link" data-scroll-target="#vectors-rs-core-building-block"><span class="header-section-number">3.6.3</span> Vectors — R’s core building block</a></li>
+  </ul></li>
+  <li><a href="#working-with-data-structures" id="toc-working-with-data-structures" class="nav-link" data-scroll-target="#working-with-data-structures"><span class="header-section-number">3.7</span> Working with data structures</a>
+  <ul class="collapse">
+  <li><a href="#vectors-and-vectorized-operations" id="toc-vectors-and-vectorized-operations" class="nav-link" data-scroll-target="#vectors-and-vectorized-operations"><span class="header-section-number">3.7.1</span> Vectors and vectorized operations</a></li>
+  <li><a href="#data-frames-the-table-youll-live-in" id="toc-data-frames-the-table-youll-live-in" class="nav-link" data-scroll-target="#data-frames-the-table-youll-live-in"><span class="header-section-number">3.7.2</span> Data frames — the table you’ll live in</a></li>
+  <li><a href="#indexing-and-subsetting" id="toc-indexing-and-subsetting" class="nav-link" data-scroll-target="#indexing-and-subsetting"><span class="header-section-number">3.7.3</span> Indexing and subsetting</a></li>
+  </ul></li>
+  <li><a href="#describing-data-basic-statistics-in-r" id="toc-describing-data-basic-statistics-in-r" class="nav-link" data-scroll-target="#describing-data-basic-statistics-in-r"><span class="header-section-number">3.8</span> Describing data: basic statistics in R</a>
+  <ul class="collapse">
+  <li><a href="#measures-of-center-mean-median-mode" id="toc-measures-of-center-mean-median-mode" class="nav-link" data-scroll-target="#measures-of-center-mean-median-mode"><span class="header-section-number">3.8.1</span> Measures of center (mean, median, mode)</a></li>
+  <li><a href="#measures-of-spread-range-iqr-variance-sd" id="toc-measures-of-spread-range-iqr-variance-sd" class="nav-link" data-scroll-target="#measures-of-spread-range-iqr-variance-sd"><span class="header-section-number">3.8.2</span> Measures of spread (range, IQR, variance, sd)</a></li>
+  <li><a href="#distribution-shape-skewness-your-images-here" id="toc-distribution-shape-skewness-your-images-here" class="nav-link" data-scroll-target="#distribution-shape-skewness-your-images-here"><span class="header-section-number">3.8.3</span> Distribution shape (skewness — your images here)</a></li>
+  <li><a href="#the-five-number-summary-and-the-box-plot-your-box-plot-image" id="toc-the-five-number-summary-and-the-box-plot-your-box-plot-image" class="nav-link" data-scroll-target="#the-five-number-summary-and-the-box-plot-your-box-plot-image"><span class="header-section-number">3.8.4</span> The five-number summary and the box plot (your box plot image)</a></li>
+  </ul></li>
+  <li><a href="#getting-help-and-next-steps" id="toc-getting-help-and-next-steps" class="nav-link" data-scroll-target="#getting-help-and-next-steps"><span class="header-section-number">3.9</span> Getting help and next steps</a>
+  <ul class="collapse">
+  <li><a href="#reading-function-documentation" id="toc-reading-function-documentation" class="nav-link" data-scroll-target="#reading-function-documentation"><span class="header-section-number">3.9.1</span> Reading function documentation (?)</a></li>
+  <li><a href="#where-to-go-when-stuck" id="toc-where-to-go-when-stuck" class="nav-link" data-scroll-target="#where-to-go-when-stuck"><span class="header-section-number">3.9.2</span> Where to go when stuck</a></li>
+  <li><a href="#ai" id="toc-ai" class="nav-link" data-scroll-target="#ai"><span class="header-section-number">3.9.3</span> AI</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/03-data-sources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/03-data-sources.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Where the data come from</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-data-sources" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Where the data come from</span></span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></h1>
 </div>
 
 
@@ -265,39 +318,157 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="what-is-r" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="what-is-r"><span class="header-section-number">3.1</span> What is R?</h2>
+<p>R is a functional language built specifically for working with data. Professionals who work with data such as statisticians and researchers are actively involved in shaping the language. In a sense, R is a <em>living</em> body of work that is constantly underdevelopment, evolving as the needs of its users do. As higher education data professionals, we use it because it is highly efficient, auditable, scalable, and yields reproducible work that can be assessed to establish trustworthyness.</p>
+<section id="a-brief-history-of-r" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="a-brief-history-of-r"><span class="header-section-number">3.1.1</span> A brief history of R</h3>
+<p>The history of the R can be traced back to the 1970’s where John Chambers and his colleagues at Bell Laboratories developed a commercial language called S. R was developed in the 1990s by the statisticians Ross Ihaka and Robert Gentleman as a free and open language for everyone that built on principles from S. R was first released to the public in 1993.</p>
+</section>
+<section id="r-and-higher-education" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="r-and-higher-education"><span class="header-section-number">3.1.2</span> R and higher education</h3>
+<p>R is widely utilized in a variety of industries including biology, pharmaceutical research, and higher education. It is free and can be used to work any other programs (e.g., Excel, SPSS) which is important when working across departments, divisions, and companies where everyone may have their own preferences for statistical software. Although completely free and open, R is of the highest quality tools for working with data. As it is continuously updated by a global community of users, the latest statistical and analytic methods are available in R often well before they are incorporated into commercial software.</p>
+</section>
+<section id="r-and-ides" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="r-and-ides"><span class="header-section-number">3.1.3</span> R and IDEs</h3>
+<p>R is the language that interprets our typed commands into instructions that the computer carrys out. An <strong>Integrated Developer Environment</strong> (IDE) is an application that makes it easier to work with R. Where working with the R interpreter itself is a more minimal experience—essentially where flat text is typed into a prompt—an IDE gives us features such as display windows to see our plots and menu options to save files.</p>
+<div id="fig-rstudio" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rstudio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_3_r_console.png" class="quarto-figure quarto-figure-center figure-img" width="600" height="400">
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Learning objectives
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: The base R console.
+</figcaption>
+</figure>
 </div>
+</section>
+</section>
+<section id="rstudio" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">3.2</span> RStudio</h2>
+<p>RStudio is a free and open source product created by the public benefit corporation Posit. It was officially released to the public in 2016 and is the most common IDE for R. R can be thought of as the language that sits under the hood of RStudio performing the work that we outline in the IDE.</p>
+<p>RStudio organizes work across several windows called <strong>panes</strong>. There are several of them but some of the most useful are:</p>
+<dl>
+<dt>Source</dt>
+<dd>
+This is the text editor where the reproducible script file is created. It is persistent and can be saved.
+</dd>
+<dt>Console</dt>
+<dd>
+The results of the script appear in the console, such as mean values or descriptive stats for a dataset. The console is also interactive meaning that code can be directly entered here. This is helpful for code you want to execute but don’t need to persist in your script, such as arithmetic calculations or accessing help files.
+</dd>
+<dt>Environment</dt>
+<dd>
+The environment pane displays the objects that are accessible to R in device memory. These can be things like imported datasets, variables, and values.
+</dd>
+<dt>Files</dt>
+<dd>
+The actual files sitting in your device that can be loaded into the environment are displayed in the files panel.
+</dd>
+<dt>Plots</dt>
+<dd>
+The plots pane shows us the data visualizations we create in our analysis. They can be exported from there too.
+</dd>
+</dl>
+<p>The image shown below shows a possible configuration of the RStudio panes, which are customizable.</p>
+<div id="fig-rstudio" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rstudio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_3_rstudio.png" class="quarto-figure quarto-figure-center figure-img" width="600" height="400">
 </div>
-<div class="callout-body-container callout-body">
-<p>After this chapter you will be able to:</p>
-<ul>
-<li><em>TODO</em></li>
-<li><em>TODO</em></li>
-</ul>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: The base R console.
+</figcaption>
+</figure>
 </div>
-</div>
-<p><em>TODO — write this chapter. Reuse the patterns from <span class="quarto-unresolved-ref">?sec-what-is-ds</span>: labelled code chunks, <code>@fig-</code> / <code>@tbl-</code> cross-references, <code>@key</code> citations, and <code>.callout-note</code> exercises.</em></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>TODO.</em></p>
-</div>
-</div>
+<section id="install" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="install"><span class="header-section-number">3.2.1</span> Install</h3>
+<p><strong>R</strong> can be downloaded from the Comprehensive R Archive Network (CRAN). Navigate to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a> and select your operating system (e.g., Windows) to download the correct installer. Run the installer typically with the default settings and verify a successful installation by opening R once it has completed.</p>
+<p><strong>RStudio</strong> can be downloaded from Posit at <a href="https://posit.co/downloads" class="uri">https://posit.co/downloads</a>. Again, select the installer based on your OS, run it with default settings, and verify it by opening the application when complete.</p>
+</section>
+</section>
+<section id="r-and-ai" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="r-and-ai"><span class="header-section-number">3.3</span> R and AI</h2>
+<p>Generative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one’s learning pathway to help ensure coding skill growth. [When using AI]</p>
+</section>
+<section id="the-r-environment" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="the-r-environment"><span class="header-section-number">3.4</span> The R environment</h2>
+<section id="the-console-and-running-code" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="the-console-and-running-code"><span class="header-section-number">3.4.1</span> The console and running code</h3>
+</section>
+<section id="scripts-and-reproducibility" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="scripts-and-reproducibility"><span class="header-section-number">3.4.2</span> Scripts and reproducibility</h3>
+</section>
+<section id="packages-extending-r" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="packages-extending-r"><span class="header-section-number">3.4.3</span> Packages — extending R</h3>
+</section>
+</section>
+<section id="r-as-a-calculator" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="r-as-a-calculator"><span class="header-section-number">3.5</span> R as a calculator</h2>
+<section id="arithmetic-operators--" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="arithmetic-operators--"><span class="header-section-number">3.5.1</span> Arithmetic operators (+ - * / ^ %%)</h3>
+</section>
+<section id="order-of-operations" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="order-of-operations"><span class="header-section-number">3.5.2</span> Order of operations</h3>
+</section>
+<section id="comparison-and-logical-operators" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="comparison-and-logical-operators"><span class="header-section-number">3.5.3</span> Comparison and logical operators (&gt; &lt; == != &amp; |)</h3>
+</section>
+</section>
+<section id="objects-and-data-types" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="objects-and-data-types"><span class="header-section-number">3.6</span> Objects and data types</h2>
+<section id="assigning-values--" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="assigning-values--"><span class="header-section-number">3.6.1</span> Assigning values (&lt;-)</h3>
+</section>
+<section id="numeric-character-logical-factor" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="numeric-character-logical-factor"><span class="header-section-number">3.6.2</span> Numeric, character, logical, factor</h3>
+</section>
+<section id="vectors-rs-core-building-block" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="vectors-rs-core-building-block"><span class="header-section-number">3.6.3</span> Vectors — R’s core building block</h3>
+</section>
+</section>
+<section id="working-with-data-structures" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="working-with-data-structures"><span class="header-section-number">3.7</span> Working with data structures</h2>
+<section id="vectors-and-vectorized-operations" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="vectors-and-vectorized-operations"><span class="header-section-number">3.7.1</span> Vectors and vectorized operations</h3>
+</section>
+<section id="data-frames-the-table-youll-live-in" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="data-frames-the-table-youll-live-in"><span class="header-section-number">3.7.2</span> Data frames — the table you’ll live in</h3>
+</section>
+<section id="indexing-and-subsetting" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="indexing-and-subsetting"><span class="header-section-number">3.7.3</span> Indexing and subsetting</h3>
+</section>
+</section>
+<section id="describing-data-basic-statistics-in-r" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="describing-data-basic-statistics-in-r"><span class="header-section-number">3.8</span> Describing data: basic statistics in R</h2>
+<section id="measures-of-center-mean-median-mode" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="measures-of-center-mean-median-mode"><span class="header-section-number">3.8.1</span> Measures of center (mean, median, mode)</h3>
+</section>
+<section id="measures-of-spread-range-iqr-variance-sd" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="measures-of-spread-range-iqr-variance-sd"><span class="header-section-number">3.8.2</span> Measures of spread (range, IQR, variance, sd)</h3>
+</section>
+<section id="distribution-shape-skewness-your-images-here" class="level3" data-number="3.8.3">
+<h3 data-number="3.8.3" class="anchored" data-anchor-id="distribution-shape-skewness-your-images-here"><span class="header-section-number">3.8.3</span> Distribution shape (skewness — your images here)</h3>
+</section>
+<section id="the-five-number-summary-and-the-box-plot-your-box-plot-image" class="level3" data-number="3.8.4">
+<h3 data-number="3.8.4" class="anchored" data-anchor-id="the-five-number-summary-and-the-box-plot-your-box-plot-image"><span class="header-section-number">3.8.4</span> The five-number summary and the box plot (your box plot image)</h3>
+</section>
+</section>
+<section id="getting-help-and-next-steps" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="getting-help-and-next-steps"><span class="header-section-number">3.9</span> Getting help and next steps</h2>
+<section id="reading-function-documentation" class="level3" data-number="3.9.1">
+<h3 data-number="3.9.1" class="anchored" data-anchor-id="reading-function-documentation"><span class="header-section-number">3.9.1</span> Reading function documentation (?)</h3>
+</section>
+<section id="where-to-go-when-stuck" class="level3" data-number="3.9.2">
+<h3 data-number="3.9.2" class="anchored" data-anchor-id="where-to-go-when-stuck"><span class="header-section-number">3.9.2</span> Where to go when stuck</h3>
+</section>
+<section id="ai" class="level3" data-number="3.9.3">
+<h3 data-number="3.9.3" class="anchored" data-anchor-id="ai"><span class="header-section-number">3.9.3</span> AI</h3>
+<p>##Community ### Rbloggers ### Posit Blog</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -720,7 +891,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 Michael Littrell. Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/03-data-sources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/03-data-sources.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/03-data-sources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/03-data-sources.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

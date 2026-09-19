@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-data-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Where the data come from</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></span></a>
   </div>
 </li>
       </ul>
@@ -249,15 +249,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-and-information" id="toc-data-and-information" class="nav-link" data-scroll-target="#data-and-information"><span class="header-section-number">2.2</span> Data and information</a></li>
   <li><a href="#data-characteristics" id="toc-data-characteristics" class="nav-link" data-scroll-target="#data-characteristics"><span class="header-section-number">2.3</span> Data characteristics</a></li>
   <li><a href="#common-data-sizes" id="toc-common-data-sizes" class="nav-link" data-scroll-target="#common-data-sizes"><span class="header-section-number">2.4</span> Common data sizes</a></li>
-  <li><a href="#data-access-types" id="toc-data-access-types" class="nav-link" data-scroll-target="#data-access-types"><span class="header-section-number">2.5</span> Data access types</a>
+  <li><a href="#where-data-are-stored" id="toc-where-data-are-stored" class="nav-link" data-scroll-target="#where-data-are-stored"><span class="header-section-number">2.5</span> Where data are stored</a></li>
+  <li><a href="#data-access-types" id="toc-data-access-types" class="nav-link" data-scroll-target="#data-access-types"><span class="header-section-number">2.6</span> Data access types</a>
   <ul class="collapse">
-  <li><a href="#publicly-available-data" id="toc-publicly-available-data" class="nav-link" data-scroll-target="#publicly-available-data"><span class="header-section-number">2.5.1</span> Publicly available data</a></li>
+  <li><a href="#publicly-available-data" id="toc-publicly-available-data" class="nav-link" data-scroll-target="#publicly-available-data"><span class="header-section-number">2.6.1</span> Publicly available data</a></li>
   </ul></li>
-  <li><a href="#sec-restricted-data" id="toc-sec-restricted-data" class="nav-link" data-scroll-target="#sec-restricted-data"><span class="header-section-number">2.6</span> Restricted data</a>
+  <li><a href="#sec-restricted-data" id="toc-sec-restricted-data" class="nav-link" data-scroll-target="#sec-restricted-data"><span class="header-section-number">2.7</span> Restricted data</a>
   <ul class="collapse">
-  <li><a href="#institutional-data" id="toc-institutional-data" class="nav-link" data-scroll-target="#institutional-data"><span class="header-section-number">2.6.1</span> Institutional data</a></li>
-  <li><a href="#protected-data" id="toc-protected-data" class="nav-link" data-scroll-target="#protected-data"><span class="header-section-number">2.6.2</span> Protected data</a></li>
+  <li><a href="#institutional-data" id="toc-institutional-data" class="nav-link" data-scroll-target="#institutional-data"><span class="header-section-number">2.7.1</span> Institutional data</a></li>
+  <li><a href="#protected-data" id="toc-protected-data" class="nav-link" data-scroll-target="#protected-data"><span class="header-section-number">2.7.2</span> Protected data</a></li>
   </ul></li>
+  <li><a href="#chapter-2-exercises" id="toc-chapter-2-exercises" class="nav-link" data-scroll-target="#chapter-2-exercises"><span class="header-section-number">2.8</span> Chapter 2 Exercises:</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/02-data-in-higher-ed.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -375,7 +377,9 @@ Table&nbsp;2.1: Common data size terms.
 </div>
 </figure>
 </div>
-<p>##Where data are stored</p>
+</section>
+<section id="where-data-are-stored" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="where-data-are-stored"><span class="header-section-number">2.5</span> Where data are stored</h2>
 <p>It can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.</p>
 <div id="tbl-storage-types" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -434,14 +438,14 @@ Table&nbsp;2.2: Common data storage ways in higher education.
 </div>
 <p>Each storage approach mentioned has advantages and disadvantages around such variables as size, difficulty of query, reliability, and privacy. Each format has its place in the data science project workflow.</p>
 </section>
-<section id="data-access-types" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="data-access-types"><span class="header-section-number">2.5</span> Data access types</h2>
+<section id="data-access-types" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="data-access-types"><span class="header-section-number">2.6</span> Data access types</h2>
 <p>When working with data in higher education it is important to always understand the permissions and rules associated with it. Some data can be downloaded by the general public and utilized mostly without restriction. For other data, permissions must be granted and certain legal protections must be considered. The rules about access to data and the related restrictions shape all of the work that can be done, so it must be considered up front in the process.</p>
-<section id="publicly-available-data" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="publicly-available-data"><span class="header-section-number">2.5.1</span> Publicly available data</h3>
+<section id="publicly-available-data" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="publicly-available-data"><span class="header-section-number">2.6.1</span> Publicly available data</h3>
 <p>Publicly available data can typically be obtained without permission. In higher education there are many datasets that are accessible by the public but they come in two forms generally. <strong>Official</strong> public data (OPD) are yielded through rigorous validated processes to ensure it is trustworthy and reliable. <strong>Unofficial</strong> public data (UPD) are shared informally. Such data are likely to be less reliable and require careful scrutiny to understand their quality.</p>
-<section id="official-public-data" class="level4" data-number="2.5.1.1">
-<h4 data-number="2.5.1.1" class="anchored" data-anchor-id="official-public-data"><span class="header-section-number">2.5.1.1</span> Official public data</h4>
+<section id="official-public-data" class="level4" data-number="2.6.1.1">
+<h4 data-number="2.6.1.1" class="anchored" data-anchor-id="official-public-data"><span class="header-section-number">2.6.1.1</span> Official public data</h4>
 <p>Official public datasets are the products of intensive inspection and are published authoritative agencies such as the Integrated Postsecondary Data System (IPEDS). All U.S. colleges and universities that receive federal financial aid are required to report data to IPEDS annually. Data represented there come from over 6,000 institutions and includes variables such as graduation and retention rates, tuition costs, and enrollment numbers. Such standardized reporting allows for institutions to be benchmarked against other similar colleges across various important features. Some sources of relevant student data are presented in the table here.</p>
 <div id="tbl-official-data" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -494,8 +498,8 @@ Table&nbsp;2.3: Official public HE data.
 </figure>
 </div>
 </section>
-<section id="unofficial-public-data" class="level4" data-number="2.5.1.2">
-<h4 data-number="2.5.1.2" class="anchored" data-anchor-id="unofficial-public-data"><span class="header-section-number">2.5.1.2</span> Unofficial public data</h4>
+<section id="unofficial-public-data" class="level4" data-number="2.6.1.2">
+<h4 data-number="2.6.1.2" class="anchored" data-anchor-id="unofficial-public-data"><span class="header-section-number">2.6.1.2</span> Unofficial public data</h4>
 <p>Unofficial public datasets are also available generally but may or may not be based on a formal trustworthy process. Data like this are useful in several capacities. If they are verified and validated, they can be genuinely informative. Otherwise they can be helpful for learning, creating prototypes, and exploring.</p>
 <div id="tbl-unofficial-data" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -539,11 +543,11 @@ Table&nbsp;2.4: Unofficial public HE data.
 </section>
 </section>
 </section>
-<section id="sec-restricted-data" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="sec-restricted-data"><span class="header-section-number">2.6</span> Restricted data</h2>
+<section id="sec-restricted-data" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="sec-restricted-data"><span class="header-section-number">2.7</span> Restricted data</h2>
 <p>Compared to publicly available data, restricted data come with obligations and rules. Often access requires special permissions.</p>
-<section id="institutional-data" class="level3" data-number="2.6.1">
-<h3 data-number="2.6.1" class="anchored" data-anchor-id="institutional-data"><span class="header-section-number">2.6.1</span> Institutional data</h3>
+<section id="institutional-data" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="institutional-data"><span class="header-section-number">2.7.1</span> Institutional data</h3>
 <p>Institutional data is internal to a university and its processes. Often this is housed on university servers or on secured cloud systems. These data are related to important aspects of a school such as enrollment numbers, budgets, and accreditation metrics. As this data is so highly sensitive, access is based on roles assigned to university stakeholders, where a faculty member may have access to different data compared to a department chair. Some example systems and the type of data they may house are presented on the table in this section.</p>
 <div id="tbl-institutional-systems" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -593,12 +597,45 @@ Table&nbsp;2.5: Institutional system examples and their data.
 </figure>
 </div>
 </section>
-<section id="protected-data" class="level3" data-number="2.6.2">
-<h3 data-number="2.6.2" class="anchored" data-anchor-id="protected-data"><span class="header-section-number">2.6.2</span> Protected data</h3>
-<p>Some institutional data are both restricted and protected legally. For instance, the <strong>Family Educational Rights and Privacy Act</strong> limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the <strong>Health Insurance Portability and Accountability Act</strong> (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects.</p>
-
-
+<section id="protected-data" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="protected-data"><span class="header-section-number">2.7.2</span> Protected data</h3>
+<p>Some institutional data are both restricted and protected legally. For instance, the <strong>Family Educational Rights and Privacy Act</strong> limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the <strong>Health Insurance Portability and Accountability Act</strong> (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects. Also, keep in mind the privacy and rights of the individuals represented in the data throughout your engagement with it. Always work cautiously!</p>
 </section>
+</section>
+<section id="chapter-2-exercises" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="chapter-2-exercises"><span class="header-section-number">2.8</span> Chapter 2 Exercises:</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercises
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Classify the data around you.</strong> Think about some data in your own professional context or data from an envisioned one. Identify one of each dataset access type—a) public facing, b) internal, and c) legally protected.</p>
+<ol type="a">
+<li><p><strong>Describe and place.</strong> For each dataset, describe what it is, its access type, and the system type where it resides (e.g., SIS, LMS).</p></li>
+<li><p><strong>Define characteristics.</strong> For these datasets, explain their properties with the five characteristics we discussed (volume, variety, velocity, veracity, value).</p></li>
+<li><p><strong>Path to access.</strong> For these datasets, what types of permissions and regulations govern them?</p></li>
+</ol></li>
+<li><p><strong>Data to information.</strong> A colleague gives you a spreadsheet of all students’ individual GPAs for the year and requests that you analyze it for helpful insights.</p>
+<ol type="a">
+<li><p><strong>As information.</strong> Explain two ways you might organize or summarize the raw data transforming it into insights a decision maker could make use of.</p></li>
+<li><p><strong>Risk.</strong> One major found in the data has only three students. How might reporting on the GPA by major be a privacy concern, especially if the results were to be reported publicly? How might you address the issue?</p></li>
+</ol></li>
+<li><p><strong>Public data source.</strong> Choose a dataset from an official public source (e.g., IPEDS) and one from an unofficial public source (e.g., Kaggle).</p>
+<ol type="a">
+<li><p><strong>Trustworthy?.</strong> What was the process that produced it, and what does that mean for how you could use it for your work?</p></li>
+<li><p><strong>Define guiding questions.</strong> Create one question for each dataset that might serve to guide your analysis if you were to undertake one. Explain them and how they connect to the data.</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1009,8 +1046,8 @@ Table&nbsp;2.5: Institutional system examples and their data.
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-data-sources.html" class="pagination-link" aria-label="Where the data come from">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Where the data come from</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-data-sources.html" class="pagination-link" aria-label="Intro to R">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -238,7 +238,18 @@
     "href": "02-data-in-higher-ed.html#common-data-sizes",
     "title": "2  Data Details",
     "section": "2.4 Common data sizes",
-    "text": "2.4 Common data sizes\nData are stored electronically so they persist and can be accessed later. This can occur locally on your own computer, on-premisis such as on a university owned server, or in the “cloud” where the server is owned and maintained by a company. All of these data have size considerations that need to be taken into account. Presented on the table here are example size terms with how they might be considered practically.\n\n\n\nTable 2.1: Common data size terms.\n\n\n\n\n\n\n\n\n\n\nSize Term\nApprox. Size\nExample\n\n\n\n\nByte (B)\n1 character\nA single letter or symbol\n\n\nKilobyte (KB)\n1,000 bytes\nA short email or text document\n\n\nMegabyte (MB)\n1,000 KB\nA high-resolution photo or MP3 song\n\n\nGigabyte (GB)\n1,000 MB\nA short HD video or full-length movie\n\n\nTerabyte (TB)\n1,000 GB\nA hard drive or a university’s annual data\n\n\nPetabyte (PB)\n1,000 TB\nData from large-scale systems\n\n\n\n\n\n\n##Where data are stored\nIt can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.\n\n\n\nTable 2.2: Common data storage ways in higher education.\n\n\n\n\n\n\n\n\n\n\nStorage Format\nDetails\nHigher Edu Example\n\n\n\n\nFlat file\nA small file such as a CSV file\nA course roster exported from an LMS system\n\n\nSpreadsheet\nA tabular file for light data work, often in Excel\nA department chair’s list of courses and their teachers\n\n\nDatabase (DB)\nTables linked by keys and queried with SQL; Often on dedicated servers\nA student records system containing enrollment data\n\n\nData warehouse\nA large repository that collates data from many systems\nAn institutional research repository containing SIS, LMS, and enrollment data\n\n\nCloud\nData hosted and maintained by a third party that are accessed via the internet\nSurvey responses collected in a cloud-hosted application, such as Qualtrics\n\n\nIn-process database\nA DB that runs in your program via an individual file\nRequesting data from the IPEDS system for benchmarking analysis\n\n\n\n\n\n\nEach storage approach mentioned has advantages and disadvantages around such variables as size, difficulty of query, reliability, and privacy. Each format has its place in the data science project workflow.",
+    "text": "2.4 Common data sizes\nData are stored electronically so they persist and can be accessed later. This can occur locally on your own computer, on-premisis such as on a university owned server, or in the “cloud” where the server is owned and maintained by a company. All of these data have size considerations that need to be taken into account. Presented on the table here are example size terms with how they might be considered practically.\n\n\n\nTable 2.1: Common data size terms.\n\n\n\n\n\n\n\n\n\n\nSize Term\nApprox. Size\nExample\n\n\n\n\nByte (B)\n1 character\nA single letter or symbol\n\n\nKilobyte (KB)\n1,000 bytes\nA short email or text document\n\n\nMegabyte (MB)\n1,000 KB\nA high-resolution photo or MP3 song\n\n\nGigabyte (GB)\n1,000 MB\nA short HD video or full-length movie\n\n\nTerabyte (TB)\n1,000 GB\nA hard drive or a university’s annual data\n\n\nPetabyte (PB)\n1,000 TB\nData from large-scale systems",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
+    ]
+  },
+  {
+    "objectID": "02-data-in-higher-ed.html#where-data-are-stored",
+    "href": "02-data-in-higher-ed.html#where-data-are-stored",
+    "title": "2  Data Details",
+    "section": "2.5 Where data are stored",
+    "text": "2.5 Where data are stored\nIt can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.\n\n\n\nTable 2.2: Common data storage ways in higher education.\n\n\n\n\n\n\n\n\n\n\nStorage Format\nDetails\nHigher Edu Example\n\n\n\n\nFlat file\nA small file such as a CSV file\nA course roster exported from an LMS system\n\n\nSpreadsheet\nA tabular file for light data work, often in Excel\nA department chair’s list of courses and their teachers\n\n\nDatabase (DB)\nTables linked by keys and queried with SQL; Often on dedicated servers\nA student records system containing enrollment data\n\n\nData warehouse\nA large repository that collates data from many systems\nAn institutional research repository containing SIS, LMS, and enrollment data\n\n\nCloud\nData hosted and maintained by a third party that are accessed via the internet\nSurvey responses collected in a cloud-hosted application, such as Qualtrics\n\n\nIn-process database\nA DB that runs in your program via an individual file\nRequesting data from the IPEDS system for benchmarking analysis\n\n\n\n\n\n\nEach storage approach mentioned has advantages and disadvantages around such variables as size, difficulty of query, reliability, and privacy. Each format has its place in the data science project workflow.",
     "crumbs": [
       "Part I — Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
@@ -248,8 +259,8 @@
     "objectID": "02-data-in-higher-ed.html#data-access-types",
     "href": "02-data-in-higher-ed.html#data-access-types",
     "title": "2  Data Details",
-    "section": "2.5 Data access types",
-    "text": "2.5 Data access types\nWhen working with data in higher education it is important to always understand the permissions and rules associated with it. Some data can be downloaded by the general public and utilized mostly without restriction. For other data, permissions must be granted and certain legal protections must be considered. The rules about access to data and the related restrictions shape all of the work that can be done, so it must be considered up front in the process.\n\n2.5.1 Publicly available data\nPublicly available data can typically be obtained without permission. In higher education there are many datasets that are accessible by the public but they come in two forms generally. Official public data (OPD) are yielded through rigorous validated processes to ensure it is trustworthy and reliable. Unofficial public data (UPD) are shared informally. Such data are likely to be less reliable and require careful scrutiny to understand their quality.\n\n2.5.1.1 Official public data\nOfficial public datasets are the products of intensive inspection and are published authoritative agencies such as the Integrated Postsecondary Data System (IPEDS). All U.S. colleges and universities that receive federal financial aid are required to report data to IPEDS annually. Data represented there come from over 6,000 institutions and includes variables such as graduation and retention rates, tuition costs, and enrollment numbers. Such standardized reporting allows for institutions to be benchmarked against other similar colleges across various important features. Some sources of relevant student data are presented in the table here.\n\n\n\nTable 2.3: Official public HE data.\n\n\n\n\n\n\n\n\n\n\nSource Org\nDetails\nUse Case\n\n\n\n\nIPEDS\nReported annually by most U.S. institutions; run by NCES\nBenchmarking against other schools\n\n\nCollege Scorecard\nDepartment of Education data that combines IPEDS with financial aid data and tax records\nComparing student outcomes like repayment of loans and salary; Public reporting\n\n\nNational Student Clearinghouse\nNonprofit org that has enrollment and degree records for most of U.S. students\nTracking student outcomes\n\n\nU.S. Census Bureau\nPopulation and demographic data\nContextualizing institutional factors\n\n\nBureau of Labor Statistics\nWage, employment, and occupational data\nConnecting degree programs to workforce demand and career outcomes\n\n\n\n\n\n\n\n\n2.5.1.2 Unofficial public data\nUnofficial public datasets are also available generally but may or may not be based on a formal trustworthy process. Data like this are useful in several capacities. If they are verified and validated, they can be genuinely informative. Otherwise they can be helpful for learning, creating prototypes, and exploring.\n\n\n\nTable 2.4: Unofficial public HE data.\n\n\n\n\n\nSource\nDetails\n\n\n\n\nKaggle\nOnline community datasets\n\n\nGoogle Dataset Search\nIndexed datasets online\n\n\nOULAD\nOpen university shared LMS data\n\n\nHarvard Dataverse\nOpen repository for published research data\n\n\nUCI Machine Learning Repository\nDatasets for machine learning",
+    "section": "2.6 Data access types",
+    "text": "2.6 Data access types\nWhen working with data in higher education it is important to always understand the permissions and rules associated with it. Some data can be downloaded by the general public and utilized mostly without restriction. For other data, permissions must be granted and certain legal protections must be considered. The rules about access to data and the related restrictions shape all of the work that can be done, so it must be considered up front in the process.\n\n2.6.1 Publicly available data\nPublicly available data can typically be obtained without permission. In higher education there are many datasets that are accessible by the public but they come in two forms generally. Official public data (OPD) are yielded through rigorous validated processes to ensure it is trustworthy and reliable. Unofficial public data (UPD) are shared informally. Such data are likely to be less reliable and require careful scrutiny to understand their quality.\n\n2.6.1.1 Official public data\nOfficial public datasets are the products of intensive inspection and are published authoritative agencies such as the Integrated Postsecondary Data System (IPEDS). All U.S. colleges and universities that receive federal financial aid are required to report data to IPEDS annually. Data represented there come from over 6,000 institutions and includes variables such as graduation and retention rates, tuition costs, and enrollment numbers. Such standardized reporting allows for institutions to be benchmarked against other similar colleges across various important features. Some sources of relevant student data are presented in the table here.\n\n\n\nTable 2.3: Official public HE data.\n\n\n\n\n\n\n\n\n\n\nSource Org\nDetails\nUse Case\n\n\n\n\nIPEDS\nReported annually by most U.S. institutions; run by NCES\nBenchmarking against other schools\n\n\nCollege Scorecard\nDepartment of Education data that combines IPEDS with financial aid data and tax records\nComparing student outcomes like repayment of loans and salary; Public reporting\n\n\nNational Student Clearinghouse\nNonprofit org that has enrollment and degree records for most of U.S. students\nTracking student outcomes\n\n\nU.S. Census Bureau\nPopulation and demographic data\nContextualizing institutional factors\n\n\nBureau of Labor Statistics\nWage, employment, and occupational data\nConnecting degree programs to workforce demand and career outcomes\n\n\n\n\n\n\n\n\n2.6.1.2 Unofficial public data\nUnofficial public datasets are also available generally but may or may not be based on a formal trustworthy process. Data like this are useful in several capacities. If they are verified and validated, they can be genuinely informative. Otherwise they can be helpful for learning, creating prototypes, and exploring.\n\n\n\nTable 2.4: Unofficial public HE data.\n\n\n\n\n\nSource\nDetails\n\n\n\n\nKaggle\nOnline community datasets\n\n\nGoogle Dataset Search\nIndexed datasets online\n\n\nOULAD\nOpen university shared LMS data\n\n\nHarvard Dataverse\nOpen repository for published research data\n\n\nUCI Machine Learning Repository\nDatasets for machine learning",
     "crumbs": [
       "Part I — Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
@@ -259,8 +270,19 @@
     "objectID": "02-data-in-higher-ed.html#sec-restricted-data",
     "href": "02-data-in-higher-ed.html#sec-restricted-data",
     "title": "2  Data Details",
-    "section": "2.6 Restricted data",
-    "text": "2.6 Restricted data\nCompared to publicly available data, restricted data come with obligations and rules. Often access requires special permissions.\n\n2.6.1 Institutional data\nInstitutional data is internal to a university and its processes. Often this is housed on university servers or on secured cloud systems. These data are related to important aspects of a school such as enrollment numbers, budgets, and accreditation metrics. As this data is so highly sensitive, access is based on roles assigned to university stakeholders, where a faculty member may have access to different data compared to a department chair. Some example systems and the type of data they may house are presented on the table in this section.\n\n\n\nTable 2.5: Institutional system examples and their data.\n\n\n\n\n\n\n\n\n\nSystem\nData\n\n\n\n\nStudent Information Systems (SIS)\nStudent data such as grades and attendance\n\n\nLearning Management Systems (LMS)\nTeaching and learning resources with related activity data\n\n\nEnterprise Resource Planning (ERP)\nBusiness activity and transactions\n\n\nFinancial Aid System\nStudent awards and disbursements\n\n\nHR System\nEmployee records\n\n\nCustomer Relationship Management (CRM)\nProspective student and alumni data\n\n\n\n\n\n\n\n\n2.6.2 Protected data\nSome institutional data are both restricted and protected legally. For instance, the Family Educational Rights and Privacy Act limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the Health Insurance Portability and Accountability Act (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects.",
+    "section": "2.7 Restricted data",
+    "text": "2.7 Restricted data\nCompared to publicly available data, restricted data come with obligations and rules. Often access requires special permissions.\n\n2.7.1 Institutional data\nInstitutional data is internal to a university and its processes. Often this is housed on university servers or on secured cloud systems. These data are related to important aspects of a school such as enrollment numbers, budgets, and accreditation metrics. As this data is so highly sensitive, access is based on roles assigned to university stakeholders, where a faculty member may have access to different data compared to a department chair. Some example systems and the type of data they may house are presented on the table in this section.\n\n\n\nTable 2.5: Institutional system examples and their data.\n\n\n\n\n\n\n\n\n\nSystem\nData\n\n\n\n\nStudent Information Systems (SIS)\nStudent data such as grades and attendance\n\n\nLearning Management Systems (LMS)\nTeaching and learning resources with related activity data\n\n\nEnterprise Resource Planning (ERP)\nBusiness activity and transactions\n\n\nFinancial Aid System\nStudent awards and disbursements\n\n\nHR System\nEmployee records\n\n\nCustomer Relationship Management (CRM)\nProspective student and alumni data\n\n\n\n\n\n\n\n\n2.7.2 Protected data\nSome institutional data are both restricted and protected legally. For instance, the Family Educational Rights and Privacy Act limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the Health Insurance Portability and Accountability Act (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects. Also, keep in mind the privacy and rights of the individuals represented in the data throughout your engagement with it. Always work cautiously!",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
+    ]
+  },
+  {
+    "objectID": "02-data-in-higher-ed.html#chapter-2-exercises",
+    "href": "02-data-in-higher-ed.html#chapter-2-exercises",
+    "title": "2  Data Details",
+    "section": "2.8 Chapter 2 Exercises:",
+    "text": "2.8 Chapter 2 Exercises:\n\n\n\n\n\n\nNoteExercises\n\n\n\n\nClassify the data around you. Think about some data in your own professional context or data from an envisioned one. Identify one of each dataset access type—a) public facing, b) internal, and c) legally protected.\n\nDescribe and place. For each dataset, describe what it is, its access type, and the system type where it resides (e.g., SIS, LMS).\nDefine characteristics. For these datasets, explain their properties with the five characteristics we discussed (volume, variety, velocity, veracity, value).\nPath to access. For these datasets, what types of permissions and regulations govern them?\n\nData to information. A colleague gives you a spreadsheet of all students’ individual GPAs for the year and requests that you analyze it for helpful insights.\n\nAs information. Explain two ways you might organize or summarize the raw data transforming it into insights a decision maker could make use of.\nRisk. One major found in the data has only three students. How might reporting on the GPA by major be a privacy concern, especially if the results were to be reported publicly? How might you address the issue?\n\nPublic data source. Choose a dataset from an official public source (e.g., IPEDS) and one from an unofficial public source (e.g., Kaggle).\n\nTrustworthy?. What was the process that produced it, and what does that mean for how you could use it for your work?\nDefine guiding questions. Create one question for each dataset that might serve to guide your analysis if you were to undertake one. Explain them and how they connect to the data.",
     "crumbs": [
       "Part I — Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
@@ -269,12 +291,111 @@
   {
     "objectID": "03-data-sources.html",
     "href": "03-data-sources.html",
-    "title": "3  Where the data come from",
+    "title": "3  Intro to R",
     "section": "",
-    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
+    "text": "3.1 What is R?\nR is a functional language built specifically for working with data. Professionals who work with data such as statisticians and researchers are actively involved in shaping the language. In a sense, R is a living body of work that is constantly underdevelopment, evolving as the needs of its users do. As higher education data professionals, we use it because it is highly efficient, auditable, scalable, and yields reproducible work that can be assessed to establish trustworthyness.",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Where the data come from</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#what-is-r",
+    "href": "03-data-sources.html#what-is-r",
+    "title": "3  Intro to R",
+    "section": "",
+    "text": "3.1.1 A brief history of R\nThe history of the R can be traced back to the 1970’s where John Chambers and his colleagues at Bell Laboratories developed a commercial language called S. R was developed in the 1990s by the statisticians Ross Ihaka and Robert Gentleman as a free and open language for everyone that built on principles from S. R was first released to the public in 1993.\n\n\n3.1.2 R and higher education\nR is widely utilized in a variety of industries including biology, pharmaceutical research, and higher education. It is free and can be used to work any other programs (e.g., Excel, SPSS) which is important when working across departments, divisions, and companies where everyone may have their own preferences for statistical software. Although completely free and open, R is of the highest quality tools for working with data. As it is continuously updated by a global community of users, the latest statistical and analytic methods are available in R often well before they are incorporated into commercial software.\n\n\n3.1.3 R and IDEs\nR is the language that interprets our typed commands into instructions that the computer carrys out. An Integrated Developer Environment (IDE) is an application that makes it easier to work with R. Where working with the R interpreter itself is a more minimal experience—essentially where flat text is typed into a prompt—an IDE gives us features such as display windows to see our plots and menu options to save files.\n\n\n\n\n\n\nFigure 3.1: The base R console.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#rstudio",
+    "href": "03-data-sources.html#rstudio",
+    "title": "3  Intro to R",
+    "section": "3.2 RStudio",
+    "text": "3.2 RStudio\nRStudio is a free and open source product created by the public benefit corporation Posit. It was officially released to the public in 2016 and is the most common IDE for R. R can be thought of as the language that sits under the hood of RStudio performing the work that we outline in the IDE.\nRStudio organizes work across several windows called panes. There are several of them but some of the most useful are:\n\nSource\n\nThis is the text editor where the reproducible script file is created. It is persistent and can be saved.\n\nConsole\n\nThe results of the script appear in the console, such as mean values or descriptive stats for a dataset. The console is also interactive meaning that code can be directly entered here. This is helpful for code you want to execute but don’t need to persist in your script, such as arithmetic calculations or accessing help files.\n\nEnvironment\n\nThe environment pane displays the objects that are accessible to R in device memory. These can be things like imported datasets, variables, and values.\n\nFiles\n\nThe actual files sitting in your device that can be loaded into the environment are displayed in the files panel.\n\nPlots\n\nThe plots pane shows us the data visualizations we create in our analysis. They can be exported from there too.\n\n\nThe image shown below shows a possible configuration of the RStudio panes, which are customizable.\n\n\n\n\n\n\nFigure 3.2: The base R console.\n\n\n\n\n3.2.1 Install\nR can be downloaded from the Comprehensive R Archive Network (CRAN). Navigate to https://cran.r-project.org/ and select your operating system (e.g., Windows) to download the correct installer. Run the installer typically with the default settings and verify a successful installation by opening R once it has completed.\nRStudio can be downloaded from Posit at https://posit.co/downloads. Again, select the installer based on your OS, run it with default settings, and verify it by opening the application when complete.",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#r-and-ai",
+    "href": "03-data-sources.html#r-and-ai",
+    "title": "3  Intro to R",
+    "section": "3.3 R and AI",
+    "text": "3.3 R and AI\nGenerative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one’s learning pathway to help ensure coding skill growth. [When using AI]",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#the-r-environment",
+    "href": "03-data-sources.html#the-r-environment",
+    "title": "3  Intro to R",
+    "section": "3.4 The R environment",
+    "text": "3.4 The R environment\n\n3.4.1 The console and running code\n\n\n3.4.2 Scripts and reproducibility\n\n\n3.4.3 Packages — extending R",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#r-as-a-calculator",
+    "href": "03-data-sources.html#r-as-a-calculator",
+    "title": "3  Intro to R",
+    "section": "3.5 R as a calculator",
+    "text": "3.5 R as a calculator\n\n3.5.1 Arithmetic operators (+ - * / ^ %%)\n\n\n3.5.2 Order of operations\n\n\n3.5.3 Comparison and logical operators (&gt; &lt; == != & |)",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#objects-and-data-types",
+    "href": "03-data-sources.html#objects-and-data-types",
+    "title": "3  Intro to R",
+    "section": "3.6 Objects and data types",
+    "text": "3.6 Objects and data types\n\n3.6.1 Assigning values (&lt;-)\n\n\n3.6.2 Numeric, character, logical, factor\n\n\n3.6.3 Vectors — R’s core building block",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#working-with-data-structures",
+    "href": "03-data-sources.html#working-with-data-structures",
+    "title": "3  Intro to R",
+    "section": "3.7 Working with data structures",
+    "text": "3.7 Working with data structures\n\n3.7.1 Vectors and vectorized operations\n\n\n3.7.2 Data frames — the table you’ll live in\n\n\n3.7.3 Indexing and subsetting",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#describing-data-basic-statistics-in-r",
+    "href": "03-data-sources.html#describing-data-basic-statistics-in-r",
+    "title": "3  Intro to R",
+    "section": "3.8 Describing data: basic statistics in R",
+    "text": "3.8 Describing data: basic statistics in R\n\n3.8.1 Measures of center (mean, median, mode)\n\n\n3.8.2 Measures of spread (range, IQR, variance, sd)\n\n\n3.8.3 Distribution shape (skewness — your images here)\n\n\n3.8.4 The five-number summary and the box plot (your box plot image)",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-sources.html#getting-help-and-next-steps",
+    "href": "03-data-sources.html#getting-help-and-next-steps",
+    "title": "3  Intro to R",
+    "section": "3.9 Getting help and next steps",
+    "text": "3.9 Getting help and next steps\n\n3.9.1 Reading function documentation (?)\n\n\n3.9.2 Where to go when stuck\n\n\n3.9.3 AI\n##Community ### Rbloggers ### Posit Blog",
+    "crumbs": [
+      "Part I — Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
     ]
   },
   {
