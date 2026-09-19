@@ -1,18 +1,85 @@
-# Where the data come from {#sec-data-sources}
+# Intro to R
 
-::: {.callout-tip}
-## Learning objectives
-After this chapter you will be able to:
+## What is R?
+R is a functional language built specifically for working with data. Professionals who work with data such as statisticians and researchers are actively involved in shaping the language. In a sense, R is a *living* body of work that is constantly underdevelopment, evolving as the needs of its users do. As higher education data professionals, we use it because it is highly efficient, auditable, scalable, and yields reproducible work that can be assessed to establish trustworthyness.
 
-- *TODO*
-- *TODO*
-:::
 
-*TODO — write this chapter. Reuse the patterns from @sec-what-is-ds: labelled
-code chunks, `@fig-` / `@tbl-` cross-references, `@key` citations, and
-`.callout-note` exercises.*
+### A brief history of R
+The history of the R can be traced back to the 1970's where John Chambers and his colleagues at Bell Laboratories developed a commercial language called S. R was developed in the 1990s by the statisticians Ross Ihaka and Robert Gentleman as a free and open language for everyone that built on principles from S. R was first released to the public in 1993.
 
-::: {.callout-note}
-## Exercise
-*TODO.*
-:::
+### R and higher education
+R is widely utilized in a variety of industries including biology, pharmaceutical research, and higher education. It is free and can be used to work any other programs (e.g., Excel, SPSS) which is important when working across departments, divisions, and companies where everyone may have their own preferences for statistical software. Although completely free and open, R is of the highest quality tools for working with data. As it is continuously updated by a global community of users, the latest statistical and analytic methods are available in R often well before they are incorporated into commercial software.
+
+### R and IDEs
+R is the language that interprets our typed commands into instructions that the computer carrys out. An **Integrated Developer Environment** (IDE) is an application that makes it easier to work with R. Where working with the R interpreter itself is a more minimal experience—essentially where flat text is typed into a prompt—an IDE gives us features such as display windows to see our plots and menu options to save files.
+
+![The base R console.](images/chp_3_r_console.png){#fig-rstudio width="600px" height="400" fig-align="center"}
+
+## RStudio
+RStudio is a free and open source product created by the public benefit corporation Posit. It was officially released to the public in 2016 and is the most common IDE for R. R can be thought of as the language that sits under the hood of RStudio performing the work that we outline in the IDE. 
+
+RStudio organizes work across several windows called **panes**. There are several of them but some of the most useful are:
+
+Source
+: This is the text editor where the reproducible script file is created. It is persistent and can be saved.
+
+Console
+: The results of the script appear in the console, such as mean values or descriptive stats for a dataset. The console is also interactive meaning that code can be directly entered here. This is helpful for code you want to execute but don't need to persist in your script, such as arithmetic calculations or accessing help files.
+
+Environment
+: The environment pane displays the objects that are accessible to R in device memory. These can be things like imported datasets, variables, and values.
+
+Files
+: The actual files sitting in your device that can be loaded into the environment are displayed in the files panel.
+
+Plots
+: The plots pane shows us the data visualizations we create in our analysis. They can be exported from there too. 
+
+The image shown below shows a possible configuration of the RStudio panes, which are customizable.
+
+![The base R console.](images/chp_3_rstudio.png){#fig-rstudio width="600px" height="400" fig-align="center"}
+
+
+### Install
+**R** can be downloaded from the Comprehensive R Archive Network (CRAN). Navigate to <https://cran.r-project.org/> and select your operating system (e.g., Windows) to download the correct installer. Run the installer typically with the default settings and verify a successful installation by opening R once it has completed.
+
+**RStudio** can be downloaded from Posit at <https://posit.co/downloads>. Again, select the installer based on your OS, run it with default settings, and verify it by opening the application when complete.  
+
+## R and AI
+Generative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one's learning pathway to help ensure coding skill growth. [When using AI] 
+
+## The R environment
+### The console and running code
+### Scripts and reproducibility
+### Packages — extending R
+
+## R as a calculator
+### Arithmetic operators          (+ - * / ^ %%)
+### Order of operations
+### Comparison and logical operators   (> < == != & |)
+
+## Objects and data types
+### Assigning values (<-)
+### Numeric, character, logical, factor
+### Vectors — R's core building block
+
+## Working with data structures
+### Vectors and vectorized operations
+### Data frames — the table you'll live in
+### Indexing and subsetting
+
+## Describing data: basic statistics in R
+### Measures of center            (mean, median, mode)
+### Measures of spread            (range, IQR, variance, sd)
+### Distribution shape            (skewness — your images here)
+### The five-number summary and the box plot   (your box plot image)
+
+## Getting help and next steps
+### Reading function documentation (?)
+### Where to go when stuck
+### AI
+
+##Community
+### Rbloggers
+### Posit Blog
+

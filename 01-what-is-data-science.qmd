@@ -106,7 +106,7 @@ Applied data science in higher education sits at the intersection of applied cod
 ## The Data Pyramid
 The data pyramid offers a more compact way of thinking about data and how the applied data scientist operates within the real-world. It starts with the anecdotal experiences we might encounter in our everyday work environments, such as suspecting that a resources section of a departmental website could be helpful to students, but is going underutilized. To confirm, we then proceed to collect traffic data and survey responses. The raw data are then organized and cleaned so that they can be analyzed for patterns and relationships. In our example, maybe they show us that students who visit the website are not being funneled to the resources section. As a meaningful insight, we might decide to include a direct path to the resources section as part of the default experience when visiting the website.
 
-![The data science pyramid that flows from raw signals to insights to serve stakeholders](images/chp_1_ds-pyramid.png){#fig-data-pyramid width="700px" fig-align="center"}
+![The data science pyramid that flows from raw signals to insights to serve stakeholders](images/chp_1_ds-pyramid.png){#fig-data-pyramid width="700px" height="400px" fig-align="center"}
 
 ## Chapter 1 Exercises:
 

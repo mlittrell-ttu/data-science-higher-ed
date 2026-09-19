@@ -39,7 +39,7 @@ Data are stored electronically so they persist and can be accessed later. This c
 
 : Common data size terms. {#tbl-data-size}
 
-##Where data are stored
+## Where data are stored
 
 It can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.
 
@@ -114,7 +114,33 @@ Institutional data is internal to a university and its processes. Often this is 
 
 
 ### Protected data 
-Some institutional data are both restricted and protected legally. For instance, the **Family Educational Rights and Privacy Act** limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the **Health Insurance Portability and Accountability Act** (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects.
+Some institutional data are both restricted and protected legally. For instance, the **Family Educational Rights and Privacy Act** limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the **Health Insurance Portability and Accountability Act** (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects. Also, keep in mind the privacy and rights of the individuals represented in the data throughout your engagement with it. Always work cautiously!
+
+
+## Chapter 2 Exercises:
+
+::: {.callout-note icon=false title="Exercises"}
+
+1. **Classify the data around you.** Think about some data in your own professional context or data from an envisioned one. Identify one of each dataset access type—a) public facing,  b) internal, and c) legally protected.
+
+    a. **Describe and place.** For each dataset, describe what it is, its access type, and the system type where it resides (e.g., SIS, LMS).
+
+    b. **Define characteristics.** For these datasets, explain their properties with the five characteristics we discussed (volume, variety, velocity, veracity, value). 
+    
+    c. **Path to access.** For these datasets, what types of permissions and regulations govern them?
+
+2. **Data to information.** A colleague gives you a spreadsheet of all students' individual GPAs for the year and requests that you analyze it for helpful insights.
+
+    a. **As information.** Explain two ways you might organize or summarize the raw data transforming it into insights a decision maker could make use of.
+
+    b. **Risk.** One major found in the data has only three students. How might reporting on the GPA by major be a privacy concern, especially if the results were to be reported publicly? How might you address the issue?
+
+3. **Public data source.** Choose a dataset from an official public source (e.g., IPEDS) and one from an unofficial public source (e.g., Kaggle).
+
+    a. **Trustworthy?.** What was the process that produced it, and what does that mean for how you could use it for your work?
+
+    b. **Define guiding questions.** Create one question for each dataset that might serve to guide your analysis if you were to undertake one. Explain them and how they connect to the data.
+:::
 
 
 
