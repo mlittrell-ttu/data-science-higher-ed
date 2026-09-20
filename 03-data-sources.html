@@ -2,26 +2,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Intro to R – Applied Data Science for Higher Education with R</title>
+<title>3&nbsp; R Orientation – Applied Data Science for Higher Education with R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -41,10 +79,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81ced3e863acfb1071fb730864f79675.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-24b484a7af1821209407615a6831fc4c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -86,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -144,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-data-sources.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></span></a>
   </div>
 </li>
       </ul>
@@ -256,53 +294,34 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install"><span class="header-section-number">3.2.1</span> Install</a></li>
   </ul></li>
-  <li><a href="#r-and-ai" id="toc-r-and-ai" class="nav-link" data-scroll-target="#r-and-ai"><span class="header-section-number">3.3</span> R and AI</a></li>
-  <li><a href="#the-r-environment" id="toc-the-r-environment" class="nav-link" data-scroll-target="#the-r-environment"><span class="header-section-number">3.4</span> The R environment</a>
+  <li><a href="#r-and-ai" id="toc-r-and-ai" class="nav-link" data-scroll-target="#r-and-ai"><span class="header-section-number">3.3</span> R and AI</a>
   <ul class="collapse">
-  <li><a href="#the-console-and-running-code" id="toc-the-console-and-running-code" class="nav-link" data-scroll-target="#the-console-and-running-code"><span class="header-section-number">3.4.1</span> The console and running code</a></li>
-  <li><a href="#scripts-and-reproducibility" id="toc-scripts-and-reproducibility" class="nav-link" data-scroll-target="#scripts-and-reproducibility"><span class="header-section-number">3.4.2</span> Scripts and reproducibility</a></li>
-  <li><a href="#packages-extending-r" id="toc-packages-extending-r" class="nav-link" data-scroll-target="#packages-extending-r"><span class="header-section-number">3.4.3</span> Packages — extending R</a></li>
+  <li><a href="#modes-of-operation" id="toc-modes-of-operation" class="nav-link" data-scroll-target="#modes-of-operation"><span class="header-section-number">3.3.1</span> Modes of operation</a></li>
   </ul></li>
-  <li><a href="#r-as-a-calculator" id="toc-r-as-a-calculator" class="nav-link" data-scroll-target="#r-as-a-calculator"><span class="header-section-number">3.5</span> R as a calculator</a>
+  <li><a href="#working-in-rstudio" id="toc-working-in-rstudio" class="nav-link" data-scroll-target="#working-in-rstudio"><span class="header-section-number">3.4</span> Working in RStudio</a>
   <ul class="collapse">
-  <li><a href="#arithmetic-operators--" id="toc-arithmetic-operators--" class="nav-link" data-scroll-target="#arithmetic-operators--"><span class="header-section-number">3.5.1</span> Arithmetic operators (+ - * / ^ %%)</a></li>
-  <li><a href="#order-of-operations" id="toc-order-of-operations" class="nav-link" data-scroll-target="#order-of-operations"><span class="header-section-number">3.5.2</span> Order of operations</a></li>
-  <li><a href="#comparison-and-logical-operators" id="toc-comparison-and-logical-operators" class="nav-link" data-scroll-target="#comparison-and-logical-operators"><span class="header-section-number">3.5.3</span> Comparison and logical operators (&gt; &lt; == != &amp; |)</a></li>
+  <li><a href="#the-environment" id="toc-the-environment" class="nav-link" data-scroll-target="#the-environment"><span class="header-section-number">3.4.1</span> The Environment</a></li>
+  <li><a href="#global-options" id="toc-global-options" class="nav-link" data-scroll-target="#global-options"><span class="header-section-number">3.4.2</span> Global Options</a></li>
+  <li><a href="#the-persistent-reproducible-script" id="toc-the-persistent-reproducible-script" class="nav-link" data-scroll-target="#the-persistent-reproducible-script"><span class="header-section-number">3.4.3</span> The persistent reproducible script</a></li>
   </ul></li>
-  <li><a href="#objects-and-data-types" id="toc-objects-and-data-types" class="nav-link" data-scroll-target="#objects-and-data-types"><span class="header-section-number">3.6</span> Objects and data types</a>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages"><span class="header-section-number">3.5</span> Packages</a></li>
+  <li><a href="#help-and-explanations" id="toc-help-and-explanations" class="nav-link" data-scroll-target="#help-and-explanations"><span class="header-section-number">3.6</span> Help and explanations</a>
   <ul class="collapse">
-  <li><a href="#assigning-values--" id="toc-assigning-values--" class="nav-link" data-scroll-target="#assigning-values--"><span class="header-section-number">3.6.1</span> Assigning values (&lt;-)</a></li>
-  <li><a href="#numeric-character-logical-factor" id="toc-numeric-character-logical-factor" class="nav-link" data-scroll-target="#numeric-character-logical-factor"><span class="header-section-number">3.6.2</span> Numeric, character, logical, factor</a></li>
-  <li><a href="#vectors-rs-core-building-block" id="toc-vectors-rs-core-building-block" class="nav-link" data-scroll-target="#vectors-rs-core-building-block"><span class="header-section-number">3.6.3</span> Vectors — R’s core building block</a></li>
+  <li><a href="#ai" id="toc-ai" class="nav-link" data-scroll-target="#ai"><span class="header-section-number">3.6.1</span> AI</a></li>
+  <li><a href="#online-function-documentation" id="toc-online-function-documentation" class="nav-link" data-scroll-target="#online-function-documentation"><span class="header-section-number">3.6.2</span> Online function documentation</a></li>
+  <li><a href="#help-resources" id="toc-help-resources" class="nav-link" data-scroll-target="#help-resources"><span class="header-section-number">3.6.3</span> Help Resources</a></li>
   </ul></li>
-  <li><a href="#working-with-data-structures" id="toc-working-with-data-structures" class="nav-link" data-scroll-target="#working-with-data-structures"><span class="header-section-number">3.7</span> Working with data structures</a>
-  <ul class="collapse">
-  <li><a href="#vectors-and-vectorized-operations" id="toc-vectors-and-vectorized-operations" class="nav-link" data-scroll-target="#vectors-and-vectorized-operations"><span class="header-section-number">3.7.1</span> Vectors and vectorized operations</a></li>
-  <li><a href="#data-frames-the-table-youll-live-in" id="toc-data-frames-the-table-youll-live-in" class="nav-link" data-scroll-target="#data-frames-the-table-youll-live-in"><span class="header-section-number">3.7.2</span> Data frames — the table you’ll live in</a></li>
-  <li><a href="#indexing-and-subsetting" id="toc-indexing-and-subsetting" class="nav-link" data-scroll-target="#indexing-and-subsetting"><span class="header-section-number">3.7.3</span> Indexing and subsetting</a></li>
-  </ul></li>
-  <li><a href="#describing-data-basic-statistics-in-r" id="toc-describing-data-basic-statistics-in-r" class="nav-link" data-scroll-target="#describing-data-basic-statistics-in-r"><span class="header-section-number">3.8</span> Describing data: basic statistics in R</a>
-  <ul class="collapse">
-  <li><a href="#measures-of-center-mean-median-mode" id="toc-measures-of-center-mean-median-mode" class="nav-link" data-scroll-target="#measures-of-center-mean-median-mode"><span class="header-section-number">3.8.1</span> Measures of center (mean, median, mode)</a></li>
-  <li><a href="#measures-of-spread-range-iqr-variance-sd" id="toc-measures-of-spread-range-iqr-variance-sd" class="nav-link" data-scroll-target="#measures-of-spread-range-iqr-variance-sd"><span class="header-section-number">3.8.2</span> Measures of spread (range, IQR, variance, sd)</a></li>
-  <li><a href="#distribution-shape-skewness-your-images-here" id="toc-distribution-shape-skewness-your-images-here" class="nav-link" data-scroll-target="#distribution-shape-skewness-your-images-here"><span class="header-section-number">3.8.3</span> Distribution shape (skewness — your images here)</a></li>
-  <li><a href="#the-five-number-summary-and-the-box-plot-your-box-plot-image" id="toc-the-five-number-summary-and-the-box-plot-your-box-plot-image" class="nav-link" data-scroll-target="#the-five-number-summary-and-the-box-plot-your-box-plot-image"><span class="header-section-number">3.8.4</span> The five-number summary and the box plot (your box plot image)</a></li>
-  </ul></li>
-  <li><a href="#getting-help-and-next-steps" id="toc-getting-help-and-next-steps" class="nav-link" data-scroll-target="#getting-help-and-next-steps"><span class="header-section-number">3.9</span> Getting help and next steps</a>
-  <ul class="collapse">
-  <li><a href="#reading-function-documentation" id="toc-reading-function-documentation" class="nav-link" data-scroll-target="#reading-function-documentation"><span class="header-section-number">3.9.1</span> Reading function documentation (?)</a></li>
-  <li><a href="#where-to-go-when-stuck" id="toc-where-to-go-when-stuck" class="nav-link" data-scroll-target="#where-to-go-when-stuck"><span class="header-section-number">3.9.2</span> Where to go when stuck</a></li>
-  <li><a href="#ai" id="toc-ai" class="nav-link" data-scroll-target="#ai"><span class="header-section-number">3.9.3</span> AI</a></li>
-  </ul></li>
+  <li><a href="#community-resources" id="toc-community-resources" class="nav-link" data-scroll-target="#community-resources"><span class="header-section-number">3.7</span> Community resources</a></li>
+  <li><a href="#chapter-3-exercises" id="toc-chapter-3-exercises" class="nav-link" data-scroll-target="#chapter-3-exercises"><span class="header-section-number">3.8</span> Chapter 3 Exercises</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/03-data-sources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/03-data-sources.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-what-is-data-science.html">Part I — Foundations</a></li><li class="breadcrumb-item"><a href="./03-data-sources.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Intro to R</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></h1>
 </div>
 
 
@@ -390,85 +409,224 @@ Figure&nbsp;3.2: The base R console.
 </section>
 <section id="r-and-ai" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="r-and-ai"><span class="header-section-number">3.3</span> R and AI</h2>
-<p>Generative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one’s learning pathway to help ensure coding skill growth. [When using AI]</p>
-</section>
-<section id="the-r-environment" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="the-r-environment"><span class="header-section-number">3.4</span> The R environment</h2>
-<section id="the-console-and-running-code" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="the-console-and-running-code"><span class="header-section-number">3.4.1</span> The console and running code</h3>
-</section>
-<section id="scripts-and-reproducibility" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="scripts-and-reproducibility"><span class="header-section-number">3.4.2</span> Scripts and reproducibility</h3>
-</section>
-<section id="packages-extending-r" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="packages-extending-r"><span class="header-section-number">3.4.3</span> Packages — extending R</h3>
+<p>Generative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one’s knowledge development to help ensure coding skill growth, as opposed to relying on the tool for working results that are not understood. Importantly, understanding and owning every line of code is essential to quality and trustworthy data science with R.</p>
+<section id="modes-of-operation" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="modes-of-operation"><span class="header-section-number">3.3.1</span> Modes of operation</h3>
+<p>Presently there are two modes of operation to consider when utilizing AI in a data science workflow.</p>
+<ol type="1">
+<li><p><strong>Copying and pasting to an external chatbot.</strong> In this mode, code is copied from the IDE over to the chatbot as needed for help and assistance. This mode is helpful for learning as it is manual and only relies on AI as needed.</p></li>
+<li><p><strong>Integrated chatbot in the IDE.</strong> This a more advanced mode of learning where the chatbot sits within the IDE editing and recommending code as the work progresses. This mode is more suitable for advanced practitioners who have a firm understanding of R. Using this approach while developing skills can potentially lead to over reliance and unintended destructive code results if the edits made by the bot are not completely understood by the human.</p></li>
+</ol>
 </section>
 </section>
-<section id="r-as-a-calculator" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="r-as-a-calculator"><span class="header-section-number">3.5</span> R as a calculator</h2>
-<section id="arithmetic-operators--" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="arithmetic-operators--"><span class="header-section-number">3.5.1</span> Arithmetic operators (+ - * / ^ %%)</h3>
+<section id="working-in-rstudio" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="working-in-rstudio"><span class="header-section-number">3.4</span> Working in RStudio</h2>
+<section id="the-environment" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="the-environment"><span class="header-section-number">3.4.1</span> The Environment</h3>
+<p>When coding with RStudio, the <strong>environment</strong> refers to all of the objects (e.g., data, functions, variables) held in the computer’s memory for the session. The environment pane displays these. It is always a good idea to inspect what is there when initially loading the program as objects are not by default removed from the environment when closed. This setting and others, such as the appearance of the UI in RStudio, can be updated in the menu path <strong>Tools &gt; Global Options</strong>.</p>
 </section>
-<section id="order-of-operations" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="order-of-operations"><span class="header-section-number">3.5.2</span> Order of operations</h3>
+<section id="global-options" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="global-options"><span class="header-section-number">3.4.2</span> Global Options</h3>
+<div id="fig-options" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_3_options.png" class="quarto-figure quarto-figure-center figure-img" width="400" height="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: RStudio global options.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="comparison-and-logical-operators" class="level3" data-number="3.5.3">
-<h3 data-number="3.5.3" class="anchored" data-anchor-id="comparison-and-logical-operators"><span class="header-section-number">3.5.3</span> Comparison and logical operators (&gt; &lt; == != &amp; |)</h3>
+<section id="the-persistent-reproducible-script" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="the-persistent-reproducible-script"><span class="header-section-number">3.4.3</span> The persistent reproducible script</h3>
+<p>The heart of working in R is the script file where code is typed and saved. To create a new script file navigate to the menu <strong>File &gt; New &gt; R Script</strong>. Setting a working directory tells R where you are working so it knows where to look for files and where to save new ones. Importantly for the new learner, saving the script file to a folder location where your other relevant files will be, such as alongside your datasets, will be the easiest way to proceed. Otherwise you will have to specify a folder path telling R how to get there. You can issue the setwd() command or right click your script file and choose the option in the UI.</p>
+<p>Example commands for setting the working directory are here. You will have to edit them to reflect your specific path on your device.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/yourname/Documents/my-project"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mac</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/yourname/Documents/my-project"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The menu option is likely simpler and is accessed by right clicking the script file tab seen here.</p>
+<div id="fig-setwd" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-setwd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_3_setwd_gui.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-setwd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: Setting the working directory with a right-click.
+</figcaption>
+</figure>
+</div>
+<p>As you are working in your script, to execute the code place the mouse cursor on the line you want to execute and type <strong>Ctrl+Enter</strong>. For code statements that are several lines long, R is smart enough to run the complete statement. Remember to frequently save your scripts with <strong>Ctrl+S</strong>. Also, to run code outside of your script—like a simple one-off calculation for example— you can still enter code interactively in the console pane.</p>
+<div id="fig-console-command" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-console-command-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_3_console_command.png" class="quarto-figure quarto-figure-center figure-img" width="400" height="350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-console-command-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.5: Entering a command interactively in the R console.
+</figcaption>
+</figure>
+</div>
 </section>
 </section>
-<section id="objects-and-data-types" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="objects-and-data-types"><span class="header-section-number">3.6</span> Objects and data types</h2>
-<section id="assigning-values--" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="assigning-values--"><span class="header-section-number">3.6.1</span> Assigning values (&lt;-)</h3>
+<section id="packages" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="packages"><span class="header-section-number">3.5</span> Packages</h2>
+<p><strong>R packages</strong> are how the base R language is extended to have more capabilities. Packages consist of functions, data, and documentation. Packages are written by the R community to accomplish particular tasks such as creating graphs or working with Excel files. Packages must be installed once on a device and then be loaded into memory every time.</p>
+<p>Here is the code for installing and loading packages, which is typically placed at the top of a script:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install a package (once)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"packagename"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a package (each session)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(packagename)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="numeric-character-logical-factor" class="level3" data-number="3.6.2">
-<h3 data-number="3.6.2" class="anchored" data-anchor-id="numeric-character-logical-factor"><span class="header-section-number">3.6.2</span> Numeric, character, logical, factor</h3>
+<section id="help-and-explanations" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="help-and-explanations"><span class="header-section-number">3.6</span> Help and explanations</h2>
+<p>Getting stuck (i.e., blocked from progressing in ones work) happens to everyone who has ever coded. It is a natural and expected part of the experience. There are several ways to get help when this happens. ### Comments Comments in R are not executed as part of the code but are for humans to read and understand. Thoroughly comment your code so that you will understand it if you pick it up at a later time or if it is passed to someone else. Comments start with a #.</p>
+<p>An example comment is here.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The mean function calculates the average gpa.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(gpa) <span class="co"># The code is on this line; Everything behind the '#' is ignored by the R interpreter.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="ai" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="ai"><span class="header-section-number">3.6.1</span> AI</h3>
+<p>AI has transformed our ability get help when stuck as new learners or when engaging with advanced topics as higher education data professionals. As was mentioned, understand and own every piece of AI output incorporated in your work to ensure accountability, learning progress, and clarity.</p>
 </section>
-<section id="vectors-rs-core-building-block" class="level3" data-number="3.6.3">
-<h3 data-number="3.6.3" class="anchored" data-anchor-id="vectors-rs-core-building-block"><span class="header-section-number">3.6.3</span> Vectors — R’s core building block</h3>
+<section id="online-function-documentation" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="online-function-documentation"><span class="header-section-number">3.6.2</span> Online function documentation</h3>
+<p>If AI does not provide sufficient information when seeking help, the built-in documentation for a function can be accessed with <code>?</code>, such as by typing <code>?mean</code>. This type of assistance is not recommended for the new learner as it can be opaque and is organized like it was created for robots. Instead it is better to access package documentation directly on user-friendly websites. For example, if working with the dplyr package, searching for this package’s documentation quickly surfaces a much easier to use reference experience at <a href="https://dplyr.tidyverse.org/index.html" class="uri">https://dplyr.tidyverse.org/index.html</a>, complete with a search function and integrated AI.</p>
+<div id="fig-dplyr-doc" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dplyr-doc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_3_dplyr_doc.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dplyr-doc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.6: Online R documentation example.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="help-resources" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="help-resources"><span class="header-section-number">3.6.3</span> Help Resources</h3>
+<p>There are an abundance of R resources online that are well organized and easy to use. Just a few general ones are on the table below.</p>
+<div id="tbl-r-resources" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-r-resources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: R resources.
+</figcaption>
+<div aria-describedby="tbl-r-resources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Resource</th>
+<th style="text-align: left;">What it is</th>
+<th style="text-align: left;">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">RDocumentation</td>
+<td style="text-align: left;">Searchable function documentation</td>
+<td style="text-align: left;"><a href="https://www.rdocumentation.org" class="uri">https://www.rdocumentation.org</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">rdrr.io</td>
+<td style="text-align: left;">Documentation for many packages</td>
+<td style="text-align: left;"><a href="https://rdrr.io" class="uri">https://rdrr.io</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Posit Cheatsheets</td>
+<td style="text-align: left;">Quick guides for some packages</td>
+<td style="text-align: left;"><a href="https://posit.co/resources/cheatsheets" class="uri">https://posit.co/resources/cheatsheets</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tidyverse</td>
+<td style="text-align: left;">Posit’s tidyverse documentation.</td>
+<td style="text-align: left;"><a href="https://tidyverse.org/" class="uri">https://tidyverse.org/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
 </section>
-<section id="working-with-data-structures" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="working-with-data-structures"><span class="header-section-number">3.7</span> Working with data structures</h2>
-<section id="vectors-and-vectorized-operations" class="level3" data-number="3.7.1">
-<h3 data-number="3.7.1" class="anchored" data-anchor-id="vectors-and-vectorized-operations"><span class="header-section-number">3.7.1</span> Vectors and vectorized operations</h3>
+<section id="community-resources" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="community-resources"><span class="header-section-number">3.7</span> Community resources</h2>
+<p>The R language and related packages has a very active community where news, resources, and help is offered. Here are some that high-quality.</p>
+<div id="tbl-community" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-community-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.2: R community resources.
+</figcaption>
+<div aria-describedby="tbl-community-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Resource</th>
+<th style="text-align: left;">What it is</th>
+<th style="text-align: left;">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">R-bloggers</td>
+<td style="text-align: left;">Many R blog posts aggregated</td>
+<td style="text-align: left;"><a href="https://www.r-bloggers.com" class="uri">https://www.r-bloggers.com</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Posit Blog</td>
+<td style="text-align: left;">Official Posit news and resources</td>
+<td style="text-align: left;"><a href="https://posit.co/blog" class="uri">https://posit.co/blog</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R Weekly</td>
+<td style="text-align: left;">Weekly collation of R news</td>
+<td style="text-align: left;"><a href="https://rweekly.org" class="uri">https://rweekly.org</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Stack Overflow</td>
+<td style="text-align: left;">Discuss specific coding issues</td>
+<td style="text-align: left;"><a href="https://stackoverflow.com/questions/tagged/r" class="uri">https://stackoverflow.com/questions/tagged/r</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="data-frames-the-table-youll-live-in" class="level3" data-number="3.7.2">
-<h3 data-number="3.7.2" class="anchored" data-anchor-id="data-frames-the-table-youll-live-in"><span class="header-section-number">3.7.2</span> Data frames — the table you’ll live in</h3>
-</section>
-<section id="indexing-and-subsetting" class="level3" data-number="3.7.3">
-<h3 data-number="3.7.3" class="anchored" data-anchor-id="indexing-and-subsetting"><span class="header-section-number">3.7.3</span> Indexing and subsetting</h3>
-</section>
-</section>
-<section id="describing-data-basic-statistics-in-r" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="describing-data-basic-statistics-in-r"><span class="header-section-number">3.8</span> Describing data: basic statistics in R</h2>
-<section id="measures-of-center-mean-median-mode" class="level3" data-number="3.8.1">
-<h3 data-number="3.8.1" class="anchored" data-anchor-id="measures-of-center-mean-median-mode"><span class="header-section-number">3.8.1</span> Measures of center (mean, median, mode)</h3>
-</section>
-<section id="measures-of-spread-range-iqr-variance-sd" class="level3" data-number="3.8.2">
-<h3 data-number="3.8.2" class="anchored" data-anchor-id="measures-of-spread-range-iqr-variance-sd"><span class="header-section-number">3.8.2</span> Measures of spread (range, IQR, variance, sd)</h3>
-</section>
-<section id="distribution-shape-skewness-your-images-here" class="level3" data-number="3.8.3">
-<h3 data-number="3.8.3" class="anchored" data-anchor-id="distribution-shape-skewness-your-images-here"><span class="header-section-number">3.8.3</span> Distribution shape (skewness — your images here)</h3>
-</section>
-<section id="the-five-number-summary-and-the-box-plot-your-box-plot-image" class="level3" data-number="3.8.4">
-<h3 data-number="3.8.4" class="anchored" data-anchor-id="the-five-number-summary-and-the-box-plot-your-box-plot-image"><span class="header-section-number">3.8.4</span> The five-number summary and the box plot (your box plot image)</h3>
-</section>
-</section>
-<section id="getting-help-and-next-steps" class="level2" data-number="3.9">
-<h2 data-number="3.9" class="anchored" data-anchor-id="getting-help-and-next-steps"><span class="header-section-number">3.9</span> Getting help and next steps</h2>
-<section id="reading-function-documentation" class="level3" data-number="3.9.1">
-<h3 data-number="3.9.1" class="anchored" data-anchor-id="reading-function-documentation"><span class="header-section-number">3.9.1</span> Reading function documentation (?)</h3>
-</section>
-<section id="where-to-go-when-stuck" class="level3" data-number="3.9.2">
-<h3 data-number="3.9.2" class="anchored" data-anchor-id="where-to-go-when-stuck"><span class="header-section-number">3.9.2</span> Where to go when stuck</h3>
-</section>
-<section id="ai" class="level3" data-number="3.9.3">
-<h3 data-number="3.9.3" class="anchored" data-anchor-id="ai"><span class="header-section-number">3.9.3</span> AI</h3>
-<p>##Community ### Rbloggers ### Posit Blog</p>
+<section id="chapter-3-exercises" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="chapter-3-exercises"><span class="header-section-number">3.8</span> Chapter 3 Exercises</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercises
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Set up your environment.</strong> Get R and RStudio working on your own device.</p>
+<ol type="a">
+<li>Install R from CRAN and RStudio from Posit. Open them both to ensure they work.</li>
+<li>Identify the Source, Console, Plot, and Environment panes. Describe in a sentence what each one is for.</li>
+<li>Create a new script, save it to a folder, and make that folder the working directory.</li>
+</ol></li>
+<li><p><strong>Practice finding help.</strong> Use each help method from this chapter on the <code>mean</code> function.</p>
+<ol type="a">
+<li>In the console, run <code>?mean</code> and explore the documentation with AI, asking for details and clarity on anything you don’t understand (e.g., specific arguments like ‘trim’). Document some information the help page tells you identifying where you relied on AI for clarity and what you extracted from the documentation unaided.</li>
+</ol></li>
+<li><p><strong>Explore a package with AI.</strong> Search for a new R package and learn about it.</p>
+<ol type="a">
+<li>Find a package relevant that is professionally relevant to you.</li>
+<li>Use AI to help you understand it, documenting your process and knowledge.</li>
+</ol></li>
+</ol>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

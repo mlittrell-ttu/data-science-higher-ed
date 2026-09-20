@@ -291,111 +291,100 @@
   {
     "objectID": "03-data-sources.html",
     "href": "03-data-sources.html",
-    "title": "3  Intro to R",
+    "title": "3  R Orientation",
     "section": "",
     "text": "3.1 What is R?\nR is a functional language built specifically for working with data. Professionals who work with data such as statisticians and researchers are actively involved in shaping the language. In a sense, R is a living body of work that is constantly underdevelopment, evolving as the needs of its users do. As higher education data professionals, we use it because it is highly efficient, auditable, scalable, and yields reproducible work that can be assessed to establish trustworthyness.",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
     "objectID": "03-data-sources.html#what-is-r",
     "href": "03-data-sources.html#what-is-r",
-    "title": "3  Intro to R",
+    "title": "3  R Orientation",
     "section": "",
     "text": "3.1.1 A brief history of R\nThe history of the R can be traced back to the 1970’s where John Chambers and his colleagues at Bell Laboratories developed a commercial language called S. R was developed in the 1990s by the statisticians Ross Ihaka and Robert Gentleman as a free and open language for everyone that built on principles from S. R was first released to the public in 1993.\n\n\n3.1.2 R and higher education\nR is widely utilized in a variety of industries including biology, pharmaceutical research, and higher education. It is free and can be used to work any other programs (e.g., Excel, SPSS) which is important when working across departments, divisions, and companies where everyone may have their own preferences for statistical software. Although completely free and open, R is of the highest quality tools for working with data. As it is continuously updated by a global community of users, the latest statistical and analytic methods are available in R often well before they are incorporated into commercial software.\n\n\n3.1.3 R and IDEs\nR is the language that interprets our typed commands into instructions that the computer carrys out. An Integrated Developer Environment (IDE) is an application that makes it easier to work with R. Where working with the R interpreter itself is a more minimal experience—essentially where flat text is typed into a prompt—an IDE gives us features such as display windows to see our plots and menu options to save files.\n\n\n\n\n\n\nFigure 3.1: The base R console.",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
     "objectID": "03-data-sources.html#rstudio",
     "href": "03-data-sources.html#rstudio",
-    "title": "3  Intro to R",
+    "title": "3  R Orientation",
     "section": "3.2 RStudio",
     "text": "3.2 RStudio\nRStudio is a free and open source product created by the public benefit corporation Posit. It was officially released to the public in 2016 and is the most common IDE for R. R can be thought of as the language that sits under the hood of RStudio performing the work that we outline in the IDE.\nRStudio organizes work across several windows called panes. There are several of them but some of the most useful are:\n\nSource\n\nThis is the text editor where the reproducible script file is created. It is persistent and can be saved.\n\nConsole\n\nThe results of the script appear in the console, such as mean values or descriptive stats for a dataset. The console is also interactive meaning that code can be directly entered here. This is helpful for code you want to execute but don’t need to persist in your script, such as arithmetic calculations or accessing help files.\n\nEnvironment\n\nThe environment pane displays the objects that are accessible to R in device memory. These can be things like imported datasets, variables, and values.\n\nFiles\n\nThe actual files sitting in your device that can be loaded into the environment are displayed in the files panel.\n\nPlots\n\nThe plots pane shows us the data visualizations we create in our analysis. They can be exported from there too.\n\n\nThe image shown below shows a possible configuration of the RStudio panes, which are customizable.\n\n\n\n\n\n\nFigure 3.2: The base R console.\n\n\n\n\n3.2.1 Install\nR can be downloaded from the Comprehensive R Archive Network (CRAN). Navigate to https://cran.r-project.org/ and select your operating system (e.g., Windows) to download the correct installer. Run the installer typically with the default settings and verify a successful installation by opening R once it has completed.\nRStudio can be downloaded from Posit at https://posit.co/downloads. Again, select the installer based on your OS, run it with default settings, and verify it by opening the application when complete.",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
     "objectID": "03-data-sources.html#r-and-ai",
     "href": "03-data-sources.html#r-and-ai",
-    "title": "3  Intro to R",
+    "title": "3  R Orientation",
     "section": "3.3 R and AI",
-    "text": "3.3 R and AI\nGenerative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one’s learning pathway to help ensure coding skill growth. [When using AI]",
+    "text": "3.3 R and AI\nGenerative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one’s knowledge development to help ensure coding skill growth, as opposed to relying on the tool for working results that are not understood. Importantly, understanding and owning every line of code is essential to quality and trustworthy data science with R.\n\n3.3.1 Modes of operation\nPresently there are two modes of operation to consider when utilizing AI in a data science workflow.\n\nCopying and pasting to an external chatbot. In this mode, code is copied from the IDE over to the chatbot as needed for help and assistance. This mode is helpful for learning as it is manual and only relies on AI as needed.\nIntegrated chatbot in the IDE. This a more advanced mode of learning where the chatbot sits within the IDE editing and recommending code as the work progresses. This mode is more suitable for advanced practitioners who have a firm understanding of R. Using this approach while developing skills can potentially lead to over reliance and unintended destructive code results if the edits made by the bot are not completely understood by the human.",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#the-r-environment",
-    "href": "03-data-sources.html#the-r-environment",
-    "title": "3  Intro to R",
-    "section": "3.4 The R environment",
-    "text": "3.4 The R environment\n\n3.4.1 The console and running code\n\n\n3.4.2 Scripts and reproducibility\n\n\n3.4.3 Packages — extending R",
+    "objectID": "03-data-sources.html#working-in-rstudio",
+    "href": "03-data-sources.html#working-in-rstudio",
+    "title": "3  R Orientation",
+    "section": "3.4 Working in RStudio",
+    "text": "3.4 Working in RStudio\n\n3.4.1 The Environment\nWhen coding with RStudio, the environment refers to all of the objects (e.g., data, functions, variables) held in the computer’s memory for the session. The environment pane displays these. It is always a good idea to inspect what is there when initially loading the program as objects are not by default removed from the environment when closed. This setting and others, such as the appearance of the UI in RStudio, can be updated in the menu path Tools &gt; Global Options.\n\n\n3.4.2 Global Options\n\n\n\n\n\n\nFigure 3.3: RStudio global options.\n\n\n\n\n\n3.4.3 The persistent reproducible script\nThe heart of working in R is the script file where code is typed and saved. To create a new script file navigate to the menu File &gt; New &gt; R Script. Setting a working directory tells R where you are working so it knows where to look for files and where to save new ones. Importantly for the new learner, saving the script file to a folder location where your other relevant files will be, such as alongside your datasets, will be the easiest way to proceed. Otherwise you will have to specify a folder path telling R how to get there. You can issue the setwd() command or right click your script file and choose the option in the UI.\nExample commands for setting the working directory are here. You will have to edit them to reflect your specific path on your device.\n# Windows\nsetwd(\"C:/Users/yourname/Documents/my-project\")\n\n# Mac\nsetwd(\"/Users/yourname/Documents/my-project\")\nThe menu option is likely simpler and is accessed by right clicking the script file tab seen here.\n\n\n\n\n\n\nFigure 3.4: Setting the working directory with a right-click.\n\n\n\nAs you are working in your script, to execute the code place the mouse cursor on the line you want to execute and type Ctrl+Enter. For code statements that are several lines long, R is smart enough to run the complete statement. Remember to frequently save your scripts with Ctrl+S. Also, to run code outside of your script—like a simple one-off calculation for example— you can still enter code interactively in the console pane.\n\n\n\n\n\n\nFigure 3.5: Entering a command interactively in the R console.",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#r-as-a-calculator",
-    "href": "03-data-sources.html#r-as-a-calculator",
-    "title": "3  Intro to R",
-    "section": "3.5 R as a calculator",
-    "text": "3.5 R as a calculator\n\n3.5.1 Arithmetic operators (+ - * / ^ %%)\n\n\n3.5.2 Order of operations\n\n\n3.5.3 Comparison and logical operators (&gt; &lt; == != & |)",
+    "objectID": "03-data-sources.html#packages",
+    "href": "03-data-sources.html#packages",
+    "title": "3  R Orientation",
+    "section": "3.5 Packages",
+    "text": "3.5 Packages\nR packages are how the base R language is extended to have more capabilities. Packages consist of functions, data, and documentation. Packages are written by the R community to accomplish particular tasks such as creating graphs or working with Excel files. Packages must be installed once on a device and then be loaded into memory every time.\nHere is the code for installing and loading packages, which is typically placed at the top of a script:\n# Install a package (once)\ninstall.packages(\"packagename\")\n\n# Load a package (each session)\nlibrary(packagename)",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#objects-and-data-types",
-    "href": "03-data-sources.html#objects-and-data-types",
-    "title": "3  Intro to R",
-    "section": "3.6 Objects and data types",
-    "text": "3.6 Objects and data types\n\n3.6.1 Assigning values (&lt;-)\n\n\n3.6.2 Numeric, character, logical, factor\n\n\n3.6.3 Vectors — R’s core building block",
+    "objectID": "03-data-sources.html#help-and-explanations",
+    "href": "03-data-sources.html#help-and-explanations",
+    "title": "3  R Orientation",
+    "section": "3.6 Help and explanations",
+    "text": "3.6 Help and explanations\nGetting stuck (i.e., blocked from progressing in ones work) happens to everyone who has ever coded. It is a natural and expected part of the experience. There are several ways to get help when this happens. ### Comments Comments in R are not executed as part of the code but are for humans to read and understand. Thoroughly comment your code so that you will understand it if you pick it up at a later time or if it is passed to someone else. Comments start with a #.\nAn example comment is here.\n# The mean function calculates the average gpa.\nmean(gpa) # The code is on this line; Everything behind the '#' is ignored by the R interpreter.\n\n3.6.1 AI\nAI has transformed our ability get help when stuck as new learners or when engaging with advanced topics as higher education data professionals. As was mentioned, understand and own every piece of AI output incorporated in your work to ensure accountability, learning progress, and clarity.\n\n\n3.6.2 Online function documentation\nIf AI does not provide sufficient information when seeking help, the built-in documentation for a function can be accessed with ?, such as by typing ?mean. This type of assistance is not recommended for the new learner as it can be opaque and is organized like it was created for robots. Instead it is better to access package documentation directly on user-friendly websites. For example, if working with the dplyr package, searching for this package’s documentation quickly surfaces a much easier to use reference experience at https://dplyr.tidyverse.org/index.html, complete with a search function and integrated AI.\n\n\n\n\n\n\nFigure 3.6: Online R documentation example.\n\n\n\n\n\n3.6.3 Help Resources\nThere are an abundance of R resources online that are well organized and easy to use. Just a few general ones are on the table below.\n\n\n\nTable 3.1: R resources.\n\n\n\n\n\nResource\nWhat it is\nLink\n\n\n\n\nRDocumentation\nSearchable function documentation\nhttps://www.rdocumentation.org\n\n\nrdrr.io\nDocumentation for many packages\nhttps://rdrr.io\n\n\nPosit Cheatsheets\nQuick guides for some packages\nhttps://posit.co/resources/cheatsheets\n\n\ntidyverse\nPosit’s tidyverse documentation.\nhttps://tidyverse.org/",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#working-with-data-structures",
-    "href": "03-data-sources.html#working-with-data-structures",
-    "title": "3  Intro to R",
-    "section": "3.7 Working with data structures",
-    "text": "3.7 Working with data structures\n\n3.7.1 Vectors and vectorized operations\n\n\n3.7.2 Data frames — the table you’ll live in\n\n\n3.7.3 Indexing and subsetting",
+    "objectID": "03-data-sources.html#community-resources",
+    "href": "03-data-sources.html#community-resources",
+    "title": "3  R Orientation",
+    "section": "3.7 Community resources",
+    "text": "3.7 Community resources\nThe R language and related packages has a very active community where news, resources, and help is offered. Here are some that high-quality.\n\n\n\nTable 3.2: R community resources.\n\n\n\n\n\nResource\nWhat it is\nLink\n\n\n\n\nR-bloggers\nMany R blog posts aggregated\nhttps://www.r-bloggers.com\n\n\nPosit Blog\nOfficial Posit news and resources\nhttps://posit.co/blog\n\n\nR Weekly\nWeekly collation of R news\nhttps://rweekly.org\n\n\nStack Overflow\nDiscuss specific coding issues\nhttps://stackoverflow.com/questions/tagged/r",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#describing-data-basic-statistics-in-r",
-    "href": "03-data-sources.html#describing-data-basic-statistics-in-r",
-    "title": "3  Intro to R",
-    "section": "3.8 Describing data: basic statistics in R",
-    "text": "3.8 Describing data: basic statistics in R\n\n3.8.1 Measures of center (mean, median, mode)\n\n\n3.8.2 Measures of spread (range, IQR, variance, sd)\n\n\n3.8.3 Distribution shape (skewness — your images here)\n\n\n3.8.4 The five-number summary and the box plot (your box plot image)",
+    "objectID": "03-data-sources.html#chapter-3-exercises",
+    "href": "03-data-sources.html#chapter-3-exercises",
+    "title": "3  R Orientation",
+    "section": "3.8 Chapter 3 Exercises",
+    "text": "3.8 Chapter 3 Exercises\n\n\n\n\n\n\nNoteExercises\n\n\n\n\nSet up your environment. Get R and RStudio working on your own device.\n\nInstall R from CRAN and RStudio from Posit. Open them both to ensure they work.\nIdentify the Source, Console, Plot, and Environment panes. Describe in a sentence what each one is for.\nCreate a new script, save it to a folder, and make that folder the working directory.\n\nPractice finding help. Use each help method from this chapter on the mean function.\n\nIn the console, run ?mean and explore the documentation with AI, asking for details and clarity on anything you don’t understand (e.g., specific arguments like ‘trim’). Document some information the help page tells you identifying where you relied on AI for clarity and what you extracted from the documentation unaided.\n\nExplore a package with AI. Search for a new R package and learn about it.\n\nFind a package relevant that is professionally relevant to you.\nUse AI to help you understand it, documenting your process and knowledge.",
     "crumbs": [
       "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
-    ]
-  },
-  {
-    "objectID": "03-data-sources.html#getting-help-and-next-steps",
-    "href": "03-data-sources.html#getting-help-and-next-steps",
-    "title": "3  Intro to R",
-    "section": "3.9 Getting help and next steps",
-    "text": "3.9 Getting help and next steps\n\n3.9.1 Reading function documentation (?)\n\n\n3.9.2 Where to go when stuck\n\n\n3.9.3 AI\n##Community ### Rbloggers ### Posit Blog",
-    "crumbs": [
-      "Part I — Foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Intro to R</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
@@ -479,7 +468,7 @@
     "href": "setup.html",
     "title": "Setup",
     "section": "",
-    "text": "What readers install before Chapter 1.\n\n\nR — https://cran.r-project.org/\n\n\nAn editor — RStudio or Positron\n\nQuarto — https://quarto.org/ (bundled with recent RStudio)\nPackages\n\n\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n\nTODO — trim to exactly what your book uses.",
+    "text": "What readers install before Chapter 1.\n\nR — https://cran.r-project.org/\nAn editor — RStudio or Positron\nQuarto — https://quarto.org/ (bundled with recent RStudio)\nPackages\n\n\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n\nTODO — trim to exactly what your book uses.",
     "crumbs": [
       "Appendices",
       "Setup"
