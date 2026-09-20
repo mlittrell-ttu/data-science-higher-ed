@@ -80,377 +80,311 @@
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html",
-    "href": "01-what-is-data-science.html",
+    "objectID": "01.html",
+    "href": "01.html",
     "title": "1  Data Science Explained",
     "section": "",
     "text": "1.1 What is higher education?\nThe UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For the applied data professional, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#what-is-higher-education",
-    "href": "01-what-is-data-science.html#what-is-higher-education",
+    "objectID": "01.html#what-is-higher-education",
+    "href": "01.html#what-is-higher-education",
     "title": "1  Data Science Explained",
     "section": "",
     "text": "Table 1.1: Levels of university structure with leadership stakeholders example data and concerns.\n\n\n\n\n\n\n\n\n\n\n\nLevel\nLeader\nExample Data\nExample Concern\n\n\n\n\nInstitution\nPresident / Board\nEnrollment totals, budget, IPEDS\nWill overall enrollment totals be sustainable next semester?\n\n\nDivision / Administrative Unit\nProvost / Vice Presidents\nRetention, research funds, staffing\nWhich colleges need retention support?\n\n\nCollege\nDean\nCredit hours, graduation rates, faculty course loads\nWhich degree programs graduate the most students in four years?\n\n\nDepartment\nChair\nCourse grades, Course completion rates, majors offered\nWhich courses can be offered more frequently to meet demand?\n\n\nProgram\nProgram Director\nStudent matriculation, program outcomes\nAre first generation students struggling with specific courses?\n\n\nSupport Offices\nDirector\nApplications, financial aid, IT tickets, alumni gifts\nDo we have enough available financial aid for rural student applicants?",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#what-are-data",
-    "href": "01-what-is-data-science.html#what-are-data",
+    "objectID": "01.html#what-are-data",
+    "href": "01.html#what-are-data",
     "title": "1  Data Science Explained",
     "section": "1.2 What are data?",
     "text": "1.2 What are data?\nData are recorded observations about the world (Witte & Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system’s discussion board, or pictures of cats. Data can be encountered—like campus weather patterns—or constructed—such as end-of-course feedback.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#what-is-science",
-    "href": "01-what-is-data-science.html#what-is-science",
+    "objectID": "01.html#what-is-science",
+    "href": "01.html#what-is-science",
     "title": "1  Data Science Explained",
     "section": "1.3 What is science?",
     "text": "1.3 What is science?\nScience is a knowledge system that is positioned in the experiential and observable world (Britannica, 2026). Importantly, the knowledge generated can be verified and even proven false by others.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#what-is-data-science",
-    "href": "01-what-is-data-science.html#what-is-data-science",
+    "objectID": "01.html#what-is-data-science",
+    "href": "01.html#what-is-data-science",
     "title": "1  Data Science Explained",
     "section": "1.4 What is data science?",
     "text": "1.4 What is data science?\nData science is the discipline of learning from data (Grus, 2019). Essential to its practice is the notion of auditability, where practitioners approach data science work in a way that can be verified by others.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#what-is-applied-data-science",
-    "href": "01-what-is-data-science.html#what-is-applied-data-science",
+    "objectID": "01.html#what-is-applied-data-science",
+    "href": "01.html#what-is-applied-data-science",
     "title": "1  Data Science Explained",
     "section": "1.5 What is applied data science?",
     "text": "1.5 What is applied data science?\nApplied data science is defined in many ways. Its definition can be dependent on where the term is used. Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). For example, this output could be a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve a university rooted in verifiable data science.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#what-is-applied-data-science-in-higher-education",
-    "href": "01-what-is-data-science.html#what-is-applied-data-science-in-higher-education",
+    "objectID": "01.html#what-is-applied-data-science-in-higher-education",
+    "href": "01.html#what-is-applied-data-science-in-higher-education",
     "title": "1  Data Science Explained",
     "section": "1.6 What is applied data science in higher education?",
     "text": "1.6 What is applied data science in higher education?\nApplied data science in a higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different activities may be undertaken that all qualify as data science. These include:\n\nInferential Research\n\nA systematic investigation of a topic to understand relationships and differences in variables (Larimore, 2021). Such work is frequently driven by theories, hypotheses, and research questions. Inferential work is about understanding why.\n\nData analytics\n\nThe process of examining existing datasets to surface patterns and associations (Tableau, 2026). It is undertaken to know what happened and to answer operationalized questions of interest, not typically for the production of generalizable knowledge.\n\nMachine learning\n\nCommonly, these are methods that use datasets to train an algorithmic model to predict a continuous or categorical outcome variable, without explicitly programming the computer (Microsoft, 2026). Machine learning is often driven by the performance of the model where accuracy is often most important so that predictions in the applied setting are helpful. Other varieties exist for identifying patterns or teaching a computer to make decisions through rote trial and error.\n\nData mining\n\nData mining makes use of large datasets to unearth unknown patterns and groups in data. It is driven by discovery and not necessarily a hypothesis.\n\n\n\n1.6.1 Methods\nThe table here shows an example of each method discussed for conducting data science:\n\n\n\nTable 1.2: Data science activity in higher education.\n\n\n\n\n\n\n\n\n\nMethod\nWhat could this look like in higher education?\n\n\n\n\nInferential Research\nA study is conducted to understand the association between class size and gpa.\n\n\nData Analytics\nUniversity website traffic is analyzed and the most utilized sections are improved.\n\n\nMachine Learning\nA model is created to predict enrollment numbers for next semester.\n\n\nData Mining\nAll university LMS activity stream data from the previous 10 years are mined for insights.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#data-science-projects",
-    "href": "01-what-is-data-science.html#data-science-projects",
+    "objectID": "01.html#data-science-projects",
+    "href": "01.html#data-science-projects",
     "title": "1  Data Science Explained",
     "section": "1.7 Data science projects",
     "text": "1.7 Data science projects\nData science projects are the heart of the application of data science in the real world. They are engaged with to solve a problem for key stakeholders, such as increasing enrollment numbers, identifying students at risk of withdrawing, or increasing graduation rates among first-generation students.\n\n1.7.1 Define the data science problem (Phase One)\nGood data science starts by thoroughly understanding the issues faced and careful planning. Example iterative steps in a data science project workflow is presented in the table here. Importantly these steps may not occur in sequence and can be revisited as needed, which is likely often depending on the project.\n\n\n\nTable 1.3: Steps for the problem phase.\n\n\n\n\n\n\n\n\n\n\nStage\nAction\nConsiderations\n\n\n\n\nFrame the problem\nState the pain point and explore the problem at a high level\nWhat is the issue experienced?\n\n\nGather context\nExplore the problem and solution space at depth through techniques such as interviews and surveys.\nSeek to understand why the issue is important to the stakeholders.\n\n\nDevelop a plan and assess feasibility\nCompare different solution possibilities considering the available data, effort, and expertise.\nFrequently, lower effort work that is of high importance is prioritized.\n\n\nAlign Stakeholders\nUpdate and involve stakeholders throughout the project.\nThis step is highly iterative and can be accomplished with standard methods or for-purpose solutions such as project management apps.\n\n\n\n\n\n\n\n\n1.7.2 Execute the work (Phase Two)\nThe next phase is about accomplishing the data work. It can broadly happen across actions with and about the data that include ingesting, storing, cleaning, analyzing, communicating results, implementing, and iterating.\n\nIngest\n\nCapture the data from sources such as from surveys or learning management systems.\n\nStore\n\nThe data needs to be kept somewhere that is reliable and secure, such as a database which we will discuss in the next chapter.\n\nClean\n\nWrangle and clean the data—such as by fixing missing values or errors—so it can be effectively worked with.\n\nAnalyze\n\nExplore the data and create visualizations and models to solve problems.\n\nCommunicate\n\nReport and present findings to stakeholders for buy-in and to plan actions.\n\nImplement\n\nBring to fruition the insights from the data via output such as process changes, assistive programs, or software.\n\nIterate\n\nMonitor and assess the implementation, reworking and revising as needed by stakeholders.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#the-applied-data-scientist-in-higher-education",
-    "href": "01-what-is-data-science.html#the-applied-data-scientist-in-higher-education",
+    "objectID": "01.html#the-applied-data-scientist-in-higher-education",
+    "href": "01.html#the-applied-data-scientist-in-higher-education",
     "title": "1  Data Science Explained",
     "section": "1.8 The applied data scientist in higher education",
     "text": "1.8 The applied data scientist in higher education\nApplied data science in higher education sits at the intersection of applied coding, applied statistics knowledge, and higher education domain knowledge (Conway, 2010). Working with data via code is highly efficient and provides a means for auditability through transparent scripts. Knowledge of statistical methods enables sound reasoning for deriving insights from data. The domain knowledge in higher education is what gives pragmatic meaning to the outputs of a data science project.\n\n\n\n\n\n\nFigure 1.1: The three domains of applied data science in higher education.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#the-data-pyramid",
-    "href": "01-what-is-data-science.html#the-data-pyramid",
+    "objectID": "01.html#the-data-pyramid",
+    "href": "01.html#the-data-pyramid",
     "title": "1  Data Science Explained",
     "section": "1.9 The Data Pyramid",
     "text": "1.9 The Data Pyramid\nThe data pyramid offers a more compact way of thinking about data and how the applied data scientist operates within the real-world. It starts with the anecdotal experiences we might encounter in our everyday work environments, such as suspecting that a resources section of a departmental website could be helpful to students, but is going underutilized. To confirm, we then proceed to collect traffic data and survey responses. The raw data are then organized and cleaned so that they can be analyzed for patterns and relationships. In our example, maybe they show us that students who visit the website are not being funneled to the resources section. As a meaningful insight, we might decide to include a direct path to the resources section as part of the default experience when visiting the website.\n\n\n\n\n\n\nFigure 1.2: The data science pyramid that flows from raw signals to insights to serve stakeholders",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "01-what-is-data-science.html#chapter-1-exercises",
-    "href": "01-what-is-data-science.html#chapter-1-exercises",
+    "objectID": "01.html#chapter-1-exercises",
+    "href": "01.html#chapter-1-exercises",
     "title": "1  Data Science Explained",
     "section": "1.10 Chapter 1 Exercises:",
     "text": "1.10 Chapter 1 Exercises:\n\n\n\n\n\n\nNoteExercises\n\n\n\n\nEnrollment data exploration. Use this small higher education dataset to answer the following. You can use any program you’re comfortable with (e.g., Excel, SPSS, or R).\n\nUnderstanding student workload variation. As a new academic advisor, you want to get a sense of how spread out your students’ course loads are before your first round of meetings. Some students may be barely enrolled while others may be overloaded — both groups might need outreach for very different reasons. What is the range of credits enrolled (lowest to highest), and what does that spread suggest about the kinds of conversations you should be prepared to have? What additional data not in the dataset could help you answer this question?\nEstimating a typical credit load. Your dean asks, “What’s a typical credit load for our students this term?” before a budget conversation about instructional capacity. What is the average credit load, and — looking back at the range from part a — is the average actually a fair representation of “typical” here, or does the spread complicate that story?\nResource allocation across programs. The student services office is deciding where to assign three new peer mentors and wants the placements to reflect where the students actually are. Build a bar graph showing the number of students in each program. Based on the chart, where would you place the mentors, and what is one piece of information not in this dataset that would change your recommendation?\n\nConsult the literature. Find a scholarly article about the applied usage of data science in higher education written in the last four years. I recommend looking on Google Scholar. Create a one page document answering the following questions. Also provide a correctly formated APA citation with a link to the article.\n\nSummarize the problem. What institutional problem or question of interest was addressed by the authors?\nIdentify methods used. What methods (e.g., data mining) were utilized in the paper and how?\nTrack the workflow. How does the article relate to the data science project workflow (e.g., framing the problem, analyzing the data)? What parts are mentioned explicitly? Which were implied or omitted?\nTrustworthyness What steps did the authors take to ensure that their results were trustworthy and addressed the problem? What was discussed and what was left out?",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html",
-    "href": "02-data-in-higher-ed.html",
+    "objectID": "02.html",
+    "href": "02.html",
     "title": "2  Data Details",
     "section": "",
     "text": "2.1 What are data?\nAs was mentioned in the first chapter, data are observations about the world and can take many forms. Data can be collected through manual means such as surveys or interviews. It can be collected more incidentally such as through capturing publicly available comments on social media platforms. Within the digital environment, data are being captured about everything we do. For example, learning management systems collect data about the number of times a student logs in, the number of times they view a video, the amount of time they spend on the platform, and many other statistics. In short, data are everywhere and is constantly be generating.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html#data-and-information",
-    "href": "02-data-in-higher-ed.html#data-and-information",
+    "objectID": "02.html#data-and-information",
+    "href": "02.html#data-and-information",
     "title": "2  Data Details",
     "section": "2.2 Data and information",
     "text": "2.2 Data and information\nData are the raw unprocessed figures, such as the GPAs for students sitting in a database. Information is data that have been organized to be put to use. The average GPA of all math majors for the fall semester is 3.1—this could be considered information.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html#data-characteristics",
-    "href": "02-data-in-higher-ed.html#data-characteristics",
+    "objectID": "02.html#data-characteristics",
+    "href": "02.html#data-characteristics",
     "title": "2  Data Details",
     "section": "2.3 Data characteristics",
     "text": "2.3 Data characteristics\nData characteristics are the qualities of the data you would assess to understand it. You can start with these characteristics to initially start engaging with data work.\n\nVolume\n\nThe amount of data. Some datasets are small (a class survey), while others are very large (millions of student records across states).\n\nVariety\n\nThe many formats data can take — numbers, text, images, audio, video, and more. It can also be structured (neatly organized in tables) or unstructured (like unprocessed social media posts).\n\nVelocity\n\nHow fast data is generated and processed. Some data is collected in real time (like sensor data or live polling), while other data is more static.\n\nVeracity\n\nThe accuracy and trustworthiness of the data. Poor-quality or messy data can lead to misleading results.\n\nValue\n\nWhether data are useful. Just collecting data isn’t enough — it needs to help answer questions or solve problems.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html#common-data-sizes",
-    "href": "02-data-in-higher-ed.html#common-data-sizes",
+    "objectID": "02.html#common-data-sizes",
+    "href": "02.html#common-data-sizes",
     "title": "2  Data Details",
     "section": "2.4 Common data sizes",
     "text": "2.4 Common data sizes\nData are stored electronically so they persist and can be accessed later. This can occur locally on your own computer, on-premisis such as on a university owned server, or in the “cloud” where the server is owned and maintained by a company. All of these data have size considerations that need to be taken into account. Presented on the table here are example size terms with how they might be considered practically.\n\n\n\nTable 2.1: Common data size terms.\n\n\n\n\n\n\n\n\n\n\nSize Term\nApprox. Size\nExample\n\n\n\n\nByte (B)\n1 character\nA single letter or symbol\n\n\nKilobyte (KB)\n1,000 bytes\nA short email or text document\n\n\nMegabyte (MB)\n1,000 KB\nA high-resolution photo or MP3 song\n\n\nGigabyte (GB)\n1,000 MB\nA short HD video or full-length movie\n\n\nTerabyte (TB)\n1,000 GB\nA hard drive or a university’s annual data\n\n\nPetabyte (PB)\n1,000 TB\nData from large-scale systems",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html#where-data-are-stored",
-    "href": "02-data-in-higher-ed.html#where-data-are-stored",
+    "objectID": "02.html#where-data-are-stored",
+    "href": "02.html#where-data-are-stored",
     "title": "2  Data Details",
     "section": "2.5 Where data are stored",
     "text": "2.5 Where data are stored\nIt can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.\n\n\n\nTable 2.2: Common data storage ways in higher education.\n\n\n\n\n\n\n\n\n\n\nStorage Format\nDetails\nHigher Edu Example\n\n\n\n\nFlat file\nA small file such as a CSV file\nA course roster exported from an LMS system\n\n\nSpreadsheet\nA tabular file for light data work, often in Excel\nA department chair’s list of courses and their teachers\n\n\nDatabase (DB)\nTables linked by keys and queried with SQL; Often on dedicated servers\nA student records system containing enrollment data\n\n\nData warehouse\nA large repository that collates data from many systems\nAn institutional research repository containing SIS, LMS, and enrollment data\n\n\nCloud\nData hosted and maintained by a third party that are accessed via the internet\nSurvey responses collected in a cloud-hosted application, such as Qualtrics\n\n\nIn-process database\nA DB that runs in your program via an individual file\nRequesting data from the IPEDS system for benchmarking analysis\n\n\n\n\n\n\nEach storage approach mentioned has advantages and disadvantages around such variables as size, difficulty of query, reliability, and privacy. Each format has its place in the data science project workflow.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html#data-access-types",
-    "href": "02-data-in-higher-ed.html#data-access-types",
+    "objectID": "02.html#data-access-types",
+    "href": "02.html#data-access-types",
     "title": "2  Data Details",
     "section": "2.6 Data access types",
     "text": "2.6 Data access types\nWhen working with data in higher education it is important to always understand the permissions and rules associated with it. Some data can be downloaded by the general public and utilized mostly without restriction. For other data, permissions must be granted and certain legal protections must be considered. The rules about access to data and the related restrictions shape all of the work that can be done, so it must be considered up front in the process.\n\n2.6.1 Publicly available data\nPublicly available data can typically be obtained without permission. In higher education there are many datasets that are accessible by the public but they come in two forms generally. Official public data (OPD) are yielded through rigorous validated processes to ensure it is trustworthy and reliable. Unofficial public data (UPD) are shared informally. Such data are likely to be less reliable and require careful scrutiny to understand their quality.\n\n2.6.1.1 Official public data\nOfficial public datasets are the products of intensive inspection and are published authoritative agencies such as the Integrated Postsecondary Data System (IPEDS). All U.S. colleges and universities that receive federal financial aid are required to report data to IPEDS annually. Data represented there come from over 6,000 institutions and includes variables such as graduation and retention rates, tuition costs, and enrollment numbers. Such standardized reporting allows for institutions to be benchmarked against other similar colleges across various important features. Some sources of relevant student data are presented in the table here.\n\n\n\nTable 2.3: Official public HE data.\n\n\n\n\n\n\n\n\n\n\nSource Org\nDetails\nUse Case\n\n\n\n\nIPEDS\nReported annually by most U.S. institutions; run by NCES\nBenchmarking against other schools\n\n\nCollege Scorecard\nDepartment of Education data that combines IPEDS with financial aid data and tax records\nComparing student outcomes like repayment of loans and salary; Public reporting\n\n\nNational Student Clearinghouse\nNonprofit org that has enrollment and degree records for most of U.S. students\nTracking student outcomes\n\n\nU.S. Census Bureau\nPopulation and demographic data\nContextualizing institutional factors\n\n\nBureau of Labor Statistics\nWage, employment, and occupational data\nConnecting degree programs to workforce demand and career outcomes\n\n\n\n\n\n\n\n\n2.6.1.2 Unofficial public data\nUnofficial public datasets are also available generally but may or may not be based on a formal trustworthy process. Data like this are useful in several capacities. If they are verified and validated, they can be genuinely informative. Otherwise they can be helpful for learning, creating prototypes, and exploring.\n\n\n\nTable 2.4: Unofficial public HE data.\n\n\n\n\n\nSource\nDetails\n\n\n\n\nKaggle\nOnline community datasets\n\n\nGoogle Dataset Search\nIndexed datasets online\n\n\nOULAD\nOpen university shared LMS data\n\n\nHarvard Dataverse\nOpen repository for published research data\n\n\nUCI Machine Learning Repository\nDatasets for machine learning",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html#sec-restricted-data",
-    "href": "02-data-in-higher-ed.html#sec-restricted-data",
+    "objectID": "02.html#sec-restricted-data",
+    "href": "02.html#sec-restricted-data",
     "title": "2  Data Details",
     "section": "2.7 Restricted data",
     "text": "2.7 Restricted data\nCompared to publicly available data, restricted data come with obligations and rules. Often access requires special permissions.\n\n2.7.1 Institutional data\nInstitutional data is internal to a university and its processes. Often this is housed on university servers or on secured cloud systems. These data are related to important aspects of a school such as enrollment numbers, budgets, and accreditation metrics. As this data is so highly sensitive, access is based on roles assigned to university stakeholders, where a faculty member may have access to different data compared to a department chair. Some example systems and the type of data they may house are presented on the table in this section.\n\n\n\nTable 2.5: Institutional system examples and their data.\n\n\n\n\n\n\n\n\n\nSystem\nData\n\n\n\n\nStudent Information Systems (SIS)\nStudent data such as grades and attendance\n\n\nLearning Management Systems (LMS)\nTeaching and learning resources with related activity data\n\n\nEnterprise Resource Planning (ERP)\nBusiness activity and transactions\n\n\nFinancial Aid System\nStudent awards and disbursements\n\n\nHR System\nEmployee records\n\n\nCustomer Relationship Management (CRM)\nProspective student and alumni data\n\n\n\n\n\n\n\n\n2.7.2 Protected data\nSome institutional data are both restricted and protected legally. For instance, the Family Educational Rights and Privacy Act limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the Health Insurance Portability and Accountability Act (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects. Also, keep in mind the privacy and rights of the individuals represented in the data throughout your engagement with it. Always work cautiously!",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "02-data-in-higher-ed.html#chapter-2-exercises",
-    "href": "02-data-in-higher-ed.html#chapter-2-exercises",
+    "objectID": "02.html#chapter-2-exercises",
+    "href": "02.html#chapter-2-exercises",
     "title": "2  Data Details",
     "section": "2.8 Chapter 2 Exercises:",
     "text": "2.8 Chapter 2 Exercises:\n\n\n\n\n\n\nNoteExercises\n\n\n\n\nClassify the data around you. Think about some data in your own professional context or data from an envisioned one. Identify one of each dataset access type—a) public facing, b) internal, and c) legally protected.\n\nDescribe and place. For each dataset, describe what it is, its access type, and the system type where it resides (e.g., SIS, LMS).\nDefine characteristics. For these datasets, explain their properties with the five characteristics we discussed (volume, variety, velocity, veracity, value).\nPath to access. For these datasets, what types of permissions and regulations govern them?\n\nData to information. A colleague gives you a spreadsheet of all students’ individual GPAs for the year and requests that you analyze it for helpful insights.\n\nAs information. Explain two ways you might organize or summarize the raw data transforming it into insights a decision maker could make use of.\nRisk. One major found in the data has only three students. How might reporting on the GPA by major be a privacy concern, especially if the results were to be reported publicly? How might you address the issue?\n\nPublic data source. Choose a dataset from an official public source (e.g., IPEDS) and one from an unofficial public source (e.g., Kaggle).\n\nTrustworthy?. What was the process that produced it, and what does that mean for how you could use it for your work?\nDefine guiding questions. Create one question for each dataset that might serve to guide your analysis if you were to undertake one. Explain them and how they connect to the data.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data Details</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html",
-    "href": "03-data-sources.html",
+    "objectID": "03.html",
+    "href": "03.html",
     "title": "3  R Orientation",
     "section": "",
     "text": "3.1 What is R?\nR is a functional language built specifically for working with data. Professionals who work with data such as statisticians and researchers are actively involved in shaping the language. In a sense, R is a living body of work that is constantly underdevelopment, evolving as the needs of its users do. As higher education data professionals, we use it because it is highly efficient, auditable, scalable, and yields reproducible work that can be assessed to establish trustworthyness.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#what-is-r",
-    "href": "03-data-sources.html#what-is-r",
+    "objectID": "03.html#what-is-r",
+    "href": "03.html#what-is-r",
     "title": "3  R Orientation",
     "section": "",
     "text": "3.1.1 A brief history of R\nThe history of the R can be traced back to the 1970’s where John Chambers and his colleagues at Bell Laboratories developed a commercial language called S. R was developed in the 1990s by the statisticians Ross Ihaka and Robert Gentleman as a free and open language for everyone that built on principles from S. R was first released to the public in 1993.\n\n\n3.1.2 R and higher education\nR is widely utilized in a variety of industries including biology, pharmaceutical research, and higher education. It is free and can be used to work any other programs (e.g., Excel, SPSS) which is important when working across departments, divisions, and companies where everyone may have their own preferences for statistical software. Although completely free and open, R is of the highest quality tools for working with data. As it is continuously updated by a global community of users, the latest statistical and analytic methods are available in R often well before they are incorporated into commercial software.\n\n\n3.1.3 R and IDEs\nR is the language that interprets our typed commands into instructions that the computer carrys out. An Integrated Developer Environment (IDE) is an application that makes it easier to work with R. Where working with the R interpreter itself is a more minimal experience—essentially where flat text is typed into a prompt—an IDE gives us features such as display windows to see our plots and menu options to save files.\n\n\n\n\n\n\nFigure 3.1: The base R console.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#rstudio",
-    "href": "03-data-sources.html#rstudio",
+    "objectID": "03.html#rstudio",
+    "href": "03.html#rstudio",
     "title": "3  R Orientation",
     "section": "3.2 RStudio",
     "text": "3.2 RStudio\nRStudio is a free and open source product created by the public benefit corporation Posit. It was officially released to the public in 2016 and is the most common IDE for R. R can be thought of as the language that sits under the hood of RStudio performing the work that we outline in the IDE.\nRStudio organizes work across several windows called panes. There are several of them but some of the most useful are:\n\nSource\n\nThis is the text editor where the reproducible script file is created. It is persistent and can be saved.\n\nConsole\n\nThe results of the script appear in the console, such as mean values or descriptive stats for a dataset. The console is also interactive meaning that code can be directly entered here. This is helpful for code you want to execute but don’t need to persist in your script, such as arithmetic calculations or accessing help files.\n\nEnvironment\n\nThe environment pane displays the objects that are accessible to R in device memory. These can be things like imported datasets, variables, and values.\n\nFiles\n\nThe actual files sitting in your device that can be loaded into the environment are displayed in the files panel.\n\nPlots\n\nThe plots pane shows us the data visualizations we create in our analysis. They can be exported from there too.\n\n\nThe image shown below shows a possible configuration of the RStudio panes, which are customizable.\n\n\n\n\n\n\nFigure 3.2: The base R console.\n\n\n\n\n3.2.1 Install\nR can be downloaded from the Comprehensive R Archive Network (CRAN). Navigate to https://cran.r-project.org/ and select your operating system (e.g., Windows) to download the correct installer. Run the installer typically with the default settings and verify a successful installation by opening R once it has completed.\nRStudio can be downloaded from Posit at https://posit.co/downloads. Again, select the installer based on your OS, run it with default settings, and verify it by opening the application when complete.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#r-and-ai",
-    "href": "03-data-sources.html#r-and-ai",
+    "objectID": "03.html#r-and-ai",
+    "href": "03.html#r-and-ai",
     "title": "3  R Orientation",
     "section": "3.3 R and AI",
     "text": "3.3 R and AI\nGenerative artificial intelligence (AI) has revolutionized coding in general. Large language models (LLMs) are very capable at aiding humans in the creation of code. Natural language can be used to prompt AI chatbots for working code, in a matter of seconds or minutes for many requests. With this in mind, it is important for both the learner new to R and the professional working in an applied capacity to remain in control of the assistance output by AI. When learning, I recommend using AI as a helper and assistant for scaffolding one’s knowledge development to help ensure coding skill growth, as opposed to relying on the tool for working results that are not understood. Importantly, understanding and owning every line of code is essential to quality and trustworthy data science with R.\n\n3.3.1 Modes of operation\nPresently there are two modes of operation to consider when utilizing AI in a data science workflow.\n\nCopying and pasting to an external chatbot. In this mode, code is copied from the IDE over to the chatbot as needed for help and assistance. This mode is helpful for learning as it is manual and only relies on AI as needed.\nIntegrated chatbot in the IDE. This a more advanced mode of learning where the chatbot sits within the IDE editing and recommending code as the work progresses. This mode is more suitable for advanced practitioners who have a firm understanding of R. Using this approach while developing skills can potentially lead to over reliance and unintended destructive code results if the edits made by the bot are not completely understood by the human.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#working-in-rstudio",
-    "href": "03-data-sources.html#working-in-rstudio",
+    "objectID": "03.html#working-in-rstudio",
+    "href": "03.html#working-in-rstudio",
     "title": "3  R Orientation",
     "section": "3.4 Working in RStudio",
     "text": "3.4 Working in RStudio\n\n3.4.1 The Environment\nWhen coding with RStudio, the environment refers to all of the objects (e.g., data, functions, variables) held in the computer’s memory for the session. The environment pane displays these. It is always a good idea to inspect what is there when initially loading the program as objects are not by default removed from the environment when closed. This setting and others, such as the appearance of the UI in RStudio, can be updated in the menu path Tools &gt; Global Options.\n\n\n3.4.2 Global Options\n\n\n\n\n\n\nFigure 3.3: RStudio global options.\n\n\n\n\n\n3.4.3 The persistent reproducible script\nThe heart of working in R is the script file where code is typed and saved. To create a new script file navigate to the menu File &gt; New &gt; R Script. Setting a working directory tells R where you are working so it knows where to look for files and where to save new ones. Importantly for the new learner, saving the script file to a folder location where your other relevant files will be, such as alongside your datasets, will be the easiest way to proceed. Otherwise you will have to specify a folder path telling R how to get there. You can issue the setwd() command or right click your script file and choose the option in the UI.\nExample commands for setting the working directory are here. You will have to edit them to reflect your specific path on your device.\n# Windows\nsetwd(\"C:/Users/yourname/Documents/my-project\")\n\n# Mac\nsetwd(\"/Users/yourname/Documents/my-project\")\nThe menu option is likely simpler and is accessed by right clicking the script file tab seen here.\n\n\n\n\n\n\nFigure 3.4: Setting the working directory with a right-click.\n\n\n\nAs you are working in your script, to execute the code place the mouse cursor on the line you want to execute and type Ctrl+Enter. For code statements that are several lines long, R is smart enough to run the complete statement. Remember to frequently save your scripts with Ctrl+S. Also, to run code outside of your script—like a simple one-off calculation for example— you can still enter code interactively in the console pane.\n\n\n\n\n\n\nFigure 3.5: Entering a command interactively in the R console.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#packages",
-    "href": "03-data-sources.html#packages",
+    "objectID": "03.html#packages",
+    "href": "03.html#packages",
     "title": "3  R Orientation",
     "section": "3.5 Packages",
     "text": "3.5 Packages\nR packages are how the base R language is extended to have more capabilities. Packages consist of functions, data, and documentation. Packages are written by the R community to accomplish particular tasks such as creating graphs or working with Excel files. Packages must be installed once on a device and then be loaded into memory every time.\nHere is the code for installing and loading packages, which is typically placed at the top of a script:\n# Install a package (once)\ninstall.packages(\"packagename\")\n\n# Load a package (each session)\nlibrary(packagename)",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#help-and-explanations",
-    "href": "03-data-sources.html#help-and-explanations",
+    "objectID": "03.html#help-and-explanations",
+    "href": "03.html#help-and-explanations",
     "title": "3  R Orientation",
     "section": "3.6 Help and explanations",
     "text": "3.6 Help and explanations\nGetting stuck (i.e., blocked from progressing in ones work) happens to everyone who has ever coded. It is a natural and expected part of the experience. There are several ways to get help when this happens. ### Comments Comments in R are not executed as part of the code but are for humans to read and understand. Thoroughly comment your code so that you will understand it if you pick it up at a later time or if it is passed to someone else. Comments start with a #.\nAn example comment is here.\n# The mean function calculates the average gpa.\nmean(gpa) # The code is on this line; Everything behind the '#' is ignored by the R interpreter.\n\n3.6.1 AI\nAI has transformed our ability get help when stuck as new learners or when engaging with advanced topics as higher education data professionals. As was mentioned, understand and own every piece of AI output incorporated in your work to ensure accountability, learning progress, and clarity.\n\n\n3.6.2 Online function documentation\nIf AI does not provide sufficient information when seeking help, the built-in documentation for a function can be accessed with ?, such as by typing ?mean. This type of assistance is not recommended for the new learner as it can be opaque and is organized like it was created for robots. Instead it is better to access package documentation directly on user-friendly websites. For example, if working with the dplyr package, searching for this package’s documentation quickly surfaces a much easier to use reference experience at https://dplyr.tidyverse.org/index.html, complete with a search function and integrated AI.\n\n\n\n\n\n\nFigure 3.6: Online R documentation example.\n\n\n\n\n\n3.6.3 Help Resources\nThere are an abundance of R resources online that are well organized and easy to use. Just a few general ones are on the table below.\n\n\n\nTable 3.1: R resources.\n\n\n\n\n\nResource\nWhat it is\nLink\n\n\n\n\nRDocumentation\nSearchable function documentation\nhttps://www.rdocumentation.org\n\n\nrdrr.io\nDocumentation for many packages\nhttps://rdrr.io\n\n\nPosit Cheatsheets\nQuick guides for some packages\nhttps://posit.co/resources/cheatsheets\n\n\ntidyverse\nPosit’s tidyverse documentation.\nhttps://tidyverse.org/",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#community-resources",
-    "href": "03-data-sources.html#community-resources",
+    "objectID": "03.html#community-resources",
+    "href": "03.html#community-resources",
     "title": "3  R Orientation",
     "section": "3.7 Community resources",
     "text": "3.7 Community resources\nThe R language and related packages has a very active community where news, resources, and help is offered. Here are some that high-quality.\n\n\n\nTable 3.2: R community resources.\n\n\n\n\n\nResource\nWhat it is\nLink\n\n\n\n\nR-bloggers\nMany R blog posts aggregated\nhttps://www.r-bloggers.com\n\n\nPosit Blog\nOfficial Posit news and resources\nhttps://posit.co/blog\n\n\nR Weekly\nWeekly collation of R news\nhttps://rweekly.org\n\n\nStack Overflow\nDiscuss specific coding issues\nhttps://stackoverflow.com/questions/tagged/r",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
     ]
   },
   {
-    "objectID": "03-data-sources.html#chapter-3-exercises",
-    "href": "03-data-sources.html#chapter-3-exercises",
+    "objectID": "03.html#chapter-3-exercises",
+    "href": "03.html#chapter-3-exercises",
     "title": "3  R Orientation",
     "section": "3.8 Chapter 3 Exercises",
-    "text": "3.8 Chapter 3 Exercises\n\n\n\n\n\n\nNoteExercises\n\n\n\n\nSet up your environment. Get R and RStudio working on your own device.\n\nInstall R from CRAN and RStudio from Posit. Open them both to ensure they work.\nIdentify the Source, Console, Plot, and Environment panes. Describe in a sentence what each one is for.\nCreate a new script, save it to a folder, and make that folder the working directory.\n\nPractice finding help. Use each help method from this chapter on the mean function.\n\nIn the console, run ?mean and explore the documentation with AI, asking for details and clarity on anything you don’t understand (e.g., specific arguments like ‘trim’). Document some information the help page tells you identifying where you relied on AI for clarity and what you extracted from the documentation unaided.\n\nExplore a package with AI. Search for a new R package and learn about it.\n\nFind a package relevant that is professionally relevant to you.\nUse AI to help you understand it, documenting your process and knowledge.",
+    "text": "3.8 Chapter 3 Exercises\n\n\n\n\n\n\nNoteExercises\n\n\n\n\nSet up your environment. Get R and RStudio working on your own device.\n\nInstall R from CRAN and RStudio from Posit. Open them both to ensure they work.\nIdentify the Source, Console, Plot, and Environment panes. Describe in a sentence what each one is for.\nCreate a new script, save it to a folder, and make that folder the working directory.\n\nPractice finding help. Use each help method from this chapter on the mean function.\n\nIn the console, run ?mean and explore the documentation with AI, asking for details and clarity on anything you don’t understand (e.g., specific arguments like ‘trim’).\nDocument some information the help page tells you identifying where you relied on AI for clarity and what you extracted from the documentation unaided.\n\nExplore a package with AI. Search for a new R package and learn about it.\n\nFind a package that is professionally relevant to you.\nUse AI to help you understand it, documenting your process and knowledge.",
     "crumbs": [
-      "Part I — Foundations",
+      "Part 1 — Applied R",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Orientation</span>"
-    ]
-  },
-  {
-    "objectID": "04-getting-started.html",
-    "href": "04-getting-started.html",
-    "title": "4  Getting started with R",
-    "section": "",
-    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
-    "crumbs": [
-      "Part II — Working in R",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Getting started with R</span>"
-    ]
-  },
-  {
-    "objectID": "05-tidyverse.html",
-    "href": "05-tidyverse.html",
-    "title": "5  Transforming data with the tidyverse",
-    "section": "",
-    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
-    "crumbs": [
-      "Part II — Working in R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Transforming data with the tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "06-visualization.html",
-    "href": "06-visualization.html",
-    "title": "6  Visualizing data with ggplot2",
-    "section": "",
-    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
-    "crumbs": [
-      "Part II — Working in R",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Visualizing data with ggplot2</span>"
-    ]
-  },
-  {
-    "objectID": "07-tidymodels.html",
-    "href": "07-tidymodels.html",
-    "title": "7  Modeling with tidymodels",
-    "section": "",
-    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
-    "crumbs": [
-      "Part III — Modeling, Packages, and Practice",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Modeling with tidymodels</span>"
-    ]
-  },
-  {
-    "objectID": "08-packages.html",
-    "href": "08-packages.html",
-    "title": "8  Building your own R package",
-    "section": "",
-    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
-    "crumbs": [
-      "Part III — Modeling, Packages, and Practice",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Building your own R package</span>"
-    ]
-  },
-  {
-    "objectID": "09-projects-and-lifecycle.html",
-    "href": "09-projects-and-lifecycle.html",
-    "title": "9  Managing projects and the data science lifecycle",
-    "section": "",
-    "text": "TipLearning objectives\n\n\n\nAfter this chapter you will be able to:\n\nTODO\nTODO\n\n\n\nTODO — write this chapter. Reuse the patterns from ?sec-what-is-ds: labelled code chunks, @fig- / @tbl- cross-references, @key citations, and .callout-note exercises.\n\n\n\n\n\n\nNoteExercise\n\n\n\nTODO.",
-    "crumbs": [
-      "Part III — Modeling, Packages, and Practice",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Managing projects and the data science lifecycle</span>"
     ]
   },
   {
