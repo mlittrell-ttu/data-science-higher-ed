@@ -157,11 +157,12 @@ The R language and related packages has a very active community where news, reso
 
 2. **Practice finding help.** Use each help method from this chapter on the `mean` function.
 
-    a. In the console, run `?mean` and explore the documentation with AI, asking for details and clarity on anything you don't understand (e.g., specific arguments like 'trim'). Document some information the help page tells you identifying where you relied on AI for clarity and what you extracted from the documentation unaided.
+    a. In the console, run `?mean` and explore the documentation with AI, asking for details and clarity on anything you don't understand (e.g., specific arguments like 'trim'). 
+    b. Document some information the help page tells you identifying where you relied on AI for clarity and what you extracted from the documentation unaided.
     
 3. **Explore a package with AI.** Search for a new R package and learn about it.
 
-    a. Find a package relevant that is professionally relevant to you.
+    a. Find a package that is professionally relevant to you.
     b. Use AI to help you understand it, documenting your process and knowledge.
     
 :::

@@ -29,21 +29,28 @@ book:
     collapse-level: 1
   chapters:
     - index.qmd
-    - part: "Part I — Foundations"
+    - part: "Part 1 — Applied R"
       chapters:
-        - 01-what-is-data-science.qmd
-        - 02-data-in-higher-ed.qmd
-        - 03-data-sources.qmd
-    - part: "Part II — Working in R"
+        - 01.qmd
+        - 02.qmd
+        - 03.qmd
+        - 04.qmd
+        - 05.qmd
+        - 06.qmd
+        - 07.qmd
+        - 08.qmd
+        - 09.qmd
+    - part: "Part 2 — Machine Learning"
       chapters:
-        - 04-getting-started.qmd
-        - 05-tidyverse.qmd
-        - 06-visualization.qmd
-    - part: "Part III — Modeling, Packages, and Practice"
+        - ph1.qmd
+    - part: "Part 3 — Quarto"
       chapters:
-        - 07-tidymodels.qmd
-        - 08-packages.qmd
-        - 09-projects-and-lifecycle.qmd
+        - ph2.qmd
+        
+    - part: "Part 4 — Shiny"
+      chapters:
+        - ph3.qmd
+        
     - summary.qmd
     - references.qmd
   appendices:
