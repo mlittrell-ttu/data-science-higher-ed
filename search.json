@@ -468,7 +468,7 @@
     "href": "setup.html",
     "title": "Setup",
     "section": "",
-    "text": "What readers install before Chapter 1.\n\nR — https://cran.r-project.org/\nAn editor — RStudio or Positron\nQuarto — https://quarto.org/ (bundled with recent RStudio)\nPackages\n\n\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n\nTODO — trim to exactly what your book uses.",
+    "text": "What readers install before Chapter 1.\n\n\nR — https://cran.r-project.org/\n\n\nAn editor — RStudio or Positron\n\nQuarto — https://quarto.org/ (bundled with recent RStudio)\nPackages\n\n\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n\nTODO — trim to exactly what your book uses.",
     "crumbs": [
       "Appendices",
       "Setup"
