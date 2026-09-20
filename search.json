@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "",
     "text": "Introduction",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#who-is-this-book-for",
     "href": "index.html#who-is-this-book-for",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "Who is this book for?",
     "text": "Who is this book for?\nThis free book is meant for higher education professionals who may work in a variety of areas such as institutional research, assessment, enrollment management, or student affairs. Its main purpose is to be very practical. This text could also be relevant to anyone wanting to learn more about applied data science, the R language, and how to use it for data tasks.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#why-would-i-want-to-read-this-book-excel-seems-just-fine.",
     "href": "index.html#why-would-i-want-to-read-this-book-excel-seems-just-fine.",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "Why would I want to read this book? Excel seems just fine.",
     "text": "Why would I want to read this book? Excel seems just fine.\nUsing a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are performed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work often relies on the recollection of the individual who accomplished the task with the GUI. “I remember dragging this column in from the spring report—I’m sure of it!”",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps",
     "href": "index.html#wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "Wait. We can use code to work with data? Isn’t that for making apps?",
     "text": "Wait. We can use code to work with data? Isn’t that for making apps?\nProgramming languages such as R or Python are great for working with data, but the coding work produced can also be thought of as relevant to the creation of helpful data apps too.",
     "crumbs": [
@@ -42,7 +42,7 @@
   {
     "objectID": "index.html#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files",
     "href": "index.html#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "What about tools like Stata that have a GUI to click and also uses script files?",
     "text": "What about tools like Stata that have a GUI to click and also uses script files?\nTools like these are proprietary and cost money, sometimes substantial amounts. Companies that own such products often gate features so that you are limited in what you can produce. Want to create machine learning models? That capability can be a separate add-on that costs extra beyond your currently purchased product.\nUsing a free and open source (FOS) language like R, an accompanying FOS developer program like RStudio, and the numerous FOS packages available means you can use the entire product for free with no restrictions. R is frequently updated and can be used across many different file types, meaning a proficient R user can produce output for most any applications such as Excel or Stata. This interoperability can be very helpful for professionals working across instituions, departments, vendors, and companies where a variety of tools are used.",
     "crumbs": [
@@ -52,7 +52,7 @@
   {
     "objectID": "index.html#why-another-r-book",
     "href": "index.html#why-another-r-book",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "Why another R book?",
     "text": "Why another R book?\nBooks about R that I have encountered generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. I crafted this book to overcome the limitations mentioned, to teach my own courses about data science in higher education, and to make explicit connections from AI to R coding to support learners.",
     "crumbs": [
@@ -62,7 +62,7 @@
   {
     "objectID": "index.html#what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content",
     "href": "index.html#what-will-i-be-able-to-do-by-reading-this-book-and-practicing-its-content",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "What will I be able to do by reading this book and practicing its content?",
     "text": "What will I be able to do by reading this book and practicing its content?\n\nUnderstand applied data science generally and within the context of higher education.\nGain insights about the types of data used in higher education and the systems that store them.\nWrangle and clean data.\nAccomplish work more efficiently with R that is typically performed in Excel.\nCreate your own applications, machine learning models, databases, and packages.\nUnderstand data science and its relationship to research.\nCreate great looking data visualizations.\nRetrieve data from a variety of sources including APIs and SQL databases.",
     "crumbs": [
@@ -72,7 +72,7 @@
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
-    "title": "Applied Data Science for Higher Education with R",
+    "title": "Applied Data Science in Higher Education with R",
     "section": "License",
     "text": "License\nThis book is licensed under CC 4.0.",
     "crumbs": [
@@ -84,7 +84,7 @@
     "href": "01.html",
     "title": "1  Data Science Explained",
     "section": "",
-    "text": "1.1 What is higher education?\nThe UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For the applied data professional, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.",
+    "text": "1.1 What is higher education?\nHigher education (HE) is overall a very challenging thing to define. As a succinct description, the UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For HE professional striving to become more proficient with data, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.",
     "crumbs": [
       "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
@@ -106,7 +106,7 @@
     "href": "01.html#what-are-data",
     "title": "1  Data Science Explained",
     "section": "1.2 What are data?",
-    "text": "1.2 What are data?\nData are recorded observations about the world (Witte & Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system’s discussion board, or pictures of cats. Data can be encountered—like campus weather patterns—or constructed—such as end-of-course feedback.",
+    "text": "1.2 What are data?\nData are recorded observations about the world (Witte & Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system’s discussion board, or pictures of cats. Data can be encountered—like campus weather patterns. It can also be constructed—like with end-of-course feedback surveys.",
     "crumbs": [
       "Part 1 — Applied R",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Science Explained</span>"
@@ -402,7 +402,7 @@
     "href": "setup.html",
     "title": "Setup",
     "section": "",
-    "text": "What readers install before Chapter 1.\n\n\nR — https://cran.r-project.org/\n\n\nAn editor — RStudio or Positron\n\nQuarto — https://quarto.org/ (bundled with recent RStudio)\nPackages\n\n\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n\nTODO — trim to exactly what your book uses.",
+    "text": "What readers install before Chapter 1.\n\nR — https://cran.r-project.org/\nAn editor — RStudio or Positron\nQuarto — https://quarto.org/ (bundled with recent RStudio)\nPackages\n\n\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n\nTODO — trim to exactly what your book uses.",
     "crumbs": [
       "Appendices",
       "Setup"
