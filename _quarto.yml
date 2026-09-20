@@ -21,7 +21,7 @@ book:
   site-url: https://mlittrell-ttu.github.io/data-science-higher-ed/   
   repo-url: https://github.com/mlittrell-ttu/data-science-higher-ed
   repo-branch: main
-  repo-actions: [edit, issue, source]            # adds "Edit this page" links
+  repo-actions: [edit, issue, source] # adds "Edit this page" links
   search: true
   page-navigation: true
   sidebar:
@@ -60,6 +60,9 @@ format:
     theme:
       - cosmo
       - theme.scss
+    include-in-header:
+      - text: |
+          <script data-goatcounter="https://heds.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     code-copy: true
     code-link: true
     code-overflow: wrap
