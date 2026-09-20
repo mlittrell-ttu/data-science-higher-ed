@@ -24,7 +24,7 @@ Science is a knowledge system that is positioned in the experiential and observa
 Data science is the discipline of learning from data (Grus, 2019). Essential to its practice is the notion of **auditability**, where practitioners approach data science work in a way that can be verified by others.  
 
 ## What is applied data science?
-Applied data science is defined in many ways. Its definition can be dependent on where the term is used.  Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). For example, this output could be a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve a university rooted in verifiable data science.
+Applied data science is defined in many ways. Its definition can be dependent on where the term is used.  Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). For example, such output could be a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve a university rooted in verifiable data science.
 
 ## What is applied data science in higher education?
 Applied data science in a higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different activities may be undertaken that all qualify as data science. These include:
@@ -56,7 +56,7 @@ The table here shows an example of each method discussed for conducting data sci
 
 ## Data science projects
 
-Data science projects are the heart of the application of data science in the real world. They are engaged with to solve a problem for key stakeholders, such as increasing enrollment numbers, identifying students at risk of withdrawing, or increasing graduation rates among first-generation students. 
+Data science projects are the heart of the application of data science in the real-world. These projects are engaged with to solve problems for key stakeholders such as: increasing enrollment numbers, identifying students at risk of withdrawing, or increasing graduation rates among first-generation students. 
 
 ### Define the data science problem (Phase One)
 Good data science starts by thoroughly understanding the issues faced and careful planning. Example iterative steps in a data science project workflow is presented in the table here. Importantly these steps may not occur in sequence and can be revisited as needed, which is likely often depending on the project.
