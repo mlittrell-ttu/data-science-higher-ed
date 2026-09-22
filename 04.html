@@ -323,7 +323,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#example-workflow" id="toc-example-workflow" class="nav-link" data-scroll-target="#example-workflow"><span class="header-section-number">4.5.1</span> Example workflow</a></li>
   </ul>
 </li>
-  <li><a href="#chapter-4-exercises" id="toc-chapter-4-exercises" class="nav-link" data-scroll-target="#chapter-4-exercises"><span class="header-section-number">4.6</span> Chapter 4 Exercises:</a></li>
+  <li><a href="#chapter-4-exercises" id="toc-chapter-4-exercises" class="nav-link" data-scroll-target="#chapter-4-exercises"><span class="header-section-number">4.6</span> Chapter 4 Exercises</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/04.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/04.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -356,7 +356,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For this chapter, create a new script file <strong>(File &gt; New &gt; File R Script)</strong> and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work.</p>
 <div id="fig-folder" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/chp_4_folder.png" class="quarto-figure quarto-figure-center figure-img" width="525" height="400">
+<img src="images/chp_4_folder.png" class="quarto-figure quarto-figure-center figure-img" width="550" height="375">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.1: An R script and CSV data file saved in the same folder.
@@ -417,10 +417,8 @@ Figure&nbsp;4.1: An R script and CSV data file saved in the same folder.
 <pre class="(r)"><code>function_name(data, argument_1)</code></pre>
 <p>Here is the mean() function in action:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">50</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 53.33333</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">50</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 53.33333</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="objects" class="level3" data-number="4.3.2"><h3 data-number="4.3.2" class="anchored" data-anchor-id="objects">
 <span class="header-section-number">4.3.2</span> Objects</h3>
@@ -493,8 +491,7 @@ Table&nbsp;4.1: Common R data types.
 </section><section id="operators" class="level3" data-number="4.3.5"><h3 data-number="4.3.5" class="anchored" data-anchor-id="operators">
 <span class="header-section-number">4.3.5</span> Operators</h3>
 <p>Operators are symbols used by R to work with values. <strong>Assignment</strong> operators let us assign values directly to named objects. <strong>Arithmetic</strong> operators are used for working with values via common arithmetic methods, such as multiplying or adding. <strong>Comparison</strong> operators compare two or more values. They return a logical result, either <code>TRUE</code> or <code>FALSE</code>.<strong>Logical</strong> operators let us take the results from two or more logical comparisons (i.e., conditions) and returns a single logical result, either <code>TRUE</code> or <code>FALSE</code>.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Assignment________________________________ </span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Assignment________________________________ </span></span>
 <span><span class="co"># See these values in your environment pane.</span></span>
 <span><span class="va">credits</span> <span class="op">&lt;-</span> <span class="fl">15</span></span>
 <span><span class="va">program</span> <span class="op">&lt;-</span> <span class="st">"Biology"</span></span>
@@ -502,107 +499,69 @@ Table&nbsp;4.1: Common R data types.
 <span></span>
 <span></span>
 <span><span class="co"># Arithmetic operators________________________________</span></span>
-<span><span class="va">credits</span> <span class="op">+</span> <span class="fl">3</span>      <span class="co"># addition</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 18</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op">-</span> <span class="fl">3</span>      <span class="co"># subtraction</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op">*</span> <span class="fl">2</span>      <span class="co"># multiplication</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 30</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op">/</span> <span class="fl">2</span>      <span class="co"># division</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 7.5</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op">^</span> <span class="fl">2</span>      <span class="co"># exponent</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 225</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">4</span>     <span class="co"># modulo (remainder)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Comparison________________________________</span></span>
-<span><span class="va">credits</span> <span class="op">&gt;</span> <span class="fl">12</span>     <span class="co"># greater than</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op">&lt;</span> <span class="fl">12</span>     <span class="co"># less than</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op">&gt;=</span> <span class="fl">15</span>    <span class="co"># greater than or equal to</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">credits</span> <span class="op">==</span> <span class="fl">15</span>    <span class="co"># equal to</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">program</span> <span class="op">!=</span> <span class="st">"Business"</span>   <span class="co"># not equal to</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Logical________________________________</span></span>
-<span><span class="va">full_time</span> <span class="op">&amp;</span> <span class="op">(</span><span class="va">credits</span> <span class="op">&gt;</span> <span class="fl">12</span><span class="op">)</span>   <span class="co"># AND - both must be TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">full_time</span> <span class="op">|</span> <span class="op">(</span><span class="va">credits</span> <span class="op">&lt;</span> <span class="fl">12</span><span class="op">)</span>   <span class="co"># OR  - either can be TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">!</span><span class="va">full_time</span>                   <span class="co"># NOT - reverses the TRUE value</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div>
+<span><span class="va">credits</span> <span class="op">+</span> <span class="fl">3</span>      <span class="co"># addition</span></span>
+<span><span class="va">credits</span> <span class="op">-</span> <span class="fl">3</span>      <span class="co"># subtraction</span></span>
+<span><span class="va">credits</span> <span class="op">*</span> <span class="fl">2</span>      <span class="co"># multiplication</span></span>
+<span><span class="va">credits</span> <span class="op">/</span> <span class="fl">2</span>      <span class="co"># division</span></span>
+<span><span class="va">credits</span> <span class="op">^</span> <span class="fl">2</span>      <span class="co"># exponent</span></span>
+<span><span class="va">credits</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">4</span>     <span class="co"># modulo (remainder)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Comparison________________________________</span></span>
+<span><span class="va">credits</span> <span class="op">&gt;</span> <span class="fl">12</span>     <span class="co"># greater than</span></span>
+<span><span class="va">credits</span> <span class="op">&lt;</span> <span class="fl">12</span>     <span class="co"># less than</span></span>
+<span><span class="va">credits</span> <span class="op">&gt;=</span> <span class="fl">15</span>    <span class="co"># greater than or equal to</span></span>
+<span><span class="va">credits</span> <span class="op">==</span> <span class="fl">15</span>    <span class="co"># equal to</span></span>
+<span><span class="va">program</span> <span class="op">!=</span> <span class="st">"Business"</span>   <span class="co"># not equal to</span></span>
+<span></span>
+<span><span class="co"># Logical________________________________</span></span>
+<span><span class="va">full_time</span> <span class="op">&amp;</span> <span class="op">(</span><span class="va">credits</span> <span class="op">&gt;</span> <span class="fl">12</span><span class="op">)</span>   <span class="co"># AND - both must be TRUE</span></span>
+<span><span class="va">full_time</span> <span class="op">|</span> <span class="op">(</span><span class="va">credits</span> <span class="op">&lt;</span> <span class="fl">12</span><span class="op">)</span>   <span class="co"># OR  - either can be TRUE</span></span>
+<span><span class="op">!</span><span class="va">full_time</span>                   <span class="co"># NOT - reverses the TRUE value</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section><section id="other-data-structures" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="other-data-structures">
 <span class="header-section-number">4.4</span> Other data structures</h2>
 <p>Beyond the tabular data frame and tibble, data in R are structured a few different ways. Here are some common ones.</p>
 <dl>
 <dt>Vector</dt>
 <dd>
-A simple ordered set of values that are all the same type, numbers for example. All columns found in a data frame are vectors. <code>credit_hours &lt;- (10, 20, 30)</code>
-</dd>
-<dt>List</dt>
-<dd>
-Can be considered a ‘container’ for holding a mix of data types of even other structures. <code>student &lt;- list(id = "S001, credits = 12)</code>
-</dd>
-<dt>Matrix</dt>
-<dd>
-A grid of values that are all the same type; organized by rows and columns. <code>scores &lt;- matrix(id = "S001, credits = 12)</code>
+A simple ordered set of values that are all the same type, numbers for example. All columns found in a data frame are vectors.
 </dd>
 </dl>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Vector________________________</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Vector________________________</span></span>
 <span><span class="va">credit_hours</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">30</span><span class="op">)</span></span>
-<span><span class="va">credit_hours</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 10 20 30</code></pre>
+<span><span class="va">credit_hours</span></span>
+<span><span class="co">#&gt; [1] 10 20 30</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># List________________________</span></span>
+<dl>
+<dt>List</dt>
+<dd>
+Can be considered a ‘container’ for holding a mix of data types of even other structures.
+</dd>
+</dl>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># List_________________________</span></span>
 <span><span class="va">student</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"S001"</span>, credits <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span>
-<span><span class="va">student</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$id
-[1] "S001"
-
-$credits
-[1] 12</code></pre>
+<span><span class="va">student</span></span>
+<span><span class="co">#&gt; $id</span></span>
+<span><span class="co">#&gt; [1] "S001"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $credits</span></span>
+<span><span class="co">#&gt; [1] 12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Matrix________________________</span></span>
+<dl>
+<dt>Matrix</dt>
+<dd>
+A grid of values that are all the same type; organized by rows and columns.
+</dd>
+</dl>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Matrix_________________________</span></span>
 <span><span class="va">scores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">88</span>, <span class="fl">92</span>, <span class="fl">75</span>, <span class="fl">80</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="va">scores</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2]
-[1,]   88   75
-[2,]   92   80</code></pre>
-</div>
+<span><span class="va">scores</span></span>
+<span><span class="co">#&gt;      [,1] [,2]</span></span>
+<span><span class="co">#&gt; [1,]   88   75</span></span>
+<span><span class="co">#&gt; [2,]   92   80</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="csv-files" class="level2" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="csv-files">
 <span class="header-section-number">4.5</span> CSV files</h2>
@@ -611,49 +570,68 @@ $credits
 <span class="header-section-number">4.5.1</span> Example workflow</h3>
 <p>Download the small student dataset here to try importing it: <a href="data/7160_module1_student_enrollment.csv" download="7160_module1_student_enrollment.csv">student dataset</a></p>
 <p>For this import we are using the tidyverse package called <strong>readr</strong>. readr imports your data as a tibble and reports on the types of columns imported.It chooses these types by inspecting the data automatically and determining what is there. Sometimes this may not be right for what you want to accomplish with the data. For this workflow, we load the data, confirm it is there, change a column type, and then re-inspect to see that the type was changed as expected.</p>
+<dl>
+<dt>Load the data</dt>
+<dd>
+<p>First, the dataset is loaded into a tibble called <em>enrollment</em>. Note that my dataset is stored in a folder called <em>data</em>, so my path starts with <code>data/</code>. If your data are in the same folder as your script, just use the filename <code>("7160_module1_student_enrollment.csv")</code>.</p>
+</dd>
+</dl>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load the CSV into a tibble called enrollment.</span></span>
-<span><span class="co"># Note that my data are in a folder called "data"; </span></span>
-<span><span class="co"># If your script and your data are in the same folder, run this instead</span></span>
-<span><span class="co"># enrollment &lt;- read_csv("7160_module1_student_enrollment.csv")</span></span>
-<span><span class="va">enrollment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/7160_module1_student_enrollment.csv"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Inspect the data.</span></span>
-<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span>   <span class="co"># All columns with their type and sample values</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 20
-Columns: 3
-$ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…
-$ Program          &lt;chr&gt; "Computer Science", "Computer Science", "Biology", "C…
-$ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/7160_module1_student_enrollment.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span>      <span class="co"># See the first six rows</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-  Student_ID Program          Credits_Enrolled
-  &lt;chr&gt;      &lt;chr&gt;                       &lt;dbl&gt;
-1 S001       Computer Science               15
-2 S002       Computer Science               12
-3 S003       Biology                         9
-4 S004       Computer Science               16
-5 S005       Business                       12
-6 S006       Biology                        12</code></pre>
+<p>Glimpse the data</p>
+<p>:When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We’ll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 20</span></span>
+<span><span class="co">#&gt; Columns: 3</span></span>
+<span><span class="co">#&gt; $ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…</span></span>
+<span><span class="co">#&gt; $ Program          &lt;chr&gt; "Computer Science", "Computer Science", "Biology", "C…</span></span>
+<span><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Change the Program variable from text to a categorical variable.</span></span>
-<span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Confirm the changed variable type.</span></span>
-<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 20
-Columns: 3
-$ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…
-$ Program          &lt;fct&gt; Computer Science, Computer Science, Biology, Computer…
-$ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</code></pre>
+<dl>
+<dt>See the top of the dataset</dt>
+<dd>
+<p>head() shows the first six rows of the data giving an at-a-glance picture of what is there. Also running <strong>view()</strong> will show you your data in RStudio via a tabular browser.</p>
+</dd>
+</dl>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span>      </span>
+<span><span class="co">#&gt; # A tibble: 6 × 3</span></span>
+<span><span class="co">#&gt;   Student_ID Program          Credits_Enrolled</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;                       &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 S001       Computer Science               15</span></span>
+<span><span class="co">#&gt; 2 S002       Computer Science               12</span></span>
+<span><span class="co">#&gt; 3 S003       Biology                         9</span></span>
+<span><span class="co">#&gt; 4 S004       Computer Science               16</span></span>
+<span><span class="co">#&gt; 5 S005       Business                       12</span></span>
+<span><span class="co">#&gt; 6 S006       Biology                        12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<dl>
+<dt>Change the data type</dt>
+<dd>
+<p>Sometimes readr doesn’t import a dataset with the variables as the type we need. When this happens, we can change it. Using as.factor() will change the Program variable to a categorical factor. We will discuss it in detail later, but for now notice the <code>$</code>. This is a subset operator that extracts that exact variable from the tibble object <code>enrollment</code>.</p>
+</dd>
+</dl>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<dl>
+<dt>Confirm the change</dt>
+<dd>
+<p>Here we confirm the change with glimpse() again.</p>
+</dd>
+</dl>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 20</span></span>
+<span><span class="co">#&gt; Columns: 3</span></span>
+<span><span class="co">#&gt; $ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…</span></span>
+<span><span class="co">#&gt; $ Program          &lt;fct&gt; Computer Science, Computer Science, Biology, Computer…</span></span>
+<span><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section><section id="chapter-4-exercises" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="chapter-4-exercises">
-<span class="header-section-number">4.6</span> Chapter 4 Exercises:</h2>
+<span class="header-section-number">4.6</span> Chapter 4 Exercises</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -666,7 +644,7 @@ $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 1
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>
-<p><strong>Run and explain this code</strong> Here is readr in action again, this time with arguments we did not use.</p>
+<p><strong>Run and explain this code.</strong> Here is readr in action again, this time with arguments we did not use.</p>
 <ol type="a">
 <li>Run this code using the same dataset as before and explain what it does now.</li>
 <li>Search out the documentation on the readr package and explain your understanding of these additional arguments.</li>
@@ -674,7 +652,7 @@ $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 1
 </ol>
 </li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
 <span>  <span class="st">"data/7160_module1_student_enrollment.csv"</span>,</span>
 <span>  col_types <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/cols.html">cols</a></span><span class="op">(</span></span>
 <span>    Student_ID <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_character</a></span><span class="op">(</span><span class="op">)</span>,</span>
