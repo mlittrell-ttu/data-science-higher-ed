@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Title TBD – Applied Data Science in Higher Education with R</title>
+<title>5&nbsp; Preprocessing – Applied Data Science in Higher Education with R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -86,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Title TBD</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -156,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -270,15 +305,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup"><span class="header-section-number">5.1</span> Setup</a>
+  <ul class="collapse">
+  <li><a href="#main-idea" id="toc-main-idea" class="nav-link" data-scroll-target="#main-idea"><span class="header-section-number">5.1.1</span> Main Idea</a></li>
+  <li><a href="#table-of-core-dplyr-verbs" id="toc-table-of-core-dplyr-verbs" class="nav-link" data-scroll-target="#table-of-core-dplyr-verbs"><span class="header-section-number">5.1.2</span> Table of core dplyr verbs</a></li>
+  <li><a href="#the-pipe" id="toc-the-pipe" class="nav-link" data-scroll-target="#the-pipe"><span class="header-section-number">5.1.3</span> The pipe</a></li>
+  </ul></li>
+  <li><a href="#preprocessing-with-dplyr-demonstration" id="toc-preprocessing-with-dplyr-demonstration" class="nav-link" data-scroll-target="#preprocessing-with-dplyr-demonstration"><span class="header-section-number">5.2</span> Preprocessing with Dplyr demonstration</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/05.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Title TBD</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Title TBD</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></h1>
 </div>
 
 
@@ -295,8 +342,291 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="setup" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">5.1</span> Setup</h2>
+<section id="main-idea" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="main-idea"><span class="header-section-number">5.1.1</span> Main Idea</h3>
+<p>Data rarely arrives in a condition that is perfectly aligned for the work intended. It can have any number of issues including variable names that are opaque, missing data, or inconsistent categorical values such as “Bio” and “Biology” representing the same program of study in a single column. For this reason we need tools to help us wrangle the data so we can work with it. <strong>Dplyr</strong> is a tidyverse package that provides a set of easy-to-read functions that we can use for this purpose. These functions are called <strong>verbs</strong> and each one does something helpful with our data. The documentation for dply is found here <a href="https://dplyr.tidyverse.org/index.html" class="uri">https://dplyr.tidyverse.org/index.html</a>.</p>
+</section>
+<section id="table-of-core-dplyr-verbs" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="table-of-core-dplyr-verbs"><span class="header-section-number">5.1.2</span> Table of core dplyr verbs</h3>
+<p>Before we get into each core verb and its use, here they are presented on a table as a quick reference. Note there there over 60+ verbs that exist beyond these but these are some of the main ones applicable in many situations.</p>
+<div id="tbl-dplyr-verbs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dplyr-verbs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.1: Core dplyr verbs.
+</figcaption>
+<div aria-describedby="tbl-dplyr-verbs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Verb</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>select()</code></td>
+<td style="text-align: left;">Picks columns by name</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>filter()</code></td>
+<td style="text-align: left;">Keeps rows that meet a condition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>arrange()</code></td>
+<td style="text-align: left;">Sorts rows by one or more columns</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>mutate()</code></td>
+<td style="text-align: left;">Creates or changes columns</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>summarize()</code></td>
+<td style="text-align: left;">Collapses many rows into a single summary value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>group_by()</code></td>
+<td style="text-align: left;">Groups rows so operations apply within each group</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="the-pipe" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="the-pipe"><span class="header-section-number">5.1.3</span> The pipe</h3>
+<p>Dplyr verbs are even more powerful when we link them together to work as a team. To accomplish this we use an operator known as <strong>pipe</strong>. It is written as <code>|&gt;</code>. It can be thought of as piping data from one function to another to arrive at an output such as seen in this generic example where data flows from function_1 and then to function_2.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">|&gt;</span> function_1 <span class="sc">|&gt;</span> function_2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="preprocessing-with-dplyr-demonstration" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="preprocessing-with-dplyr-demonstration"><span class="header-section-number">5.2</span> Preprocessing with Dplyr demonstration</h2>
+<p>Here is the applied data preprocessing demonstration that teaches the core verbs and some additional ones as we work through the process.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Title:    Preprocessing with dplyrr</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Purpose:  Load, inspect, and clean IPEDS degree completions data</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># We need some data to work with in this chapter. One source of data can come </span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># from packages themselves. We will install the **IPEDS** package and use data </span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># that are built in there. These data are a product of the surveys discussed in </span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Chapter 2. After installing and loading the package, simply call the dataset </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># with its name. </span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># **Install and load packages**</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"IPEDS"</span>)   <span class="co"># only once</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(IPEDS)              <span class="co"># each session</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># See what datasets come with the package</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="at">package =</span> <span class="st">"IPEDS"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># **Bring in the data**</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># IPEDS data are built in, so we can call them by name with no file path.</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># A good habit to develop is assigning data directly to an object in your device's </span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># memory leaving the original untouched.</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>inst_award_data <span class="ot">&lt;-</span> complete2020</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect the data visually in RStudio's data browser</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(inst_award_data)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># **Know the unit of analysis (UOA)**</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co"># An important understanding to grasp for any dataset is what is represented as </span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co"># the **unit of analysis** (UOA). This knowledge helps determine the questions </span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># that can be asked and how data are to be handled. The UOA in the complete2020 </span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co"># is not the institution or the student—as one might expect—but is combination </span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="co"># of the institution and award level. Each row representes one award level </span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># (e.g., bachelor's degree) at one institution. This explains why institution </span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co"># IDs are repeated in the first column, once for each award level. You can </span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect visually with `view(inst_award_data)`.</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="co"># **Know what the variables mean**</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable meanings can be opaque in large official datasets. See the full</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co"># key with: ?complete2020</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="co">#   Variable(s)          What it represents</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="co">#   INSTITUTION_ID       Unique institution ID (repeats, one row per award level)</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="co">#   AWARD_LVL            Degree level, coded as a number</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="co">#                        (3 = associate, 5 = bachelor, 7 = master, 9 = doctoral)</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="co">#   TOTAL                Total completions for that institution-award level</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="co">#   TOTAL_M, TOTAL_W     Completions by gender</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="co">#   TOTAL_&lt;race&gt;         Each race column per group (e.g. TOTAL_ASIAN)</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="co">#   AGE&lt;band&gt;            Each age column per band(e.g. AGE18_24)</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="co"># **Look at the structure**</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Looking at the data with glimpse() is often helpful.</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="co"># glimpse() shows dimensions, every column, its type, and sample values.</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we have 15,937 rows with 19 variables. Every variable is &lt;int&gt;, which is </span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="co"># likely not not helpful. INSTITUTION_ID is a label and AWARD_LVL is </span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="co"># a category, not numbers we'd do math on.</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(inst_award_data)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="co"># **Select the columns to work with**</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Perhaps we are only interested in a certain subset of the data.</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="co"># **select()** picks columns by name and excludes the rest. We narrow to the two</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="co"># identifiers plus TOTAL, saving to a new object so the full data persists </span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="co"># separately.</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>inst_award_data_totals <span class="ot">&lt;-</span> inst_award_data <span class="sc">|&gt;</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(INSTITUTION_ID, AWARD_LVL, TOTAL)</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(inst_award_data_totals)</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="co"># **Fix the data types with mutate()**</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="co"># **mutate()** creates or changes columns. We pair it with the as.*() conversion</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="co"># functions from the previous chapter to fix the two problem types:</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="co">#   INSTITUTION_ID -&gt; character (it's a label)</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="co">#   AWARD_LVL      -&gt; factor    (it's fixed categories)</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Assigning it back to the data with `&lt;-` makes the change remain in dataset.</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>inst_award_data_totals <span class="ot">&lt;-</span> inst_award_data_totals <span class="sc">|&gt;</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>    <span class="at">INSTITUTION_ID =</span> <span class="fu">as.character</span>(INSTITUTION_ID),</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>    <span class="at">AWARD_LVL =</span> <span class="fu">as.factor</span>(AWARD_LVL)</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="co"># Confirm the types.</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(inst_award_data_totals)</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="co"># **Summarize to spot problems**</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="co"># **summary()** gives a quick overview of each column. For numbers it shows min,</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="co"># max, mean, and quartiles. For factors, it shows counts per level. Here we have </span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="co"># a quick way to catch impossible values or check the spread of a variable.</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(inst_award_data_totals)</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="co">#____________________________</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="co"># Two potential issues stand out. TOTAL ranges from 1 to 24,676, and its mean (313.8) is</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="co"># far above its median (68). Possibly some very large institutions are stretching the</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="co"># average. And AWARD_LVL shows the counts are spread across many levels, so this</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="co"># TOTAL summary is mixing bachelor's, master's, associate's, and more together.</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="co"># To make TOTAL meaningful, we could look at one award level at a time.</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; summary(inst_award_data_totals)</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    INSTITUTION_ID    AWARD_LVL        TOTAL        </span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Length   :15937   2      :3649   Min.   :    1.0  </span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  N.unique : 6124   12     :2702   1st Qu.:   19.0  </span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  N.blank  :    0   3      :2464   Median :   68.0  </span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.nchar:    6   5      :2366   Mean   :  313.8  </span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.nchar:    6   7      :1931   3rd Qu.:  247.0  </span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                    9      :1076   Max.   :24676.0  </span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                    (Other):1749 </span></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="co"># **Filter to one award level with filter()**</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="co"># **filter()** keeps only rows meeting a condition. We keep just bachelor's degrees</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="co"># (level "5" as AWARD_LVL is now a factor). Now every row is one</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="co"># institution's bachelor's completions, so TOTAL is comparable across rows. </span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>bachelors <span class="ot">&lt;-</span> inst_award_data_totals <span class="sc">|&gt;</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(AWARD_LVL <span class="sc">==</span> <span class="st">"5"</span>)</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(bachelors)</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-summarize now that we're looking at a single level.</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(bachelors)</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="co"># **Sort rows with arrange()**</span></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a><span class="co"># **arrange()** orders rows by a column. By default it sorts ascending (smallest</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="co"># first). Wrap a column in desc() to sort in descending order. Here we see the</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="co"># institutions granting the most bachelor's degrees.</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="co"># We then pass the result to slice(), a non-core verb that selects rows by their</span></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="co"># row number (aka postion). The sequence operator ":" builds a sequence of</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="co"># numbers. 1:10 means 1, 2, 3 ... 10—giving us the top 10 rows once the</span></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="co"># data is sorted largest-first.</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>bachelors <span class="sc">|&gt;</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(TOTAL)) <span class="sc">|&gt;</span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="co"># **Create a variable with missing values**</span></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="co"># **NA** is R's way of marking missing or unknown values.</span></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="co"># Institutional data can be incomplete on purpose, where if group data is very</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="co"># small, institutions may suppress the count so no individual can be identified</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a><span class="co"># as mentioned for the FERPA privacy concern from Chapter 2. We can simulate </span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a><span class="co"># that here to see how missing data behaves, as inspecting data for missing values</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="co"># is essential to preprocessing. Building realistic fake data for learning like </span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a><span class="co"># this is called simulation and it is covered more completely in a later chapter.</span></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a><span class="co"># We do it with an **if-else statement**, which asks a yes-or-no question of each</span></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a><span class="co"># value and returns one result for yes and another for no. The ifelse()</span></span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a><span class="co"># function takes three arguments in order: the condition, the value if TRUE,</span></span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a><span class="co"># and the value if FALSE. Here, wherever TOTAL is under 5, we insert NA to</span></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a><span class="co"># mark it suppressed. Otherwise, we keep TOTAL.</span></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>inst_award_data <span class="ot">&lt;-</span> inst_award_data <span class="sc">|&gt;</span></span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">total_reported =</span> <span class="fu">ifelse</span>(TOTAL <span class="sc">&lt;</span> <span class="dv">5</span>, <span class="cn">NA</span>, TOTAL))</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Confirm we created some missing values.</span></span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(inst_award_data<span class="sc">$</span>total_reported))</span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a><span class="co"># **Group and summarize with the missing-value problem**</span></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a><span class="co"># **group_by()** splits the data into groups. **summarize()** collapses each group </span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="co"># to a single row. Together they answer "what is the average within each group?"</span></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we ask for the mean of total_reported by award level.</span></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice this results in any group with even one missing value returning as NA. </span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a><span class="co"># A single unknown value makes the true average unknowable, so R will not guess </span></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a><span class="co"># unless we tell it to.</span></span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>inst_award_data <span class="sc">|&gt;</span></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(AWARD_LVL) <span class="sc">|&gt;</span></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg_reported =</span> <span class="fu">mean</span>(total_reported))</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a><span class="co"># **Handle missing with na.rm = TRUE**</span></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a><span class="co"># The fix is the na.rm argument ("NA remove"). Setting it to TRUE drops the</span></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a><span class="co"># missing values before calculating, so the average is taken over what remains.</span></span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>inst_award_data <span class="sc">|&gt;</span></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(AWARD_LVL) <span class="sc">|&gt;</span></span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg_reported =</span> <span class="fu">mean</span>(total_reported, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="co"># Use`na.rm = TRUE` thoughtfully, not automatically. Dropping missing is often </span></span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a><span class="co"># acceptable when they occur randomly, but misleading when they are not.</span></span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="co"># MCAR (missing completely at random): MCAR NAs are unrelated to anything known. </span></span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, courses dropped at random for no known contextual reason. </span></span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a><span class="co"># MAR (missing at random): MAR NAs depend on something you can know, like one</span></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a><span class="co"># campus recording a field less reliably. This can be addressed but ignoring can </span></span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="co"># bias comparisons.</span></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="co"># MNAR (missing not at random): MNAR NAs are values that are missing because of </span></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a><span class="co"># what the value would have been if it were included. Our suppressed counts demonstrate </span></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a><span class="co"># this as it reflected small programs. In this instance, dropping the observations </span></span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a><span class="co"># with NAs might delete all the small programs, pushing averages up and only</span></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a><span class="co"># accounting for larger programs.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -719,7 +1049,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 Michael Littrell. Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/05.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/05.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

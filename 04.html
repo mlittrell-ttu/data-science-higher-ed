@@ -176,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -323,7 +323,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#example-workflow" id="toc-example-workflow" class="nav-link" data-scroll-target="#example-workflow"><span class="header-section-number">4.5.1</span> Example workflow</a></li>
   </ul>
 </li>
-  <li><a href="#chapter-4-exercises" id="toc-chapter-4-exercises" class="nav-link" data-scroll-target="#chapter-4-exercises"><span class="header-section-number">4.6</span> Chapter 4 Exercises</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4.6</span> Conclusion</a></li>
+  <li><a href="#chapter-4-exercises" id="toc-chapter-4-exercises" class="nav-link" data-scroll-target="#chapter-4-exercises"><span class="header-section-number">4.7</span> Chapter 4 Exercises</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/04.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/04.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -490,7 +491,7 @@ Table&nbsp;4.1: Common R data types.
 </div>
 </section><section id="operators" class="level3" data-number="4.3.5"><h3 data-number="4.3.5" class="anchored" data-anchor-id="operators">
 <span class="header-section-number">4.3.5</span> Operators</h3>
-<p>Operators are symbols used by R to work with values. <strong>Assignment</strong> operators let us assign values directly to named objects. <strong>Arithmetic</strong> operators are used for working with values via common arithmetic methods, such as multiplying or adding. <strong>Comparison</strong> operators compare two or more values. They return a logical result, either <code>TRUE</code> or <code>FALSE</code>.<strong>Logical</strong> operators let us take the results from two or more logical comparisons (i.e., conditions) and returns a single logical result, either <code>TRUE</code> or <code>FALSE</code>.</p>
+<p>Operators are symbols used by R to work with values. <strong>Assignment</strong> operators let us assign values directly to named objects. <strong>Arithmetic</strong> operators are used for working with values via common arithmetic methods, such as multiplying or adding. <strong>Comparison</strong> operators compare two or more values. They return a logical result, either <code>TRUE</code> or <code>FALSE</code>.<strong>Logical</strong> operators let us take the results from two or more logical comparisons (i.e., conditions) and returns a single logical result, either <code>TRUE</code> or <code>FALSE</code>. Run these in your environment to see what they do firsthand.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Assignment________________________________ </span></span>
 <span><span class="co"># See these values in your environment pane.</span></span>
 <span><span class="va">credits</span> <span class="op">&lt;-</span> <span class="fl">15</span></span>
@@ -570,17 +571,24 @@ A grid of values that are all the same type; organized by rows and columns.
 <span class="header-section-number">4.5.1</span> Example workflow</h3>
 <p>Download the small student dataset here to try importing it: <a href="data/7160_module1_student_enrollment.csv" download="7160_module1_student_enrollment.csv">student dataset</a></p>
 <p>For this import we are using the tidyverse package called <strong>readr</strong>. readr imports your data as a tibble and reports on the types of columns imported.It chooses these types by inspecting the data automatically and determining what is there. Sometimes this may not be right for what you want to accomplish with the data. For this workflow, we load the data, confirm it is there, change a column type, and then re-inspect to see that the type was changed as expected.</p>
-<dl>
-<dt>Load the data</dt>
-<dd>
-<p>First, the dataset is loaded into a tibble called <em>enrollment</em>. Note that my dataset is stored in a folder called <em>data</em>, so my path starts with <code>data/</code>. If your data are in the same folder as your script, just use the filename <code>("7160_module1_student_enrollment.csv")</code>.</p>
-</dd>
-</dl>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Leveraging AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Leveraging AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For complete readr documentation, visit <a href="https://readr.tidyverse.org/index.html" class="uri">https://readr.tidyverse.org/index.html</a>. Think of the documentation as the way to extend your knowledge and overcome limitations you encounter. It pairs well with AI. For example, you can paste part of a function’s documentation into a chatbot and ask the tool to explain. Also you can describe what you’re trying to do and ask which argument would work for a specific use case. Remember the main idea from Chapter 3 though, where it is important to read and understand any AI produced code before you use it, so your learning continues to progress.</p>
+</div>
+</div>
+<p><strong>Load the data.</strong> First, the dataset is loaded into a tibble called <em>enrollment</em>. Note that my dataset is stored in a folder called <em>data</em>, so my path starts with <code>data/</code>. If your data are in the same folder as your script, just use the filename <code>("7160_module1_student_enrollment.csv")</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/7160_module1_student_enrollment.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Glimpse the data</p>
-<p>:When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We’ll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.</p>
+<p><strong>Glimpse the data.</strong> When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We’ll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 20</span></span>
@@ -589,12 +597,7 @@ A grid of values that are all the same type; organized by rows and columns.
 <span><span class="co">#&gt; $ Program          &lt;chr&gt; "Computer Science", "Computer Science", "Biology", "C…</span></span>
 <span><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<dl>
-<dt>See the top of the dataset</dt>
-<dd>
-<p>head() shows the first six rows of the data giving an at-a-glance picture of what is there. Also running <strong>view()</strong> will show you your data in RStudio via a tabular browser.</p>
-</dd>
-</dl>
+<p><strong>See the top of the dataset.</strong> head() shows the first six rows of the data giving an at-a-glance picture of what is there. Also running <strong>view()</strong> will show you your data in RStudio via a tabular browser.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span>      </span>
 <span><span class="co">#&gt; # A tibble: 6 × 3</span></span>
@@ -607,21 +610,62 @@ A grid of values that are all the same type; organized by rows and columns.
 <span><span class="co">#&gt; 5 S005       Business                       12</span></span>
 <span><span class="co">#&gt; 6 S006       Biology                        12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<dl>
-<dt>Change the data type</dt>
-<dd>
-<p>Sometimes readr doesn’t import a dataset with the variables as the type we need. When this happens, we can change it. Using as.factor() will change the Program variable to a categorical factor. We will discuss it in detail later, but for now notice the <code>$</code>. This is a subset operator that extracts that exact variable from the tibble object <code>enrollment</code>.</p>
-</dd>
-</dl>
+<p><strong>Change the data type.</strong> Sometimes readr doesn’t import a dataset with the variables as the type we need. When this happens, we can change it. Using as.factor() will change the Program variable to a categorical factor. We will discuss it in detail later, but for now notice the <code>$</code>. This is a subset operator that extracts that exact variable from the tibble object <code>enrollment</code>.</p>
+<div id="tbl-conversions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-conversions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.2: Readr data type conversion functions.
+</figcaption><div aria-describedby="tbl-conversions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 38%">
+<col style="width: 32%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Converts to</th>
+<th style="text-align: left;">Use case</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/factor.html">as.factor()</a></code></td>
+<td style="text-align: left;">Factor</td>
+<td style="text-align: left;">The values are categorical (major, class)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/numeric.html">as.numeric()</a></code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;">Numbers were imported as text, but calculations are needed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code></td>
+<td style="text-align: left;">Whole number</td>
+<td style="text-align: left;">The values are numbers with no decimals</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/character.html">as.character()</a></code></td>
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">A code or label was read as a number (ZIP code, ID)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/logical.html">as.logical()</a></code></td>
+<td style="text-align: left;">TRUE/FALSE</td>
+<td style="text-align: left;">A column contains yes/no or true/false values</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/factor.html">as.ordered()</a></code></td>
+<td style="text-align: left;">Ordered factor</td>
+<td style="text-align: left;">Categorical values have meaningful rank (Freshman, Senior)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<dl>
-<dt>Confirm the change</dt>
-<dd>
-<p>Here we confirm the change with glimpse() again.</p>
-</dd>
-</dl>
+<p><strong>Confirm the change.</strong> Here we confirm the change with glimpse() again.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 20</span></span>
@@ -630,8 +674,11 @@ A grid of values that are all the same type; organized by rows and columns.
 <span><span class="co">#&gt; $ Program          &lt;fct&gt; Computer Science, Computer Science, Biology, Computer…</span></span>
 <span><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section></section><section id="chapter-4-exercises" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="chapter-4-exercises">
-<span class="header-section-number">4.6</span> Chapter 4 Exercises</h2>
+</section></section><section id="conclusion" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="conclusion">
+<span class="header-section-number">4.6</span> Conclusion</h2>
+<p>In this chapter we learned some basics about R and how to get a simple dataset into our environment to work with it. In the following chapters we will build on these skills to wrangle and analyze data.</p>
+</section><section id="chapter-4-exercises" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="chapter-4-exercises">
+<span class="header-section-number">4.7</span> Chapter 4 Exercises</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -665,7 +712,7 @@ A grid of values that are all the same type; organized by rows and columns.
 <p><strong>Consult the documentation.</strong> Use the readr documentation to answer the following questions.</p>
 <ol type="a">
 <li>What is the default value of the <code>col_names</code> argument for <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>? What does it do?</li>
-<li>The what function would be used to load a tab seperated file?</li>
+<li>What function would be used to load a tab seperated file?</li>
 <li>Explain what does the skip argument does and give an example practical use case.</li>
 </ol>
 </li>
@@ -675,6 +722,14 @@ A grid of values that are all the same type; organized by rows and columns.
 <li>In Excel, create and save a dataset as a csv file with a header. It should have four columns and ten rows. There should be at least one text column and one numeric column. Also create a new R script and save that to the same folder.</li>
 <li>Load your dataset with readr and assign it to a named object.</li>
 <li>Examine it with the functions we used in the chapter for inspecting data and describe the output.</li>
+</ol>
+</li>
+<li>
+<p><strong>Craft conditions with operators.</strong> Use your dataset to practice comparisons and logical operators.</p>
+<ol type="a">
+<li><p>Pick a numeric column and write a comparison that returns TRUE/FALSE for each value For example, is a value greater than a sepecifc threshold you choose. Exaplain what the result tells you about your data.</p></li>
+<li><p>Write another condition for a different column. Then combine your two conditions with a logical operator (&amp; or |). Explain what the combined condition is asking. For example, “students who are full-time <em>and</em> are in Biology”.</p></li>
+<li><p>Change your &amp; to a |—or vice versa. Describe how the output changed. How could an analyst use “AND” and “OR” when working with data?</p></li>
 </ol>
 </li>
 </ol>
@@ -1087,8 +1142,8 @@ A grid of values that are all the same type; organized by rows and columns.
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05.html" class="pagination-link" aria-label="Title TBD">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Title TBD</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05.html" class="pagination-link" aria-label="Preprocessing">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
