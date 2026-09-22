@@ -74,9 +74,12 @@ format:
     code-overflow: wrap
     toc: true
     number-sections: true
-  # PDF output is optional and needs a LaTeX install: run `quarto install tinytex`.
-  # pdf:
-  # documentclass: scrbook
+
+knitr:
+  opts_chunk:
+    comment: "#>"
+    collapse: true
+
 
 execute:
   freeze: auto      # a chapter re-renders only when its own code changes

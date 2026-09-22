@@ -9,7 +9,7 @@ Throughout this book you will see two threads of work. Where possible we will re
 ### Create a new script
 For this chapter, create a new script file **(File > New > File R Script)** and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work. 
 
-![An R script and CSV data file saved in the same folder.](images/chp_4_folder.png){#fig-folder width="525px" height="400" fig-align="center"}
+![An R script and CSV data file saved in the same folder.](images/chp_4_folder.png){#fig-folder width="550px" height="375" fig-align="center"}
 
 Typically, there is some information about what the script is all about up top. The packages for the script are located before the work happens so they are pre-loaded. Data are imported, inspected, and prepared before the analysis occurs. To help the flat script file appear more visually structured, each section can be divided with continuous underscore characters creating lines, for example.
 
@@ -112,7 +112,7 @@ Each column that you import into R has a **data type** so it knows the kind of v
 ### Operators
 Operators are symbols used by R to work with values. **Assignment** operators let us assign values directly to named objects. **Arithmetic** operators are used for working with values via common arithmetic methods, such as multiplying or adding. **Comparison** operators compare two or more values. They return a logical result, either `TRUE` or `FALSE`.**Logical** operators let us take the results from two or more logical comparisons (i.e., conditions) and returns a single logical result, either `TRUE` or `FALSE`.
 
-```{r}
+```r
 # Assignment________________________________ 
 # See these values in your environment pane.
 credits <- 15
@@ -148,28 +148,25 @@ Beyond the tabular data frame and tibble, data in R are structured a few differe
 
 Vector
 : A simple ordered set of values that are all the same type, numbers for example. All columns found in a data frame are vectors. 
-`credit_hours <- (10, 20, 30)`
-
-List
-: Can be considered a 'container' for holding a mix of data types of even other structures.
-`student <- list(id = "S001, credits = 12)`
-
-Matrix
-: A grid of values that are all the same type; organized by rows and columns. 
-`scores <- matrix(id = "S001, credits = 12)`
-
-
-
 ```{r}
 # Vector________________________
 credit_hours <- c(10, 20, 30)
 credit_hours
+```
 
-# List________________________
+List
+: Can be considered a 'container' for holding a mix of data types of even other structures.
+```{r}
+# List_________________________
 student <- list(id = "S001", credits = 12)
 student
+```
 
-# Matrix________________________
+
+Matrix
+: A grid of values that are all the same type; organized by rows and columns. 
+```{r}
+# Matrix_________________________
 scores <- matrix(c(88, 92, 75, 80), nrow = 2)
 scores
 ```
@@ -184,31 +181,47 @@ Download the small student dataset here to try importing it:
 
 For this import we are using the tidyverse package called **readr**. readr imports your data as a tibble and reports on the types of columns imported.It chooses these types by inspecting the data automatically and determining what is there. Sometimes this may not be right for what you want to accomplish with the data. For this workflow, we load the data, confirm it is there, change a column type, and then re-inspect to see that the type was changed as expected.
 
+Load the data
 
+: First, the dataset is loaded into a tibble called *enrollment*. Note that my dataset is stored in a folder called *data*, so my path starts with `data/`. If your data are in the same folder as your script, just use the filename `("7160_module1_student_enrollment.csv")`.
 ```{r}
-#| label: explore-enrollment
-#| message: false
-# Load the CSV into a tibble called enrollment.
-# Note that my data are in a folder called "data"; 
-# If your script and your data are in the same folder, run this instead
-# enrollment <- read_csv("7160_module1_student_enrollment.csv")
 enrollment <- read_csv("data/7160_module1_student_enrollment.csv")
+```
 
-# Inspect the data.
-glimpse(enrollment)   # All columns with their type and sample values
-head(enrollment)      # See the first six rows
+Glimpse the data
 
-# Change the Program variable from text to a categorical variable.
-enrollment$Program <- as.factor(enrollment$Program)
-
-# Confirm the changed variable type.
+:When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We'll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.
+```{r}
 glimpse(enrollment)
 ```
 
-## Chapter 4 Exercises:
+See the top of the dataset
+
+: head() shows the first six rows of the data giving an at-a-glance picture of what is there. Also running **view()** will show you your data in RStudio via a tabular browser.
+```{r}
+head(enrollment)      
+```
+
+Change the data type
+
+: Sometimes readr doesn't import a dataset with the variables as the type we need. When this happens, we can change it. Using as.factor() will change the Program variable to a categorical factor. We will discuss it in detail later, but for now notice the `$`. This is a subset operator that extracts that exact variable from the tibble object `enrollment`.
+```{r}
+enrollment$Program <- as.factor(enrollment$Program)
+```
+
+Confirm the change
+
+: Here we confirm the change with glimpse() again.
+```{r}
+glimpse(enrollment)
+```
+
+
+
+## Chapter 4 Exercises
 ::: {.callout-note icon=false title="Exercises"}
 
-1. **Run and explain this code** Here is readr in action again, this time with arguments we did not use.
+1. **Run and explain this code.** Here is readr in action again, this time with arguments we did not use.
 
     a. Run this code using the same dataset as before and explain what it does now.
     b. Search out the documentation on the readr package and explain your understanding of these additional arguments.
