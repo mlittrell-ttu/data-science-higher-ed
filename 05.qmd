@@ -1,7 +1,7 @@
 # Preprocessing
 ## Setup
 ### Main Idea
-Data rarely arrives in a condition that is perfectly aligned for the work intended. It can have any number of issues including variable names that are opaque, missing data, or inconsistent categorical values such as "Bio" and "Biology" representing the same program of study in a single column. For this reason we need tools to help us wrangle the data so we can work with it. **Dplyr** is a tidyverse package that provides a set of easy-to-read functions that we can use for this purpose. These functions are called **verbs** and each one does something helpful with our data. The documentation for dply is found here <https://dplyr.tidyverse.org/index.html>.
+This module is situated in the data science project workflow at the **clean** phase. Data rarely arrives in a condition that is perfectly aligned for the work intended. It can have any number of issues including variable names that are opaque, missing data, or inconsistent categorical values such as "Bio" and "Biology" representing the same program of study in a single column. For this reason we need tools to help us wrangle the data so we can work with it. Specifically to working within the tidyverse, is the idea that all data should be 'tidy' (Wickham, 2021).That is, all rows should be one observation, all columns a variable, and each cell is a single value. **Dplyr** is a tidyverse package that provides a set of easy-to-read functions that we can use to clean data. These functions are called **verbs** and each one does something helpful with our data. The documentation for dply is found here <https://dplyr.tidyverse.org/index.html>.
 
 ### Table of core dplyr verbs
 Before we get into each core verb and its use, here they are presented on a table as a quick reference. Note there there over 60+ verbs that exist beyond these but these are some of the main ones applicable in many situations.
@@ -29,3 +29,4 @@ Here is the applied data preprocessing demonstration that teaches the core verbs
 
 ```{.r include="scripts/05.R"}
 ```
+

@@ -177,6 +177,10 @@ inst_award_data <- inst_award_data |>
 # Confirm we created some missing values.
 sum(is.na(inst_award_data$total_reported))
 
+# To see missing values across the whole dataset at once, wrap colSums() around
+# is.na(). This counts the NAs in every column so you can spot which variables
+# have gaps and which are complete.
+colSums(is.na(inst_award_data))
 
 
 #________________________________________________________
@@ -218,3 +222,56 @@ inst_award_data |>
 # this as it reflected small programs. In this instance, dropping the observations 
 # with NAs might delete all the small programs, pushing averages up and only
 # accounting for larger programs.
+
+
+
+#________________________________________________________
+# **Rename and relocate columns**
+# rename() changes a column's name with the syntax rename(new = old). Here we
+# give TOTAL a clearer name. relocate() moves a column to a new position using
+# .before or .after. Neither changes the data itself.
+bachelors <- bachelors |>
+  rename(completions = TOTAL) |>
+  relocate(completions, .after = INSTITUTION_ID)
+
+glimpse(bachelors)
+
+
+#________________________________________________________
+# **Find unique values with distinct()**
+# distinct() returns only unique rows. Given one or more columns, it returns the
+# unique combinations found in them. Here we confirm how many distinct award
+# levels appear in the full dataset.
+inst_award_data_totals |>
+  distinct(AWARD_LVL)
+
+
+#________________________________________________________
+# **Combine tables with a join**
+# So far our data has institution ID numbers but no names. Institution names
+# live in a different IPEDS table, dir_info2020. A join combines two tables by
+# matching on a shared column -- here, INSTITUTION_ID.
+#
+# left_join() keeps every row of the first (left) table and attaches matching
+# columns from the second. We first select just the name and state from the
+# directory, then join them onto our bachelor's data.
+dir_info <- dir_info2020 |>
+  select(INSTITUTION_ID, INSTITUTION, STATE)
+
+# The IDs must be the same type to match. We made INSTITUTION_ID a character
+# earlier, so we align the directory's ID to character as well.
+dir_info <- dir_info |>
+  mutate(INSTITUTION_ID = as.character(INSTITUTION_ID))
+
+bachelors_named <- bachelors |>
+  left_join(dir_info, by = "INSTITUTION_ID")
+
+glimpse(bachelors_named)
+
+
+#________________________________________________________
+# **Put it together: which schools grant the most bachelor's degrees?**
+# Now that names are attached, we can sort and read the result plainly.
+bachelors_named |>
+  arrange(desc(completions)) |>
+  slice(1:10)
