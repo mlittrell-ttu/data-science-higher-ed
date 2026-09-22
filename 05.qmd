@@ -1,1 +1,31 @@
-# Title TBD
+# Preprocessing
+## Setup
+### Main Idea
+Data rarely arrives in a condition that is perfectly aligned for the work intended. It can have any number of issues including variable names that are opaque, missing data, or inconsistent categorical values such as "Bio" and "Biology" representing the same program of study in a single column. For this reason we need tools to help us wrangle the data so we can work with it. **Dplyr** is a tidyverse package that provides a set of easy-to-read functions that we can use for this purpose. These functions are called **verbs** and each one does something helpful with our data. The documentation for dply is found here <https://dplyr.tidyverse.org/index.html>.
+
+### Table of core dplyr verbs
+Before we get into each core verb and its use, here they are presented on a table as a quick reference. Note there there over 60+ verbs that exist beyond these but these are some of the main ones applicable in many situations.
+
+| Verb | What it does |
+|:-----|:-------------|
+| `select()` | Picks columns by name |
+| `filter()` | Keeps rows that meet a condition |
+| `arrange()` | Sorts rows by one or more columns |
+| `mutate()` | Creates or changes columns |
+| `summarize()` | Collapses many rows into a single summary value |
+| `group_by()` | Groups rows so operations apply within each group |
+
+: Core dplyr verbs. {#tbl-dplyr-verbs}
+
+### The pipe
+Dplyr verbs are even more powerful when we link them together to work as a team. To accomplish this we use an operator known as **pipe**. It is written as `|>`. It can be thought of as piping data from one function to another to arrive at an output such as seen in this generic example where data flows from function_1 and then to function_2.
+
+```r
+data|> function_1 |> function_2
+```
+
+## Preprocessing with Dplyr demonstration
+Here is the applied data preprocessing demonstration that teaches the core verbs and some additional ones as we work through the process.
+
+```{.r include="scripts/05.R"}
+```

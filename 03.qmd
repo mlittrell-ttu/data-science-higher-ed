@@ -126,6 +126,7 @@ There are an abundance of R resources online that are well organized and easy to
 | rdrr.io | Documentation for many packages | <https://rdrr.io> |
 | Posit Cheatsheets | Quick guides for some packages | <https://posit.co/resources/cheatsheets> |
 |tidyverse | Posit's tidyverse documentation. | <https://tidyverse.org/> |
+|R for Data Science | Comprehensive tidyverse book | <https://r4ds.hadley.nz/> |
 
 : R resources. {#tbl-r-resources}
 

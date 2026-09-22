@@ -57,6 +57,9 @@ book:
   page-footer:
     center: "© 2026 Michael Littrell. Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)."
 
+filters:
+  - include-code-files
+
 bibliography: references.bib
 # csl: apa.csl   # APA fits higher ed. Download apa.csl from the CSL project into
                  # this folder, then uncomment. Without it, Quarto uses Chicago.

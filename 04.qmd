@@ -110,7 +110,7 @@ Each column that you import into R has a **data type** so it knows the kind of v
 : Common R data types. {#tbl-data-types}
 
 ### Operators
-Operators are symbols used by R to work with values. **Assignment** operators let us assign values directly to named objects. **Arithmetic** operators are used for working with values via common arithmetic methods, such as multiplying or adding. **Comparison** operators compare two or more values. They return a logical result, either `TRUE` or `FALSE`.**Logical** operators let us take the results from two or more logical comparisons (i.e., conditions) and returns a single logical result, either `TRUE` or `FALSE`.
+Operators are symbols used by R to work with values. **Assignment** operators let us assign values directly to named objects. **Arithmetic** operators are used for working with values via common arithmetic methods, such as multiplying or adding. **Comparison** operators compare two or more values. They return a logical result, either `TRUE` or `FALSE`.**Logical** operators let us take the results from two or more logical comparisons (i.e., conditions) and returns a single logical result, either `TRUE` or `FALSE`. Run these in your environment to see what they do firsthand.
 
 ```r
 # Assignment________________________________ 
@@ -181,42 +181,51 @@ Download the small student dataset here to try importing it:
 
 For this import we are using the tidyverse package called **readr**. readr imports your data as a tibble and reports on the types of columns imported.It chooses these types by inspecting the data automatically and determining what is there. Sometimes this may not be right for what you want to accomplish with the data. For this workflow, we load the data, confirm it is there, change a column type, and then re-inspect to see that the type was changed as expected.
 
-Load the data
+::: {.callout-tip icon=false title="Leveraging AI"}
+For complete readr documentation, visit <https://readr.tidyverse.org/index.html>. Think of the documentation as the way to extend your knowledge and overcome limitations you encounter. It pairs well with AI. For example, you can paste part of a function's documentation into a chatbot and ask the tool to explain. Also you can describe what you're trying to do and ask which argument would work for a specific use case. Remember the main idea from Chapter 3 though, where it is important to read and understand any AI produced code before you use it, so your learning continues to progress.
+:::
 
-: First, the dataset is loaded into a tibble called *enrollment*. Note that my dataset is stored in a folder called *data*, so my path starts with `data/`. If your data are in the same folder as your script, just use the filename `("7160_module1_student_enrollment.csv")`.
+
+**Load the data.** First, the dataset is loaded into a tibble called *enrollment*. Note that my dataset is stored in a folder called *data*, so my path starts with `data/`. If your data are in the same folder as your script, just use the filename `("7160_module1_student_enrollment.csv")`.
 ```{r}
 enrollment <- read_csv("data/7160_module1_student_enrollment.csv")
 ```
 
-Glimpse the data
-
-:When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We'll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.
+**Glimpse the data.** When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We'll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.
 ```{r}
 glimpse(enrollment)
 ```
 
-See the top of the dataset
-
-: head() shows the first six rows of the data giving an at-a-glance picture of what is there. Also running **view()** will show you your data in RStudio via a tabular browser.
+**See the top of the dataset.** head() shows the first six rows of the data giving an at-a-glance picture of what is there. Also running **view()** will show you your data in RStudio via a tabular browser.
 ```{r}
 head(enrollment)      
 ```
 
-Change the data type
+**Change the data type.** Sometimes readr doesn't import a dataset with the variables as the type we need. When this happens, we can change it. Using as.factor() will change the Program variable to a categorical factor. We will discuss it in detail later, but for now notice the `$`. This is a subset operator that extracts that exact variable from the tibble object `enrollment`.
 
-: Sometimes readr doesn't import a dataset with the variables as the type we need. When this happens, we can change it. Using as.factor() will change the Program variable to a categorical factor. We will discuss it in detail later, but for now notice the `$`. This is a subset operator that extracts that exact variable from the tibble object `enrollment`.
+
+| Function | Converts to | Use case  |
+|:---------|:------------|:----------|
+| `as.factor()` | Factor | The values are categorical (major, class) |
+| `as.numeric()` | Number | Numbers were imported as text, but calculations are needed |
+| `as.integer()` | Whole number | The values are numbers with no decimals |
+| `as.character()` | Text | A code or label was read as a number (ZIP code, ID) |
+| `as.logical()` | TRUE/FALSE | A column contains yes/no or true/false values |
+| `as.ordered()` | Ordered factor | Categorical values have meaningful rank (Freshman, Senior)
+
+: Readr data type conversion functions. {#tbl-conversions}
+
 ```{r}
 enrollment$Program <- as.factor(enrollment$Program)
 ```
 
-Confirm the change
-
-: Here we confirm the change with glimpse() again.
+**Confirm the change.** Here we confirm the change with glimpse() again.
 ```{r}
 glimpse(enrollment)
 ```
 
-
+## Conclusion
+In this chapter we learned some basics about R and how to get a simple dataset into our environment to work with it. In the following chapters we will build on these skills to wrangle and analyze data.
 
 ## Chapter 4 Exercises
 ::: {.callout-note icon=false title="Exercises"}
@@ -241,7 +250,7 @@ enrollment <- read_csv(
 2. **Consult the documentation.** Use the readr documentation to answer the following questions.
 
     a. What is the default value of the `col_names` argument for `read_csv()`? What does it do?
-    b. The what function would be used to load a tab seperated file?
+    b. What function would be used to load a tab seperated file?
     c. Explain what does the skip argument does and give an example practical use case.
 
 3. **Build and load a CSV dataset.** Create a small dataset that is higher education related.
@@ -249,4 +258,12 @@ enrollment <- read_csv(
     a. In Excel, create and save a dataset as a csv file with a header. It should have four columns and ten rows. There should be at least one text column and one numeric column. Also create a new R script and save that to the same folder.
     b. Load your dataset with readr and assign it to a named object.
     c. Examine it with the functions we used in the chapter for inspecting data and describe the output.
+    
+4. **Craft conditions with operators.** Use your dataset to practice comparisons and logical operators.
+
+    a. Pick a numeric column and write a comparison that returns TRUE/FALSE for each value For example, is a value greater than a sepecifc threshold you choose. Exaplain what the result tells you about your data.
+
+    b. Write another condition for a different column. Then combine your two conditions with a logical operator (& or |). Explain what the combined condition is asking. For example, "students who are full-time *and* are in Biology".
+
+    c. Change your & to a |—or vice versa. Describe how the output changed. How could an analyst use "AND" and "OR" when working with data?
 :::
