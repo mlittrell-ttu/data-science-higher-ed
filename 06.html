@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Title TBD – Applied Data Science in Higher Education with R</title>
+<title>6&nbsp; Exploratory Data Analysis – Applied Data Science in Higher Education with R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Title TBD</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -270,15 +270,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#picking-up-the-preprocessing-thread" id="toc-picking-up-the-preprocessing-thread" class="nav-link active" data-scroll-target="#picking-up-the-preprocessing-thread"><span class="header-section-number">6.1</span> Picking up the preprocessing thread</a></li>
+  <li><a href="#a-short-statistics-refresher" id="toc-a-short-statistics-refresher" class="nav-link" data-scroll-target="#a-short-statistics-refresher"><span class="header-section-number">6.2</span> A short statistics refresher</a>
+  <ul class="collapse">
+  <li><a href="#measures-of-spread" id="toc-measures-of-spread" class="nav-link" data-scroll-target="#measures-of-spread"><span class="header-section-number">6.2.1</span> Measures of spread</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/06.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Title TBD</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Title TBD</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></h1>
 </div>
 
 
@@ -295,8 +305,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="picking-up-the-preprocessing-thread" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="picking-up-the-preprocessing-thread"><span class="header-section-number">6.1</span> Picking up the preprocessing thread</h2>
+<p>In the last chapter we used dplyr to reshape and clean data. That work continues here to expand on a couple of additional ideas.</p>
+<p>Cleaning is only half of this chapter. Once our data are tidy, the same dplyr tools that helped fixed it can also assist us in understanding it. <strong>Exploratory data analysis (EDA)</strong> is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spots surprises and decide what is worth investigating further.</p>
+</section>
+<section id="a-short-statistics-refresher" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="a-short-statistics-refresher"><span class="header-section-number">6.2</span> A short statistics refresher</h2>
+<p>EDA leans on a handful of basic statistical ideas. A quick review is presented here that is enough to follow the chapter.</p>
+<p>[#WORKING DRAFT BELOW HERE#] ### Measures of central tendency A <strong>measure of central tendency</strong> describes the “typical” value in a set of numbers. Three are common:</p>
+<ul>
+<li>The <strong>mean</strong> is the arithmetic average — add the values and divide by how many there are. It is the most familiar measure, but it is sensitive to extreme values.</li>
+<li>The <strong>median</strong> is the middle value when the numbers are sorted. Half fall below it and half above. Because it ignores how far away the extremes are, it resists their pull.</li>
+<li>The <strong>mode</strong> is the value that appears most often. It is the only one that works for categories (the most common major, say), not just numbers.</li>
+</ul>
+<p>The gap between the mean and the median is itself informative. When they are close, the data is roughly balanced. When the mean is pulled well above the median, a few large values are stretching it upward — exactly what we saw with institutional completion counts in the last chapter.</p>
+<section id="measures-of-spread" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="measures-of-spread"><span class="header-section-number">6.2.1</span> Measures of spread</h3>
+<p>Central tendency tells us where the middle is; <strong>spread</strong> tells us how far the values scatter around it.</p>
+<ul>
+<li>The <strong>range</strong> is the distance from the smallest value to the largest. Simple, but driven entirely by the two extremes.</li>
+<li>The <strong>interquartile range (IQR)</strong> is the range of the middle half of the data — the distance from the 25th to the 75th percentile. It describes the bulk of the values while ignoring the extremes.</li>
+<li>The <strong>standard deviation (SD)</strong> measures the typical distance of values from the mean. A small SD means values cluster tightly; a large one means they are widely dispersed.</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -719,7 +754,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 Michael Littrell. Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/06.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/06.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
