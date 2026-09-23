@@ -81,22 +81,46 @@ inst_award_data_totals <- inst_award_data |>
 glimpse(inst_award_data_totals)
 
 
+
 #________________________________________________________
 # **Fix the data types with mutate()**
-# **mutate()** creates or changes columns. We pair it with the as.*() conversion
-# functions from the previous chapter to fix the two problem types:
+# **mutate()** creates or changes columns. We fix the two problem types:
 #   INSTITUTION_ID -> character (it's a label)
-#   AWARD_LVL      -> factor    (it's fixed categories)
-# Assigning it back to the data with `<-` makes the change remain in dataset.
+#   AWARD_LVL      -> ordered factor with readable labels
+#
+# AWARD_LVL is coded as numbers and its categories have a meaningful rank (a
+# bachelor's > associate's etc.).
+# We turn it into an ORDERED factor: factor() takes the levels in rank order,
+# readable labels for each, and ordered = TRUE. This makes the codes
+# human-readable (5 -> "Bachelor's") and preserves the hierarchy.
+# An ordered factor shows as <ord> in glimpse() instead of <fct>.
+#
 inst_award_data_totals <- inst_award_data_totals |>
   mutate(
     INSTITUTION_ID = as.character(INSTITUTION_ID),
-    AWARD_LVL = as.factor(AWARD_LVL)
+    AWARD_LVL = factor(
+      AWARD_LVL,
+      levels = c(11, 12, 2, 3, 5, 10, 7, 9),
+      labels = c(
+        "Cert <12wks",
+        "Cert 12wks-1yr",
+        "Cert 1-4yrs",
+        "Associate's",
+        "Bachelor's",
+        "Postbacc cert",
+        "Master's",
+        "Doctoral"
+      ),
+      ordered = TRUE
+    )
   )
 
-# Confirm the types.
+
+# Inspect the results:
 glimpse(inst_award_data_totals)
 
+# See the levels:
+levels(inst_award_data_totals$AWARD_LVL)
 
 #________________________________________________________
 # **Summarize to spot problems**
@@ -131,7 +155,7 @@ summary(inst_award_data_totals)
 # (level "5" as AWARD_LVL is now a factor). Now every row is one
 # institution's bachelor's completions, so TOTAL is comparable across rows. 
 bachelors <- inst_award_data_totals |>
-  filter(AWARD_LVL == "5")
+  filter(AWARD_LVL == "Bachelor's")
 
 glimpse(bachelors)
 
@@ -171,17 +195,17 @@ bachelors |>
 # function takes three arguments in order: the condition, the value if TRUE,
 # and the value if FALSE. Here, wherever TOTAL is under 5, we insert NA to
 # mark it suppressed. Otherwise, we keep TOTAL.
-inst_award_data <- inst_award_data |>
+inst_award_data_totals <- inst_award_data_totals |>
   mutate(total_reported = ifelse(TOTAL < 5, NA, TOTAL))
 
 # Confirm we created some missing values.
-sum(is.na(inst_award_data$total_reported))
+# `$` is the extract operator. It pulls columns out of data
+sum(is.na(inst_award_data_totals$total_reported))
 
 # To see missing values across the whole dataset at once, wrap colSums() around
 # is.na(). This counts the NAs in every column so you can spot which variables
 # have gaps and which are complete.
-colSums(is.na(inst_award_data))
-
+colSums(is.na(inst_award_data_totals))
 
 #________________________________________________________
 # **Group and summarize with the missing-value problem**
@@ -192,7 +216,7 @@ colSums(is.na(inst_award_data))
 # Notice this results in any group with even one missing value returning as NA. 
 # A single unknown value makes the true average unknowable, so R will not guess 
 # unless we tell it to.
-inst_award_data |>
+inst_award_data_totals |>
   group_by(AWARD_LVL) |>
   summarize(avg_reported = mean(total_reported))
 
@@ -201,7 +225,7 @@ inst_award_data |>
 # **Handle missing with na.rm = TRUE**
 # The fix is the na.rm argument ("NA remove"). Setting it to TRUE drops the
 # missing values before calculating, so the average is taken over what remains.
-inst_award_data |>
+inst_award_data_totals |>
   group_by(AWARD_LVL) |>
   summarize(avg_reported = mean(total_reported, na.rm = TRUE))
 
@@ -248,10 +272,15 @@ inst_award_data_totals |>
 
 #________________________________________________________
 # **Combine tables with a join**
+# Sometimes data are distributed amongst different tables. These can be merged
+# with joins, where data are matched on a shared column.
 # So far our data has institution ID numbers but no names. Institution names
-# live in a different IPEDS table, dir_info2020. A join combines two tables by
-# matching on a shared column -- here, INSTITUTION_ID.
-#
+# live in a different IPEDS table, dir_info2020. The join here combines two 
+# tables by matching on the shared INSTITUTION_ID.
+
+# See the columns available in the dataset
+glimpse(dir_info2020)
+
 # left_join() keeps every row of the first (left) table and attaches matching
 # columns from the second. We first select just the name and state from the
 # directory, then join them onto our bachelor's data.

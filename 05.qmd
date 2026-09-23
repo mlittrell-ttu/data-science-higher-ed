@@ -3,19 +3,44 @@
 ### Main Idea
 This module is situated in the data science project workflow at the **clean** phase. Data rarely arrives in a condition that is perfectly aligned for the work intended. It can have any number of issues including variable names that are opaque, missing data, or inconsistent categorical values such as "Bio" and "Biology" representing the same program of study in a single column. For this reason we need tools to help us wrangle the data so we can work with it. Specifically to working within the tidyverse, is the idea that all data should be 'tidy' (Wickham, 2021).That is, all rows should be one observation, all columns a variable, and each cell is a single value. **Dplyr** is a tidyverse package that provides a set of easy-to-read functions that we can use to clean data. These functions are called **verbs** and each one does something helpful with our data. The documentation for dply is found here <https://dplyr.tidyverse.org/index.html>.
 
-### Table of core dplyr verbs
-Before we get into each core verb and its use, here they are presented on a table as a quick reference. Note there there over 60+ verbs that exist beyond these but these are some of the main ones applicable in many situations.
+### Table of some helpful dplyr verbs
+Before we get into the verbs and their use, here are some presented on a table as a quick reference. Note there there over 60+ verbs that exist beyond the ones seen on the table, but these are some that are applicable in many situations.
+
+**Working with rows**
+
+| Verb | What it does |
+|:-----|:-------------|
+| `filter()` | Keeps rows that meet a condition |
+| `arrange()` | Sorts rows by one or more columns |
+| `distinct()` | Keeps only unique rows or unique combinations of columns |
+| `slice()` | Selects rows by position (e.g., `slice(1:10)`) |
+
+**Working with columns**
 
 | Verb | What it does |
 |:-----|:-------------|
 | `select()` | Picks columns by name |
-| `filter()` | Keeps rows that meet a condition |
-| `arrange()` | Sorts rows by one or more columns |
 | `mutate()` | Creates or changes columns |
-| `summarize()` | Collapses many rows into a single summary value |
-| `group_by()` | Groups rows so operations apply within each group |
+| `rename()` | Changes a column's name, `rename(new = old)` |
+| `relocate()` | Moves columns to a new position with `.before` or `.after` |
 
-: Core dplyr verbs. {#tbl-dplyr-verbs}
+**Working with groups**
+
+| Verb | What it does |
+|:-----|:-------------|
+| `group_by()` | Groups rows so operations apply within each group |
+| `summarize()` | Collapses each group into a single summary row |
+
+**Combining tables**
+
+| Verb | What it does |
+|:-----|:-------------|
+| `left_join()` | Keeps all rows of the left table, adds matching columns from the right |
+| `right_join()` | Keeps all rows of the right table, adds matching columns from the left |
+| `inner_join()` | Keeps only rows with a match in both tables |
+| `full_join()` | Keeps all rows from both tables, filling gaps with `NA` |
+
+: Helpful dplyr verbs. {#tbl-dplyr-verbs}
 
 ### The pipe
 Dplyr verbs are even more powerful when we link them together to work as a team. To accomplish this we use an operator known as **pipe**. It is written as `|>`. It can be thought of as piping data from one function to another to arrive at an output such as seen in this generic example where data flows from function_1 and then to function_2.
@@ -25,8 +50,37 @@ data|> function_1 |> function_2
 ```
 
 ## Preprocessing with Dplyr demonstration
-Here is the applied data preprocessing demonstration that teaches the core verbs and some additional ones as we work through the process.
+Here is the applied data preprocessing demonstration that teaches some helpful dplyr verbs as we work through the process.
 
 ```{.r include="scripts/05.R"}
 ```
 
+
+## Exercises
+::: {.callout-note icon=false title="Exercises"}
+
+1. **Preprocess a new IPEDS dataset.** See the other datasets in the package with `data(package = "IPEDS")`. Pick one that interests you (for example, `adm2020` for admissions). Load it and clean it using the verbs from this chapter.
+
+    a. Assign the dataset to an object, then look up what its variables mean with `?<dataset_name>`. In a sentence, state its unit of analysis. What does one row represent?
+    b. Use `glimpse()` and `summary()` to inspect it. Identify at least one column whose type looks wrong (a label or category stored as a number), and one thing `summary()` reveals about a numeric column.
+    c. Fix the type you found with `mutate()` and the `as.*()` function. Confirm with `glimpse()`. Pick a column (like class standing), turn it into an ordered factor with `factor(..., ordered = TRUE)`. Give each level a readable label and confirm the levels.
+
+2. **Shape the data with dplyr verbs.** Using your dataset, put several verbs to work.
+
+    a. Use `select()` to narrow to a few relevant columns. Then `filter()` to keep a subset of rows that meet a condition you choose. Explain what your filter keeps.
+    b. Use `rename()` to give a column a clearer name, and `arrange()` to sort the result. Describe what now sits at the top and why you arranged it that way.
+    c. Use `distinct()` on a categorical column to see its unique values. Describe what you see.
+
+3. **Summarize across groups, and handle missing data.** Compute a grouped summary and deal with any missing.
+
+    a. Use `group_by()` and `summarize()` to compute an average or count within groups.
+    b. If a group returns `NA`, apply `na.rm = TRUE` to fix it. If nothing is missing, use `ifelse()` in a `mutate()` to introduce an `NA` (for example, marking small counts as missing), then redo the summary.
+    c. Considering the MCAR, MAR, and MNAR patterns, explain whether dropping the missing values with `na.rm = TRUE` is reasonable in your case, or whether it would potentially bias the result.
+
+4. **Combine two tables with a join.** Bring in information from a second IPEDS dataset.
+
+    a. Pick a second IPEDS dataset that shares a column with your first (for example, `dir_info2020` shares `INSTITUTION_ID`). Use `glimpse()` on it to find the shared column and a column to add.
+    b. Make sure the shared column is the same type in both tables, then use `left_join()` to attach the new information to your data. Confirm the result with `glimpse()`.
+    c. What happens to rows in your data that have no match in the second table? Explain in a sentence.
+
+:::

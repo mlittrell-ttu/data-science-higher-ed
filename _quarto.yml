@@ -13,7 +13,7 @@ project:
 
 book:
   title: "Applied Data Science in Higher Education with R"
-  subtitle: "A practical, open book for pragmatic data science."
+  subtitle: "A practical, open resource for pragmatic data science."
   author: "Michael Littrell"
   date: today
   cover-image: images/cover_v1.png
