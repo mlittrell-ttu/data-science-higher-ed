@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81ced3e863acfb1071fb730864f79675.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c2d2b1e2f569a1ea8a30b921b6be124c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -275,11 +278,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#picking-up-the-preprocessing-thread" id="toc-picking-up-the-preprocessing-thread" class="nav-link active" data-scroll-target="#picking-up-the-preprocessing-thread"><span class="header-section-number">6.1</span> Picking up the preprocessing thread</a></li>
-  <li><a href="#a-short-statistics-refresher" id="toc-a-short-statistics-refresher" class="nav-link" data-scroll-target="#a-short-statistics-refresher"><span class="header-section-number">6.2</span> A short statistics refresher</a>
+  <li><a href="#details" id="toc-details" class="nav-link active" data-scroll-target="#details"><span class="header-section-number">6.1</span> Details</a></li>
+  <li><a href="#very-brief-stats" id="toc-very-brief-stats" class="nav-link" data-scroll-target="#very-brief-stats"><span class="header-section-number">6.2</span> Very brief stats</a>
   <ul class="collapse">
-  <li><a href="#measures-of-spread" id="toc-measures-of-spread" class="nav-link" data-scroll-target="#measures-of-spread"><span class="header-section-number">6.2.1</span> Measures of spread</a></li>
+  <li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency"><span class="header-section-number">6.2.1</span> Measures of central tendency</a></li>
+  <li><a href="#measures-of-spread" id="toc-measures-of-spread" class="nav-link" data-scroll-target="#measures-of-spread"><span class="header-section-number">6.2.2</span> Measures of spread</a></li>
+  <li><a href="#distribution-shape-and-skew" id="toc-distribution-shape-and-skew" class="nav-link" data-scroll-target="#distribution-shape-and-skew"><span class="header-section-number">6.2.3</span> Distribution, shape, and skew</a></li>
   </ul></li>
+  <li><a href="#two-modes-of-eda" id="toc-two-modes-of-eda" class="nav-link" data-scroll-target="#two-modes-of-eda"><span class="header-section-number">6.3</span> Two modes of EDA</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/06.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -305,32 +311,77 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="picking-up-the-preprocessing-thread" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="picking-up-the-preprocessing-thread"><span class="header-section-number">6.1</span> Picking up the preprocessing thread</h2>
-<p>In the last chapter we used dplyr to reshape and clean data. That work continues here to expand on a couple of additional ideas.</p>
-<p>Cleaning is only half of this chapter. Once our data are tidy, the same dplyr tools that helped fixed it can also assist us in understanding it. <strong>Exploratory data analysis (EDA)</strong> is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spots surprises and decide what is worth investigating further.</p>
+<section id="details" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="details"><span class="header-section-number">6.1</span> Details</h2>
+<p>This module is about <strong>exploratory data analysis (EDA)</strong>, which is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spot surprises and decide what is worth investigating further. Once data are tidy, the same dplyr tools we used to clean data in the last module can also help us understand it. We will also pick up a couple of helpful preprocessing steps along the way.</p>
 </section>
-<section id="a-short-statistics-refresher" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="a-short-statistics-refresher"><span class="header-section-number">6.2</span> A short statistics refresher</h2>
+<section id="very-brief-stats" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="very-brief-stats"><span class="header-section-number">6.2</span> Very brief stats</h2>
 <p>EDA leans on a handful of basic statistical ideas. A quick review is presented here that is enough to follow the chapter.</p>
-<p>[#WORKING DRAFT BELOW HERE#] ### Measures of central tendency A <strong>measure of central tendency</strong> describes the “typical” value in a set of numbers. Three are common:</p>
+<section id="measures-of-central-tendency" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="measures-of-central-tendency"><span class="header-section-number">6.2.1</span> Measures of central tendency</h3>
+<p>A <strong>measure of central tendency</strong> describes the “typical” value in a set of numbers. These three are common:</p>
 <ul>
-<li>The <strong>mean</strong> is the arithmetic average — add the values and divide by how many there are. It is the most familiar measure, but it is sensitive to extreme values.</li>
-<li>The <strong>median</strong> is the middle value when the numbers are sorted. Half fall below it and half above. Because it ignores how far away the extremes are, it resists their pull.</li>
-<li>The <strong>mode</strong> is the value that appears most often. It is the only one that works for categories (the most common major, say), not just numbers.</li>
+<li>The <strong>mean</strong> is the average where values are added together and divided by their count. It is a common stat, but it is sensitive to outliers with extreme values.</li>
+<li>The <strong>median</strong> is the middle value when the numbers are sorted. Half fall below it and half above. Because it ignores how far away the extremes are, it is less sensitive to them.</li>
+<li>The <strong>mode</strong> is the value that appears most often. It works for categorical and numeric data.</li>
 </ul>
-<p>The gap between the mean and the median is itself informative. When they are close, the data is roughly balanced. When the mean is pulled well above the median, a few large values are stretching it upward — exactly what we saw with institutional completion counts in the last chapter.</p>
-<section id="measures-of-spread" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="measures-of-spread"><span class="header-section-number">6.2.1</span> Measures of spread</h3>
-<p>Central tendency tells us where the middle is; <strong>spread</strong> tells us how far the values scatter around it.</p>
+</section>
+<section id="measures-of-spread" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="measures-of-spread"><span class="header-section-number">6.2.2</span> Measures of spread</h3>
+<p>Central tendency refers to the middle of some values. <strong>Spread</strong> tells us how far the values scatter around it.</p>
 <ul>
 <li>The <strong>range</strong> is the distance from the smallest value to the largest. Simple, but driven entirely by the two extremes.</li>
-<li>The <strong>interquartile range (IQR)</strong> is the range of the middle half of the data — the distance from the 25th to the 75th percentile. It describes the bulk of the values while ignoring the extremes.</li>
-<li>The <strong>standard deviation (SD)</strong> measures the typical distance of values from the mean. A small SD means values cluster tightly; a large one means they are widely dispersed.</li>
+<li>The <strong>interquartile range (IQR)</strong> is the range of the middle half of the data. That is, the distance from the 25th to the 75th percentile. It describes the bulk of the values while ignoring the extremes.</li>
+<li>The <strong>standard deviation (SD)</strong> measures the typical distance of values from the mean. A small SD means values cluster tightly around the average. A large one means they are widely dispersed.</li>
 </ul>
-
-
 </section>
+<section id="distribution-shape-and-skew" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="distribution-shape-and-skew"><span class="header-section-number">6.2.3</span> Distribution, shape, and skew</h3>
+<p><strong>Skew</strong> describes how lopsided the shape of a distribution is. Comparing the mean to the median surfaces the shape. A useful framing for understanding a distribution is that the mean chases the tail, being pulled toward the extreme values. The median is more resistant, so it sits near the middle. Whenever the mean and median drift apart, the direction of the gap tells you which way the data is skewed.</p>
+<p>In a <strong>symmetric</strong> distribution, the values are balanced around the center and the mean and median sit close together. Example: In a well designed course, most students score roughly near the class average, with some scoring below or above this.</p>
+<div id="fig-sym" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sym-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_6_sym.png" class="quarto-figure quarto-figure-center figure-img" width="300" height="250">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sym-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: A symmetric distribution, where the mean and median are near the center.
+</figcaption>
+</figure>
+</div>
+<p>A distribution has a <strong>positive (right) skew</strong> when a few large values stretch a long tail to the right. These high values pull the mean higher, so the mean sits above the median. Example: In a difficult course, most students score low, with a few high scorers stretching a tail to the right and pulling the mean above the median.</p>
+<div id="fig-pos" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_6_pos.png" class="quarto-figure quarto-figure-center figure-img" width="300" height="250">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: A positive (right) skew, where the mean is pulled above the median by some high values.
+</figcaption>
+</figure>
+</div>
+<p>A distribution has <strong>negative (left) skew</strong> when a long tail stretches to the left. These low values pull the mean down, so the mean sits below the median. Example: In an easy course, most students score high, with a few low scorers stretching a tail to the left and pulling the mean below the median.</p>
+<div id="fig-neg" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-neg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/chp_6_neg.png" class="quarto-figure quarto-figure-center figure-img" width="300" height="250">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: A negative (left) skew, where the mean is pulled below the median by some low values.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="two-modes-of-eda" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="two-modes-of-eda"><span class="header-section-number">6.3</span> Two modes of EDA</h2>
+<p>EDA works through two complementary modes of working and it can be helpful to move between them often.</p>
+<p>The first mode works with <strong>values</strong>, such as summaries, counts, and statistics. We might compute the average GPA by major, count how many students fall into each class standing, or find the highest and lowest values. Values are precise and let us compare and understand exactly.</p>
+<p>The second mode works with <strong>visual</strong> elements. This could include plots that show skewness, histograms that the distribution of a variable, or a box plot that exposes outliers. Pictures can reveal patterns and data issues that a table of values can hide.</p>
+<p>These modes work in tandem and are supportive of one another. Imagine we compute the average number of credits per major and notice one major’s average looks oddly low. The number raises a question but doesn’t answer it. So we plot that program’s credits and see the distribution splits in two — a cluster of part-time students pulling the average down. The plot raises a new question, so we go back to the numbers to count how many are part-time.</p>
+
+
 </section>
 
 </main> <!-- /main -->

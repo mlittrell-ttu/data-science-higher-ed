@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>4&nbsp; R Basics – Applied Data Science in Higher Education with R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -57,6 +63,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -72,10 +79,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81ced3e863acfb1071fb730864f79675.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-c2d2b1e2f569a1ea8a30b921b6be124c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -101,12 +109,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script data-goatcounter="https://heds.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+}</script>
+<script data-goatcounter="https://heds.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+
 </head>
+
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -117,9 +131,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Applied Data Science in Higher Education with R</a> 
         <div class="sidebar-tools-main">
@@ -134,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
@@ -148,8 +166,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></span></a>
@@ -204,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -213,15 +231,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">blank</span></span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -230,15 +248,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">blank</span></span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -247,15 +265,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">blank</span></span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
@@ -276,62 +294,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li>
-<a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context"><span class="header-section-number">4.1</span> Context</a>
+  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context"><span class="header-section-number">4.1</span> Context</a>
   <ul class="collapse">
-<li><a href="#a-note-about-base-r-and-tidyverse" id="toc-a-note-about-base-r-and-tidyverse" class="nav-link" data-scroll-target="#a-note-about-base-r-and-tidyverse"><span class="header-section-number">4.1.1</span> A note about base R and tidyverse</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#setup-and-packages" id="toc-setup-and-packages" class="nav-link" data-scroll-target="#setup-and-packages"><span class="header-section-number">4.2</span> Setup and packages</a>
+  <li><a href="#a-note-about-base-r-and-tidyverse" id="toc-a-note-about-base-r-and-tidyverse" class="nav-link" data-scroll-target="#a-note-about-base-r-and-tidyverse"><span class="header-section-number">4.1.1</span> A note about base R and tidyverse</a></li>
+  </ul></li>
+  <li><a href="#setup-and-packages" id="toc-setup-and-packages" class="nav-link" data-scroll-target="#setup-and-packages"><span class="header-section-number">4.2</span> Setup and packages</a>
   <ul class="collapse">
-<li><a href="#create-a-new-script" id="toc-create-a-new-script" class="nav-link" data-scroll-target="#create-a-new-script"><span class="header-section-number">4.2.1</span> Create a new script</a></li>
+  <li><a href="#create-a-new-script" id="toc-create-a-new-script" class="nav-link" data-scroll-target="#create-a-new-script"><span class="header-section-number">4.2.1</span> Create a new script</a></li>
   <li><a href="#load-packages" id="toc-load-packages" class="nav-link" data-scroll-target="#load-packages"><span class="header-section-number">4.2.2</span> Load packages</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics"><span class="header-section-number">4.3</span> Basics</a>
+  </ul></li>
+  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics"><span class="header-section-number">4.3</span> Basics</a>
   <ul class="collapse">
-<li><a href="#functional-syntax" id="toc-functional-syntax" class="nav-link" data-scroll-target="#functional-syntax"><span class="header-section-number">4.3.1</span> Functional syntax</a></li>
+  <li><a href="#functional-syntax" id="toc-functional-syntax" class="nav-link" data-scroll-target="#functional-syntax"><span class="header-section-number">4.3.1</span> Functional syntax</a></li>
   <li><a href="#objects" id="toc-objects" class="nav-link" data-scroll-target="#objects"><span class="header-section-number">4.3.2</span> Objects</a></li>
   <li><a href="#data-frames-and-tibbles" id="toc-data-frames-and-tibbles" class="nav-link" data-scroll-target="#data-frames-and-tibbles"><span class="header-section-number">4.3.3</span> Data frames and tibbles</a></li>
   <li><a href="#variable-types" id="toc-variable-types" class="nav-link" data-scroll-target="#variable-types"><span class="header-section-number">4.3.4</span> Variable types</a></li>
   <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators"><span class="header-section-number">4.3.5</span> Operators</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#other-data-structures" id="toc-other-data-structures" class="nav-link" data-scroll-target="#other-data-structures"><span class="header-section-number">4.4</span> Other data structures</a></li>
-  <li>
-<a href="#csv-files" id="toc-csv-files" class="nav-link" data-scroll-target="#csv-files"><span class="header-section-number">4.5</span> CSV files</a>
+  <li><a href="#csv-files" id="toc-csv-files" class="nav-link" data-scroll-target="#csv-files"><span class="header-section-number">4.5</span> CSV files</a>
   <ul class="collapse">
-<li><a href="#example-workflow" id="toc-example-workflow" class="nav-link" data-scroll-target="#example-workflow"><span class="header-section-number">4.5.1</span> Example workflow</a></li>
-  </ul>
-</li>
+  <li><a href="#example-workflow" id="toc-example-workflow" class="nav-link" data-scroll-target="#example-workflow"><span class="header-section-number">4.5.1</span> Example workflow</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4.6</span> Conclusion</a></li>
   <li><a href="#chapter-4-exercises" id="toc-chapter-4-exercises" class="nav-link" data-scroll-target="#chapter-4-exercises"><span class="header-section-number">4.7</span> Chapter 4 Exercises</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/04.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/04.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/04.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/04.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span>
-</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span></h1>
 </div>
 
 
@@ -345,95 +359,110 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="context" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="context">
-<span class="header-section-number">4.1</span> Context</h2>
-<section id="a-note-about-base-r-and-tidyverse" class="level3" data-number="4.1.1"><h3 data-number="4.1.1" class="anchored" data-anchor-id="a-note-about-base-r-and-tidyverse">
-<span class="header-section-number">4.1.1</span> A note about base R and tidyverse</h3>
+</header>
+
+
+<section id="context" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="context"><span class="header-section-number">4.1</span> Context</h2>
+<section id="a-note-about-base-r-and-tidyverse" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="a-note-about-base-r-and-tidyverse"><span class="header-section-number">4.1.1</span> A note about base R and tidyverse</h3>
 <p>Throughout this book you will see two threads of work. Where possible we will rely on the <strong>tidyverse</strong>, a collection of packages first developed by Hadley Wickham and now maintained by Posit. These packages offer an improved way of working with R overall. When it is needed or is more efficient, we will switch to <strong>base R</strong> which refers to the default capabilities that the language includes, or other packages outside of the tidyverse.</p>
-</section></section><section id="setup-and-packages" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="setup-and-packages">
-<span class="header-section-number">4.2</span> Setup and packages</h2>
-<section id="create-a-new-script" class="level3" data-number="4.2.1"><h3 data-number="4.2.1" class="anchored" data-anchor-id="create-a-new-script">
-<span class="header-section-number">4.2.1</span> Create a new script</h3>
+</section>
+</section>
+<section id="setup-and-packages" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="setup-and-packages"><span class="header-section-number">4.2</span> Setup and packages</h2>
+<section id="create-a-new-script" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="create-a-new-script"><span class="header-section-number">4.2.1</span> Create a new script</h3>
 <p>For this chapter, create a new script file <strong>(File &gt; New &gt; File R Script)</strong> and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work.</p>
 <div id="fig-folder" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/chp_4_folder.png" class="quarto-figure quarto-figure-center figure-img" width="550" height="375">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.1: An R script and CSV data file saved in the same folder.
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
 <p>Typically, there is some information about what the script is all about up top. The packages for the script are located before the work happens so they are pre-loaded. Data are imported, inspected, and prepared before the analysis occurs. To help the flat script file appear more visually structured, each section can be divided with continuous underscore characters creating lines, for example.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># Title:    Generic Example Script File</span></span>
-<span><span class="co"># Analyst:  Your name</span></span>
-<span><span class="co"># Date:     The date</span></span>
-<span><span class="co"># Purpose:  The purpose of the wok in the script.</span></span>
-<span><span class="co">#________________________________________________________</span></span>
-<span></span>
-<span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># Step 1. Install/ Load packages</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span> <span class="op">(</span><span class="st">"package_name"</span><span class="op">)</span> <span class="co"># Only once</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">package_name</span><span class="op">)</span> <span class="co"># Each session</span></span>
-<span></span>
-<span></span>
-<span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># Step 2. Set working directory(optionally use RStudio GUI instead)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"C:/users/name/documents/folder"</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># Step 3. Import data</span></span>
-<span><span class="va">data_frame</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"your_data.csv"</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># Step 4. Inspection of loaded data</span></span>
-<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">data_frame</span><span class="op">)</span>   <span class="co"># Shows columns types and sample values.</span></span>
-<span></span>
-<span></span>
-<span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># Step 5. Data preparation</span></span>
-<span><span class="co"># Many actions could be taken here such as dropping missing values.</span></span>
-<span><span class="va">data_frame</span> <span class="op">&lt;-</span> <span class="fu">drop_na</span><span class="op">(</span><span class="va">data_frame</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># Step 6. Analyze the data</span></span>
-<span><span class="co"># The analysis will proceed after these initial steps.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section><section id="load-packages" class="level3" data-number="4.2.2"><h3 data-number="4.2.2" class="anchored" data-anchor-id="load-packages">
-<span class="header-section-number">4.2.2</span> Load packages</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Title:    Generic Example Script File</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Analyst:  Your name</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Date:     The date</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Purpose:  The purpose of the wok in the script.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1. Install/ Load packages</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span> (<span class="st">"package_name"</span>) <span class="co"># Only once</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(package_name) <span class="co"># Each session</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2. Set working directory(optionally use RStudio GUI instead)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setwd</span>(<span class="st">"C:/users/name/documents/folder"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3. Import data</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>data_frame <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"your_data.csv"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4. Inspection of loaded data</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_frame)   <span class="co"># Shows columns types and sample values.</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5. Data preparation</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Many actions could be taken here such as dropping missing values.</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>data_frame <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(data_frame)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">#________________________________________________________</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6. Analyze the data</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># The analysis will proceed after these initial steps.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="load-packages" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="load-packages"><span class="header-section-number">4.2.2</span> Load packages</h3>
 <p>For the work in this chapter, first install and then load the following packages:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Install </span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span> <span class="co"># Only once</span></span>
-<span></span>
-<span><span class="co"># Load </span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span> <span class="co"># Each session</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section></section><section id="basics" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="basics">
-<span class="header-section-number">4.3</span> Basics</h2>
-<section id="functional-syntax" class="level3" data-number="4.3.1"><h3 data-number="4.3.1" class="anchored" data-anchor-id="functional-syntax">
-<span class="header-section-number">4.3.1</span> Functional syntax</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>) <span class="co"># Only once</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Each session</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="basics" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="basics"><span class="header-section-number">4.3</span> Basics</h2>
+<section id="functional-syntax" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="functional-syntax"><span class="header-section-number">4.3.1</span> Functional syntax</h3>
 <p>Most work in R is the result of executing pre-defined <strong>functions</strong>. These operators take some data as input, work with it in some way, and then output the result. These functions take <strong>arguments</strong> that tell them what to work on or adjust their behavior.</p>
 <p>Here is a generic function syntax:</p>
 <pre class="(r)"><code>function_name(data, argument_1)</code></pre>
 <p>Here is the mean() function in action:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">50</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 53.33333</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">100</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 53.33333</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section><section id="objects" class="level3" data-number="4.3.2"><h3 data-number="4.3.2" class="anchored" data-anchor-id="objects">
-<span class="header-section-number">4.3.2</span> Objects</h3>
-<p>Everything created in R is stored in memory as an <strong>object</strong>. Objects can be thought of as containers which we give a name to identify them by and access them again later. You can see a list of the objects that R currently has in memory in the environment pane of RStudio or by running the command <code><a href="https://rdrr.io/r/base/ls.html">ls()</a></code> in your console.</p>
-</section><section id="data-frames-and-tibbles" class="level3" data-number="4.3.3"><h3 data-number="4.3.3" class="anchored" data-anchor-id="data-frames-and-tibbles">
-<span class="header-section-number">4.3.3</span> Data frames and tibbles</h3>
+</section>
+<section id="objects" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="objects"><span class="header-section-number">4.3.2</span> Objects</h3>
+<p>Everything created in R is stored in memory as an <strong>object</strong>. Objects can be thought of as containers which we give a name to identify them by and access them again later. You can see a list of the objects that R currently has in memory in the environment pane of RStudio or by running the command <code>ls()</code> in your console.</p>
+</section>
+<section id="data-frames-and-tibbles" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="data-frames-and-tibbles"><span class="header-section-number">4.3.3</span> Data frames and tibbles</h3>
 <p>Data are brought into your environment to be worked with and that is what this chapter is about. Data are imported into R as objects. The default object is called a <strong>data frame</strong>. Data frames are base R’s way of bringing in tabular data made of rows and columns. The tidyverse has improved on the data frame,importing tabular data as <strong>tibbles</strong>. A tibble has some subtle smart features that make them easier to work with and they are also compatible across the range of tidyverse packages.</p>
-</section><section id="variable-types" class="level3" data-number="4.3.4"><h3 data-number="4.3.4" class="anchored" data-anchor-id="variable-types">
-<span class="header-section-number">4.3.4</span> Variable types</h3>
+</section>
+<section id="variable-types" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="variable-types"><span class="header-section-number">4.3.4</span> Variable types</h3>
 <p>Each column that you import into R has a <strong>data type</strong> so it knows the kind of values that are represented by the variable. The data type determines the types of actions that can be taken when working with data. Multiplying red (character) by cat (character) is beyond the capabilities of the language, for example. The table here shows the different types that are commonly worked with.</p>
 <div id="tbl-data-types" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;4.1: Common R data types.
-</figcaption><div aria-describedby="tbl-data-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption>
+<div aria-describedby="tbl-data-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -441,12 +470,14 @@ Table&nbsp;4.1: Common R data types.
 <col style="width: 41%">
 <col style="width: 25%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Type</th>
 <th style="text-align: left;">Name</th>
 <th style="text-align: left;">What it holds</th>
 <th style="text-align: left;">Example</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><code>chr</code></td>
@@ -489,38 +520,41 @@ Table&nbsp;4.1: Common R data types.
 </div>
 </figure>
 </div>
-</section><section id="operators" class="level3" data-number="4.3.5"><h3 data-number="4.3.5" class="anchored" data-anchor-id="operators">
-<span class="header-section-number">4.3.5</span> Operators</h3>
+</section>
+<section id="operators" class="level3" data-number="4.3.5">
+<h3 data-number="4.3.5" class="anchored" data-anchor-id="operators"><span class="header-section-number">4.3.5</span> Operators</h3>
 <p>Operators are symbols used by R to work with values. <strong>Assignment</strong> operators let us assign values directly to named objects. <strong>Arithmetic</strong> operators are used for working with values via common arithmetic methods, such as multiplying or adding. <strong>Comparison</strong> operators compare two or more values. They return a logical result, either <code>TRUE</code> or <code>FALSE</code>.<strong>Logical</strong> operators let us take the results from two or more logical comparisons (i.e., conditions) and returns a single logical result, either <code>TRUE</code> or <code>FALSE</code>. Run these in your environment to see what they do firsthand.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Assignment________________________________ </span></span>
-<span><span class="co"># See these values in your environment pane.</span></span>
-<span><span class="va">credits</span> <span class="op">&lt;-</span> <span class="fl">15</span></span>
-<span><span class="va">program</span> <span class="op">&lt;-</span> <span class="st">"Biology"</span></span>
-<span><span class="va">full_time</span> <span class="op">&lt;-</span> <span class="cn">TRUE</span></span>
-<span></span>
-<span></span>
-<span><span class="co"># Arithmetic operators________________________________</span></span>
-<span><span class="va">credits</span> <span class="op">+</span> <span class="fl">3</span>      <span class="co"># addition</span></span>
-<span><span class="va">credits</span> <span class="op">-</span> <span class="fl">3</span>      <span class="co"># subtraction</span></span>
-<span><span class="va">credits</span> <span class="op">*</span> <span class="fl">2</span>      <span class="co"># multiplication</span></span>
-<span><span class="va">credits</span> <span class="op">/</span> <span class="fl">2</span>      <span class="co"># division</span></span>
-<span><span class="va">credits</span> <span class="op">^</span> <span class="fl">2</span>      <span class="co"># exponent</span></span>
-<span><span class="va">credits</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">4</span>     <span class="co"># modulo (remainder)</span></span>
-<span></span>
-<span></span>
-<span><span class="co"># Comparison________________________________</span></span>
-<span><span class="va">credits</span> <span class="op">&gt;</span> <span class="fl">12</span>     <span class="co"># greater than</span></span>
-<span><span class="va">credits</span> <span class="op">&lt;</span> <span class="fl">12</span>     <span class="co"># less than</span></span>
-<span><span class="va">credits</span> <span class="op">&gt;=</span> <span class="fl">15</span>    <span class="co"># greater than or equal to</span></span>
-<span><span class="va">credits</span> <span class="op">==</span> <span class="fl">15</span>    <span class="co"># equal to</span></span>
-<span><span class="va">program</span> <span class="op">!=</span> <span class="st">"Business"</span>   <span class="co"># not equal to</span></span>
-<span></span>
-<span><span class="co"># Logical________________________________</span></span>
-<span><span class="va">full_time</span> <span class="op">&amp;</span> <span class="op">(</span><span class="va">credits</span> <span class="op">&gt;</span> <span class="fl">12</span><span class="op">)</span>   <span class="co"># AND - both must be TRUE</span></span>
-<span><span class="va">full_time</span> <span class="op">|</span> <span class="op">(</span><span class="va">credits</span> <span class="op">&lt;</span> <span class="fl">12</span><span class="op">)</span>   <span class="co"># OR  - either can be TRUE</span></span>
-<span><span class="op">!</span><span class="va">full_time</span>                   <span class="co"># NOT - reverses the TRUE value</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section></section><section id="other-data-structures" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="other-data-structures">
-<span class="header-section-number">4.4</span> Other data structures</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assignment________________________________ </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># See these values in your environment pane.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>credits <span class="ot">&lt;-</span> <span class="dv">15</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>program <span class="ot">&lt;-</span> <span class="st">"Biology"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>full_time <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Arithmetic operators________________________________</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">+</span> <span class="dv">3</span>      <span class="co"># addition</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">-</span> <span class="dv">3</span>      <span class="co"># subtraction</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">*</span> <span class="dv">2</span>      <span class="co"># multiplication</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">/</span> <span class="dv">2</span>      <span class="co"># division</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">^</span> <span class="dv">2</span>      <span class="co"># exponent</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">%%</span> <span class="dv">4</span>     <span class="co"># modulo (remainder)</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparison________________________________</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">&gt;</span> <span class="dv">12</span>     <span class="co"># greater than</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">&lt;</span> <span class="dv">12</span>     <span class="co"># less than</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">&gt;=</span> <span class="dv">15</span>    <span class="co"># greater than or equal to</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>credits <span class="sc">==</span> <span class="dv">15</span>    <span class="co"># equal to</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>program <span class="sc">!=</span> <span class="st">"Business"</span>   <span class="co"># not equal to</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Logical________________________________</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>full_time <span class="sc">&amp;</span> (credits <span class="sc">&gt;</span> <span class="dv">12</span>)   <span class="co"># AND - both must be TRUE</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>full_time <span class="sc">|</span> (credits <span class="sc">&lt;</span> <span class="dv">12</span>)   <span class="co"># OR  - either can be TRUE</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>full_time                   <span class="co"># NOT - reverses the TRUE value</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="other-data-structures" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="other-data-structures"><span class="header-section-number">4.4</span> Other data structures</h2>
 <p>Beyond the tabular data frame and tibble, data in R are structured a few different ways. Here are some common ones.</p>
 <dl>
 <dt>Vector</dt>
@@ -529,10 +563,10 @@ A simple ordered set of values that are all the same type, numbers for example. 
 </dd>
 </dl>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Vector________________________</span></span>
-<span><span class="va">credit_hours</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">30</span><span class="op">)</span></span>
-<span><span class="va">credit_hours</span></span>
-<span><span class="co">#&gt; [1] 10 20 30</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector________________________</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>credit_hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>credit_hours</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10 20 30</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <dl>
 <dt>List</dt>
@@ -541,14 +575,14 @@ Can be considered a ‘container’ for holding a mix of data types of even othe
 </dd>
 </dl>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># List_________________________</span></span>
-<span><span class="va">student</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"S001"</span>, credits <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span>
-<span><span class="va">student</span></span>
-<span><span class="co">#&gt; $id</span></span>
-<span><span class="co">#&gt; [1] "S001"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $credits</span></span>
-<span><span class="co">#&gt; [1] 12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List_________________________</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>student <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">id =</span> <span class="st">"S001"</span>, <span class="at">credits =</span> <span class="dv">12</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>student</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $id</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "S001"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $credits</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <dl>
 <dt>Matrix</dt>
@@ -557,18 +591,19 @@ A grid of values that are all the same type; organized by rows and columns.
 </dd>
 </dl>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Matrix_________________________</span></span>
-<span><span class="va">scores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">88</span>, <span class="fl">92</span>, <span class="fl">75</span>, <span class="fl">80</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="va">scores</span></span>
-<span><span class="co">#&gt;      [,1] [,2]</span></span>
-<span><span class="co">#&gt; [1,]   88   75</span></span>
-<span><span class="co">#&gt; [2,]   92   80</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix_________________________</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">88</span>, <span class="dv">92</span>, <span class="dv">75</span>, <span class="dv">80</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>scores</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2]</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]   88   75</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]   92   80</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section><section id="csv-files" class="level2" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="csv-files">
-<span class="header-section-number">4.5</span> CSV files</h2>
+</section>
+<section id="csv-files" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="csv-files"><span class="header-section-number">4.5</span> CSV files</h2>
 <p>Commonly, datasets are in flat CSV files that we want to analyze. These files are typically an option to export from other systems such as an LMS in higher education, so it is useful to know how to work with them.</p>
-<section id="example-workflow" class="level3" data-number="4.5.1"><h3 data-number="4.5.1" class="anchored" data-anchor-id="example-workflow">
-<span class="header-section-number">4.5.1</span> Example workflow</h3>
+<section id="example-workflow" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="example-workflow"><span class="header-section-number">4.5.1</span> Example workflow</h3>
 <p>Download the small student dataset here to try importing it: <a href="data/7160_module1_student_enrollment.csv" download="7160_module1_student_enrollment.csv">student dataset</a></p>
 <p>For this import we are using the tidyverse package called <strong>readr</strong>. readr imports your data as a tibble and reports on the types of columns imported.It chooses these types by inspecting the data automatically and determining what is there. Sometimes this may not be right for what you want to accomplish with the data. For this workflow, we load the data, confirm it is there, change a column type, and then re-inspect to see that the type was changed as expected.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Leveraging AI">
@@ -586,74 +621,78 @@ A grid of values that are all the same type; organized by rows and columns.
 </div>
 <p><strong>Load the data.</strong> First, the dataset is loaded into a tibble called <em>enrollment</em>. Note that my dataset is stored in a folder called <em>data</em>, so my path starts with <code>data/</code>. If your data are in the same folder as your script, just use the filename <code>("7160_module1_student_enrollment.csv")</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/7160_module1_student_enrollment.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>enrollment <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/7160_module1_student_enrollment.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Glimpse the data.</strong> When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We’ll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 20</span></span>
-<span><span class="co">#&gt; Columns: 3</span></span>
-<span><span class="co">#&gt; $ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…</span></span>
-<span><span class="co">#&gt; $ Program          &lt;chr&gt; "Computer Science", "Computer Science", "Biology", "C…</span></span>
-<span><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(enrollment)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Rows: 20</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Columns: 3</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $ Program          &lt;chr&gt; "Computer Science", "Computer Science", "Biology", "C…</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>See the top of the dataset.</strong> head() shows the first six rows of the data giving an at-a-glance picture of what is there. Also running <strong>view()</strong> will show you your data in RStudio via a tabular browser.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span>      </span>
-<span><span class="co">#&gt; # A tibble: 6 × 3</span></span>
-<span><span class="co">#&gt;   Student_ID Program          Credits_Enrolled</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;                       &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1 S001       Computer Science               15</span></span>
-<span><span class="co">#&gt; 2 S002       Computer Science               12</span></span>
-<span><span class="co">#&gt; 3 S003       Biology                         9</span></span>
-<span><span class="co">#&gt; 4 S004       Computer Science               16</span></span>
-<span><span class="co">#&gt; 5 S005       Business                       12</span></span>
-<span><span class="co">#&gt; 6 S006       Biology                        12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(enrollment)      </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 3</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Student_ID Program          Credits_Enrolled</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;                       &lt;dbl&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 S001       Computer Science               15</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 S002       Computer Science               12</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 S003       Biology                         9</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 S004       Computer Science               16</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 S005       Business                       12</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 S006       Biology                        12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Change the data type.</strong> Sometimes readr doesn’t import a dataset with the variables as the type we need. When this happens, we can change it. Using as.factor() will change the Program variable to a categorical factor. We will discuss it in detail later, but for now notice the <code>$</code>. This is a subset operator that extracts that exact variable from the tibble object <code>enrollment</code>.</p>
 <div id="tbl-conversions" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-conversions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-conversions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;4.2: Readr data type conversion functions.
-</figcaption><div aria-describedby="tbl-conversions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption>
+<div aria-describedby="tbl-conversions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 29%">
 <col style="width: 38%">
 <col style="width: 32%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Function</th>
 <th style="text-align: left;">Converts to</th>
 <th style="text-align: left;">Use case</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/factor.html">as.factor()</a></code></td>
+<td style="text-align: left;"><code>as.factor()</code></td>
 <td style="text-align: left;">Factor</td>
 <td style="text-align: left;">The values are categorical (major, class)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/numeric.html">as.numeric()</a></code></td>
+<td style="text-align: left;"><code>as.numeric()</code></td>
 <td style="text-align: left;">Number</td>
 <td style="text-align: left;">Numbers were imported as text, but calculations are needed</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/integer.html">as.integer()</a></code></td>
+<td style="text-align: left;"><code>as.integer()</code></td>
 <td style="text-align: left;">Whole number</td>
 <td style="text-align: left;">The values are numbers with no decimals</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/character.html">as.character()</a></code></td>
+<td style="text-align: left;"><code>as.character()</code></td>
 <td style="text-align: left;">Text</td>
 <td style="text-align: left;">A code or label was read as a number (ZIP code, ID)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/logical.html">as.logical()</a></code></td>
+<td style="text-align: left;"><code>as.logical()</code></td>
 <td style="text-align: left;">TRUE/FALSE</td>
 <td style="text-align: left;">A column contains yes/no or true/false values</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/factor.html">as.ordered()</a></code></td>
+<td style="text-align: left;"><code>as.ordered()</code></td>
 <td style="text-align: left;">Ordered factor</td>
 <td style="text-align: left;">Categorical values have meaningful rank (Freshman, Senior)</td>
 </tr>
@@ -663,22 +702,25 @@ Table&nbsp;4.2: Readr data type conversion functions.
 </figure>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">$</span><span class="va">Program</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>enrollment<span class="sc">$</span>Program <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(enrollment<span class="sc">$</span>Program)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Confirm the change.</strong> Here we confirm the change with glimpse() again.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">enrollment</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 20</span></span>
-<span><span class="co">#&gt; Columns: 3</span></span>
-<span><span class="co">#&gt; $ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…</span></span>
-<span><span class="co">#&gt; $ Program          &lt;fct&gt; Computer Science, Computer Science, Biology, Computer…</span></span>
-<span><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(enrollment)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Rows: 20</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Columns: 3</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $ Student_ID       &lt;chr&gt; "S001", "S002", "S003", "S004", "S005", "S006", "S007…</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $ Program          &lt;fct&gt; Computer Science, Computer Science, Biology, Computer…</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section></section><section id="conclusion" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="conclusion">
-<span class="header-section-number">4.6</span> Conclusion</h2>
+</section>
+</section>
+<section id="conclusion" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">4.6</span> Conclusion</h2>
 <p>In this chapter we learned some basics about R and how to get a simple dataset into our environment to work with it. In the following chapters we will build on these skills to wrangle and analyze data.</p>
-</section><section id="chapter-4-exercises" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="chapter-4-exercises">
-<span class="header-section-number">4.7</span> Chapter 4 Exercises</h2>
+</section>
+<section id="chapter-4-exercises" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="chapter-4-exercises"><span class="header-section-number">4.7</span> Chapter 4 Exercises</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -690,54 +732,49 @@ Table&nbsp;4.2: Readr data type conversion functions.
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>
-<p><strong>Run and explain this code.</strong> Here is readr in action again, this time with arguments we did not use.</p>
+<li><p><strong>Run and explain this code.</strong> Here is readr in action again, this time with arguments we did not use.</p>
 <ol type="a">
 <li>Run this code using the same dataset as before and explain what it does now.</li>
 <li>Search out the documentation on the readr package and explain your understanding of these additional arguments.</li>
 <li>What argument could you use to load Credits_Enrolled as a data type that only accepts whole numbers?</li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">enrollment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
-<span>  <span class="st">"data/7160_module1_student_enrollment.csv"</span>,</span>
-<span>  col_types <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/cols.html">cols</a></span><span class="op">(</span></span>
-<span>    Student_ID <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_character</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>    Program <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_factor.html">col_factor</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>    Credits_Enrolled <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_double</a></span><span class="op">(</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span>
-<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>enrollment <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/7160_module1_student_enrollment.csv"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Student_ID =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Program =</span> <span class="fu">col_factor</span>(),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Credits_Enrolled =</span> <span class="fu">col_double</span>()</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="2" type="1">
-<li>
-<p><strong>Consult the documentation.</strong> Use the readr documentation to answer the following questions.</p>
+<li><p><strong>Consult the documentation.</strong> Use the readr documentation to answer the following questions.</p>
 <ol type="a">
-<li>What is the default value of the <code>col_names</code> argument for <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>? What does it do?</li>
+<li>What is the default value of the <code>col_names</code> argument for <code>read_csv()</code>? What does it do?</li>
 <li>What function would be used to load a tab seperated file?</li>
 <li>Explain what does the skip argument does and give an example practical use case.</li>
-</ol>
-</li>
-<li>
-<p><strong>Build and load a CSV dataset.</strong> Create a small dataset that is higher education related.</p>
+</ol></li>
+<li><p><strong>Build and load a CSV dataset.</strong> Create a small dataset that is higher education related.</p>
 <ol type="a">
 <li>In Excel, create and save a dataset as a csv file with a header. It should have four columns and ten rows. There should be at least one text column and one numeric column. Also create a new R script and save that to the same folder.</li>
 <li>Load your dataset with readr and assign it to a named object.</li>
 <li>Examine it with the functions we used in the chapter for inspecting data and describe the output.</li>
-</ol>
-</li>
-<li>
-<p><strong>Craft conditions with operators.</strong> Use your dataset to practice comparisons and logical operators.</p>
+</ol></li>
+<li><p><strong>Craft conditions with operators.</strong> Use your dataset to practice comparisons and logical operators.</p>
 <ol type="a">
 <li><p>Pick a numeric column and write a comparison that returns TRUE/FALSE for each value For example, is a value greater than a sepecifc threshold you choose. Exaplain what the result tells you about your data.</p></li>
 <li><p>Write another condition for a different column. Then combine your two conditions with a logical operator (&amp; or |). Explain what the combined condition is asking. For example, “students who are full-time <em>and</em> are in Biology”.</p></li>
 <li><p>Change your &amp; to a |—or vice versa. Describe how the output changed. How could an analyst use “AND” and “OR” when working with data?</p></li>
-</ol>
-</li>
+</ol></li>
 </ol>
 </div>
 </div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1136,7 +1173,9 @@ Table&nbsp;4.2: Readr data type conversion functions.
       }
     }
   });
-  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
       <a href="./03.html" class="pagination-link" aria-label="R Orientation">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></span>
       </a>          
@@ -1148,7 +1187,8 @@ Table&nbsp;4.2: Readr data type conversion functions.
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -1160,6 +1200,8 @@ Table&nbsp;4.2: Readr data type conversion functions.
     </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
