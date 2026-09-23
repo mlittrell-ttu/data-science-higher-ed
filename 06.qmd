@@ -1,26 +1,52 @@
 # Exploratory Data Analysis
 
-## Picking up the preprocessing thread
-In the last chapter we used dplyr to reshape and clean data. That work continues here to expand on a couple of additional ideas.
+## Details
+This module is about **exploratory data analysis (EDA)**, which is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spot surprises and decide what is worth investigating further. Once data are tidy, the same dplyr tools we used to clean data in the last module can also help us understand it. We will also pick up a couple of helpful preprocessing steps along the way.
 
-Cleaning is only half of this chapter. Once our data are tidy, the same dplyr tools that helped fixed it can also assist us in understanding it. **Exploratory data analysis (EDA)** is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spots surprises and decide what is worth investigating further.
 
-## A short statistics refresher
+## Very brief stats
 EDA leans on a handful of basic statistical ideas. A quick review is presented here that is enough to follow the chapter.
 
-[#WORKING DRAFT BELOW HERE#]
+
 ### Measures of central tendency
-A **measure of central tendency** describes the "typical" value in a set of numbers. Three are common:
+A **measure of central tendency** describes the "typical" value in a set of numbers. These three are common:
 
-- The **mean** is the arithmetic average — add the values and divide by how many there are. It is the most familiar measure, but it is sensitive to extreme values.
-- The **median** is the middle value when the numbers are sorted. Half fall below it and half above. Because it ignores how far away the extremes are, it resists their pull.
-- The **mode** is the value that appears most often. It is the only one that works for categories (the most common major, say), not just numbers.
+- The **mean** is the average where values are added together and divided by their count. It is a common stat, but it is sensitive to outliers with extreme values.
+- The **median** is the middle value when the numbers are sorted. Half fall below it and half above. Because it ignores how far away the extremes are, it is less sensitive to them.
+- The **mode** is the value that appears most often. It works for categorical and numeric data.
 
-The gap between the mean and the median is itself informative. When they are close, the data is roughly balanced. When the mean is pulled well above the median, a few large values are stretching it upward — exactly what we saw with institutional completion counts in the last chapter.
 
 ### Measures of spread
-Central tendency tells us where the middle is; **spread** tells us how far the values scatter around it.
+Central tendency refers to the middle of some values. **Spread** tells us how far the values scatter around it.
 
 - The **range** is the distance from the smallest value to the largest. Simple, but driven entirely by the two extremes.
-- The **interquartile range (IQR)** is the range of the middle half of the data — the distance from the 25th to the 75th percentile. It describes the bulk of the values while ignoring the extremes.
-- The **standard deviation (SD)** measures the typical distance of values from the mean. A small SD means values cluster tightly; a large one means they are widely dispersed.
+- The **interquartile range (IQR)** is the range of the middle half of the data. That is, the distance from the 25th to the 75th percentile. It describes the bulk of the values while ignoring the extremes.
+- The **standard deviation (SD)** measures the typical distance of values from the mean. A small SD means values cluster tightly around the average. A large one means they are widely dispersed.
+
+
+### Distribution, shape, and skew
+**Skew** describes how lopsided the shape of a distribution is. Comparing the mean to the median surfaces the shape. A useful framing for understanding a distribution is that the mean chases the tail, being pulled toward the extreme values. The median is more resistant, so it sits near the middle. Whenever the mean and median drift apart, the direction of the gap tells you which way the data is skewed.
+
+
+In a **symmetric** distribution, the values are balanced around the center and the mean and median sit close together. Example: In a well designed course, most students score roughly near the class average, with some scoring below or above this.
+
+![A symmetric distribution, where the mean and median are near the center.](images/chp_6_sym.png){#fig-sym height="250" width="300px" fig-align="center"}
+
+
+A distribution has a **positive (right) skew** when a few large values stretch a long tail to the right. These high values pull the mean higher, so the mean sits above the median. Example: In a difficult course, most students score low, with a few high scorers stretching a tail to the right and pulling the mean above the median. 
+
+![A positive (right) skew, where the mean is pulled above the median by some high values.](images/chp_6_pos.png){#fig-pos height="250" width="300px" fig-align="center"}
+
+A distribution has **negative (left) skew** when a long tail stretches to the left. These low values pull the mean down, so the mean sits below the median. Example: In an easy course, most students score high, with a few low scorers stretching a tail to the left and pulling the mean below the median.
+
+![A negative (left) skew, where the mean is pulled below the median by some low values.](images/chp_6_neg.png){#fig-neg height="250" width="300px" fig-align="center"}
+
+## Two modes of EDA
+EDA works through two complementary modes of working and it can be helpful to move between them often.
+
+The first mode works with **values**, such as summaries, counts, and statistics. We might compute the average GPA by major, count how many students fall into each class standing, or find the highest and lowest values. Values are precise and let us compare and understand exactly.
+
+The second mode works with **visual** elements. This could include plots that show skewness, histograms that the distribution of a variable, or a box plot that exposes outliers. Pictures can reveal patterns and data issues that a table of values can hide.
+
+These modes work in tandem and are supportive of one another. Imagine we compute the average number of credits per major and notice one major's average looks oddly low. The number raises a question but doesn't answer it. So we plot that program's credits and see the distribution splits in two — a cluster of part-time students pulling the average down. The plot raises a new question, so we go back to the numbers to count how many are part-time.
+
