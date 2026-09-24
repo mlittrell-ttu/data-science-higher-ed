@@ -49,7 +49,7 @@ Dplyr verbs are even more powerful when we link them together to work as a team.
 data|> function_1 |> function_2
 ```
 
-## Preprocessing with Dplyr demonstration
+## Guided Lab: Preprocessing with Dplyr
 Here is the applied data preprocessing demonstration that teaches some helpful dplyr verbs as we work through the process.
 
 ```{.r include="scripts/05.R"}

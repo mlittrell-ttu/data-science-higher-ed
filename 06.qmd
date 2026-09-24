@@ -50,3 +50,5 @@ The second mode works with **visual** elements. This could include plots that sh
 
 These modes work in tandem and are supportive of one another. Imagine we compute the average number of credits per major and notice one major's average looks oddly low. The number raises a question but doesn't answer it. So we plot that program's credits and see the distribution splits in two — a cluster of part-time students pulling the average down. The plot raises a new question, so we go back to the numbers to count how many are part-time.
 
+## Guided Lab: Exploratory data analysis
+
