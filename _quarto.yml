@@ -1,59 +1,56 @@
 project:
-  type: book
+  type: website
   output-dir: _book
   resources:
     - data/
-  # --- Custom domain note -------------------------------------------------
-  # To keep a custom domain across re-publishes, edit the CNAME file (put your
-  # bare domain in it, e.g. rbook.example.com) and then UNCOMMENT the two lines
-  # below so Quarto copies CNAME into the built site on every render. Leave them
-  # commented until your domain is real, or your first deploy will break.
-  # resources:
-  #   - CNAME
+    - scripts/
 
-book:
-  title: "Applied Data Science in Higher Education with R"
-  subtitle: "A practical, open resource for pragmatic data science."
-  author: "Michael Littrell"
-  date: today
-  cover-image: images/cover_v1.png
-  # favicon: images/favicon.png 
-  site-url: https://mlittrell-ttu.github.io/data-science-higher-ed/   
+website:
+  title: "Data Science for Higher Ed"
+  site-url: https://mlittrell-ttu.github.io/data-science-higher-ed/
   repo-url: https://github.com/mlittrell-ttu/data-science-higher-ed
-  repo-branch: main
-  repo-actions: [edit, issue, source] # adds "Edit this page" links
+  repo-actions: [edit, issue, source]
   search: true
   page-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: setup.qmd
+        text: Setup
+    right:
+      - icon: github
+        href: https://github.com/mlittrell-ttu/data-science-higher-ed
   sidebar:
     style: docked
+    title: "Modules"
     collapse-level: 1
-  chapters:
-    - index.qmd
-    - part: "Part 1 — Applied R"
-      chapters:
-        - 01.qmd
-        - 02.qmd
-        - 03.qmd
-        - 04.qmd
-        - 05.qmd
-        - 06.qmd
-        - 07.qmd
-        - 08.qmd
-        - 09.qmd
-    - part: "Part 2 — Machine Learning"
-      chapters:
-        - ph1.qmd
-    - part: "Part 3 — Quarto"
-      chapters:
-        - ph2.qmd
-    - part: "Part 4 — Shiny"
-      chapters:
-        - ph3.qmd
-        
-    - summary.qmd
-    - references.qmd
-  appendices:
-    - setup.qmd
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - section: "Part 1 — Applied R"
+        contents:
+          - 01.qmd
+          - 02.qmd
+          - 03.qmd
+          - 04.qmd
+          - 05.qmd
+          - 06.qmd
+          - 07.qmd
+          - 08.qmd
+          - 09.qmd
+      - section: "Part 2 — Machine Learning"
+        contents:
+          - ph1.qmd
+      - section: "Part 3 — Quarto"
+        contents:
+          - ph2.qmd
+      - section: "Part 4 — Shiny"
+        contents:
+          - ph3.qmd
+      - summary.qmd
+      - references.qmd
+      - setup.qmd
   page-footer:
     center: "© 2026 Michael Littrell. Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)."
 
@@ -61,8 +58,6 @@ filters:
   - include-code-files
 
 bibliography: references.bib
-# csl: apa.csl   # APA fits higher ed. Download apa.csl from the CSL project into
-                 # this folder, then uncomment. Without it, Quarto uses Chicago.
 
 format:
   html:
@@ -76,16 +71,15 @@ format:
     code-link: true
     code-overflow: wrap
     toc: true
-    number-sections: true
+    number-sections: false
 
 knitr:
   opts_chunk:
     comment: "#>"
     collapse: true
 
-
 execute:
-  freeze: auto      # a chapter re-renders only when its own code changes
+  freeze: auto
   echo: true
   warning: false
   message: false

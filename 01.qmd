@@ -1,4 +1,6 @@
-# Data Science Explained
+---
+title: "1 Data Science Explained"
+---
 
 ## What is higher education?
 Higher education (HE) is overall a very challenging thing to define. As a succinct description, the UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For HE professional striving to become more proficient with data, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.
