@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Data Details – Applied Data Science in Higher Education with R</title>
+<title>quarto-inpute816e6300a35377b – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,13 +44,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81ced3e863acfb1071fb730864f79675.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-96d816b5cdfca3a6b17098982031e8c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -77,47 +77,65 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Science for Higher Ed</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./setup.html"> 
+<span class="menu-text">Setup</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mlittrell-ttu/data-science-higher-ed"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./02.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./02.html">Data Details</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Applied Data Science in Higher Education with R</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/mlittrell-ttu/data-science-higher-ed" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -132,55 +150,55 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></span></a>
+ <span class="menu-text">1 Data Science Explained</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span></a>
+ <span class="menu-text">Data Details</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></span></a>
+ <span class="menu-text">R Orientation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span></span></a>
+ <span class="menu-text">R Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span></a>
+ <span class="menu-text">Preprocessing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+ <span class="menu-text">Exploratory Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
       </ul>
@@ -197,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -214,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -231,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -248,23 +266,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -272,59 +279,48 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-are-data" id="toc-what-are-data" class="nav-link active" data-scroll-target="#what-are-data"><span class="header-section-number">2.1</span> What are data?</a></li>
-  <li><a href="#data-and-information" id="toc-data-and-information" class="nav-link" data-scroll-target="#data-and-information"><span class="header-section-number">2.2</span> Data and information</a></li>
-  <li><a href="#data-characteristics" id="toc-data-characteristics" class="nav-link" data-scroll-target="#data-characteristics"><span class="header-section-number">2.3</span> Data characteristics</a></li>
-  <li><a href="#common-data-sizes" id="toc-common-data-sizes" class="nav-link" data-scroll-target="#common-data-sizes"><span class="header-section-number">2.4</span> Common data sizes</a></li>
-  <li><a href="#where-data-are-stored" id="toc-where-data-are-stored" class="nav-link" data-scroll-target="#where-data-are-stored"><span class="header-section-number">2.5</span> Where data are stored</a></li>
-  <li><a href="#data-access-types" id="toc-data-access-types" class="nav-link" data-scroll-target="#data-access-types"><span class="header-section-number">2.6</span> Data access types</a>
+  <li><a href="#data-details" id="toc-data-details" class="nav-link active" data-scroll-target="#data-details">Data Details</a>
   <ul class="collapse">
-  <li><a href="#publicly-available-data" id="toc-publicly-available-data" class="nav-link" data-scroll-target="#publicly-available-data"><span class="header-section-number">2.6.1</span> Publicly available data</a></li>
-  </ul></li>
-  <li><a href="#sec-restricted-data" id="toc-sec-restricted-data" class="nav-link" data-scroll-target="#sec-restricted-data"><span class="header-section-number">2.7</span> Restricted data</a>
+  <li><a href="#what-are-data" id="toc-what-are-data" class="nav-link" data-scroll-target="#what-are-data">What are data?</a></li>
+  <li><a href="#data-and-information" id="toc-data-and-information" class="nav-link" data-scroll-target="#data-and-information">Data and information</a></li>
+  <li><a href="#data-characteristics" id="toc-data-characteristics" class="nav-link" data-scroll-target="#data-characteristics">Data characteristics</a></li>
+  <li><a href="#common-data-sizes" id="toc-common-data-sizes" class="nav-link" data-scroll-target="#common-data-sizes">Common data sizes</a></li>
+  <li><a href="#where-data-are-stored" id="toc-where-data-are-stored" class="nav-link" data-scroll-target="#where-data-are-stored">Where data are stored</a></li>
+  <li><a href="#data-access-types" id="toc-data-access-types" class="nav-link" data-scroll-target="#data-access-types">Data access types</a>
   <ul class="collapse">
-  <li><a href="#institutional-data" id="toc-institutional-data" class="nav-link" data-scroll-target="#institutional-data"><span class="header-section-number">2.7.1</span> Institutional data</a></li>
-  <li><a href="#protected-data" id="toc-protected-data" class="nav-link" data-scroll-target="#protected-data"><span class="header-section-number">2.7.2</span> Protected data</a></li>
+  <li><a href="#publicly-available-data" id="toc-publicly-available-data" class="nav-link" data-scroll-target="#publicly-available-data">Publicly available data</a></li>
   </ul></li>
-  <li><a href="#chapter-2-exercises" id="toc-chapter-2-exercises" class="nav-link" data-scroll-target="#chapter-2-exercises"><span class="header-section-number">2.8</span> Chapter 2 Exercises:</a></li>
+  <li><a href="#sec-restricted-data" id="toc-sec-restricted-data" class="nav-link" data-scroll-target="#sec-restricted-data">Restricted data</a>
+  <ul class="collapse">
+  <li><a href="#institutional-data" id="toc-institutional-data" class="nav-link" data-scroll-target="#institutional-data">Institutional data</a></li>
+  <li><a href="#protected-data" id="toc-protected-data" class="nav-link" data-scroll-target="#protected-data">Protected data</a></li>
+  </ul></li>
+  <li><a href="#chapter-2-exercises" id="toc-chapter-2-exercises" class="nav-link" data-scroll-target="#chapter-2-exercises">Chapter 2 Exercises:</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/02.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./02.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./02.html">Data Details</a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="what-are-data" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="what-are-data"><span class="header-section-number">2.1</span> What are data?</h2>
+<section id="data-details" class="level1">
+<h1>Data Details</h1>
+<section id="what-are-data" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-data">What are data?</h2>
 <p>As was mentioned in the first chapter, data are observations about the world and can take many forms. Data can be collected through manual means such as surveys or interviews. It can be collected more incidentally such as through capturing publicly available comments on social media platforms. Within the digital environment, data are being captured about everything we do. For example, learning management systems collect data about the number of times a student logs in, the number of times they view a video, the amount of time they spend on the platform, and many other statistics. In short, data are everywhere and is constantly be generating.</p>
 </section>
-<section id="data-and-information" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="data-and-information"><span class="header-section-number">2.2</span> Data and information</h2>
+<section id="data-and-information" class="level2">
+<h2 class="anchored" data-anchor-id="data-and-information">Data and information</h2>
 <p>Data are the raw unprocessed figures, such as the GPAs for students sitting in a database. Information is data that have been organized to be put to use. The average GPA of all math majors for the fall semester is 3.1—this could be considered information.</p>
 </section>
-<section id="data-characteristics" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="data-characteristics"><span class="header-section-number">2.3</span> Data characteristics</h2>
+<section id="data-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="data-characteristics">Data characteristics</h2>
 <p>Data characteristics are the qualities of the data you would assess to understand it. You can start with these characteristics to initially start engaging with data work.</p>
 <dl>
 <dt>Volume</dt>
@@ -349,13 +345,13 @@ Whether data are useful. Just collecting data isn’t enough — it needs to hel
 </dd>
 </dl>
 </section>
-<section id="common-data-sizes" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="common-data-sizes"><span class="header-section-number">2.4</span> Common data sizes</h2>
+<section id="common-data-sizes" class="level2">
+<h2 class="anchored" data-anchor-id="common-data-sizes">Common data sizes</h2>
 <p>Data are stored electronically so they persist and can be accessed later. This can occur locally on your own computer, on-premisis such as on a university owned server, or in the “cloud” where the server is owned and maintained by a company. All of these data have size considerations that need to be taken into account. Presented on the table here are example size terms with how they might be considered practically.</p>
 <div id="tbl-data-size" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.1: Common data size terms.
+Table&nbsp;1: Common data size terms.
 </figcaption>
 <div aria-describedby="tbl-data-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -408,13 +404,13 @@ Table&nbsp;2.1: Common data size terms.
 </figure>
 </div>
 </section>
-<section id="where-data-are-stored" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="where-data-are-stored"><span class="header-section-number">2.5</span> Where data are stored</h2>
+<section id="where-data-are-stored" class="level2">
+<h2 class="anchored" data-anchor-id="where-data-are-stored">Where data are stored</h2>
 <p>It can be helpful when working with data to understand the different formats that they are stored in. This information is important for accessing and acquiring it for analysis. In higher education data can live in several different formats.</p>
 <div id="tbl-storage-types" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-storage-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.2: Common data storage ways in higher education.
+Table&nbsp;2: Common data storage ways in higher education.
 </figcaption>
 <div aria-describedby="tbl-storage-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -468,19 +464,19 @@ Table&nbsp;2.2: Common data storage ways in higher education.
 </div>
 <p>Each storage approach mentioned has advantages and disadvantages around such variables as size, difficulty of query, reliability, and privacy. Each format has its place in the data science project workflow.</p>
 </section>
-<section id="data-access-types" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="data-access-types"><span class="header-section-number">2.6</span> Data access types</h2>
+<section id="data-access-types" class="level2">
+<h2 class="anchored" data-anchor-id="data-access-types">Data access types</h2>
 <p>When working with data in higher education it is important to always understand the permissions and rules associated with it. Some data can be downloaded by the general public and utilized mostly without restriction. For other data, permissions must be granted and certain legal protections must be considered. The rules about access to data and the related restrictions shape all of the work that can be done, so it must be considered up front in the process.</p>
-<section id="publicly-available-data" class="level3" data-number="2.6.1">
-<h3 data-number="2.6.1" class="anchored" data-anchor-id="publicly-available-data"><span class="header-section-number">2.6.1</span> Publicly available data</h3>
+<section id="publicly-available-data" class="level3">
+<h3 class="anchored" data-anchor-id="publicly-available-data">Publicly available data</h3>
 <p>Publicly available data can typically be obtained without permission. In higher education there are many datasets that are accessible by the public but they come in two forms generally. <strong>Official</strong> public data (OPD) are yielded through rigorous validated processes to ensure it is trustworthy and reliable. <strong>Unofficial</strong> public data (UPD) are shared informally. Such data are likely to be less reliable and require careful scrutiny to understand their quality.</p>
-<section id="official-public-data" class="level4" data-number="2.6.1.1">
-<h4 data-number="2.6.1.1" class="anchored" data-anchor-id="official-public-data"><span class="header-section-number">2.6.1.1</span> Official public data</h4>
+<section id="official-public-data" class="level4">
+<h4 class="anchored" data-anchor-id="official-public-data">Official public data</h4>
 <p>Official public datasets are the products of intensive inspection and are published authoritative agencies such as the Integrated Postsecondary Data System (IPEDS). All U.S. colleges and universities that receive federal financial aid are required to report data to IPEDS annually. Data represented there come from over 6,000 institutions and includes variables such as graduation and retention rates, tuition costs, and enrollment numbers. Such standardized reporting allows for institutions to be benchmarked against other similar colleges across various important features. Some sources of relevant student data are presented in the table here.</p>
 <div id="tbl-official-data" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-official-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.3: Official public HE data.
+Table&nbsp;3: Official public HE data.
 </figcaption>
 <div aria-describedby="tbl-official-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -528,13 +524,13 @@ Table&nbsp;2.3: Official public HE data.
 </figure>
 </div>
 </section>
-<section id="unofficial-public-data" class="level4" data-number="2.6.1.2">
-<h4 data-number="2.6.1.2" class="anchored" data-anchor-id="unofficial-public-data"><span class="header-section-number">2.6.1.2</span> Unofficial public data</h4>
+<section id="unofficial-public-data" class="level4">
+<h4 class="anchored" data-anchor-id="unofficial-public-data">Unofficial public data</h4>
 <p>Unofficial public datasets are also available generally but may or may not be based on a formal trustworthy process. Data like this are useful in several capacities. If they are verified and validated, they can be genuinely informative. Otherwise they can be helpful for learning, creating prototypes, and exploring.</p>
 <div id="tbl-unofficial-data" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unofficial-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.4: Unofficial public HE data.
+Table&nbsp;4: Unofficial public HE data.
 </figcaption>
 <div aria-describedby="tbl-unofficial-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -573,16 +569,16 @@ Table&nbsp;2.4: Unofficial public HE data.
 </section>
 </section>
 </section>
-<section id="sec-restricted-data" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="sec-restricted-data"><span class="header-section-number">2.7</span> Restricted data</h2>
+<section id="sec-restricted-data" class="level2">
+<h2 class="anchored" data-anchor-id="sec-restricted-data">Restricted data</h2>
 <p>Compared to publicly available data, restricted data come with obligations and rules. Often access requires special permissions.</p>
-<section id="institutional-data" class="level3" data-number="2.7.1">
-<h3 data-number="2.7.1" class="anchored" data-anchor-id="institutional-data"><span class="header-section-number">2.7.1</span> Institutional data</h3>
+<section id="institutional-data" class="level3">
+<h3 class="anchored" data-anchor-id="institutional-data">Institutional data</h3>
 <p>Institutional data is internal to a university and its processes. Often this is housed on university servers or on secured cloud systems. These data are related to important aspects of a school such as enrollment numbers, budgets, and accreditation metrics. As this data is so highly sensitive, access is based on roles assigned to university stakeholders, where a faculty member may have access to different data compared to a department chair. Some example systems and the type of data they may house are presented on the table in this section.</p>
 <div id="tbl-institutional-systems" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-institutional-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.5: Institutional system examples and their data.
+Table&nbsp;5: Institutional system examples and their data.
 </figcaption>
 <div aria-describedby="tbl-institutional-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -627,13 +623,13 @@ Table&nbsp;2.5: Institutional system examples and their data.
 </figure>
 </div>
 </section>
-<section id="protected-data" class="level3" data-number="2.7.2">
-<h3 data-number="2.7.2" class="anchored" data-anchor-id="protected-data"><span class="header-section-number">2.7.2</span> Protected data</h3>
+<section id="protected-data" class="level3">
+<h3 class="anchored" data-anchor-id="protected-data">Protected data</h3>
 <p>Some institutional data are both restricted and protected legally. For instance, the <strong>Family Educational Rights and Privacy Act</strong> limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the <strong>Health Insurance Portability and Accountability Act</strong> (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects. Also, keep in mind the privacy and rights of the individuals represented in the data throughout your engagement with it. Always work cautiously!</p>
 </section>
 </section>
-<section id="chapter-2-exercises" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="chapter-2-exercises"><span class="header-section-number">2.8</span> Chapter 2 Exercises:</h2>
+<section id="chapter-2-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-exercises">Chapter 2 Exercises:</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -666,6 +662,7 @@ Table&nbsp;2.5: Institutional system examples and their data.
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1071,13 +1068,13 @@ Table&nbsp;2.5: Institutional system examples and their data.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01.html" class="pagination-link" aria-label="Data Science Explained">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></span>
+      <a href="./01.html" class="pagination-link" aria-label="1 Data Science Explained">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1 Data Science Explained</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./03.html" class="pagination-link" aria-label="R Orientation">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">R Orientation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

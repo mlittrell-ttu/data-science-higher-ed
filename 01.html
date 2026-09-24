@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Data Science Explained – Applied Data Science in Higher Education with R</title>
+<title>1 Data Science Explained – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,13 +44,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81ced3e863acfb1071fb730864f79675.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-96d816b5cdfca3a6b17098982031e8c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -77,47 +77,65 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Science for Higher Ed</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./setup.html"> 
+<span class="menu-text">Setup</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mlittrell-ttu/data-science-higher-ed"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./01.html">1 Data Science Explained</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Applied Data Science in Higher Education with R</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/mlittrell-ttu/data-science-higher-ed" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -132,55 +150,55 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></span></a>
+ <span class="menu-text">1 Data Science Explained</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span></a>
+ <span class="menu-text">Data Details</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></span></a>
+ <span class="menu-text">R Orientation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span></span></a>
+ <span class="menu-text">R Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span></a>
+ <span class="menu-text">Preprocessing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+ <span class="menu-text">Exploratory Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
       </ul>
@@ -197,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -214,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -231,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -248,23 +266,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -272,35 +279,35 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-higher-education" id="toc-what-is-higher-education" class="nav-link active" data-scroll-target="#what-is-higher-education"><span class="header-section-number">1.1</span> What is higher education?</a></li>
-  <li><a href="#what-are-data" id="toc-what-are-data" class="nav-link" data-scroll-target="#what-are-data"><span class="header-section-number">1.2</span> What are data?</a></li>
-  <li><a href="#what-is-science" id="toc-what-is-science" class="nav-link" data-scroll-target="#what-is-science"><span class="header-section-number">1.3</span> What is science?</a></li>
-  <li><a href="#what-is-data-science" id="toc-what-is-data-science" class="nav-link" data-scroll-target="#what-is-data-science"><span class="header-section-number">1.4</span> What is data science?</a></li>
-  <li><a href="#what-is-applied-data-science" id="toc-what-is-applied-data-science" class="nav-link" data-scroll-target="#what-is-applied-data-science"><span class="header-section-number">1.5</span> What is applied data science?</a></li>
-  <li><a href="#what-is-applied-data-science-in-higher-education" id="toc-what-is-applied-data-science-in-higher-education" class="nav-link" data-scroll-target="#what-is-applied-data-science-in-higher-education"><span class="header-section-number">1.6</span> What is applied data science in higher education?</a>
+  <li><a href="#what-is-higher-education" id="toc-what-is-higher-education" class="nav-link active" data-scroll-target="#what-is-higher-education">What is higher education?</a></li>
+  <li><a href="#what-are-data" id="toc-what-are-data" class="nav-link" data-scroll-target="#what-are-data">What are data?</a></li>
+  <li><a href="#what-is-science" id="toc-what-is-science" class="nav-link" data-scroll-target="#what-is-science">What is science?</a></li>
+  <li><a href="#what-is-data-science" id="toc-what-is-data-science" class="nav-link" data-scroll-target="#what-is-data-science">What is data science?</a></li>
+  <li><a href="#what-is-applied-data-science" id="toc-what-is-applied-data-science" class="nav-link" data-scroll-target="#what-is-applied-data-science">What is applied data science?</a></li>
+  <li><a href="#what-is-applied-data-science-in-higher-education" id="toc-what-is-applied-data-science-in-higher-education" class="nav-link" data-scroll-target="#what-is-applied-data-science-in-higher-education">What is applied data science in higher education?</a>
   <ul class="collapse">
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">1.6.1</span> Methods</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
   </ul></li>
-  <li><a href="#data-science-projects" id="toc-data-science-projects" class="nav-link" data-scroll-target="#data-science-projects"><span class="header-section-number">1.7</span> Data science projects</a>
+  <li><a href="#data-science-projects" id="toc-data-science-projects" class="nav-link" data-scroll-target="#data-science-projects">Data science projects</a>
   <ul class="collapse">
-  <li><a href="#define-the-data-science-problem-phase-one" id="toc-define-the-data-science-problem-phase-one" class="nav-link" data-scroll-target="#define-the-data-science-problem-phase-one"><span class="header-section-number">1.7.1</span> Define the data science problem (Phase One)</a></li>
-  <li><a href="#execute-the-work-phase-two" id="toc-execute-the-work-phase-two" class="nav-link" data-scroll-target="#execute-the-work-phase-two"><span class="header-section-number">1.7.2</span> Execute the work (Phase Two)</a></li>
+  <li><a href="#define-the-data-science-problem-phase-one" id="toc-define-the-data-science-problem-phase-one" class="nav-link" data-scroll-target="#define-the-data-science-problem-phase-one">Define the data science problem (Phase One)</a></li>
+  <li><a href="#execute-the-work-phase-two" id="toc-execute-the-work-phase-two" class="nav-link" data-scroll-target="#execute-the-work-phase-two">Execute the work (Phase Two)</a></li>
   </ul></li>
-  <li><a href="#the-applied-data-scientist-in-higher-education" id="toc-the-applied-data-scientist-in-higher-education" class="nav-link" data-scroll-target="#the-applied-data-scientist-in-higher-education"><span class="header-section-number">1.8</span> The applied data scientist in higher education</a></li>
-  <li><a href="#the-data-pyramid" id="toc-the-data-pyramid" class="nav-link" data-scroll-target="#the-data-pyramid"><span class="header-section-number">1.9</span> The Data Pyramid</a></li>
-  <li><a href="#chapter-1-exercises" id="toc-chapter-1-exercises" class="nav-link" data-scroll-target="#chapter-1-exercises"><span class="header-section-number">1.10</span> Chapter 1 Exercises:</a></li>
+  <li><a href="#the-applied-data-scientist-in-higher-education" id="toc-the-applied-data-scientist-in-higher-education" class="nav-link" data-scroll-target="#the-applied-data-scientist-in-higher-education">The applied data scientist in higher education</a></li>
+  <li><a href="#the-data-pyramid" id="toc-the-data-pyramid" class="nav-link" data-scroll-target="#the-data-pyramid">The Data Pyramid</a></li>
+  <li><a href="#chapter-1-exercises" id="toc-chapter-1-exercises" class="nav-link" data-scroll-target="#chapter-1-exercises">Chapter 1 Exercises:</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/01.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./01.html">1 Data Science Explained</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></h1>
+<h1 class="title">1 Data Science Explained</h1>
 </div>
 
 
@@ -317,13 +324,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-higher-education" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-higher-education"><span class="header-section-number">1.1</span> What is higher education?</h2>
+<section id="what-is-higher-education" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-higher-education">What is higher education?</h2>
 <p>Higher education (HE) is overall a very challenging thing to define. As a succinct description, the UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For HE professional striving to become more proficient with data, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.</p>
 <div id="tbl-uni-structure" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-uni-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1.1: Levels of university structure with leadership stakeholders example data and concerns.
+Table&nbsp;1: Levels of university structure with leadership stakeholders example data and concerns.
 </figcaption>
 <div aria-describedby="tbl-uni-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -384,24 +391,24 @@ Table&nbsp;1.1: Levels of university structure with leadership stakeholders exam
 </figure>
 </div>
 </section>
-<section id="what-are-data" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="what-are-data"><span class="header-section-number">1.2</span> What are data?</h2>
+<section id="what-are-data" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-data">What are data?</h2>
 <p>Data are recorded observations about the world (Witte &amp; Witte, 2017). Examples could include numeric student survey data for the assessment of a course, qualitative narrative posts on a learning management system’s discussion board, or pictures of cats. Data can be <strong>encountered</strong>—like campus weather patterns. It can also be <strong>constructed</strong>—like with end-of-course feedback surveys.</p>
 </section>
-<section id="what-is-science" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="what-is-science"><span class="header-section-number">1.3</span> What is science?</h2>
+<section id="what-is-science" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-science">What is science?</h2>
 <p>Science is a knowledge system that is positioned in the experiential and observable world (Britannica, 2026). Importantly, the knowledge generated can be verified and even proven false by others.</p>
 </section>
-<section id="what-is-data-science" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="what-is-data-science"><span class="header-section-number">1.4</span> What is data science?</h2>
+<section id="what-is-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-data-science">What is data science?</h2>
 <p>Data science is the discipline of learning from data (Grus, 2019). Essential to its practice is the notion of <strong>auditability</strong>, where practitioners approach data science work in a way that can be verified by others.</p>
 </section>
-<section id="what-is-applied-data-science" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="what-is-applied-data-science"><span class="header-section-number">1.5</span> What is applied data science?</h2>
+<section id="what-is-applied-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-applied-data-science">What is applied data science?</h2>
 <p>Applied data science is defined in many ways. Its definition can be dependent on where the term is used. Generally, it can be thought of as an approach to working with data so that something useful and trustworthy is produced (Shah, 2020). For example, such output could be a helpful understanding to support a data-informed decision, a model to deliver predictions about an outcome of interest, a clarifying visualization, a report, or an intervention program to serve a university rooted in verifiable data science.</p>
 </section>
-<section id="what-is-applied-data-science-in-higher-education" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="what-is-applied-data-science-in-higher-education"><span class="header-section-number">1.6</span> What is applied data science in higher education?</h2>
+<section id="what-is-applied-data-science-in-higher-education" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-applied-data-science-in-higher-education">What is applied data science in higher education?</h2>
 <p>Applied data science in a higher education context is defined by the empirical activities that practitioners engage in within a shared structure (Kuhn, 1962) to learn from and pursue results to serve educational stakeholders including, students, faculty, staff, administrators, and many others. Depending on the department and goal, several different activities may be undertaken that all qualify as data science. These include:</p>
 <dl>
 <dt>Inferential Research</dt>
@@ -421,13 +428,13 @@ Commonly, these are methods that use datasets to train an algorithmic model to p
 Data mining makes use of large datasets to unearth unknown patterns and groups in data. It is driven by discovery and not necessarily a hypothesis.
 </dd>
 </dl>
-<section id="methods" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" class="anchored" data-anchor-id="methods"><span class="header-section-number">1.6.1</span> Methods</h3>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
 <p>The table here shows an example of each method discussed for conducting data science:</p>
 <div id="tbl-ds-activities" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ds-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1.2: Data science activity in higher education.
+Table&nbsp;2: Data science activity in higher education.
 </figcaption>
 <div aria-describedby="tbl-ds-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -465,16 +472,16 @@ Table&nbsp;1.2: Data science activity in higher education.
 </div>
 </section>
 </section>
-<section id="data-science-projects" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="data-science-projects"><span class="header-section-number">1.7</span> Data science projects</h2>
+<section id="data-science-projects" class="level2">
+<h2 class="anchored" data-anchor-id="data-science-projects">Data science projects</h2>
 <p>Data science projects are the heart of the application of data science in the real-world. These projects are engaged with to solve problems for key stakeholders such as: increasing enrollment numbers, identifying students at risk of withdrawing, or increasing graduation rates among first-generation students.</p>
-<section id="define-the-data-science-problem-phase-one" class="level3" data-number="1.7.1">
-<h3 data-number="1.7.1" class="anchored" data-anchor-id="define-the-data-science-problem-phase-one"><span class="header-section-number">1.7.1</span> Define the data science problem (Phase One)</h3>
+<section id="define-the-data-science-problem-phase-one" class="level3">
+<h3 class="anchored" data-anchor-id="define-the-data-science-problem-phase-one">Define the data science problem (Phase One)</h3>
 <p>Good data science starts by thoroughly understanding the issues faced and careful planning. Example iterative steps in a data science project workflow is presented in the table here. Importantly these steps may not occur in sequence and can be revisited as needed, which is likely often depending on the project.</p>
 <div id="tbl-ds-p1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ds-p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1.3: Steps for the problem phase.
+Table&nbsp;3: Steps for the problem phase.
 </figcaption>
 <div aria-describedby="tbl-ds-p1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -517,8 +524,8 @@ Table&nbsp;1.3: Steps for the problem phase.
 </figure>
 </div>
 </section>
-<section id="execute-the-work-phase-two" class="level3" data-number="1.7.2">
-<h3 data-number="1.7.2" class="anchored" data-anchor-id="execute-the-work-phase-two"><span class="header-section-number">1.7.2</span> Execute the work (Phase Two)</h3>
+<section id="execute-the-work-phase-two" class="level3">
+<h3 class="anchored" data-anchor-id="execute-the-work-phase-two">Execute the work (Phase Two)</h3>
 <p>The next phase is about accomplishing the data work. It can broadly happen across actions with and about the data that include ingesting, storing, cleaning, analyzing, communicating results, implementing, and iterating.</p>
 <dl>
 <dt>Ingest</dt>
@@ -552,8 +559,8 @@ Monitor and assess the implementation, reworking and revising as needed by stake
 </dl>
 </section>
 </section>
-<section id="the-applied-data-scientist-in-higher-education" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="the-applied-data-scientist-in-higher-education"><span class="header-section-number">1.8</span> The applied data scientist in higher education</h2>
+<section id="the-applied-data-scientist-in-higher-education" class="level2">
+<h2 class="anchored" data-anchor-id="the-applied-data-scientist-in-higher-education">The applied data scientist in higher education</h2>
 <p>Applied data science in higher education sits at the intersection of applied coding, applied statistics knowledge, and higher education domain knowledge (Conway, 2010). Working with data via code is highly efficient and provides a means for auditability through transparent scripts. Knowledge of statistical methods enables sound reasoning for deriving insights from data. The domain knowledge in higher education is what gives pragmatic meaning to the outputs of a data science project.</p>
 <div id="fig-ds-venn" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -561,13 +568,13 @@ Monitor and assess the implementation, reworking and revising as needed by stake
 <img src="images/chp_1_ds-venn.png" class="quarto-figure quarto-figure-center figure-img" width="425" height="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ds-venn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: The three domains of applied data science in higher education.
+Figure&nbsp;1: The three domains of applied data science in higher education.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="the-data-pyramid" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="the-data-pyramid"><span class="header-section-number">1.9</span> The Data Pyramid</h2>
+<section id="the-data-pyramid" class="level2">
+<h2 class="anchored" data-anchor-id="the-data-pyramid">The Data Pyramid</h2>
 <p>The data pyramid offers a more compact way of thinking about data and how the applied data scientist operates within the real-world. It starts with the anecdotal experiences we might encounter in our everyday work environments, such as suspecting that a resources section of a departmental website could be helpful to students, but is going underutilized. To confirm, we then proceed to collect traffic data and survey responses. The raw data are then organized and cleaned so that they can be analyzed for patterns and relationships. In our example, maybe they show us that students who visit the website are not being funneled to the resources section. As a meaningful insight, we might decide to include a direct path to the resources section as part of the default experience when visiting the website.</p>
 <div id="fig-data-pyramid" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -575,13 +582,13 @@ Figure&nbsp;1.1: The three domains of applied data science in higher education.
 <img src="images/chp_1_ds-pyramid.png" class="quarto-figure quarto-figure-center figure-img" width="700" height="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data-pyramid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: The data science pyramid that flows from raw signals to insights to serve stakeholders
+Figure&nbsp;2: The data science pyramid that flows from raw signals to insights to serve stakeholders
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="chapter-1-exercises" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="chapter-1-exercises"><span class="header-section-number">1.10</span> Chapter 1 Exercises:</h2>
+<section id="chapter-1-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-1-exercises">Chapter 1 Exercises:</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1016,13 +1023,13 @@ Figure&nbsp;1.2: The data science pyramid that flows from raw signals to insight
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="./index.html" class="pagination-link" aria-label="Home">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./02.html" class="pagination-link" aria-label="Data Details">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Data Details</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

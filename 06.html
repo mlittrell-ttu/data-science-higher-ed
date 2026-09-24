@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>6&nbsp; Exploratory Data Analysis – Applied Data Science in Higher Education with R</title>
+<title>quarto-input66a439e65fab72f4 – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,12 +75,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81ced3e863acfb1071fb730864f79675.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+<link href="site_libs/bootstrap/bootstrap-96d816b5cdfca3a6b17098982031e8c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -103,41 +103,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script><script data-goatcounter="https://heds.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 </head>
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Science for Higher Ed</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./setup.html"> 
+<span class="menu-text">Setup</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mlittrell-ttu/data-science-higher-ed"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html">Exploratory Data Analysis</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Applied Data Science in Higher Education with R</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/mlittrell-ttu/data-science-higher-ed" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -152,55 +168,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></span></a>
+ <span class="menu-text">1 Data Science Explained</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span></a>
+ <span class="menu-text">Data Details</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></span></a>
+ <span class="menu-text">R Orientation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span></span></a>
+ <span class="menu-text">R Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span></a>
+ <span class="menu-text">Preprocessing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+ <span class="menu-text">Exploratory Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
       </ul>
@@ -217,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -234,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -251,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -268,93 +284,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
-</li>
-      </ul>
 </li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#details" id="toc-details" class="nav-link active" data-scroll-target="#details"><span class="header-section-number">6.1</span> Details</a></li>
-  <li>
-<a href="#very-brief-stats" id="toc-very-brief-stats" class="nav-link" data-scroll-target="#very-brief-stats"><span class="header-section-number">6.2</span> Very brief stats</a>
+<li>
+<a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link active" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a>
   <ul class="collapse">
-<li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency"><span class="header-section-number">6.2.1</span> Measures of central tendency</a></li>
-  <li><a href="#measures-of-spread" id="toc-measures-of-spread" class="nav-link" data-scroll-target="#measures-of-spread"><span class="header-section-number">6.2.2</span> Measures of spread</a></li>
-  <li><a href="#distribution-shape-and-skew" id="toc-distribution-shape-and-skew" class="nav-link" data-scroll-target="#distribution-shape-and-skew"><span class="header-section-number">6.2.3</span> Distribution, shape, and skew</a></li>
+<li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a></li>
+  <li>
+<a href="#very-brief-stats" id="toc-very-brief-stats" class="nav-link" data-scroll-target="#very-brief-stats">Very brief stats</a>
+  <ul class="collapse">
+<li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency">Measures of central tendency</a></li>
+  <li><a href="#measures-of-spread" id="toc-measures-of-spread" class="nav-link" data-scroll-target="#measures-of-spread">Measures of spread</a></li>
+  <li><a href="#distribution-shape-and-skew" id="toc-distribution-shape-and-skew" class="nav-link" data-scroll-target="#distribution-shape-and-skew">Distribution, shape, and skew</a></li>
   </ul>
 </li>
-  <li><a href="#two-modes-of-eda" id="toc-two-modes-of-eda" class="nav-link" data-scroll-target="#two-modes-of-eda"><span class="header-section-number">6.3</span> Two modes of EDA</a></li>
+  <li><a href="#two-modes-of-eda" id="toc-two-modes-of-eda" class="nav-link" data-scroll-target="#two-modes-of-eda">Two modes of EDA</a></li>
   <li>
-<a href="#how-visualization-works-with-ggplot2" id="toc-how-visualization-works-with-ggplot2" class="nav-link" data-scroll-target="#how-visualization-works-with-ggplot2"><span class="header-section-number">6.4</span> How visualization works with ggplot2</a>
+<a href="#how-visualization-works-with-ggplot2" id="toc-how-visualization-works-with-ggplot2" class="nav-link" data-scroll-target="#how-visualization-works-with-ggplot2">How visualization works with ggplot2</a>
   <ul class="collapse">
-<li><a href="#basic-ggplot-syntax" id="toc-basic-ggplot-syntax" class="nav-link" data-scroll-target="#basic-ggplot-syntax"><span class="header-section-number">6.4.1</span> Basic ggplot syntax</a></li>
-  <li><a href="#basic-visualizations-with-ggplot2-examples" id="toc-basic-visualizations-with-ggplot2-examples" class="nav-link" data-scroll-target="#basic-visualizations-with-ggplot2-examples"><span class="header-section-number">6.4.2</span> Basic visualizations with ggplot2 examples</a></li>
-  <li><a href="#column-chart" id="toc-column-chart" class="nav-link" data-scroll-target="#column-chart"><span class="header-section-number">6.4.3</span> Column chart</a></li>
-  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart"><span class="header-section-number">6.4.4</span> Line chart</a></li>
+<li><a href="#basic-ggplot-syntax" id="toc-basic-ggplot-syntax" class="nav-link" data-scroll-target="#basic-ggplot-syntax">Basic ggplot syntax</a></li>
+  <li><a href="#basic-visualizations-with-ggplot2-examples" id="toc-basic-visualizations-with-ggplot2-examples" class="nav-link" data-scroll-target="#basic-visualizations-with-ggplot2-examples">Basic visualizations with ggplot2 examples</a></li>
+  <li><a href="#column-chart" id="toc-column-chart" class="nav-link" data-scroll-target="#column-chart">Column chart</a></li>
+  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart">Line chart</a></li>
   </ul>
 </li>
-  <li><a href="#guided-lab-exploratory-data-analysis" id="toc-guided-lab-exploratory-data-analysis" class="nav-link" data-scroll-target="#guided-lab-exploratory-data-analysis"><span class="header-section-number">6.5</span> Guided Lab: Exploratory data analysis</a></li>
+  <li><a href="#guided-lab-exploratory-data-analysis" id="toc-guided-lab-exploratory-data-analysis" class="nav-link" data-scroll-target="#guided-lab-exploratory-data-analysis">Guided Lab: Exploratory data analysis</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/06.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span>
-</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header><section id="details" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="details">
-<span class="header-section-number">6.1</span> Details</h2>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html">Exploratory Data Analysis</a></li></ol></nav></header><section id="exploratory-data-analysis" class="level1"><h1>Exploratory Data Analysis</h1>
+<section id="details" class="level2"><h2 class="anchored" data-anchor-id="details">Details</h2>
 <p>This module is about <strong>exploratory data analysis (EDA)</strong>, which is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spot surprises and decide what is worth investigating further. Once data are tidy, the same dplyr tools we used to clean data in the last module can also help us understand it. We will also pick up a couple of helpful preprocessing steps along the way.</p>
-</section><section id="very-brief-stats" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="very-brief-stats">
-<span class="header-section-number">6.2</span> Very brief stats</h2>
+</section><section id="very-brief-stats" class="level2"><h2 class="anchored" data-anchor-id="very-brief-stats">Very brief stats</h2>
 <p>EDA leans on a handful of basic statistical ideas. A quick review is presented here that is enough to follow the chapter.</p>
-<section id="measures-of-central-tendency" class="level3" data-number="6.2.1"><h3 data-number="6.2.1" class="anchored" data-anchor-id="measures-of-central-tendency">
-<span class="header-section-number">6.2.1</span> Measures of central tendency</h3>
+<section id="measures-of-central-tendency" class="level3"><h3 class="anchored" data-anchor-id="measures-of-central-tendency">Measures of central tendency</h3>
 <p>A <strong>measure of central tendency</strong> describes the “typical” value in a set of numbers. These three are common:</p>
 <ul>
 <li>The <strong>mean</strong> is the average where values are added together and divided by their count. It is a common stat, but it is sensitive to outliers with extreme values.</li>
 <li>The <strong>median</strong> is the middle value when the numbers are sorted. Half fall below it and half above. Because it ignores how far away the extremes are, it is less sensitive to them.</li>
 <li>The <strong>mode</strong> is the value that appears most often. It works for categorical and numeric data.</li>
-</ul></section><section id="measures-of-spread" class="level3" data-number="6.2.2"><h3 data-number="6.2.2" class="anchored" data-anchor-id="measures-of-spread">
-<span class="header-section-number">6.2.2</span> Measures of spread</h3>
+</ul></section><section id="measures-of-spread" class="level3"><h3 class="anchored" data-anchor-id="measures-of-spread">Measures of spread</h3>
 <p>Central tendency refers to the middle of some values. <strong>Spread</strong> tells us how far the values scatter around it.</p>
 <ul>
 <li>The <strong>range</strong> is the distance from the smallest value to the largest. Simple, but driven entirely by the two extremes.</li>
 <li>The <strong>interquartile range (IQR)</strong> is the range of the middle half of the data. That is, the distance from the 25th to the 75th percentile. It describes the bulk of the values while ignoring the extremes.</li>
 <li>The <strong>standard deviation (SD)</strong> measures the typical distance of values from the mean. A small SD means values cluster tightly around the average. A large one means they are widely dispersed.</li>
-</ul></section><section id="distribution-shape-and-skew" class="level3" data-number="6.2.3"><h3 data-number="6.2.3" class="anchored" data-anchor-id="distribution-shape-and-skew">
-<span class="header-section-number">6.2.3</span> Distribution, shape, and skew</h3>
+</ul></section><section id="distribution-shape-and-skew" class="level3"><h3 class="anchored" data-anchor-id="distribution-shape-and-skew">Distribution, shape, and skew</h3>
 <p><strong>Skew</strong> describes how lopsided the shape of a distribution is. Comparing the mean to the median surfaces the shape. A useful framing for understanding a distribution is that the mean chases the tail, being pulled toward the extreme values. The median is more resistant, so it sits near the middle. Whenever the mean and median drift apart, the direction of the gap tells you which way the data is skewed.</p>
 <p>In a <strong>symmetric</strong> distribution, the values are balanced around the center and the mean and median sit close together. Example: In a well designed course, most students score roughly near the class average, with some scoring below or above this.</p>
 <div id="fig-sym" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -362,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="images/chp_6_sym.png" class="quarto-figure quarto-figure-center figure-img" width="300" height="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sym-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.1: A symmetric distribution, where the mean and median are near the center.
+Figure&nbsp;1: A symmetric distribution, where the mean and median are near the center.
 </figcaption></figure>
 </div>
 <p>A distribution has a <strong>positive (right) skew</strong> when a few large values stretch a long tail to the right. These high values pull the mean higher, so the mean sits above the median. Example: In a difficult course, most students score low, with a few high scorers stretching a tail to the right and pulling the mean above the median.</p>
@@ -371,7 +360,7 @@ Figure&nbsp;6.1: A symmetric distribution, where the mean and median are near th
 <img src="images/chp_6_pos.png" class="quarto-figure quarto-figure-center figure-img" width="300" height="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.2: A positive (right) skew, where the mean is pulled above the median by some high values.
+Figure&nbsp;2: A positive (right) skew, where the mean is pulled above the median by some high values.
 </figcaption></figure>
 </div>
 <p>A distribution has <strong>negative (left) skew</strong> when a long tail stretches to the left. These low values pull the mean down, so the mean sits below the median. Example: In an easy course, most students score high, with a few low scorers stretching a tail to the left and pulling the mean below the median.</p>
@@ -380,20 +369,17 @@ Figure&nbsp;6.2: A positive (right) skew, where the mean is pulled above the med
 <img src="images/chp_6_neg.png" class="quarto-figure quarto-figure-center figure-img" width="300" height="250">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.3: A negative (left) skew, where the mean is pulled below the median by some low values.
+Figure&nbsp;3: A negative (left) skew, where the mean is pulled below the median by some low values.
 </figcaption></figure>
 </div>
-</section></section><section id="two-modes-of-eda" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="two-modes-of-eda">
-<span class="header-section-number">6.3</span> Two modes of EDA</h2>
+</section></section><section id="two-modes-of-eda" class="level2"><h2 class="anchored" data-anchor-id="two-modes-of-eda">Two modes of EDA</h2>
 <p>EDA works through two complementary modes of working and it can be helpful to move between them often.</p>
 <p>The first mode works with <strong>values</strong>, such as summaries, counts, and statistics. We might compute the average GPA by major, count how many students fall into each class standing, or find the highest and lowest values. Values are precise and let us compare and understand exactly.</p>
 <p>The second mode works with <strong>visual</strong> elements. This could include plots that show skewness, histograms that the distribution of a variable, or a box plot that exposes outliers. Pictures can reveal patterns and data issues that a table of values can hide.</p>
 <p>These modes work in tandem and are supportive of one another. Imagine we compute the average number of credits per major and notice one major’s average looks oddly low. The number raises a question but doesn’t answer it. So we plot that program’s credits and see the distribution splits in two — a cluster of part-time students pulling the average down. The plot raises a new question, so we go back to the numbers to count how many are part-time.</p>
-</section><section id="how-visualization-works-with-ggplot2" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="how-visualization-works-with-ggplot2">
-<span class="header-section-number">6.4</span> How visualization works with ggplot2</h2>
+</section><section id="how-visualization-works-with-ggplot2" class="level2"><h2 class="anchored" data-anchor-id="how-visualization-works-with-ggplot2">How visualization works with ggplot2</h2>
 <p>When we move to the visual mode, we build plots with <strong>ggplot2</strong>, a tidyverse package for making graphs. It works by layering a few simple pieces, and once you know them, most plots follow the same pattern. We keep visuals simple in this module and go deeper into ggplot2 later. The ggplot2 documentation is found here <a href="https://ggplot2.tidyverse.org/" class="uri">https://ggplot2.tidyverse.org/</a>.</p>
-<section id="basic-ggplot-syntax" class="level3" data-number="6.4.1"><h3 data-number="6.4.1" class="anchored" data-anchor-id="basic-ggplot-syntax">
-<span class="header-section-number">6.4.1</span> Basic ggplot syntax</h3>
+<section id="basic-ggplot-syntax" class="level3"><h3 class="anchored" data-anchor-id="basic-ggplot-syntax">Basic ggplot syntax</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">data</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">...</span>, y <span class="op">=</span> <span class="va">...</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>   <span class="co"># start with the data and map variables to the plot</span></span>
 <span>  <span class="fu">geom_type</span><span class="op">(</span><span class="op">)</span>                           <span class="co"># add a geom for the shape you want to draw</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -411,7 +397,7 @@ Figure&nbsp;6.3: A negative (left) skew, where the mean is pulled below the medi
 <p>Put together, a plot reads almost like a sentence: take <em>this data</em>, map <em>these variables</em> to the axes, and draw them as <em>this shape</em>. A few common plot types seen in EDA are:</p>
 <div id="tbl-plots" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6.1: Common plot types and their geoms.
+Table&nbsp;1: Common plot types and their geoms.
 </figcaption><div aria-describedby="tbl-plots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
@@ -457,8 +443,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 </div>
 </figure>
 </div>
-</section><section id="basic-visualizations-with-ggplot2-examples" class="level3" data-number="6.4.2"><h3 data-number="6.4.2" class="anchored" data-anchor-id="basic-visualizations-with-ggplot2-examples">
-<span class="header-section-number">6.4.2</span> Basic visualizations with ggplot2 examples</h3>
+</section><section id="basic-visualizations-with-ggplot2-examples" class="level3"><h3 class="anchored" data-anchor-id="basic-visualizations-with-ggplot2-examples">Basic visualizations with ggplot2 examples</h3>
 <p>First we create import IPEDS data to use for the visuals.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
@@ -513,8 +498,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 <span><span class="co">#&gt; $ MTH_ACT_25     &lt;int&gt; 15, 20, 23, 14, 21, 16, 23, 20, 16, NA, 17, NA, 17, 15,…</span></span>
 <span><span class="co">#&gt; $ MTH_ACT_75     &lt;int&gt; 18, 27, 29, 20, 29, 22, 29, 27, 22, NA, 24, NA, 25, 24,…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<section id="histogram" class="level4" data-number="6.4.2.1"><h4 data-number="6.4.2.1" class="anchored" data-anchor-id="histogram">
-<span class="header-section-number">6.4.2.1</span> Histogram</h4>
+<section id="histogram" class="level4"><h4 class="anchored" data-anchor-id="histogram">Histogram</h4>
 <p>A <strong>histogram</strong> shows the shape of one numeric variable by binning its values and counting each bin. Here we look at the 75th-percentile SAT math score across institutions. The aes() function— short for aesthetics—maps a column of your data to a part of the plot. In aes(x = MTH_SAT_75), we map the SAT math score to the x-axis.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">admissions</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">MTH_SAT_75</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>   <span class="co"># map the SAT math score to the x-axis</span></span>
@@ -527,8 +511,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 </div>
 </div>
 <p>The x-axis is the score. The y-axis is how many institutions fall in each range. Test scores cluster around a center and tail off on both sides showing a roughly symmetric bell shape.</p>
-</section><section id="box-plot" class="level4" data-number="6.4.2.2"><h4 data-number="6.4.2.2" class="anchored" data-anchor-id="box-plot">
-<span class="header-section-number">6.4.2.2</span> Box plot</h4>
+</section><section id="box-plot" class="level4"><h4 class="anchored" data-anchor-id="box-plot">Box plot</h4>
 <p>A <strong>box plot</strong> shows spread and outliers. It can be helpful for comparing groups. Here we compare the number of applications an institution receives at schools that <em>require</em> an admissions test versus those that only <em>recommend</em> one. We use dplyr’s filter to remove the other categories. <code>%in%</code> is a membership check. It says remove every observation that isn’t one of these.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
@@ -543,8 +526,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 </div>
 </div>
 <p>Each box summarizes one group’s applications. The box itself are the middle values. The line is the median. Dots are outliers. Comparing the two shows whether test-requiring institutions receive more applications than those that only recommend a test.</p>
-</section><section id="bar-chart" class="level4" data-number="6.4.2.3"><h4 data-number="6.4.2.3" class="anchored" data-anchor-id="bar-chart">
-<span class="header-section-number">6.4.2.3</span> Bar chart</h4>
+</section><section id="bar-chart" class="level4"><h4 class="anchored" data-anchor-id="bar-chart">Bar chart</h4>
 <p>A <strong>bar chart</strong> compares counts across categories. Here we count how many institutions fall into each high-school-GPA admission policy.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">admissions</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">hs_gpa</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>   <span class="co"># the policy category on the x-axis</span></span>
@@ -558,8 +540,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 </div>
 </div>
 <p>Each bar is a policy (“Required,” “Recommended,” etc.). Its height is how many institutions use the policy. Bars make the most and least common policies easy to spot.</p>
-</section><section id="scatter-plot" class="level4" data-number="6.4.2.4"><h4 data-number="6.4.2.4" class="anchored" data-anchor-id="scatter-plot">
-<span class="header-section-number">6.4.2.4</span> Scatter plot</h4>
+</section><section id="scatter-plot" class="level4"><h4 class="anchored" data-anchor-id="scatter-plot">Scatter plot</h4>
 <p>A <strong>scatter plot</strong> shows the relationship between two numeric variables, one per axis. Here we compare applications received against students admitted.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">admissions</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>   <span class="co"># applications on x, admissions on y</span></span>
@@ -572,8 +553,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 </div>
 </div>
 <p>Each point is an institution, placed by its applications (x) and admissions (y). The compact upward grouping shows a strong relationship, where institutions with more applications also admit more students. <code>alpha = 0.4</code> makes points semi-transparent so crowded areas stay readable.</p>
-</section></section><section id="column-chart" class="level3" data-number="6.4.3"><h3 data-number="6.4.3" class="anchored" data-anchor-id="column-chart">
-<span class="header-section-number">6.4.3</span> Column chart</h3>
+</section></section><section id="column-chart" class="level3"><h3 class="anchored" data-anchor-id="column-chart">Column chart</h3>
 <p>A <strong>column chart</strong> draws bars at heights you supply, rather than counting rows. Here we use some additional dplyr verbs (group_by and summarize) to total applications received by admission-test policy, removing any rows with missing values. This is different from the bar chart where we are calculating the stat</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
@@ -590,8 +570,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 </div>
 </div>
 <p>Unlike the bar chart, which counted institutions, here each bar’s height is the <em>sum</em> of applications in that group, which we calculated first with <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>. That is the core difference between <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar()</a></code> and <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code>.</p>
-</section><section id="line-chart" class="level3" data-number="6.4.4"><h3 data-number="6.4.4" class="anchored" data-anchor-id="line-chart">
-<span class="header-section-number">6.4.4</span> Line chart</h3>
+</section><section id="line-chart" class="level3"><h3 class="anchored" data-anchor-id="line-chart">Line chart</h3>
 <p>A <strong>line chart</strong> connects points across an ordered x-axis. Test-score policies have a natural order from strict to most lenient. <em>Required</em>, then <em>Recommended</em>, then <em>Neither</em>. We can trace the average number of applications across these ordered levels.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
@@ -611,8 +590,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 </div>
 </div>
 <p>Each point is one policy level, ordered from strictest to most lenient, and the line connects them to show how average applications change across the levels. A line makes sense here because the categories have a real order.</p>
-</section></section><section id="guided-lab-exploratory-data-analysis" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="guided-lab-exploratory-data-analysis">
-<span class="header-section-number">6.5</span> Guided Lab: Exploratory data analysis</h2>
+</section></section><section id="guided-lab-exploratory-data-analysis" class="level2"><h2 class="anchored" data-anchor-id="guided-lab-exploratory-data-analysis">Guided Lab: Exploratory data analysis</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#________________________________________________________</span></span>
 <span><span class="co"># Title:    Exploratory Data Analysis</span></span>
 <span><span class="co"># Purpose:  Clean, reshape, and explore a small student dataset</span></span>
@@ -700,7 +678,7 @@ Table&nbsp;6.1: Common plot types and their geoms.
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">students</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1101,12 +1079,12 @@ Table&nbsp;6.1: Common plot types and their geoms.
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./05.html" class="pagination-link" aria-label="Preprocessing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preprocessing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./07.html" class="pagination-link" aria-label="Title TBD">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Title TBD</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Title TBD</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

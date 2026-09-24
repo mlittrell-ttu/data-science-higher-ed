@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Michael Littrell">
-<meta name="dcterms.date" content="2026-09-24">
 
-<title>Applied Data Science in Higher Education with R</title>
+<title>Applied Data Science in Higher Education with R – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -45,13 +43,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-81ced3e863acfb1071fb730864f79675.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-96d816b5cdfca3a6b17098982031e8c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -78,47 +76,65 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Science for Higher Ed</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./setup.html"> 
+<span class="menu-text">Setup</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mlittrell-ttu/data-science-higher-ed"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Applied Data Science in Higher Education with R</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/mlittrell-ttu/data-science-higher-ed" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -133,55 +149,55 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></span></a>
+ <span class="menu-text">1 Data Science Explained</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Details</span></span></a>
+ <span class="menu-text">Data Details</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Orientation</span></span></a>
+ <span class="menu-text">R Orientation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R Basics</span></span></a>
+ <span class="menu-text">R Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Preprocessing</span></span></a>
+ <span class="menu-text">Preprocessing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+ <span class="menu-text">Exploratory Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Title TBD</span></span></a>
+ <span class="menu-text">Title TBD</span></a>
   </div>
 </li>
       </ul>
@@ -198,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -215,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -232,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">blank</span></span></a>
+ <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
@@ -249,23 +265,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -273,21 +278,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#who-is-this-resource-for" id="toc-who-is-this-resource-for" class="nav-link" data-scroll-target="#who-is-this-resource-for">Who is this resource for?</a></li>
-  <li><a href="#resource" id="toc-resource" class="nav-link" data-scroll-target="#resource">Resource?</a></li>
-  <li><a href="#why-would-i-want-to-read-this-excel-seems-just-fine." id="toc-why-would-i-want-to-read-this-excel-seems-just-fine." class="nav-link" data-scroll-target="#why-would-i-want-to-read-this-excel-seems-just-fine.">Why would I want to read this? Excel seems just fine.</a></li>
-  <li><a href="#wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps" id="toc-wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps" class="nav-link" data-scroll-target="#wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps">Wait. We can use code to work with data? Isn’t that for making apps?</a></li>
-  <li><a href="#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files" id="toc-what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files" class="nav-link" data-scroll-target="#what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files">What about tools like Stata that have a GUI to click and also uses script files?</a></li>
-  <li><a href="#why-another-r-resource" id="toc-why-another-r-resource" class="nav-link" data-scroll-target="#why-another-r-resource">Why another R resource?</a></li>
-  <li><a href="#what-will-i-be-able-to-do-by-reading-this-resource-and-practicing-its-content" id="toc-what-will-i-be-able-to-do-by-reading-this-resource-and-practicing-its-content" class="nav-link" data-scroll-target="#what-will-i-be-able-to-do-by-reading-this-resource-and-practicing-its-content">What will I be able to do by reading this resource and practicing its content?</a></li>
-  <li><a href="#about-this-resource-and-ai" id="toc-about-this-resource-and-ai" class="nav-link" data-scroll-target="#about-this-resource-and-ai">About this resource and AI</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
+  <li><a href="#how-to-use-it" id="toc-how-to-use-it" class="nav-link" data-scroll-target="#how-to-use-it">How to use it</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link" data-scroll-target="#about">About this resource</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -297,26 +294,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Applied Data Science in Higher Education with R</h1>
-<p class="subtitle lead">A practical, open resource for pragmatic data science.</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Michael Littrell </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 24, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -326,58 +310,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1><p><img src="images/cover_v1.png" title="Applied Data Science in Higher Education with R" class="quarto-cover-image nolightbox img-fluid"></p>
-<section id="who-is-this-resource-for" class="level2">
-<h2 class="anchored" data-anchor-id="who-is-this-resource-for">Who is this resource for?</h2>
-<p>This free and open resource is meant for higher education professionals who may work in a variety of areas such as institutional research, assessment, enrollment management, or student affairs. Its main purpose is to be very practical. This support could also be relevant to anyone wanting to learn more about applied data science, the R language, and how to use it for data tasks.</p>
+<p>A free, open, hands-on resource for learning practical data science with R, built for people who work with higher education data.</p>
+<p><a href="./01.html" class="btn btn-primary btn-lg">Start with Module 1 →</a></p>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>This resource is meant for higher education professionals who work with data. It could be useful for learning to work with data for institutional research, assessment, enrollment management, student affairs, and many other applications. It could also be useful for anyone wanting to learn about how to use R for applied data science in general. No prior coding experience is assumed.</p>
 </section>
-<section id="resource" class="level2">
-<h2 class="anchored" data-anchor-id="resource">Resource?</h2>
-<p>This is an open, free-to-use learning resource for applied data science in higher education. It is not a formally published or peer-reviewed textbook, but a practical tool made freely available for anyone who wants to learn.</p>
-<p>This resource is likely best not considered a ‘book’ at all. If anything, it is more of a digital lab experience that is constantly evolving and mutating along with the state of pragmatic data science and coding in the time of AI.</p>
-</section>
-<section id="why-would-i-want-to-read-this-excel-seems-just-fine." class="level2">
-<h2 class="anchored" data-anchor-id="why-would-i-want-to-read-this-excel-seems-just-fine.">Why would I want to read this? Excel seems just fine.</h2>
-<p>Using a language like R is a great approach to working with data in a way that is auditable and highly efficient when compared to an interface like Excel. It can be used for repeated tasks that are performed frequently, for example. Instead of clicking the identical path in the graphical user interface (GUI), a script can be created to repeatedly execute the same work on different data. Also, creating a script file to act as the source of truth for work accomplished in a data project (e.g., governance), can increase the reliability of the results, as all effort can be inspected. Compare this with trying to wrangle shared data in Excel, where the dependability of the work often relies on the recollection of the individual who accomplished the task with the GUI. “I remember dragging this column in from the spring report—I’m sure of it!”</p>
-</section>
-<section id="wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps" class="level2">
-<h2 class="anchored" data-anchor-id="wait.-we-can-use-code-to-work-with-data-isnt-that-for-making-apps">Wait. We can use code to work with data? Isn’t that for making apps?</h2>
-<p>Programming languages such as R or Python are great for working with data, but the coding work produced can also be thought of as relevant to the creation of helpful data apps too.</p>
-</section>
-<section id="what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files" class="level2">
-<h2 class="anchored" data-anchor-id="what-about-tools-like-stata-that-have-a-gui-to-click-and-also-uses-script-files">What about tools like Stata that have a GUI to click and also uses script files?</h2>
-<p>Tools like these are proprietary and cost money, sometimes substantial amounts. Companies that own such products often gate features so that you are limited in what you can produce. Want to create machine learning models? That capability can be a separate add-on that costs extra beyond your currently purchased product.</p>
-<p>Using a free and open source (FOS) language like R, an accompanying FOS developer program like RStudio, and the numerous FOS packages available means you can use the entire product for free with no restrictions. R is frequently updated and can be used across many different file types, meaning a proficient R user can produce output for most any applications such as Excel or Stata. This interoperability can be very helpful for professionals working across instituions, departments, vendors, and companies where a variety of tools are used.</p>
-</section>
-<section id="why-another-r-resource" class="level2">
-<h2 class="anchored" data-anchor-id="why-another-r-resource">Why another R resource?</h2>
-<p>Resources online about R that I have encountered generally are often not meant for the practical user who may have limited programming experience and little knowledge of deep technical data science topics. This is especially true when trying to find books that adequately address pragmatic coding within the context of higher education. Also, artificial intelligence has dramatically changed the way that programming a computer is accomplished and provides a much easier learning curve for the new coding data scientist. I crafted this learning support to overcome the limitations mentioned, to teach my own courses about data science in higher education, and to make explicit connections from AI to R coding to support learners.</p>
-</section>
-<section id="what-will-i-be-able-to-do-by-reading-this-resource-and-practicing-its-content" class="level2">
-<h2 class="anchored" data-anchor-id="what-will-i-be-able-to-do-by-reading-this-resource-and-practicing-its-content">What will I be able to do by reading this resource and practicing its content?</h2>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
 <ul>
-<li>Understand applied data science generally and within the context of higher education.</li>
-<li>Gain insights about the types of data used in higher education and the systems that store them.</li>
-<li>Wrangle and clean data.</li>
-<li>Accomplish work more efficiently with R that is typically performed in Excel.</li>
-<li>Create your own applications, machine learning models, databases, and packages.</li>
-<li>Understand data science and its relationship to research.</li>
-<li>Create great looking data visualizations.</li>
-<li>Retrieve data from a variety of sources including APIs and SQL databases.</li>
+<li><strong>Applied.</strong> Most modules are experiential where every concept comes with runnable code scripts that represent a complete increment of work.</li>
+<li><strong>Higher education focused.</strong> The examples use data that is reflective of actual institutional data or official public datasets that are higher ed relevant such those from IPEDS.<br>
+</li>
+<li><strong>Free and open.</strong> This digital resource is completely available at no cost.</li>
+<li><strong>Current.</strong> This site is updated frequently to keep pace with rapidly changing field of data science given the impact of AI.</li>
 </ul>
 </section>
-<section id="about-this-resource-and-ai" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-resource-and-ai">About this resource and AI</h2>
-<p>Using my expertise and professional experience, I designed this applied digital resource with its ideas, structure, examples, and the concepts it teaches. While building it out, assistance from generative AI was sometimes used, working under my direction and structure. All content has been thoroughly edited, revised, and verified to ensure it is high quality and accurate.</p>
+<section id="how-to-use-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-it">How to use it</h2>
+<p>Work through the modules in order using the sidebar starting with module number 1. Each one builds on the last. Concepts are presented at the top of the module page, before shifting to annotated code walkthroughs, where you can run them yourself as you go. The exercises at the end of each module let you practice independently.</p>
 </section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>This resource is licensed under CC 4.0. <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="images/by_nc_nd.svg" class="img-fluid" width="88" alt="Creative Commons License"></a></p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About this resource</h2>
+<p>This is an open, free-to-use learning resource, not a formally published or peer-reviewed textbook — think of it as a living lab that evolves alongside pragmatic data science and coding in the time of AI. I designed it: its ideas, structure, examples, and the concepts it teaches are my own. In building it out, I used generative AI as an assistant to help draft code and prose from my direction, all of which I then edited, revised, and verified. I take full responsibility for the content and own every line — the same standard this resource asks of you as you learn to work with AI yourself.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -785,8 +742,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01.html" class="pagination-link" aria-label="Data Science Explained">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Science Explained</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./01.html" class="pagination-link" aria-label="1 Data Science Explained">
+        <span class="nav-page-text">1 Data Science Explained</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
