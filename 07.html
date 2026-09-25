@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>quarto-inputd27aa474e2058b5 – Data Science for Higher Ed</title>
+<title>7 More Data Vis – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,8 +20,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -44,8 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b1095ebcda9306b4f27b8a46b621a439.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-249667c51bdd3db30e9255cbf7b95ed1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -71,18 +101,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script data-goatcounter="https://heds.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
-
-
+}</script><script data-goatcounter="https://heds.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 </head>
-
 <body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Data Science for Higher Ed</span>
@@ -94,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
@@ -103,36 +127,30 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Setup</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/mlittrell-ttu/data-science-higher-ed"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./07.html">Title TBD</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./07.html">7 More Data Vis</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
@@ -146,11 +164,11 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1 Data Science Explained</span></a>
+ <span class="menu-text">1 Considerations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -174,19 +192,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preprocessing</span></a>
+ <span class="menu-text">5 Preprocessing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory Data Analysis</span></a>
+ <span class="menu-text">6 Exploring Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Title TBD</span></a>
+ <span class="menu-text">7 More Data Vis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -202,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -211,15 +229,15 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -228,15 +246,15 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -245,15 +263,15 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ph3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">blank</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
@@ -273,33 +291,370 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#title-tbd" id="toc-title-tbd" class="nav-link active" data-scroll-target="#title-tbd">Title TBD</a></li>
+<li><a href="#what-this-module-adds" id="toc-what-this-module-adds" class="nav-link active" data-scroll-target="#what-this-module-adds">What this module adds</a></li>
+  <li><a href="#ggplot2-extended" id="toc-ggplot2-extended" class="nav-link" data-scroll-target="#ggplot2-extended">ggplot2 extended</a></li>
+  <li><a href="#building-with-and" id="toc-building-with-and" class="nav-link" data-scroll-target="#building-with-and">Building with <code>+</code> and <code>|&gt;</code></a></li>
+  <li>
+<a href="#mapping-versus-setting" id="toc-mapping-versus-setting" class="nav-link" data-scroll-target="#mapping-versus-setting">Mapping versus setting</a>
+  <ul class="collapse">
+<li><a href="#mapping-color-to-a-variable" id="toc-mapping-color-to-a-variable" class="nav-link" data-scroll-target="#mapping-color-to-a-variable">Mapping color to a variable</a></li>
+  <li><a href="#setting-a-constant-color" id="toc-setting-a-constant-color" class="nav-link" data-scroll-target="#setting-a-constant-color">Setting a constant color</a></li>
+  <li><a href="#global-and-local-aesthetics" id="toc-global-and-local-aesthetics" class="nav-link" data-scroll-target="#global-and-local-aesthetics">Global and local aesthetics</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/07.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/07.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
+</li>
+  <li>
+<a href="#building-up-a-richer-plot" id="toc-building-up-a-richer-plot" class="nav-link" data-scroll-target="#building-up-a-richer-plot">Building up a richer plot</a>
+  <ul class="collapse">
+<li><a href="#adding-a-shape-dimension" id="toc-adding-a-shape-dimension" class="nav-link" data-scroll-target="#adding-a-shape-dimension">Adding a shape dimension</a></li>
+  <li><a href="#zooming-in-on-a-range" id="toc-zooming-in-on-a-range" class="nav-link" data-scroll-target="#zooming-in-on-a-range">Zooming in on a range</a></li>
+  <li><a href="#labeling-the-plot" id="toc-labeling-the-plot" class="nav-link" data-scroll-target="#labeling-the-plot">Labeling the plot</a></li>
+  <li><a href="#cleaning-up-the-look-with-a-theme" id="toc-cleaning-up-the-look-with-a-theme" class="nav-link" data-scroll-target="#cleaning-up-the-look-with-a-theme">Cleaning up the look with a theme</a></li>
+  <li><a href="#adjusting-size-and-text" id="toc-adjusting-size-and-text" class="nav-link" data-scroll-target="#adjusting-size-and-text">Adjusting size and text</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/07.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/07.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./07.html">Title TBD</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./07.html">7 More Data Vis</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">7 More Data Vis</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="title-tbd" class="level1">
-<h1>Title TBD</h1>
+    
+  
+    
+  </div>
+  
 
 
-</section>
+</header><section id="what-this-module-adds" class="level2"><h2 class="anchored" data-anchor-id="what-this-module-adds">What this module adds</h2>
+<p>The last module used ggplot2 to make quick plots that helped us see the data. This module builds on that toward plots that ease our own interpretation or communicate clearly to someone else. We stay with the same ggplot2 package, but we add more of its functions to map several variables at once, layer geoms, add trend lines and reference lines, split a plot into small panels, control color and axes, and labeling everything so a reader can understand the plot without us standing next to them.</p>
+</section><section id="ggplot2-extended" class="level2"><h2 class="anchored" data-anchor-id="ggplot2-extended">ggplot2 extended</h2>
+<p>Every ggplot is built from layers and they can be added one at a time. In the last module we used the first few. Here is the fuller set, roughly in the order you may tend to add them. Importantly, every layer is not needed for every plot. A quick look might use only data, aesthetics, and a geom. A finished plot for a report can use more of them.</p>
+<div id="tbl-gg-layers" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gg-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The layers of a ggplot.
+</figcaption><div aria-describedby="tbl-gg-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 52%">
+<col style="width: 26%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">What it controls</th>
+<th style="text-align: left;">Example</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Data</td>
+<td style="text-align: left;">The tibble being plotted</td>
+<td style="text-align: left;"><code>ggplot(data, ...)</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aesthetics</td>
+<td style="text-align: left;">Which columns map to which visual properties</td>
+<td style="text-align: left;"><code>aes(x = , y = , color = )</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Geoms</td>
+<td style="text-align: left;">The shapes drawn</td>
+<td style="text-align: left;">
+<code>geom_point()</code>, <code>geom_line()</code>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Stats</td>
+<td style="text-align: left;">Stats a geom calculates before drawing</td>
+<td style="text-align: left;">binning, smoothing</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Scales</td>
+<td style="text-align: left;">How values map to color, size, and axis positions</td>
+<td style="text-align: left;"><code>scale_color</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Facets</td>
+<td style="text-align: left;">Splitting the plot into panels by group</td>
+<td style="text-align: left;"><code>facet_wrap(~ group)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Coordinates</td>
+<td style="text-align: left;">The plotting area and how it is viewed</td>
+<td style="text-align: left;"><code>coord_cartesian()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Theme</td>
+<td style="text-align: left;">The overall look. Fonts, gridlines, legend</td>
+<td style="text-align: left;"><code>theme_minimal()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Labels</td>
+<td style="text-align: left;">Titles, axis labels, and captions</td>
+<td style="text-align: left;"><code>labs(title = )</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section><section id="building-with-and" class="level2"><h2 class="anchored" data-anchor-id="building-with-and">Building with <code>+</code> and <code>|&gt;</code>
+</h2>
+<p>By now you have used two operators that both chain steps together, and it is worth being clear about when each one applies. Mixing them up is a common early error.</p>
+<p>The pipe <code>|&gt;</code> moves data from one dplyr verb to the next. It reads as “and then”. Example: “Take the data, and then filter, and then summarize”.</p>
+<p>The plus <code>+</code> adds a layer to a ggplot. It reads as “and also”. Example: “Start the plot, and also add points, and also add a trend line, and also add labels”</p>
+<p>The two often appear together. You pipe data into <code>ggplot()</code> with <code>|&gt;</code>, and from there you build the plot with <code>+</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">admissions</span> <span class="op">|&gt;</span>                              <span class="co"># pipe the data in with |&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">APPLCN</span> <span class="op">&gt;</span> <span class="fl">30000</span><span class="op">)</span> <span class="op">|&gt;</span>                  <span class="co"># dplyr steps use |&gt;</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>     <span class="co"># switch to + once inside ggplot</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.4</span><span class="op">)</span>                   <span class="co"># add layers with +</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/pipe-plus-demo-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="mapping-versus-setting" class="level2"><h2 class="anchored" data-anchor-id="mapping-versus-setting">Mapping versus setting</h2>
+<p>The distinction between mapping and setting is important to understanding ggplot. To see it, we start with a plain plot and add color to it two different ways.</p>
+<p>Here is a scatter with no color specified. Every point is ggplot’s default black.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/plain-scatter-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="mapping-color-to-a-variable" class="level3"><h3 class="anchored" data-anchor-id="mapping-color-to-a-variable">Mapping color to a variable</h3>
+<p>To <strong>map</strong> an aesthetic means to connect it to a column so it varies with the data. Mapping goes <em>inside</em> <code>aes()</code>. Here we map color to whether an institution requires an admissions test, so the points take on different colors by group and a legend appears to explain them.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>, color <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.4</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/map-color-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The color now carries information, showing a third variable on top of the two on the axes. ggplot chose the colors and built the legend for us because we mapped color to a column.</p>
+</section><section id="setting-a-constant-color" class="level3"><h3 class="anchored" data-anchor-id="setting-a-constant-color">Setting a constant color</h3>
+<p>To <strong>set</strong> an aesthetic means to fix it to one value that is the same for every point. Setting goes <em>outside</em> <code>aes()</code>, as an argument to the geom. Here every point is the same blue, and no legend appears because the color carries no information about the data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.4</span>, color <span class="op">=</span> <span class="st">"#799BA6"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/set-color-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In summary, if a visual property should change with the data, map it inside <code>aes()</code>. If it should be constant, set it outside <code>aes()</code> in the geom.</p>
+<p>One related trap is worth seeing. If you put a constant <em>inside</em> <code>aes()</code>, it does not do what you might expect.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/aes-trap-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The points did not turn blue. Because <code>color = "blue"</code> sits inside <code>aes()</code>, ggplot treated the word “blue” as a category to map, gave it its own color, and added a legend labeled “blue”. This is the classic sign that a constant ended up inside <code>aes()</code> by mistake.</p>
+</section><section id="global-and-local-aesthetics" class="level3"><h3 class="anchored" data-anchor-id="global-and-local-aesthetics">Global and local aesthetics</h3>
+<p>There is one more piece to where <code>aes()</code> goes. Aesthetics can live in two places, and the location decides which geoms they affect.</p>
+<p><strong>Global</strong></p>
+<p>An aesthetic placed inside <code>ggplot()</code> is <strong>global</strong>. Every geom in the plot inherits it. Here both the points and the smooth trend line are colored by group, because color is mapped globally.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>, color <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.4</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/global-aes-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Local</strong></p>
+<p>An aesthetic placed inside a single geom is <strong>local</strong>. Only that geom uses it. Here color is mapped only inside <code>geom_point()</code>, so the points are colored by group but the single smooth line is not, because it did not inherit the color mapping.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span>, alpha <span class="op">=</span> <span class="fl">0.4</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/local-aes-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The difference is visible in the trend lines. Global color gives one line per group, while local color leaves a single line over all the data. Deciding whether an aesthetic is global or local is how you control which parts of a plot respond to it.</p>
+</section></section><section id="building-up-a-richer-plot" class="level2"><h2 class="anchored" data-anchor-id="building-up-a-richer-plot">Building up a richer plot</h2>
+<p>So far we have mapped a single variable to color and seen how mapping and setting differ. From here we add more to a plot a piece at a time. Each addition is another layer joined with <code>+</code>. We will keep working with the admissions data and grow one plot as we go, so you can see each layer’s effect on its own.</p>
+<section id="adding-a-shape-dimension" class="level3"><h3 class="anchored" data-anchor-id="adding-a-shape-dimension">Adding a shape dimension</h3>
+<p>Color is one aesthetic, and a plot can map more than one at a time. Shape is another. It draws each group’s points with a different symbol, such as circles, triangles, and squares. Mapping shape works just like mapping color, inside <code>aes()</code>.</p>
+<p>Here we map both color and shape to the same variable, the admissions test policy. Each group now differs in two ways at once, which can make groups easier to tell apart, and it helps a reader who cannot rely on color alone.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">adm_tscores</span>, shape <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/map-shape-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The legend now shows both a color and a symbol for each group, since both aesthetics carry the same information.</p>
+<p>Shape can also carry a <em>different</em> variable than color, letting one plot show more of the data at once. This is powerful, but it comes with a caution. The more a plot tries to show, the harder it can be to read. Being able to add another aesthetic does not always mean we should.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">adm_tscores</span>, shape <span class="op">=</span> <span class="va">hs_gpa</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/shape-second-var-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Here color shows the test policy and shape shows the high-school-GPA policy, so the plot carries four variables at once: two on the axes and two in the aesthetics. That is a lot to take in. A plot like this can be worth the density when a reader needs all of it, but often a cleaner plot that shows less communicates more.</p>
+</section><section id="zooming-in-on-a-range" class="level3"><h3 class="anchored" data-anchor-id="zooming-in-on-a-range">Zooming in on a range</h3>
+<p>Sometimes the interesting data sits in one part of the plot. Zooming into a a range can be helpful to examine and highlight them. There are two ways to zoom in ggplot2, and they behave differently in a way worth understanding.</p>
+<section id="approach-1-coord_cartesian-for-true-zoom" class="level4"><h4 class="anchored" data-anchor-id="approach-1-coord_cartesian-for-true-zoom">Approach 1: coord_cartesian() for true zoom</h4>
+<p><code>coord_cartesian()</code> sets the viewing window without changing the data. Points outside the window are simply off screen, but they are still there and still used in any calculation. This is a ‘true zoom’, like moving a magnifying glass over the plot.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">adm_tscores</span>, shape <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">coord_cartesian</span><span class="op">(</span>xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/zoom-coord-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now the crowded region opens up. With fewer points overlapping, the colors and shapes do some explanatory work.This view sits at the very base of the full plot, the corner of the smallest institutions, where both applications and admissions are low. These are the many small schools that were packed into the bottom-left corner and invisible before we zoomed in.</p>
+</section><section id="approach-2-scale-limits-which-drop-data" class="level4"><h4 class="anchored" data-anchor-id="approach-2-scale-limits-which-drop-data">Approach 2: scale limits, which drop data</h4>
+<p>Setting limits through the scales, with <code>xlim()</code> or <code>scale_x_continuous(limits = ...)</code>, looks similar but does something different. It removes any data outside the limits before the plot is drawn. The points beyond the range are not hidden, they are dropped, and anything computed from the data is recomputed on only what remains.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">adm_tscores</span>, shape <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>group <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, se <span class="op">=</span> <span class="cn">FALSE</span>, color <span class="op">=</span> <span class="st">"#C7522A"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">xlim</span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ylim</span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/zoom-scale-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Here we added a trend line to make the difference visible. Because the large institutions were removed before the line was fit, this line describes only the smaller institutions in the range, not the full dataset. You may also see a warning that rows were removed, which is ggplot telling you that data was dropped.</p>
+</section><section id="which-to-use" class="level4"><h4 class="anchored" data-anchor-id="which-to-use">Which to use</h4>
+<p>The two look alike but answer different questions. Use <code>coord_cartesian()</code> when you want to look closely at part of the data while keeping every point and every calculation intact. Use scale limits when you genuinely want to exclude the data.</p>
+</section></section><section id="labeling-the-plot" class="level3"><h3 class="anchored" data-anchor-id="labeling-the-plot">Labeling the plot</h3>
+<p>So far the plot uses the raw column names for its axes, like <code>APPLCN</code> and <code>ADMSSN</code>, which a reader outside the data may not understand. The <code>labs()</code> layer sets readable labels for axis titles, plot titles, and captions. A useful habit is to put the plot’s main takeaway in the subtitle, so a reader gets the point that you are trying to make.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">adm_tscores</span>, shape <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">coord_cartesian</span><span class="op">(</span>xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Applications and admissions at the smallest institutions"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Among the smallest schools, admissions rise closely with applications"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Applications received"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Students admitted"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Test policy"</span>,</span>
+<span>    shape <span class="op">=</span> <span class="st">"Test policy"</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/add-labels-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The axes now read plainly, the title says what the plot is about, and the subtitle states the takeaway. Setting both <code>color</code> and <code>shape</code> labels to the same text also cleans up the legend, giving it one clear heading instead of the column name.</p>
+</section><section id="cleaning-up-the-look-with-a-theme" class="level3"><h3 class="anchored" data-anchor-id="cleaning-up-the-look-with-a-theme">Cleaning up the look with a theme</h3>
+<p>The default gray panel background is fine for quick looks, but a white background often reads better in a report. A theme controls the overall look of the plot: the background, the gridlines, the fonts. ggplot2 comes with several ready-made themes, and <code>theme_minimal()</code> gives a clean white background with light gridlines.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">adm_tscores</span>, shape <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">coord_cartesian</span><span class="op">(</span>xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Applications and admissions at the smallest institutions"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Among the smallest schools, admissions rise closely with applications"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Applications received"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Students admitted"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Test policy"</span>,</span>
+<span>    shape <span class="op">=</span> <span class="st">"Test policy"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/add-theme-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The gray panel is gone, replaced by a clean white background that puts the focus on the points. This is the same plot as before, just easier to read, and it is starting to look like something you could drop into a report.</p>
+</section><section id="adjusting-size-and-text" class="level3"><h3 class="anchored" data-anchor-id="adjusting-size-and-text">Adjusting size and text</h3>
+<p>Two things can still be improved. The points are small, which makes the shapes hard to tell apart, and the default text is a little small for a report. We can fix both.</p>
+<p>Point size is set in the geom, outside <code>aes()</code>, because we want every point the same larger size. We add <code>size = 2.5</code> to <code>geom_point()</code>.</p>
+<p>Text sizes are controlled in the <code>theme()</code> layer. While <code>theme_minimal()</code> sets the overall look, <code>theme()</code> lets us adjust individual pieces, such as the size of the title, the axis labels, and the axis numbers. We add a <code>theme()</code> after <code>theme_minimal()</code> so our changes build on top of it.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">admissions</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span>,</span>
+<span>                       color <span class="op">=</span> <span class="va">adm_tscores</span>, shape <span class="op">=</span> <span class="va">adm_tscores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.7</span>, size <span class="op">=</span> <span class="fl">3.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">coord_cartesian</span><span class="op">(</span>xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span>, ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Applications and admissions at the smallest institutions"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Among the smallest schools, admissions rise closely with applications"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Applications received"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Students admitted"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Test policy"</span>,</span>
+<span>    shape <span class="op">=</span> <span class="st">"Test policy"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme</span><span class="op">(</span></span>
+<span>    plot.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">16</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
+<span>    plot.subtitle <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span>,</span>
+<span>    axis.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span>,</span>
+<span>    axis.text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="07_files/figure-html/size-and-text-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The larger points make the shapes easy to distinguish, and the text now sizes sensibly for a report. Notice the pattern inside <code>theme()</code>: each element of the plot has a name, such as <code>plot.title</code> or <code>axis.text</code>, and we adjust it with <code>element_text()</code>, which controls text properties like size and whether it is bold. This is how ggplot2 gives fine control over nearly every part of a plot’s appearance.</p>
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -698,11 +1053,9 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./06.html" class="pagination-link" aria-label="Exploratory Data Analysis">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exploratory Data Analysis</span>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./06.html" class="pagination-link" aria-label="6 Exploring Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">6 Exploring Data</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -712,8 +1065,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -725,8 +1077,6 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>quarto-input7bd8a93740980578 – Data Science for Higher Ed</title>
+<title>6 Exploring Data – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b1095ebcda9306b4f27b8a46b621a439.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-249667c51bdd3db30e9255cbf7b95ed1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -142,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html">Exploratory Data Analysis</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html">6 Exploring Data</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -168,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1 Data Science Explained</span></a>
+ <span class="menu-text">1 Considerations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -192,19 +192,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preprocessing</span></a>
+ <span class="menu-text">5 Preprocessing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Exploratory Data Analysis</span></a>
+ <span class="menu-text">6 Exploring Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title TBD</span></a>
+ <span class="menu-text">7 More Data Vis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -298,10 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li>
-<a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link active" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a>
-  <ul class="collapse">
-<li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a></li>
+<li><a href="#details" id="toc-details" class="nav-link active" data-scroll-target="#details">Details</a></li>
   <li>
 <a href="#very-brief-stats" id="toc-very-brief-stats" class="nav-link" data-scroll-target="#very-brief-stats">Very brief stats</a>
   <ul class="collapse">
@@ -321,13 +318,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
   <li><a href="#guided-lab-exploratory-data-analysis" id="toc-guided-lab-exploratory-data-analysis" class="nav-link" data-scroll-target="#guided-lab-exploratory-data-analysis">Guided Lab: Exploratory data analysis</a></li>
   <li><a href="#module-6-exercises-verify-and-edit-all-here" id="toc-module-6-exercises-verify-and-edit-all-here" class="nav-link" data-scroll-target="#module-6-exercises-verify-and-edit-all-here">Module 6 Exercises [VERIFY AND EDIT ALL HERE]</a></li>
-  </ul>
-</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/06.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html">Exploratory Data Analysis</a></li></ol></nav></header><section id="exploratory-data-analysis" class="level1"><h1>Exploratory Data Analysis</h1>
-<section id="details" class="level2"><h2 class="anchored" data-anchor-id="details">Details</h2>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./06.html">6 Exploring Data</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">6 Exploring Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="details" class="level2"><h2 class="anchored" data-anchor-id="details">Details</h2>
 <p>This module is about <strong>exploratory data analysis (EDA)</strong>, which is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spot surprises and decide what is worth investigating further. Once data are tidy, the same dplyr tools we used to clean data in the last module can also help us understand it. We will also pick up a couple of helpful preprocessing steps along the way.</p>
 </section><section id="very-brief-stats" class="level2"><h2 class="anchored" data-anchor-id="very-brief-stats">Very brief stats</h2>
 <p>EDA leans on a handful of basic statistical ideas. A quick review is presented here that is enough to follow the chapter.</p>
@@ -1119,7 +1128,7 @@ Table&nbsp;1: Common plot types and their geoms.
 <ol type="a">
 <li>Assign it to an object in memory and look up what its variables mean with <code>?&lt;dataset_name&gt;</code>. In a sentence, describe its unit of analysis. What does one row represent?</li>
 <li>Use <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code>, <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code>, and <code><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim()</a></code> to inspect it. Note the dimensions, the variable types, and whether any columns have missing values.</li>
-<li>Identify one column whose values look worth a second glance, for reasons like missing data, a surprising range, or a type that seems off for what the column represents. Describe what you notice and why it stands out to you.</li>
+<li>Identify one column whose values look worth a second glance, for reasons like missing data, a surprising range, a type that seems off for what the column represents, or others. Describe what you notice and why it stands out to you.</li>
 </ol>
 </li>
 <li>
@@ -1138,12 +1147,19 @@ Table&nbsp;1: Common plot types and their geoms.
 <li>Write dplyr code to investigate what you noticed and report what you found. Did the numbers explain the pattern in the picture, or raise a new question?</li>
 </ol>
 </li>
+<li>
+<p><strong>Comment your process.</strong> Any scripts we use when working with data professionally should be auditable and easy to understand.</p>
+<ol type="a">
+<li>Thoroughly comment your script so that it could be picked up and understood at a later date or by someone who is not familiar with your work.</li>
+<li>Also utilize your script comments as a tool for learning where you take notes throughout your process.</li>
+</ol>
+</li>
 </ol>
 </div>
 </div>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1543,13 +1559,13 @@ Table&nbsp;1: Common plot types and their geoms.
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./05.html" class="pagination-link" aria-label="Preprocessing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preprocessing</span>
+      <a href="./05.html" class="pagination-link" aria-label="5 Preprocessing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5 Preprocessing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07.html" class="pagination-link" aria-label="Title TBD">
-        <span class="nav-page-text">Title TBD</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./07.html" class="pagination-link" aria-label="7 More Data Vis">
+        <span class="nav-page-text">7 More Data Vis</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
