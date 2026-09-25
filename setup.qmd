@@ -1,10 +1,10 @@
 # Setup {.unnumbered}
 
-What readers install before Chapter 1.
+Here are instructions and resources to use in your R work.
 
 1. **R** — <https://cran.r-project.org/>
-2. **An editor** — RStudio or Positron
-3. **Quarto** — <https://quarto.org/> (bundled with recent RStudio)
+2. **IDE** — RStudio
+3. **Quarto** — <https://quarto.org/>
 4. **Packages**
 
 ```{r}
@@ -12,4 +12,3 @@ What readers install before Chapter 1.
 install.packages(c("tidyverse", "tidymodels"))
 ```
 
-*TODO — trim to exactly what your book uses.*

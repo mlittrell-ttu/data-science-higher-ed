@@ -1,8 +1,8 @@
 {
-  "hash": "e9814958eb99598e4ba34dbb2db810f2",
+  "hash": "ef1b9adbb5999324f8c7e33218ed248b",
   "result": {
     "engine": "knitr",
-    "markdown": "# Setup {.unnumbered}\n\nWhat readers install before Chapter 1.\n\n1. **R** — <https://cran.r-project.org/>\n2. **An editor** — RStudio or Positron\n3. **Quarto** — <https://quarto.org/> (bundled with recent RStudio)\n4. **Packages**\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n```\n:::\n\n\n*TODO — trim to exactly what your book uses.*\n",
+    "markdown": "# Setup {.unnumbered}\n\nHere are instructions and resources to use in your R work.\n\n1. **R** — <https://cran.r-project.org/>\n2. **IDE** — RStudio\n3. **Quarto** — <https://quarto.org/>\n4. **Packages**\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(c(\"tidyverse\", \"tidymodels\"))\n```\n:::\n\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

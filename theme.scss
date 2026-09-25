@@ -7,3 +7,12 @@ $font-size-root: 18px;
 pre.sourceCode {
   border-radius: 6px;
 }
+
+// Recolor note callouts to the site's primary color
+div.callout-note.callout {
+  border-left-color: #799BA6;
+}
+div.callout-note .callout-title {
+  background-color: #799BA6;   // solid band instead of the light tint
+  color: white;                // white text so it reads on the band
+}

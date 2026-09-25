@@ -3,7 +3,7 @@ title: "1 Data Science Explained"
 ---
 
 ## What is higher education?
-Higher education (HE) is overall a very challenging thing to define. As a succinct description, the UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For HE professional striving to become more proficient with data, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.
+Higher education (HE) is overall a very challenging thing to define. As a succinct description, the UNESCO (2026) definition is widely accepted and is paraphrased as the teaching and learning that occurs at institutions beyond secondary education. For HE professionals striving to become more proficient with data, a university could be considered a sum of many parts, where each has its own functions, goals, stakeholders, and relevant data. Seen in the table here are some details about the possible structural levels of a university.
 
 | Level | Leader | Example Data | Example Concern |
 |:------|:-------|:-------------|:----------------|
@@ -81,7 +81,7 @@ Ingest
 : Capture the data from sources such as from surveys or learning management systems.
 
 Store
-: The data needs to be kept somewhere that is reliable and secure, such as a database which we will discuss in the next chapter.
+: The data needs to be kept somewhere that is reliable and secure, such as a database which we will discuss in a later module.
 
 Clean
 : Wrangle and clean the data—such as by fixing missing values or errors—so it can be effectively worked with.
@@ -110,7 +110,7 @@ The data pyramid offers a more compact way of thinking about data and how the ap
 
 ![The data science pyramid that flows from raw signals to insights to serve stakeholders](images/chp_1_ds-pyramid.png){#fig-data-pyramid width="700px" height="400px" fig-align="center"}
 
-## Chapter 1 Exercises:
+## Modules 1 Exercises:
 
 ::: {.callout-note icon=false title="Exercises"}
 

@@ -2,25 +2,21 @@
 title: "Applied Data Science in Higher Education with R"
 ---
 
-A free, open, hands-on resource for learning practical data science with R, built for people who work with higher education data.
+A free, open, hands-on digitial resource for learning practical data science with R, built for people who work with higher education data.
 
 [Start with Module 1 →](01.qmd){.btn .btn-primary .btn-lg}
 
 ## Purpose
 
-This resource is meant for higher education professionals who work with data. It could be useful for learning to work with data for institutional research, assessment, enrollment management, student affairs, and many other applications. It could also be useful for anyone wanting to learn about how to use R for applied data science in general. No prior coding experience is assumed.
+This website is meant for higher education professionals who work with data. It could be useful for learning to work with data for institutional research, assessment, enrollment management, student affairs, and many other applications. It could also be useful for anyone wanting to learn about how to use R for applied data science in general. No prior coding experience is assumed.
 
 ## Features
 
 - **Applied.** Most modules are experiential where every concept comes with runnable code scripts that represent a complete increment of work.
 - **Higher education focused.** The examples use data that is reflective of actual institutional data or official public datasets that are higher ed relevant such those from IPEDS.  
 - **Free and open.** This digital resource is completely available at no cost.
-- **Current.** This site is updated frequently to keep pace with rapidly changing field of data science given the impact of AI.
+- **Current.** This site is updated frequently to keep pace with the rapidly changing field of data science given the impact of AI.
 
 ## How to use it
 
-Work through the modules in order using the sidebar starting with module number 1. Each one builds on the last. Concepts are presented at the top of the module page, before shifting to annotated code walkthroughs,  where you can run them yourself as you go. The exercises at the end of each module let you practice independently.
-
-## About this resource {#about}
-
-This is an open, free-to-use learning resource, not a formally published or peer-reviewed textbook — think of it as a living lab that evolves alongside pragmatic data science and coding in the time of AI. I designed it: its ideas, structure, examples, and the concepts it teaches are my own. In building it out, I used generative AI as an assistant to help draft code and prose from my direction, all of which I then edited, revised, and verified. I take full responsibility for the content and own every line — the same standard this resource asks of you as you learn to work with AI yourself.
+For the new learner, I recommend working through the modules in order using the sidebar starting with module number 1. Each one builds on the last. Concepts are presented at the top of the module page, before shifting to annotated code walk-throughs, where you can run them yourself at your own pace. The exercises at the end of each module let you practice independently.

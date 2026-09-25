@@ -1,7 +1,10 @@
-# Data Details
+---
+title: "2 Data Details"
+---
+
 
 ## What are data?
-As was mentioned in the first chapter, data are observations about the world and can take many forms. Data can be collected through manual means such as surveys or interviews. It can be collected more incidentally such as through capturing publicly available comments on social media platforms. Within the digital environment, data are being captured about everything we do. For example, learning management systems collect data about the number of times a student logs in, the number of times they view a video, the amount of time they spend on the platform, and many other statistics. In short, data are everywhere and is constantly be generating.
+As was mentioned in the first module, data are observations about the world and can take many forms. Data can be collected through manual means such as surveys or interviews. It can be collected more incidentally such as through capturing publicly available comments on social media platforms. Within the digital environment, data are being captured about everything we do. For example, learning management systems collect data about the number of times a student logs in, the number of times they view a video, the amount of time they spend on the platform, and many other statistics. In short, data are everywhere and is constantly be generating.
 
 ## Data and information
 Data are the raw unprocessed figures, such as the GPAs for students sitting in a database. Information is data that have been organized to be put to use. The average GPA of all math majors for the fall semester is 3.1—this could be considered information.
@@ -117,7 +120,7 @@ Institutional data is internal to a university and its processes. Often this is 
 Some institutional data are both restricted and protected legally. For instance, the **Family Educational Rights and Privacy Act** limits how student data can be disseminated, obtained, and communicated about. FERPA is applicable to any school that receives federal funding and consent to access protected data must typically be connected to an educational or legal matter. Other laws are also applicable such as the **Health Insurance Portability and Accountability Act** (HIPPAA) for health care data if there is an on-campus clinic. Due to such restrictions, it is always important to be aware and thoroughly understand any regulations relevant to data being worked with in the execution of data science projects. Also, keep in mind the privacy and rights of the individuals represented in the data throughout your engagement with it. Always work cautiously!
 
 
-## Chapter 2 Exercises:
+## Module 2 Exercises:
 
 ::: {.callout-note icon=false title="Exercises"}
 

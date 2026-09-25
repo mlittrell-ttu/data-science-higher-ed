@@ -59,7 +59,7 @@ Here is the applied data preprocessing demonstration that teaches some helpful d
 ## Exercises
 ::: {.callout-note icon=false title="Exercises"}
 
-1. **Preprocess a new IPEDS dataset.** See the other datasets in the package with `data(package = "IPEDS")`. Pick one that interests you (for example, `adm2020` for admissions). Load it and clean it using the verbs from this chapter.
+1. **Preprocess a new IPEDS dataset.** See the other datasets in the package with `data(package = "IPEDS")`. Pick one that interests you (for example, `adm2020` for admissions). Load it and clean it using the verbs from this module.
 
     a. Assign the dataset to an object, then look up what its variables mean with `?<dataset_name>`. In a sentence, state its unit of analysis. What does one row represent?
     b. Use `glimpse()` and `summary()` to inspect it. Identify at least one column whose type looks wrong (a label or category stored as a number), and one thing `summary()` reveals about a numeric column.

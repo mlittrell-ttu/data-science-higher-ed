@@ -1,4 +1,6 @@
-# R Orientation
+---
+title: "3 R Orientation"
+---
 
 ## What is R?
 R is a functional language built specifically for working with data. Professionals who work with data such as statisticians and researchers are actively involved in shaping the language. In a sense, R is a *living* body of work that is constantly underdevelopment, evolving as the needs of its users do. As higher education data professionals, we use it because it is highly efficient, auditable, scalable, and yields reproducible work that can be assessed to establish trustworthyness.
@@ -146,7 +148,7 @@ The R language and related packages has a very active community where news, reso
 : R community resources. {#tbl-community}
 
 
-## Chapter 3 Exercises
+## Module 3 Exercises
 
 ::: {.callout-note icon=false title="Exercises"}
 

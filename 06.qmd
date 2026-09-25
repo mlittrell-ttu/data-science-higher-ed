@@ -80,7 +80,7 @@ Put together, a plot reads almost like a sentence: take *this data*, map *these 
 
 ### Basic visualizations with ggplot2 examples
 
-First we create import IPEDS data to use for the visuals.
+First we import IPEDS data to use for the visuals. For these examples, we use the `adm2020` dataset from the IPEDS package, which has admissions information for U.S. colleges and universities, including application and admission counts, test-score requirements, and SAT/ACT score ranges. It has one row per institution.
 
 ```{r}
 #| label: viz-demo-setup
@@ -146,22 +146,6 @@ ggplot(admissions, aes(x = APPLCN, y = ADMSSN)) +   # applications on x, admissi
 Each point is an institution, placed by its applications (x) and admissions (y). The compact upward grouping shows a strong relationship, where institutions with more applications also admit more students. `alpha = 0.4` makes points semi-transparent so crowded areas stay readable.
 
 
-### Column chart
-A **column chart** draws bars at heights you supply, rather than counting rows. Here we use some additional dplyr verbs (group_by and summarize) to total applications received by admission-test policy, removing any rows with missing values. This is different from the bar chart where we are calculating the stat
-
-```{r}
-#| label: viz-column
-admissions |>
-  group_by(adm_tscores) |>
-  summarize(total_apps = sum(APPLCN, na.rm = TRUE)) |>   # compute the height ourselves
-  ggplot(aes(x = adm_tscores, y = total_apps)) +
-  geom_col() +                                           # bars use the summed value as height
-  coord_flip()                                           # flip sideways so labels fit
-```
-
-Unlike the bar chart, which counted institutions, here each bar's height is the *sum* of applications in that group, which we calculated first with `group_by()` and `summarize()`. That is the core difference between `geom_bar()` and `geom_col()`.
-
-
 
 ### Line chart
 A **line chart** connects points across an ordered x-axis. Test-score policies have a natural order from strict to most lenient. *Required*, then *Recommended*, then *Neither*. We can trace the average number of applications across these ordered levels.
@@ -188,3 +172,25 @@ Each point is one policy level, ordered from strictest to most lenient, and the 
 ```
 
 
+## Module 6 Exercises [VERIFY AND EDIT ALL HERE]
+::: {.callout-note icon=false title="Exercises"}
+
+1. **Choose and inspect a dataset.** From the IPEDS package, pick a dataset you have not used yet (see the options with `data(package = "IPEDS")`, for example `fall_enroll2020` or `fin_aid1920`). Load it and get to know it.
+
+    a. Assign it to an object in memory and look up what its variables mean with `?<dataset_name>`. In a sentence, describe its unit of analysis. What does one row represent?
+    b. Use `glimpse()`, `summary()`, and `skim()` to inspect it. Note the dimensions, the variable types, and whether any columns have missing values.
+    c. Identify one column whose values look worth a second glance, for reasons like missing data, a surprising range, or a type that seems off for what the column represents. Describe what you notice and why it stands out to you.
+
+2. **Explore with dplyr.** Use the verbs from this module to ask a few questions of your dataset.
+
+    a. Use `filter()` and `arrange()` together to focus on a subset of rows and order it in a way that helps you read it. Explain in plain language what your result shows.
+    b. Use `group_by()` and `summarize()` to compute a summary within groups, such as an average or a count by category. What does the grouped result suggest?
+    c. Use `slice_max()` or `slice_min()` to pull the top or bottom few rows on a variable of interest. Are the results what you expected?
+
+3. **Move between a picture and the numbers.** Build a plot, notice something in it, and investigate what you see with the numbers.
+
+    a. Make a plot of your data with `ggplot2`, choosing a geom that fits your question (a histogram for one variable's shape, a boxplot to compare groups, a scatter plot to relate two variables).
+    b. Point out something in the plot worth a closer look, such as an outlier, a cluster, a skew, or a gap.
+    c. Write dplyr code to investigate what you noticed and report what you found. Did the numbers explain the pattern in the picture, or raise a new question?
+
+:::

@@ -1,13 +1,16 @@
-# R Basics
+---
+title: "4 R Basics"
+---
+
 
 ## Context
 ### A note about base R and tidyverse
-Throughout this book you will see two threads of work. Where possible we will rely on the **tidyverse**, a collection of packages first developed by Hadley Wickham and now maintained by Posit. These packages offer an improved way of working with R overall. When it is needed or is more efficient, we will switch to **base R** which refers to the default capabilities that the language includes, or other packages outside of the tidyverse.
+Throughout the instructional content on this site, you will see two threads of work. Where possible we will rely on the **tidyverse**, a collection of packages first developed by Hadley Wickham and now maintained by Posit. These packages offer an improved way of working with R overall. When it is needed or is more efficient, we will switch to **base R** which refers to the default capabilities that the language includes, or other packages outside of the tidyverse.
 
 
 ## Setup and packages
 ### Create a new script
-For this chapter, create a new script file **(File > New > File R Script)** and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work. 
+For this module, create a new script file **(File > New > File R Script)** and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work. 
 
 ![An R script and CSV data file saved in the same folder.](images/chp_4_folder.png){#fig-folder width="550px" height="375" fig-align="center"}
 
@@ -56,7 +59,7 @@ data_frame <- drop_na(data_frame)
 
 
 ### Load packages
-For the work in this chapter, first install and then load the following packages:
+For the work in this module, first install and then load the following packages:
 
 ```r
 # Install 
@@ -93,7 +96,7 @@ mean(c(10, 50, 100))
 Everything created in R is stored in memory as an **object**. Objects can be thought of as containers which we give a name to identify them by and access them again later. You can see a list of the objects that R currently has in memory in the environment pane of RStudio or by running the command `ls()` in your console.
 
 ### Data frames and tibbles
-Data are brought into your environment to be worked with and that is what this chapter is about. Data are imported into R as objects. The default object is called a **data frame**. Data frames are base R's way of bringing in tabular data made of rows and columns. The tidyverse has improved on the data frame,importing tabular data as **tibbles**. A tibble has some subtle smart features that make them easier to work with and they are also compatible across the range of tidyverse packages.
+Data are brought into your environment to be worked with and that is what this module is about. Data are imported into R as objects. The default object is called a **data frame**. Data frames are base R's way of bringing in tabular data made of rows and columns. The tidyverse has improved on the data frame,importing tabular data as **tibbles**. A tibble has some subtle smart features that make them easier to work with and they are also compatible across the range of tidyverse packages.
 
 ### Variable types
 Each column that you import into R has a **data type** so it knows the kind of values that are represented by the variable. The data type determines the types of actions that can be taken when working with data. Multiplying red (character) by cat (character) is beyond the capabilities of the language, for example. The table here shows the different types that are commonly worked with.
@@ -182,7 +185,7 @@ Download the small student dataset here to try importing it:
 For this import we are using the tidyverse package called **readr**. readr imports your data as a tibble and reports on the types of columns imported.It chooses these types by inspecting the data automatically and determining what is there. Sometimes this may not be right for what you want to accomplish with the data. For this workflow, we load the data, confirm it is there, change a column type, and then re-inspect to see that the type was changed as expected.
 
 ::: {.callout-tip icon=false title="Leveraging AI"}
-For complete readr documentation, visit <https://readr.tidyverse.org/index.html>. Think of the documentation as the way to extend your knowledge and overcome limitations you encounter. It pairs well with AI. For example, you can paste part of a function's documentation into a chatbot and ask the tool to explain. Also you can describe what you're trying to do and ask which argument would work for a specific use case. Remember the main idea from Chapter 3 though, where it is important to read and understand any AI produced code before you use it, so your learning continues to progress.
+For complete readr documentation, visit <https://readr.tidyverse.org/index.html>. Think of the documentation as the way to extend your knowledge and overcome limitations you encounter. It pairs well with AI. For example, you can paste part of a function's documentation into a chatbot and ask the tool to explain. Also you can describe what you're trying to do and ask which argument would work for a specific use case. Remember the main idea from module 3 though, where it is important to read and understand any AI produced code before you use it, so your learning continues to progress.
 :::
 
 
@@ -225,9 +228,9 @@ glimpse(enrollment)
 ```
 
 ## Conclusion
-In this chapter we learned some basics about R and how to get a simple dataset into our environment to work with it. In the following chapters we will build on these skills to wrangle and analyze data.
+In this module we learned some basics about R and how to get a simple dataset into our environment to work with it. In the following modules we will build on these skills to wrangle and analyze data.
 
-## Chapter 4 Exercises
+## Module 4 Exercises
 ::: {.callout-note icon=false title="Exercises"}
 
 1. **Run and explain this code.** Here is readr in action again, this time with arguments we did not use.
@@ -257,7 +260,7 @@ enrollment <- read_csv(
 
     a. In Excel, create and save a dataset as a csv file with a header. It should have four columns and ten rows. There should be at least one text column and one numeric column. Also create a new R script and save that to the same folder.
     b. Load your dataset with readr and assign it to a named object.
-    c. Examine it with the functions we used in the chapter for inspecting data and describe the output.
+    c. Examine it with the functions we used in the module for inspecting data and describe the output.
     
 4. **Craft conditions with operators.** Use your dataset to practice comparisons and logical operators.
 
