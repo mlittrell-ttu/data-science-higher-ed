@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-input744452042e574d1 – Data Science for Higher Ed</title>
+<title>3 R Orientation – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96d816b5cdfca3a6b17098982031e8c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b1095ebcda9306b4f27b8a46b621a439.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -155,7 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./03.html">R Orientation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./03.html">3 R Orientation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -191,19 +191,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Details</span></a>
+ <span class="menu-text">2 Data Details</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">R Orientation</span></a>
+ <span class="menu-text">3 R Orientation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Basics</span></a>
+ <span class="menu-text">4 R Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -317,9 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-orientation" id="toc-r-orientation" class="nav-link active" data-scroll-target="#r-orientation">R Orientation</a>
-  <ul class="collapse">
-  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link" data-scroll-target="#what-is-r">What is R?</a>
+  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link active" data-scroll-target="#what-is-r">What is R?</a>
   <ul class="collapse">
   <li><a href="#a-brief-history-of-r" id="toc-a-brief-history-of-r" class="nav-link" data-scroll-target="#a-brief-history-of-r">A brief history of R</a></li>
   <li><a href="#r-and-higher-education" id="toc-r-and-higher-education" class="nav-link" data-scroll-target="#r-and-higher-education">R and higher education</a></li>
@@ -347,19 +345,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#help-resources" id="toc-help-resources" class="nav-link" data-scroll-target="#help-resources">Help Resources</a></li>
   </ul></li>
   <li><a href="#community-resources" id="toc-community-resources" class="nav-link" data-scroll-target="#community-resources">Community resources</a></li>
-  <li><a href="#chapter-3-exercises" id="toc-chapter-3-exercises" class="nav-link" data-scroll-target="#chapter-3-exercises">Chapter 3 Exercises</a></li>
-  </ul></li>
+  <li><a href="#module-3-exercises" id="toc-module-3-exercises" class="nav-link" data-scroll-target="#module-3-exercises">Module 3 Exercises</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/03.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/03.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./03.html">R Orientation</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./03.html">3 R Orientation</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">3 R Orientation</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="r-orientation" class="level1">
-<h1>R Orientation</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="what-is-r" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-r">What is R?</h2>
 <p>R is a functional language built specifically for working with data. Professionals who work with data such as statisticians and researchers are actively involved in shaping the language. In a sense, R is a <em>living</em> body of work that is constantly underdevelopment, evolving as the needs of its users do. As higher education data professionals, we use it because it is highly efficient, auditable, scalable, and yields reproducible work that can be assessed to establish trustworthyness.</p>
@@ -621,8 +632,8 @@ Table&nbsp;2: R community resources.
 </figure>
 </div>
 </section>
-<section id="chapter-3-exercises" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-3-exercises">Chapter 3 Exercises</h2>
+<section id="module-3-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="module-3-exercises">Module 3 Exercises</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -655,7 +666,6 @@ Table&nbsp;2: R community resources.
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1061,13 +1071,13 @@ Table&nbsp;2: R community resources.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02.html" class="pagination-link" aria-label="Data Details">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Details</span>
+      <a href="./02.html" class="pagination-link" aria-label="2 Data Details">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2 Data Details</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./04.html" class="pagination-link" aria-label="R Basics">
-        <span class="nav-page-text">R Basics</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04.html" class="pagination-link" aria-label="4 R Basics">
+        <span class="nav-page-text">4 R Basics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

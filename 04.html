@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>quarto-input830186c3fa8ffd13 – Data Science for Higher Ed</title>
+<title>4 R Basics – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96d816b5cdfca3a6b17098982031e8c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-b1095ebcda9306b4f27b8a46b621a439.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -142,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./04.html">R Basics</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./04.html">4 R Basics</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -174,19 +174,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Details</span></a>
+ <span class="menu-text">2 Data Details</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Orientation</span></a>
+ <span class="menu-text">3 R Orientation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">R Basics</span></a>
+ <span class="menu-text">4 R Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -299,10 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li>
-<a href="#r-basics" id="toc-r-basics" class="nav-link active" data-scroll-target="#r-basics">R Basics</a>
-  <ul class="collapse">
-<li>
-<a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a>
+<a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a>
   <ul class="collapse">
 <li><a href="#a-note-about-base-r-and-tidyverse" id="toc-a-note-about-base-r-and-tidyverse" class="nav-link" data-scroll-target="#a-note-about-base-r-and-tidyverse">A note about base R and tidyverse</a></li>
   </ul>
@@ -332,19 +329,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#chapter-4-exercises" id="toc-chapter-4-exercises" class="nav-link" data-scroll-target="#chapter-4-exercises">Chapter 4 Exercises</a></li>
-  </ul>
-</li>
+  <li><a href="#module-4-exercises" id="toc-module-4-exercises" class="nav-link" data-scroll-target="#module-4-exercises">Module 4 Exercises</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/04.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/04.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./04.html">R Basics</a></li></ol></nav></header><section id="r-basics" class="level1"><h1>R Basics</h1>
-<section id="context" class="level2"><h2 class="anchored" data-anchor-id="context">Context</h2>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01.html">Part 1 — Applied R</a></li><li class="breadcrumb-item"><a href="./04.html">4 R Basics</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">4 R Basics</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="context" class="level2"><h2 class="anchored" data-anchor-id="context">Context</h2>
 <section id="a-note-about-base-r-and-tidyverse" class="level3"><h3 class="anchored" data-anchor-id="a-note-about-base-r-and-tidyverse">A note about base R and tidyverse</h3>
-<p>Throughout this book you will see two threads of work. Where possible we will rely on the <strong>tidyverse</strong>, a collection of packages first developed by Hadley Wickham and now maintained by Posit. These packages offer an improved way of working with R overall. When it is needed or is more efficient, we will switch to <strong>base R</strong> which refers to the default capabilities that the language includes, or other packages outside of the tidyverse.</p>
+<p>Throughout the instructional content on this site, you will see two threads of work. Where possible we will rely on the <strong>tidyverse</strong>, a collection of packages first developed by Hadley Wickham and now maintained by Posit. These packages offer an improved way of working with R overall. When it is needed or is more efficient, we will switch to <strong>base R</strong> which refers to the default capabilities that the language includes, or other packages outside of the tidyverse.</p>
 </section></section><section id="setup-and-packages" class="level2"><h2 class="anchored" data-anchor-id="setup-and-packages">Setup and packages</h2>
 <section id="create-a-new-script" class="level3"><h3 class="anchored" data-anchor-id="create-a-new-script">Create a new script</h3>
-<p>For this chapter, create a new script file <strong>(File &gt; New &gt; File R Script)</strong> and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work.</p>
+<p>For this module, create a new script file <strong>(File &gt; New &gt; File R Script)</strong> and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work.</p>
 <div id="fig-folder" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/chp_4_folder.png" class="quarto-figure quarto-figure-center figure-img" width="550" height="375">
@@ -392,7 +401,7 @@ Figure&nbsp;1: An R script and CSV data file saved in the same folder.
 <span><span class="co"># Step 6. Analyze the data</span></span>
 <span><span class="co"># The analysis will proceed after these initial steps.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section><section id="load-packages" class="level3"><h3 class="anchored" data-anchor-id="load-packages">Load packages</h3>
-<p>For the work in this chapter, first install and then load the following packages:</p>
+<p>For the work in this module, first install and then load the following packages:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Install </span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span> <span class="co"># Only once</span></span>
 <span></span>
@@ -411,7 +420,7 @@ Figure&nbsp;1: An R script and CSV data file saved in the same folder.
 </section><section id="objects" class="level3"><h3 class="anchored" data-anchor-id="objects">Objects</h3>
 <p>Everything created in R is stored in memory as an <strong>object</strong>. Objects can be thought of as containers which we give a name to identify them by and access them again later. You can see a list of the objects that R currently has in memory in the environment pane of RStudio or by running the command <code><a href="https://rdrr.io/r/base/ls.html">ls()</a></code> in your console.</p>
 </section><section id="data-frames-and-tibbles" class="level3"><h3 class="anchored" data-anchor-id="data-frames-and-tibbles">Data frames and tibbles</h3>
-<p>Data are brought into your environment to be worked with and that is what this chapter is about. Data are imported into R as objects. The default object is called a <strong>data frame</strong>. Data frames are base R’s way of bringing in tabular data made of rows and columns. The tidyverse has improved on the data frame,importing tabular data as <strong>tibbles</strong>. A tibble has some subtle smart features that make them easier to work with and they are also compatible across the range of tidyverse packages.</p>
+<p>Data are brought into your environment to be worked with and that is what this module is about. Data are imported into R as objects. The default object is called a <strong>data frame</strong>. Data frames are base R’s way of bringing in tabular data made of rows and columns. The tidyverse has improved on the data frame,importing tabular data as <strong>tibbles</strong>. A tibble has some subtle smart features that make them easier to work with and they are also compatible across the range of tidyverse packages.</p>
 </section><section id="variable-types" class="level3"><h3 class="anchored" data-anchor-id="variable-types">Variable types</h3>
 <p>Each column that you import into R has a <strong>data type</strong> so it knows the kind of values that are represented by the variable. The data type determines the types of actions that can be taken when working with data. Multiplying red (character) by cat (character) is beyond the capabilities of the language, for example. The table here shows the different types that are commonly worked with.</p>
 <div id="tbl-data-types" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -561,7 +570,7 @@ A grid of values that are all the same type; organized by rows and columns.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For complete readr documentation, visit <a href="https://readr.tidyverse.org/index.html" class="uri">https://readr.tidyverse.org/index.html</a>. Think of the documentation as the way to extend your knowledge and overcome limitations you encounter. It pairs well with AI. For example, you can paste part of a function’s documentation into a chatbot and ask the tool to explain. Also you can describe what you’re trying to do and ask which argument would work for a specific use case. Remember the main idea from Chapter 3 though, where it is important to read and understand any AI produced code before you use it, so your learning continues to progress.</p>
+<p>For complete readr documentation, visit <a href="https://readr.tidyverse.org/index.html" class="uri">https://readr.tidyverse.org/index.html</a>. Think of the documentation as the way to extend your knowledge and overcome limitations you encounter. It pairs well with AI. For example, you can paste part of a function’s documentation into a chatbot and ask the tool to explain. Also you can describe what you’re trying to do and ask which argument would work for a specific use case. Remember the main idea from module 3 though, where it is important to read and understand any AI produced code before you use it, so your learning continues to progress.</p>
 </div>
 </div>
 <p><strong>Load the data.</strong> First, the dataset is loaded into a tibble called <em>enrollment</em>. Note that my dataset is stored in a folder called <em>data</em>, so my path starts with <code>data/</code>. If your data are in the same folder as your script, just use the filename <code>("7160_module1_student_enrollment.csv")</code>.</p>
@@ -655,8 +664,8 @@ Table&nbsp;2: Readr data type conversion functions.
 <span><span class="co">#&gt; $ Credits_Enrolled &lt;dbl&gt; 15, 12, 9, 16, 12, 12, 6, 15, 12, 18, 3, 9, 12, 14, 1…</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section><section id="conclusion" class="level2"><h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In this chapter we learned some basics about R and how to get a simple dataset into our environment to work with it. In the following chapters we will build on these skills to wrangle and analyze data.</p>
-</section><section id="chapter-4-exercises" class="level2"><h2 class="anchored" data-anchor-id="chapter-4-exercises">Chapter 4 Exercises</h2>
+<p>In this module we learned some basics about R and how to get a simple dataset into our environment to work with it. In the following modules we will build on these skills to wrangle and analyze data.</p>
+</section><section id="module-4-exercises" class="level2"><h2 class="anchored" data-anchor-id="module-4-exercises">Module 4 Exercises</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -699,7 +708,7 @@ Table&nbsp;2: Readr data type conversion functions.
 <ol type="a">
 <li>In Excel, create and save a dataset as a csv file with a header. It should have four columns and ten rows. There should be at least one text column and one numeric column. Also create a new R script and save that to the same folder.</li>
 <li>Load your dataset with readr and assign it to a named object.</li>
-<li>Examine it with the functions we used in the chapter for inspecting data and describe the output.</li>
+<li>Examine it with the functions we used in the module for inspecting data and describe the output.</li>
 </ol>
 </li>
 <li>
@@ -715,7 +724,7 @@ Table&nbsp;2: Readr data type conversion functions.
 </div>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1115,8 +1124,8 @@ Table&nbsp;2: Readr data type conversion functions.
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./03.html" class="pagination-link" aria-label="R Orientation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">R Orientation</span>
+      <a href="./03.html" class="pagination-link" aria-label="3 R Orientation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3 R Orientation</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

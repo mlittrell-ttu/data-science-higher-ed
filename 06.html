@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>quarto-input66a439e65fab72f4 – Data Science for Higher Ed</title>
+<title>quarto-input7bd8a93740980578 – Data Science for Higher Ed</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-96d816b5cdfca3a6b17098982031e8c0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-b1095ebcda9306b4f27b8a46b621a439.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -174,19 +174,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Details</span></a>
+ <span class="menu-text">2 Data Details</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Orientation</span></a>
+ <span class="menu-text">3 R Orientation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Basics</span></a>
+ <span class="menu-text">4 R Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -316,11 +316,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
 <li><a href="#basic-ggplot-syntax" id="toc-basic-ggplot-syntax" class="nav-link" data-scroll-target="#basic-ggplot-syntax">Basic ggplot syntax</a></li>
   <li><a href="#basic-visualizations-with-ggplot2-examples" id="toc-basic-visualizations-with-ggplot2-examples" class="nav-link" data-scroll-target="#basic-visualizations-with-ggplot2-examples">Basic visualizations with ggplot2 examples</a></li>
-  <li><a href="#column-chart" id="toc-column-chart" class="nav-link" data-scroll-target="#column-chart">Column chart</a></li>
   <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart">Line chart</a></li>
   </ul>
 </li>
   <li><a href="#guided-lab-exploratory-data-analysis" id="toc-guided-lab-exploratory-data-analysis" class="nav-link" data-scroll-target="#guided-lab-exploratory-data-analysis">Guided Lab: Exploratory data analysis</a></li>
+  <li><a href="#module-6-exercises-verify-and-edit-all-here" id="toc-module-6-exercises-verify-and-edit-all-here" class="nav-link" data-scroll-target="#module-6-exercises-verify-and-edit-all-here">Module 6 Exercises [VERIFY AND EDIT ALL HERE]</a></li>
   </ul>
 </li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/edit/main/06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mlittrell-ttu/data-science-higher-ed/blob/main/06.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -444,7 +444,7 @@ Table&nbsp;1: Common plot types and their geoms.
 </figure>
 </div>
 </section><section id="basic-visualizations-with-ggplot2-examples" class="level3"><h3 class="anchored" data-anchor-id="basic-visualizations-with-ggplot2-examples">Basic visualizations with ggplot2 examples</h3>
-<p>First we create import IPEDS data to use for the visuals.</p>
+<p>First we import IPEDS data to use for the visuals. For these examples, we use the <code>adm2020</code> dataset from the IPEDS package, which has admissions information for U.S. colleges and universities, including application and admission counts, test-score requirements, and SAT/ACT score ranges. It has one row per institution.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">IPEDS</span><span class="op">)</span></span>
@@ -553,27 +553,10 @@ Table&nbsp;1: Common plot types and their geoms.
 </div>
 </div>
 <p>Each point is an institution, placed by its applications (x) and admissions (y). The compact upward grouping shows a strong relationship, where institutions with more applications also admit more students. <code>alpha = 0.4</code> makes points semi-transparent so crowded areas stay readable.</p>
-</section></section><section id="column-chart" class="level3"><h3 class="anchored" data-anchor-id="column-chart">Column chart</h3>
-<p>A <strong>column chart</strong> draws bars at heights you supply, rather than counting rows. Here we use some additional dplyr verbs (group_by and summarize) to total applications received by admission-test policy, removing any rows with missing values. This is different from the bar chart where we are calculating the stat</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">adm_tscores</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>total_apps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">APPLCN</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>   <span class="co"># compute the height ourselves</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">adm_tscores</span>, y <span class="op">=</span> <span class="va">total_apps</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>                                           <span class="co"># bars use the summed value as height</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip</a></span><span class="op">(</span><span class="op">)</span>                                           <span class="co"># flip sideways so labels fit</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="06_files/figure-html/viz-column-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Unlike the bar chart, which counted institutions, here each bar’s height is the <em>sum</em> of applications in that group, which we calculated first with <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>. That is the core difference between <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar()</a></code> and <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code>.</p>
-</section><section id="line-chart" class="level3"><h3 class="anchored" data-anchor-id="line-chart">Line chart</h3>
+</section></section><section id="line-chart" class="level3"><h3 class="anchored" data-anchor-id="line-chart">Line chart</h3>
 <p>A <strong>line chart</strong> connects points across an ordered x-axis. Test-score policies have a natural order from strict to most lenient. <em>Required</em>, then <em>Recommended</em>, then <em>Neither</em>. We can trace the average number of applications across these ordered levels.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">adm_tscores</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Required"</span>, <span class="st">"Recommended"</span>,</span>
 <span>                            <span class="st">"Neither_required_nor_recommended"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">adm_tscores</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -591,7 +574,7 @@ Table&nbsp;1: Common plot types and their geoms.
 </div>
 <p>Each point is one policy level, ordered from strictest to most lenient, and the line connects them to show how average applications change across the levels. A line makes sense here because the categories have a real order.</p>
 </section></section><section id="guided-lab-exploratory-data-analysis" class="level2"><h2 class="anchored" data-anchor-id="guided-lab-exploratory-data-analysis">Guided Lab: Exploratory data analysis</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#________________________________________________________</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#________________________________________________________</span></span>
 <span><span class="co"># Title:    Exploratory Data Analysis</span></span>
 <span><span class="co"># Purpose:  Clean, reshape, and explore a small student dataset</span></span>
 <span><span class="co">#________________________________________________________</span></span>
@@ -601,12 +584,12 @@ Table&nbsp;1: Common plot types and their geoms.
 <span><span class="co"># **Setup**</span></span>
 <span><span class="co"># We use the tidyverse (which includes dplyr, tidyr, and ggplot2) throughout.</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/skimr/">skimr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/skimr/">skimr</a></span><span class="op">)</span> <span class="co">#Also install skimr if you have not.</span></span>
 <span></span>
 <span></span>
 <span><span class="co">#________________________________________________________</span></span>
 <span><span class="co"># **Load the student data**</span></span>
-<span><span class="co"># We read the dataset straight from the resource's GitHub repository -- no</span></span>
+<span><span class="co"># We read the dataset straight from the website's GitHub repository -- no</span></span>
 <span><span class="co"># download needed. read_csv() accepts a web address just as it accepts a file</span></span>
 <span><span class="co"># path. It is a small, made-up dataset of 50 students with a few deliberate</span></span>
 <span><span class="co"># problems and patterns to discover.</span></span>
@@ -625,16 +608,25 @@ Table&nbsp;1: Common plot types and their geoms.
 <span></span>
 <span></span>
 <span></span>
-<span><span class="co"># Two things look wrong. gpa has a maximum of 5.20, but GPA we know for our </span></span>
-<span><span class="co"># context, it should max out at 4.0.</span></span>
+<span><span class="co"># Two things look potentially off. gpa has a maximum of 5.20, but GPA we know from our </span></span>
+<span><span class="co"># hypothetical contextual knowledge, it should max out at 4.0.</span></span>
 <span></span>
-<span><span class="co"># And hours_studied has a negative minimum, which is from our contextual knowledge</span></span>
+<span><span class="co"># And hours_studied has a negative minimum, which from our contextual knowledge,</span></span>
 <span><span class="co"># we know that negative hours would not be recorded.</span></span>
 <span><span class="co"># Possibly these are data-entry errors to fix.</span></span>
 <span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **A closer look with skimr**</span></span>
+<span><span class="co"># The skimr package offers skim(), which gives a fuller summary than summary().</span></span>
+<span><span class="co"># For each variable it reports missing counts, means, standard deviations, and</span></span>
+<span><span class="co"># even small inline histograms. It is a helpful way to see the state of the data</span></span>
+<span><span class="co"># after our fixes, including how many missing values we now have.</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="va">students</span><span class="op">)</span></span>
+<span></span>
+<span></span>
 <span></span>
 <span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># **See the problems, don't just read them**</span></span>
+<span><span class="co"># **See the issues visually*</span></span>
 <span><span class="co"># The summary tells us something is off, but a picture makes it obvious. A box</span></span>
 <span><span class="co"># plot draws the middle half of the data as a box and flags unusual points as</span></span>
 <span><span class="co"># dots far from it. We plot hours_studied to see the impossible negative value.</span></span>
@@ -650,32 +642,505 @@ Table&nbsp;1: Common plot types and their geoms.
 <span></span>
 <span></span>
 <span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># **Find the bad values**</span></span>
-<span><span class="co"># Before fixing anything, we look at the offending rows so we know what we're</span></span>
-<span><span class="co"># dealing with. filter() keeps rows meeting a condition -- here, the impossible</span></span>
-<span><span class="co"># ones.</span></span>
+<span><span class="co"># **Find the values with issues**</span></span>
+<span><span class="co"># Before fixing anything, we look at the potentially problematic rows so we know what we're</span></span>
+<span><span class="co"># dealing with. filter() keeps rows meeting a condition. Here, the ones outside the range</span></span>
+<span><span class="co"># of what we know could be entered.</span></span>
 <span><span class="va">students</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">gpa</span> <span class="op">&gt;</span> <span class="fl">4.0</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">students</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">hours_studied</span> <span class="op">&lt;</span> <span class="fl">0</span><span class="op">)</span></span>
 <span></span>
 <span></span>
 <span><span class="co">#________________________________________________________</span></span>
-<span><span class="co"># **Fix the bad values**</span></span>
-<span><span class="co"># How you fix a bad value is a judgment call. Sometimes you can correct it if</span></span>
-<span><span class="co"># you know the true value; often you don't, so you mark it missing (NA) and</span></span>
-<span><span class="co"># handle it like any other missing value later.</span></span>
+<span><span class="co"># **Fix the values**</span></span>
+<span><span class="co"># How you fix a value is largely context dependent. </span></span>
+<span><span class="co"># Perhaps you know the true value and correct it, but you may not. </span></span>
+<span><span class="co"># One approach may be to mark it as missing (NA) and fix it along with any other</span></span>
+<span><span class="co"># missing values. </span></span>
 <span><span class="co">#</span></span>
-<span><span class="co"># Here we treat both impossible values as unknown and set them to NA. We use</span></span>
-<span><span class="co"># mutate() to change the columns, and ifelse() to target only the bad values:</span></span>
-<span><span class="co"># where the condition is TRUE, insert NA; otherwise keep the original value.</span></span>
+<span><span class="co"># Here we treat both values outside the range as unknown and set them to NA. We use</span></span>
+<span><span class="co"># mutate() to change the columns, and ifelse() to target only the values with issues.</span></span>
+<span><span class="co"># Ifelse works on a condition. If it is True do the firs thing (set it to NA),</span></span>
+<span><span class="co"># Else, do the second thing keep the original value found in gpa.</span></span>
+<span></span>
 <span><span class="va">students</span> <span class="op">&lt;-</span> <span class="va">students</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    gpa <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">gpa</span> <span class="op">&gt;</span> <span class="fl">4.0</span>, <span class="cn">NA</span>, <span class="va">gpa</span><span class="op">)</span>,</span>
 <span>    hours_studied <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">hours_studied</span> <span class="op">&lt;</span> <span class="fl">0</span>, <span class="cn">NA</span>, <span class="va">hours_studied</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Confirm the fix: the impossible values are gone from the summary.</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">students</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="co"># Confirm the missing values</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">students</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Handling missing values**</span></span>
+<span><span class="co"># Our two fixes converted values outside our expected range into NA, so those</span></span>
+<span><span class="co"># join any missing values that were already present. Handling missing data</span></span>
+<span><span class="co"># is a judgment that depends on the context and goals of the work. There is</span></span>
+<span><span class="co"># no single correct choice, and different approaches carry different trade-offs.</span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># One common approach is imputation, which means filling in a missing value with</span></span>
+<span><span class="co"># an estimate. Here we look at two simple options and what each one does to the</span></span>
+<span><span class="co"># data.</span></span>
+<span></span>
+<span><span class="co"># First, we see which gpa values are missing.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Mean imputation**</span></span>
+<span><span class="co"># Mean imputation replaces each missing value with the mean of the values that</span></span>
+<span><span class="co"># are present. It is simple and keeps every row, but it also pulls values toward</span></span>
+<span><span class="co"># the center. This can make the data look less variable than it really is.</span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># We compute the mean of the present gpa values with na.rm = TRUE so the missing</span></span>
+<span><span class="co"># values are ignored in the calculation, then use it to fill the gaps.</span></span>
+<span><span class="va">gpa_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">students</span><span class="op">$</span><span class="va">gpa</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">students_mean_imp</span> <span class="op">&lt;-</span> <span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>gpa <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span>, <span class="va">gpa_mean</span>, <span class="va">gpa</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># The missing gpa values are now filled with the mean.</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="va">students_mean_imp</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Median imputation**</span></span>
+<span><span class="co"># Median imputation fills the gaps with the median instead of the mean. Because</span></span>
+<span><span class="co"># the median is less affected by extreme values, this can be a better fit when</span></span>
+<span><span class="co"># the data are skewed. Like mean imputation, it keeps every row, and it also</span></span>
+<span><span class="co"># reduces the natural variation in the data.</span></span>
+<span><span class="va">gpa_median</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">students</span><span class="op">$</span><span class="va">gpa</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">students_median_imp</span> <span class="op">&lt;-</span> <span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>gpa <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span>, <span class="va">gpa_median</span>, <span class="va">gpa</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="va">students_median_imp</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Which one?**</span></span>
+<span><span class="co"># Neither imputation is automatically right. Each one changes the data to serve</span></span>
+<span><span class="co"># a purpose, and the better choice depends on the context, the variable, and</span></span>
+<span><span class="co"># what you plan to do next. Whatever you choose, it is worth noting that the</span></span>
+<span><span class="co"># values were imputed, since the filled-in numbers are estimates rather than</span></span>
+<span><span class="co"># observations. You can see them in your environment and compare the value that</span></span>
+<span><span class="co"># was used, as info on which might be helpful.</span></span>
+<span><span class="va">gpa_mean</span></span>
+<span><span class="va">gpa_median</span></span>
+<span></span>
+<span><span class="co">#For this demonstration we will go ahead and assign the mean value to our main</span></span>
+<span><span class="co"># dataset:</span></span>
+<span></span>
+<span><span class="va">students</span> <span class="op">&lt;-</span> <span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>gpa <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span>, <span class="va">gpa_mean</span>, <span class="va">gpa</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># The missing gpa values are now filled with the mean.</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="va">students</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Reshaping to solve summary and join problems**</span></span>
+<span><span class="co"># Reshaping is something we when the shape of some data gets in the way of the work. </span></span>
+<span><span class="co"># A common case is when data arrives in a</span></span>
+<span><span class="co"># shape that will not summarize or join cleanly onto what we already have.</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co">#pivot_longer()</span></span>
+<span><span class="co"># **Case 1: wide data we need to make long for summary**</span></span>
+<span><span class="co"># Suppose we receive attendance counts for three campus events, with each event</span></span>
+<span><span class="co"># as its own column. The event is really a variable, but here it is stuck in the</span></span>
+<span><span class="co"># column names. We only have data for a few students for this example.</span></span>
+<span><span class="va">events_wide</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  student_id  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span>,</span>
+<span>  orientation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>  career_fair <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span>,</span>
+<span>  study_night <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">events_wide</span></span>
+<span></span>
+<span><span class="co"># The problem: to summarize attendance by event, or to store one attendance</span></span>
+<span><span class="co"># record per student-event, we need the event names in the data, not in the</span></span>
+<span><span class="co"># column headers. pivot_longer() moves them into the data.</span></span>
+<span></span>
+<span><span class="co"># What pivot_longer() does:</span></span>
+<span><span class="co">#   - Takes a wide dataset (many columns) and makes it long (more rows)</span></span>
+<span><span class="co">#   - Column names become values in a new column</span></span>
+<span><span class="co">#   - Cell values go into another new column</span></span>
+<span><span class="co">#   - Columns you dont pivot get repeated for each new row</span></span>
+<span></span>
+<span><span class="co"># Use cases?</span></span>
+<span><span class="co">#   - When a variable is stored in the column names instead of the data</span></span>
+<span><span class="co">#   - Common with data recorded one column per time period, term, or category</span></span>
+<span><span class="co">#   - When you want to group, summarize, or plot across those columns</span></span>
+<span></span>
+<span><span class="va">events_long</span> <span class="op">&lt;-</span> <span class="va">events_wide</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span></span>
+<span>    cols <span class="op">=</span> <span class="va">orientation</span><span class="op">:</span><span class="va">study_night</span>,   <span class="co"># the event columns to gather</span></span>
+<span>    names_to <span class="op">=</span> <span class="st">"event"</span>,               <span class="co"># event names go into a new "event" column</span></span>
+<span>    values_to <span class="op">=</span> <span class="st">"attended"</span>            <span class="co"># the 0/1 values go into an "attended" column</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="va">events_long</span></span>
+<span></span>
+<span><span class="co"># Now the data is in a tidy one-row-per-student-per-event shape. We can summarize</span></span>
+<span><span class="co"># attendance by event, which may not have suited our needs in the wide layout.</span></span>
+<span><span class="va">events_long</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">event</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>times_attended <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">attended</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co">#pivot_wider</span></span>
+<span><span class="co"># **Case 2: long data we need to make wide, then join**</span></span>
+<span><span class="co"># Now suppose we receive survey responses in a long shape, with one row per</span></span>
+<span><span class="co"># student per question. To join a student's answers onto our one-row-per-student</span></span>
+<span><span class="co"># data, we need each question to be its own column. Again, we only have a few</span></span>
+<span><span class="co"># students here.</span></span>
+<span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># What pivot_wider() does:</span></span>
+<span><span class="co">#   - Takes a long dataset (many rows) and makes it wide (more columns)</span></span>
+<span><span class="co">#   - Values from one column become new column names</span></span>
+<span><span class="co">#   - Values from another column fill those new columns</span></span>
+<span><span class="co">#   - Opposite of pivot_longer()</span></span>
+<span></span>
+<span><span class="co"># Use cases?</span></span>
+<span><span class="co">#   - When one observation is scattered across multiple rows</span></span>
+<span><span class="co">#   - Common with survey data, evaluation forms, repeated measures</span></span>
+<span><span class="co">#   - When you want to compare values side-by-side</span></span>
+<span></span>
+<span><span class="va">survey_long</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  student_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  question   <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"belonging"</span>, <span class="st">"advising"</span>, <span class="st">"belonging"</span>, <span class="st">"advising"</span>,</span>
+<span>                 <span class="st">"belonging"</span>, <span class="st">"advising"</span><span class="op">)</span>,</span>
+<span>  rating     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">survey_long</span></span>
+<span></span>
+<span><span class="co"># The problem is this shape has multiple rows per student, so it will not join</span></span>
+<span><span class="co"># cleanly onto our one-row-per-student data. pivot_wider() spreads the questions</span></span>
+<span><span class="co"># into their own columns, giving one row per student.</span></span>
+<span><span class="va">survey_wide</span> <span class="op">&lt;-</span> <span class="va">survey_long</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span></span>
+<span>    names_from <span class="op">=</span> <span class="va">question</span>,   <span class="co"># the question names become column names</span></span>
+<span>    values_from <span class="op">=</span> <span class="va">rating</span>     <span class="co"># the ratings fill those new columns</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="va">survey_wide</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Join the reshaped data onto students**</span></span>
+<span><span class="co"># Both reshaped tables now have one row per student, keyed by student_id, so</span></span>
+<span><span class="co"># they will join cleanly. We attach the survey answers here. A left_join keeps</span></span>
+<span><span class="co"># all of our students and adds the new columns, leaving NA where a student has</span></span>
+<span><span class="co"># no matching survey response.</span></span>
+<span><span class="va">students</span> <span class="op">&lt;-</span> <span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">survey_wide</span>, by <span class="op">=</span> <span class="st">"student_id"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">students</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Exploring with dplyr**</span></span>
+<span><span class="co"># The same verbs we used to clean the data can also help us explore it. Cleaning</span></span>
+<span><span class="co"># and exploring are not separate toolkits. We use filter, arrange, and summarize</span></span>
+<span><span class="co"># to ask questions of the data and start building a sense of what is there.</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Sorting to see the extremes**</span></span>
+<span><span class="co"># arrange() orders rows by a column. Sorting by gpa lets us see the students at</span></span>
+<span><span class="co"># the low and high ends, which is often where interesting cases sit. desc()</span></span>
+<span><span class="co"># sorts from high to low.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span>n <span class="op">=</span> <span class="cn">Inf</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Sorting the other direction shows the lowest values.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span>n <span class="op">=</span> <span class="cn">Inf</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Filtering to a group of interest**</span></span>
+<span><span class="co"># filter() keeps rows meeting a condition, which lets us focus on a subset for</span></span>
+<span><span class="co"># a closer look. Here we look at students carrying a light credit load, who an</span></span>
+<span><span class="co"># advisor might want to check in with.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">credits</span> <span class="op">&lt;=</span> <span class="fl">6</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Filtering and sorting together**</span></span>
+<span><span class="co"># The verbs combine in a pipe, so we can filter to a subset and then order it in</span></span>
+<span><span class="co"># one flow. Here we keep the students carrying a light credit load, then sort</span></span>
+<span><span class="co"># them by gpa so an advisor could scan from lowest to highest while deciding who</span></span>
+<span><span class="co"># to check in with first.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">credits</span> <span class="op">&lt;=</span> <span class="fl">6</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Summarizing the whole dataset**</span></span>
+<span><span class="co"># summarize() collapses many rows into summary values. Here we compute a few</span></span>
+<span><span class="co"># measures of center and spread for gpa across all students. Because we already</span></span>
+<span><span class="co"># handled the missing values, we do not need na.rm here.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    mean_gpa   <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span>,</span>
+<span>    median_gpa <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span>,</span>
+<span>    sd_gpa     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Summarizing by group**</span></span>
+<span><span class="co"># The real utility of summarize() shows when paired with group_by(). This</span></span>
+<span><span class="co"># splits the data into groups and computes the summary within each one. Here we</span></span>
+<span><span class="co"># look at how credit load differs by major, which is a question the numbers can</span></span>
+<span><span class="co"># begin to answer.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">major</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    n_students  <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mean_credits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">credits</span><span class="op">)</span>,</span>
+<span>    median_credits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">credits</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Focusing the view with select()**</span></span>
+<span><span class="co"># When a table has many columns, select() narrows to the ones we care about for</span></span>
+<span><span class="co"># a given question. Here we look at just the identifying and academic columns,</span></span>
+<span><span class="co"># which makes a wide table easier to read.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">student_id</span>, <span class="va">major</span>, <span class="va">gpa</span>, <span class="va">credits</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Building a new column with mutate()**</span></span>
+<span><span class="co"># mutate() adds a column computed from existing ones. Here we create a simple</span></span>
+<span><span class="co"># flag for full-time status, treating 12 or more credits as full-time. This</span></span>
+<span><span class="co"># turns a raw number into a label we can group and filter on.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>status <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">credits</span> <span class="op">&gt;=</span> <span class="fl">12</span>, <span class="st">"full-time"</span>, <span class="st">"part-time"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">student_id</span>, <span class="va">major</span>, <span class="va">credits</span>, <span class="va">status</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Pulling the top rows with slice_max()**</span></span>
+<span><span class="co"># slice_max() returns the rows with the highest values of a column. It answers</span></span>
+<span><span class="co"># "which are the top few?" without needing to sort the whole table by hand. Here</span></span>
+<span><span class="co"># we pull the five students with the highest gpa.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_max</a></span><span class="op">(</span><span class="va">gpa</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Counting categories with count()**</span></span>
+<span><span class="co"># count() is a shortcut for grouping by a column and tallying how many rows fall</span></span>
+<span><span class="co"># in each group. Here we count how many students are in each major.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">major</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Combining verbs to answer a question**</span></span>
+<span><span class="co"># The verbs are useful together. Here we ask a fuller question in one flow:</span></span>
+<span><span class="co"># among part-time students, how does gpa compare across majors? We build the</span></span>
+<span><span class="co"># status flag, keep the part-time students, group by major, and summarize.</span></span>
+<span><span class="va">students</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>status <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">credits</span> <span class="op">&gt;=</span> <span class="fl">12</span>, <span class="st">"full-time"</span>, <span class="st">"part-time"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">status</span> <span class="op">==</span> <span class="st">"part-time"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">major</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    n_students <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mean_gpa   <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">gpa</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Seeing the data with ggplot2**</span></span>
+<span><span class="co"># Numbers describe the data, and pictures let us inspect it visually. </span></span>
+<span><span class="co"># We build plots with</span></span>
+<span><span class="co"># ggplot2, layering a few pieces: the data, an aesthetic mapping that connects </span></span>
+<span><span class="co"># columns to parts of the plot, and a geom that draws the shape. </span></span>
+<span><span class="co"># The front matter covers the pieces in more detail. Here we put a few to work </span></span>
+<span><span class="co"># on our students data.</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **A histogram to see a distribution's shape**</span></span>
+<span><span class="co"># A histogram groups a numeric variable into bins and counts each one, which</span></span>
+<span><span class="co"># shows the shape of the distribution. Here we look at hours_studied to see how</span></span>
+<span><span class="co"># study time is spread across students. Notice the warning in the console about</span></span>
+<span><span class="co"># the missing value we created earlier.</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">students</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">hours_studied</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>bins <span class="op">=</span> <span class="fl">8</span><span class="op">)</span> <span class="co"># change this number to see different bin sizes</span></span>
+<span></span>
+<span><span class="co"># The shape leans to the right. Most students cluster at lower study hours, with</span></span>
+<span><span class="co"># a few reaching much higher.</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **A box plot to compare groups**</span></span>
+<span><span class="co"># A box plot summarizes a numeric variable and is good for comparing</span></span>
+<span><span class="co"># groups side by side. Here we compare gpa across majors. Each box shows the</span></span>
+<span><span class="co"># middle half of that major's values, the line marks the median, and dots mark</span></span>
+<span><span class="co"># points that sit far from the rest.</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">students</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">major</span>, y <span class="op">=</span> <span class="va">gpa</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Comparing the boxes gives a quick read on how gpa differs across majors, both</span></span>
+<span><span class="co"># in typical value and in spread.</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **From a picture to the numbers with real data**</span></span>
+<span><span class="co"># Exploratory work moves back and forth between pictures and numbers. A picture</span></span>
+<span><span class="co"># can surface something unexpected, and the numbers let us investigate it. To</span></span>
+<span><span class="co"># see this, we return to the admissions data from the IPEDS package that we used</span></span>
+<span><span class="co"># for the earlier plot examples.</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">IPEDS</span><span class="op">)</span></span>
+<span><span class="va">admissions</span> <span class="op">&lt;-</span> <span class="va">adm2020</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **The picture**</span></span>
+<span><span class="co"># We plot applications received against students admitted. Each point is one</span></span>
+<span><span class="co"># institution.</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">admissions</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">APPLCN</span>, y <span class="op">=</span> <span class="va">ADMSSN</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Most points fall along a rising band where institutions that receive more</span></span>
+<span><span class="co"># applications tend to admit more students. But a few points sit apart from that</span></span>
+<span><span class="co"># band and are worth a closer look.</span></span>
+<span><span class="co">#</span></span>
+<span><span class="co"># In the far upper right, one institution sits high above the rest, with a very</span></span>
+<span><span class="co"># large number of both applications and admissions. In the lower right, a few</span></span>
+<span><span class="co"># institutions received many applications but admitted comparatively few.</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Add institution names**</span></span>
+<span><span class="co"># The admissions data identifies schools by an ID number, not a name, which</span></span>
+<span><span class="co"># makes any result hard to read. The names live in a different IPEDS table,</span></span>
+<span><span class="co"># dir_info2020. We join the name onto the admissions data by the shared</span></span>
+<span><span class="co"># INSTITUTION_ID, so our later results are readable.</span></span>
+<span><span class="va">names_lookup</span> <span class="op">&lt;-</span> <span class="va">dir_info2020</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">INSTITUTION_ID</span>, <span class="va">INSTITUTION</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">admissions</span> <span class="op">&lt;-</span> <span class="va">admissions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">names_lookup</span>, by <span class="op">=</span> <span class="st">"INSTITUTION_ID"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Identify the point highest on the y-axis**</span></span>
+<span><span class="co"># One point sits far up the vertical axis, admitting a very large number of</span></span>
+<span><span class="co"># students. That is the institution with the most admissions, so slice_max() on</span></span>
+<span><span class="co"># ADMSSN returns it.</span></span>
+<span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_max</a></span><span class="op">(</span><span class="va">ADMSSN</span>, n <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">INSTITUTION</span>, <span class="va">APPLCN</span>, <span class="va">ADMSSN</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Identify the point farthest right on the x-axis**</span></span>
+<span><span class="co"># A different point sits far to the right, receiving the most applications, yet</span></span>
+<span><span class="co"># it does not sit as high, because it admits a smaller share. That is the</span></span>
+<span><span class="co"># institution with the most applications, found with slice_max() on APPLCN.</span></span>
+<span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_max</a></span><span class="op">(</span><span class="va">APPLCN</span>, n <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">INSTITUTION</span>, <span class="va">APPLCN</span>, <span class="va">ADMSSN</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Looking at the whole far-right group**</span></span>
+<span><span class="co"># Rather than a single point, a cluster of institutions sits to the far right of</span></span>
+<span><span class="co"># the plot, each receiving a very large number of applications. We can pull the</span></span>
+<span><span class="co"># whole group at once by filtering to institutions above a high application</span></span>
+<span><span class="co"># count, then sorting them from most applications to least. This lets us see who</span></span>
+<span><span class="co"># these large schools are and compare them side by side.</span></span>
+<span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">APPLCN</span> <span class="op">&gt;</span> <span class="fl">70000</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">INSTITUTION</span>, <span class="va">APPLCN</span>, <span class="va">ADMSSN</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">APPLCN</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Notice these large schools do not all behave the same way. Some admit a large</span></span>
+<span><span class="co"># share of their many applicants while others admit far fewer, so size alone</span></span>
+<span><span class="co"># does not tell us about selectivity. The plot grouped them together by</span></span>
+<span><span class="co"># application count, and the numbers reveal the variety within that group.</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="co">#________________________________________________________</span></span>
+<span><span class="co"># **Investigating the selective points**</span></span>
+<span><span class="co"># Some points received many applications but admitted comparatively few, a sign</span></span>
+<span><span class="co"># of high selectivity. These are not just the points farthest right as a school</span></span>
+<span><span class="co"># can sit mid-range on applications and still admit a small share. To find them,</span></span>
+<span><span class="co"># we build a simple admit rate with mutate(), keep institutions with many applications, and</span></span>
+<span><span class="co"># sort by the lowest rates.</span></span>
+<span><span class="va">admissions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>admit_rate <span class="op">=</span> <span class="va">ADMSSN</span> <span class="op">/</span> <span class="va">APPLCN</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">APPLCN</span> <span class="op">&gt;</span> <span class="fl">20000</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">admit_rate</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">INSTITUTION</span>, <span class="va">APPLCN</span>, <span class="va">ADMSSN</span>, <span class="va">admit_rate</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># The picture pointed us toward these institutions, and the numbers named and</span></span>
+<span><span class="co"># described them. Notice that "largest" and "most selective" are different</span></span>
+<span><span class="co"># questions with different answers. The school with the most applications is not</span></span>
+<span><span class="co"># the same as the school that admits the smallest share. A single plot can hold</span></span>
+<span><span class="co"># several stories, and which one we see depends on the question we bring to it.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section><section id="module-6-exercises-verify-and-edit-all-here" class="level2"><h2 class="anchored" data-anchor-id="module-6-exercises-verify-and-edit-all-here">Module 6 Exercises [VERIFY AND EDIT ALL HERE]</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercises">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercises
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>
+<p><strong>Choose and inspect a dataset.</strong> From the IPEDS package, pick a dataset you have not used yet (see the options with <code>data(package = "IPEDS")</code>, for example <code>fall_enroll2020</code> or <code>fin_aid1920</code>). Load it and get to know it.</p>
+<ol type="a">
+<li>Assign it to an object in memory and look up what its variables mean with <code>?&lt;dataset_name&gt;</code>. In a sentence, describe its unit of analysis. What does one row represent?</li>
+<li>Use <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code>, <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code>, and <code><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim()</a></code> to inspect it. Note the dimensions, the variable types, and whether any columns have missing values.</li>
+<li>Identify one column whose values look worth a second glance, for reasons like missing data, a surprising range, or a type that seems off for what the column represents. Describe what you notice and why it stands out to you.</li>
+</ol>
+</li>
+<li>
+<p><strong>Explore with dplyr.</strong> Use the verbs from this module to ask a few questions of your dataset.</p>
+<ol type="a">
+<li>Use <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code> together to focus on a subset of rows and order it in a way that helps you read it. Explain in plain language what your result shows.</li>
+<li>Use <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code> to compute a summary within groups, such as an average or a count by category. What does the grouped result suggest?</li>
+<li>Use <code><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_max()</a></code> or <code><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_min()</a></code> to pull the top or bottom few rows on a variable of interest. Are the results what you expected?</li>
+</ol>
+</li>
+<li>
+<p><strong>Move between a picture and the numbers.</strong> Build a plot, notice something in it, and investigate what you see with the numbers.</p>
+<ol type="a">
+<li>Make a plot of your data with <code>ggplot2</code>, choosing a geom that fits your question (a histogram for one variable’s shape, a boxplot to compare groups, a scatter plot to relate two variables).</li>
+<li>Point out something in the plot worth a closer look, such as an outlier, a cluster, a skew, or a gap.</li>
+<li>Write dplyr code to investigate what you noticed and report what you found. Did the numbers explain the pattern in the picture, or raise a new question?</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
 
 
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
