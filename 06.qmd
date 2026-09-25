@@ -1,4 +1,7 @@
-# Exploratory Data Analysis
+---
+title: "6 Exploring Data"
+---
+
 
 ## Details
 This module is about **exploratory data analysis (EDA)**, which is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spot surprises and decide what is worth investigating further. Once data are tidy, the same dplyr tools we used to clean data in the last module can also help us understand it. We will also pick up a couple of helpful preprocessing steps along the way.
@@ -179,7 +182,7 @@ Each point is one policy level, ordered from strictest to most lenient, and the 
 
     a. Assign it to an object in memory and look up what its variables mean with `?<dataset_name>`. In a sentence, describe its unit of analysis. What does one row represent?
     b. Use `glimpse()`, `summary()`, and `skim()` to inspect it. Note the dimensions, the variable types, and whether any columns have missing values.
-    c. Identify one column whose values look worth a second glance, for reasons like missing data, a surprising range, or a type that seems off for what the column represents. Describe what you notice and why it stands out to you.
+    c. Identify one column whose values look worth a second glance, for reasons like missing data, a surprising range, a type that seems off for what the column represents, or others. Describe what you notice and why it stands out to you.
 
 2. **Explore with dplyr.** Use the verbs from this module to ask a few questions of your dataset.
 
@@ -193,4 +196,8 @@ Each point is one policy level, ordered from strictest to most lenient, and the 
     b. Point out something in the plot worth a closer look, such as an outlier, a cluster, a skew, or a gap.
     c. Write dplyr code to investigate what you noticed and report what you found. Did the numbers explain the pattern in the picture, or raise a new question?
 
+4. **Comment your process.** Any scripts we use when working with data professionally should be auditable and easy to understand.
+
+    a. Thoroughly comment your script so that it could be picked up and understood at a later date or by someone who is not familiar with your work.
+    b. Also utilize your script comments as a tool for learning where you take notes throughout your process.
 :::

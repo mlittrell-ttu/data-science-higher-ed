@@ -1,5 +1,5 @@
 ---
-title: "1 Data Science Explained"
+title: "1 Considerations"
 ---
 
 ## What is higher education?

@@ -1,4 +1,7 @@
-# Preprocessing
+---
+title: "5 Preprocessing"
+---
+
 ## Setup
 ### Main Idea
 This module is situated in the data science project workflow at the **clean** phase. Data rarely arrives in a condition that is perfectly aligned for the work intended. It can have any number of issues including variable names that are opaque, missing data, or inconsistent categorical values such as "Bio" and "Biology" representing the same program of study in a single column. For this reason we need tools to help us wrangle the data so we can work with it. Specifically to working within the tidyverse, is the idea that all data should be 'tidy' (Wickham, 2021).That is, all rows should be one observation, all columns a variable, and each cell is a single value. **Dplyr** is a tidyverse package that provides a set of easy-to-read functions that we can use to clean data. These functions are called **verbs** and each one does something helpful with our data. The documentation for dply is found here <https://dplyr.tidyverse.org/index.html>.

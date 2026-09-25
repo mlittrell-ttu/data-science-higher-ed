@@ -10,9 +10,10 @@ pre.sourceCode {
 
 // Recolor note callouts to the site's primary color
 div.callout-note.callout {
-  border-left-color: #799BA6;
+  border-left-color: #799BA6 !important;
 }
-div.callout-note .callout-title {
-  background-color: #799BA6;   // solid band instead of the light tint
-  color: white;                // white text so it reads on the band
+div.callout-note.callout .callout-title,
+div.callout-note.callout .callout-header {
+  background-color: #799BA6 !important;
+  color: black !important;
 }
