@@ -7,7 +7,6 @@ title: "7 More Data Vis"
 #| include: false
 library(tidyverse)
 library(IPEDS)
-library(plotly)
 admissions <- adm2020
 ```
 
@@ -15,6 +14,9 @@ admissions <- adm2020
 
 ## What this module adds
 The last module used ggplot2 to make quick plots that helped us see the data. This module builds on that toward plots that ease our own interpretation or communicate clearly to someone else. We stay with the same ggplot2 package, but we add more of its functions to map several variables at once, layer geoms, add trend lines and reference lines, split a plot into small panels, control color and axes, and labeling everything so a reader can understand the plot without us standing next to them.
+
+## Resources
+What is presented in this module is a small slice of a very robust visualization package. A quick view of some of the types of visuals that can be created can be found at the R Graph Gallery <https://r-graph-gallery.com/>. Deeper exploration can be found in the book by Wickham <https://r4ds.hadley.nz/>. Definitive documentation of all of ggplot2's capabilities is located here <https://ggplot2.tidyverse.org/>.
 
 ## ggplot2 extended
 Every ggplot is built from layers and they can be added one at a time. In the last module we used the first few. Here is the fuller set, roughly in the order you may tend to add them. Importantly, every layer is not needed for every plot. A quick look might use only data, aesthetics, and a geom. A finished plot for a report can use more of them.
@@ -42,7 +44,6 @@ The plots below are built from real data so you can run them yourself as you rea
 # Load the packages (install first if needed)
 library(tidyverse)
 library(IPEDS)
-library(plotly)
 
 # Assign the admissions data to work with
 admissions <- adm2020
@@ -429,7 +430,7 @@ ggplot(small_schools, aes(x = APPLCN, y = ADMSSN,
            color = "#C7522A",
            fontface = "bold") +
   labs(
-    title = "Applications and admissions at the smallest institutions",
+    title = "The smallest schools typically do not require or recommend admissions tests",
     x = "Applications received",
     y = "Students admitted",
     color = "Test policy",
@@ -449,64 +450,83 @@ ggplot(small_schools, aes(x = APPLCN, y = ADMSSN,
 
 
 
-### A bit of interactivity with plotly
-Every plot so far has been a static fixed image. Sometimes it helps to let a reader explore a plot directly, hovering over points to read their exact values or zooming into a region. The plotly package can turn a ggplot into an interactive version with a single function, `ggplotly()`.
+### Small multiples with facets
+Our plot has been showing all four test-policy groups on one set of axes, differntiated by color and shape. When groups overlap heavily, another approach is to give each one its own small panel. This is called faceting, and it produces a set of small plots that are repeated once per group, side by side.
 
-We build the plot as usual, save it to an object, then pass that object to `ggplotly()`. Here we use a clean version of our colored scatter.
+`facet_wrap()` splits the plot by a variable. We give it the variable to split on, written with a `~` in front, and ggplot draws one panel per value.
 
 ```{r}
-p <- ggplot(small_schools, aes(x = APPLCN, y = ADMSSN, color = adm_tscores)) +
-  geom_point(alpha = 0.7, size = 3) +
+#| label: facet-basic
+#| warning: false
+ggplot(small_schools, aes(x = APPLCN, y = ADMSSN)) +
+  geom_point(alpha = 0.7, size = 2.5, color = "#799BA6") +
+  facet_wrap(~ adm_tscores) +
   labs(
-    title = "Applications and admissions at the smallest institutions",
+    title = "Applications and admissions, one panel per test policy",
     x = "Applications received",
-    y = "Students admitted",
-    color = "Test policy"
-  ) +
-  scale_color_manual(
-    values = c(
-      "Considered_but_not_required"      = "#C7522A",
-      "Neither_required_nor_recommended" = "#799BA6",
-      "Recommended"                      = "#6A8D73",
-      "Required"                         = "#4A4A4A"
-    )
+    y = "Students admitted"
   ) +
   theme_minimal()
-
-ggplotly(p)
 ```
 
 
-#### Exposing university names with plotly
-We can also specify exactly what information we want plotly to display on hover.
-Here we add the names of the universities to our small_schools dataset with a join.
-In the aesthetic map, we define `text` that is later called by plotly by `ggplotly(p, tooltip = "text")`, rendering the value as a tooltip on hover.
+Each policy now has its own panel, which makes it easy to compare the groups without them overlapping. Because we split by policy, we no longer need to map color to it. This plot uses a single color and lets the panels do the separating.
+
+Faceting and the reference line combine well. When we add the average line, `geom_hline()` draws it in *every* panel, so each group can be read against the same overall average.
 
 ```{r}
-# The admissions data has IDs, not names, so we join names on first
-# (the same dir_info2020 lookup from earlier).
-small_named <- small_schools |>
-  left_join(select(dir_info2020, INSTITUTION_ID, INSTITUTION),
-            by = "INSTITUTION_ID")
-
-p <- ggplot(small_named, aes(x = APPLCN, y = ADMSSN, color = adm_tscores,
-                             text = INSTITUTION)) +
-  geom_point(alpha = 0.7, size = 3) +
+#| label: facet-hline
+#| warning: false
+ggplot(small_schools, aes(x = APPLCN, y = ADMSSN)) +
+  geom_point(alpha = 0.7, size = 2.5, color = "#799BA6") +
+  geom_hline(yintercept = mean_admit, color = "#C7522A", linewidth = 1, alpha = 0.6) +
+  facet_wrap(~ adm_tscores) +
   labs(
-    title = "Applications and admissions at the smallest institutions",
+    title = "Admissions by test policy, against the overall average",
+    subtitle = "The orange line marks the average admissions across all these schools",
     x = "Applications received",
-    y = "Students admitted",
-    color = "Test policy"
-  ) +
-  scale_color_manual(
-    values = c(
-      "Considered_but_not_required"      = "#C7522A",
-      "Neither_required_nor_recommended" = "#799BA6",
-      "Recommended"                      = "#6A8D73",
-      "Required"                         = "#4A4A4A"
-    )
+    y = "Students admitted"
   ) +
   theme_minimal()
-
-ggplotly(p, tooltip = "text")
 ```
+
+
+### Faceting on two variables
+`facet_wrap()` splits by one variable. To split by *two* at once, `facet_grid()` lays out a grid: one variable's categories down the rows and another's across the columns. This lets us see how two groupings interact.
+
+Here we cross test policy with a second grouping we build ourselves about whether a school's full-time enrollment is majority female. We create that category first with `mutate()`, then grid the two variables. In `facet_grid()`, the `~` separates rows from columns. We shorten variable names so they render legibly on the plot. We use filter to remove any institutions with missing enrollment data so we don't have an `NA` column.
+
+```{r}
+#| label: facet-grid2
+#| warning: false
+small_schools |>
+  filter(!is.na(FT_enroll), !is.na(FT_enroll_W), FT_enroll > 0) |>
+  mutate(
+    majority_female = ifelse(FT_enroll_W / FT_enroll > 0.5, ">50% F", "<=50% F"),
+    policy = recode(adm_tscores,
+      "Required"                         = "Required",
+      "Recommended"                      = "Recommended",
+      "Considered_but_not_required"      = "Considered",
+      "Neither_required_nor_recommended" = "Neither")
+  ) |>
+  ggplot(aes(x = APPLCN, y = ADMSSN, color = policy)) +
+  geom_point(alpha = 0.7, size = 2) +
+  facet_grid(policy ~ majority_female) +
+  scale_color_manual(
+    values = c(
+      "Considered"  = "#C7522A",
+      "Neither"     = "#799BA6",
+      "Recommended" = "#6A8D73",
+      "Required"    = "#4A4A4A"
+    )
+  ) +
+  labs(
+    title = "Admissions by test policy and female enrollment",
+    x = "Applications received",
+    y = "Students admitted"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+Each cell is one combination corresponding with a test policy (row) and whether the school is majority female (column). Reading across a row shows how one policy's schools split by enrollment makeup, and reading down a column shows how the majority-female and majority-male schools differ across policies. Sparse cells may be informative too, telling us that combination is uncommon among these small institutions.
