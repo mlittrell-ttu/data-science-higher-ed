@@ -175,7 +175,7 @@ Each point is one policy level, ordered from strictest to most lenient, and the 
 ```
 
 
-## Module 6 Exercises [VERIFY AND EDIT ALL HERE]
+## Module 6 Exercises
 ::: {.callout-note icon=false title="Exercises"}
 
 1. **Choose and inspect a dataset.** From the IPEDS package, pick a dataset you have not used yet (see the options with `data(package = "IPEDS")`, for example `fall_enroll2020` or `fin_aid1920`). Load it and get to know it.

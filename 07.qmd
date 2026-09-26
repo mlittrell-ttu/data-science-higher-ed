@@ -7,7 +7,7 @@ title: "7 More Data Vis"
 #| include: false
 library(tidyverse)
 library(IPEDS)
-
+library(plotly)
 admissions <- adm2020
 ```
 
@@ -35,7 +35,18 @@ Every ggplot is built from layers and they can be added one at a time. In the la
 : The layers of a ggplot. {#tbl-gg-layers}
 
 
+## Follow along
+The plots below are built from real data so you can run them yourself as you read. To follow along, load the tidyverse and the IPEDS package, then assign the admissions data to an object. If you have not installed these packages yet, install them once with `install.packages()`.
 
+```r
+# Load the packages (install first if needed)
+library(tidyverse)
+library(IPEDS)
+library(plotly)
+
+# Assign the admissions data to work with
+admissions <- adm2020
+```
 
 ## Building with `+` and `|>`
 By now you have used two operators that both chain steps together, and it is worth being clear about when each one applies. Mixing them up is a common early error.
@@ -227,7 +238,7 @@ ggplot(admissions, aes(x = APPLCN, y = ADMSSN,
   coord_cartesian(xlim = c(0, 25), ylim = c(0, 25)) +
   labs(
     title = "Applications and admissions at the smallest institutions",
-    subtitle = "Among the smallest schools, admissions rise closely with applications",
+    subtitle = "The smallest schools typically do not require or recommend admissions tests",
     x = "Applications received",
     y = "Students admitted",
     color = "Test policy",
@@ -250,7 +261,7 @@ ggplot(admissions, aes(x = APPLCN, y = ADMSSN,
   coord_cartesian(xlim = c(0, 25), ylim = c(0, 25)) +
   labs(
     title = "Applications and admissions at the smallest institutions",
-    subtitle = "Among the smallest schools, admissions rise closely with applications",
+    subtitle = "The smallest schools typically do not require or recommend admissions tests",
     x = "Applications received",
     y = "Students admitted",
     color = "Test policy",
@@ -279,7 +290,7 @@ ggplot(admissions, aes(x = APPLCN, y = ADMSSN,
   coord_cartesian(xlim = c(0, 25), ylim = c(0, 25)) +
   labs(
     title = "Applications and admissions at the smallest institutions",
-    subtitle = "Among the smallest schools, admissions rise closely with applications",
+    subtitle = "The smallest schools typically do not require or recommend admissions tests",
     x = "Applications received",
     y = "Students admitted",
     color = "Test policy",
@@ -294,4 +305,208 @@ ggplot(admissions, aes(x = APPLCN, y = ADMSSN,
   )
 ```
 
-The larger points make the shapes easy to distinguish, and the text now sizes sensibly for a report. Notice the pattern inside `theme()`: each element of the plot has a name, such as `plot.title` or `axis.text`, and we adjust it with `element_text()`, which controls text properties like size and whether it is bold. This is how ggplot2 gives fine control over nearly every part of a plot's appearance.
+The larger points make the shapes easy to distinguish, and the text sizes are more legible for a report or presentation. Notice the syntax inside `theme()` where each element of the plot has a name, such as `plot.title` or `axis.text`, and we adjust it with `element_text()`, which controls text properties like size and boldness. This is how ggplot2 gives fine control over nearly every part of a plot's appearance.See ggplot2 documentation to see the dozens of customizations available: <https://ggplot2.tidyverse.org/reference/theme.html>.
+
+
+### Controlling the colors
+So far ggplot2 has chosen the colors for us. Often that is fine, but sometimes we want to control that. For example, to use a colorblind-safe palette, to match a brand, or to pick colors that read well together. Color is set through a scale, and the scale for a mapped color aesthetic is one of the `scale_color_*()` functions.
+
+
+#### A ready-made palette
+The simplest control is to swap in a prebuilt palette. The viridis palettes are a popular choice because they are designed to be readable by people with color vision differences and to print well in grayscale. For a categorical variable like our test policy, we use `scale_color_brewer()` with the Set1 pallete. You can see the palettes here <https://ggplot2.tidyverse.org/reference/scale_brewer.html#palettes>.
+
+```{r}
+#| label: scale-viridis
+#| warning: false
+ggplot(admissions, aes(x = APPLCN, y = ADMSSN,
+                       color = adm_tscores, shape = adm_tscores)) +
+  geom_point(alpha = 0.7, size = 3.5) +
+  coord_cartesian(xlim = c(0, 25), ylim = c(0, 25)) +
+  labs(
+    title = "Applications and admissions at the smallest institutions",
+    subtitle = "The smallest schools typically do not require or recommend admissions tests",
+    x = "Applications received",
+    y = "Students admitted",
+    color = "Test policy",
+    shape = "Test policy"
+  ) +
+  scale_color_brewer(palette = "Set1") +
+  theme_minimal()
+```
+
+
+
+
+#### Setting each color by hand
+When you want exact control, `scale_color_manual()` lets you assign a specific color to each group. You give it a set of values, one per group. Here we choose colors ourselves, including our site's slate and rust, so the plot matches the look we want.
+
+```{r}
+#| label: scale-manual
+#| warning: false
+ggplot(admissions, aes(x = APPLCN, y = ADMSSN,
+                       color = adm_tscores, shape = adm_tscores)) +
+  geom_point(alpha = 0.7, size = 3.5) +
+  coord_cartesian(xlim = c(0, 25), ylim = c(0, 25)) +
+  labs(
+    title = "Applications and admissions at the smallest institutions",
+    subtitle = "The smallest schools typically do not require or recommend admissions tests",
+    x = "Applications received",
+    y = "Students admitted",
+    color = "Test policy",
+    shape = "Test policy"
+  ) +
+  scale_color_manual(
+    values = c(
+      "Considered_but_not_required"      = "#C7522A",
+      "Neither_required_nor_recommended" = "#799BA6",
+      "Recommended"                      = "#6A8D73",
+      "Required"                         = "#4A4A4A"
+    )
+  ) +
+  theme_minimal()
+```
+
+
+
+
+### Marking a value on the plot
+Beyond styling, we can put information directly on a plot to guide the reader such as lines marking a threshold or an average, and text labels explaining it. We build on the same plot, adding a reference line and an annotation.
+
+
+#### A reference line
+`geom_hline()` draws a horizontal line at a value we give it, and `geom_vline()` draws a vertical one. They are useful for marking a cutoff or an average. Here we compute the average admissions among these small institutions and draw a line at it in our orange accent color. This lets a reader see at a glance which schools sit above and below the average. 
+
+We first filtered to the small institutions and stored them in `small_schools`, then computed the mean of their admissions as `mean_admit` and passed it to `geom_hline()`. The line comes straight from the data, so it stays correct if the data changes.
+
+This occurs because `coord_cartesian()` leaves the entire dataset intact and only zooms in on a bit. These calculations ensure we aren't accounting for all schools when only the smallest ones are of interest in this moment.
+
+```{r}
+#| label: annotate-hline
+#| warning: false
+small_schools <- admissions |>
+  filter(APPLCN <= 25, ADMSSN <= 25)
+
+mean_admit <- mean(small_schools$ADMSSN, na.rm = TRUE)
+
+ggplot(small_schools, aes(x = APPLCN, y = ADMSSN,
+                          color = adm_tscores, shape = adm_tscores)) +
+  geom_point(alpha = 0.7, size = 3.5) +
+  geom_hline(yintercept = mean_admit, color = "#C7522A", linewidth = 1) +
+  labs(
+    title = "Applications and admissions at the smallest institutions",
+    subtitle = "The orange line marks the average number of admissions",
+    x = "Applications received",
+    y = "Students admitted",
+    color = "Test policy",
+    shape = "Test policy"
+  ) +
+  scale_color_manual(
+    values = c(
+      "Considered_but_not_required"      = "#C7522A",
+      "Neither_required_nor_recommended" = "#799BA6",
+      "Recommended"                      = "#6A8D73",
+      "Required"                         = "#4A4A4A"
+    )
+  ) +
+  theme_minimal()
+```
+
+
+#### Adding a text label
+A line shows *where* a value sits, but a label can say *what* it is. `annotate()` places text at coordinates we choose. Here we label the line so its meaning is clear on the plot itself.
+
+```{r}
+#| label: annotate-label
+#| warning: false
+ggplot(small_schools, aes(x = APPLCN, y = ADMSSN,
+                          color = adm_tscores, shape = adm_tscores)) +
+  geom_point(alpha = 0.7, size = 3.5) +
+  geom_hline(yintercept = mean_admit, color = "#C7522A", linewidth = 1) +
+  annotate("text",
+           x = 5,
+           y = mean_admit + 1.5,
+           label = paste("Average:", round(mean_admit, 1)),
+           color = "#C7522A",
+           fontface = "bold") +
+  labs(
+    title = "Applications and admissions at the smallest institutions",
+    x = "Applications received",
+    y = "Students admitted",
+    color = "Test policy",
+    shape = "Test policy"
+  ) +
+  scale_color_manual(
+    values = c(
+      "Considered_but_not_required"      = "#C7522A",
+      "Neither_required_nor_recommended" = "#799BA6",
+      "Recommended"                      = "#6A8D73",
+      "Required"                         = "#4A4A4A"
+    )
+  ) +
+  theme_minimal()
+```
+
+
+
+
+### A bit of interactivity with plotly
+Every plot so far has been a static fixed image. Sometimes it helps to let a reader explore a plot directly, hovering over points to read their exact values or zooming into a region. The plotly package can turn a ggplot into an interactive version with a single function, `ggplotly()`.
+
+We build the plot as usual, save it to an object, then pass that object to `ggplotly()`. Here we use a clean version of our colored scatter.
+
+```{r}
+p <- ggplot(small_schools, aes(x = APPLCN, y = ADMSSN, color = adm_tscores)) +
+  geom_point(alpha = 0.7, size = 3) +
+  labs(
+    title = "Applications and admissions at the smallest institutions",
+    x = "Applications received",
+    y = "Students admitted",
+    color = "Test policy"
+  ) +
+  scale_color_manual(
+    values = c(
+      "Considered_but_not_required"      = "#C7522A",
+      "Neither_required_nor_recommended" = "#799BA6",
+      "Recommended"                      = "#6A8D73",
+      "Required"                         = "#4A4A4A"
+    )
+  ) +
+  theme_minimal()
+
+ggplotly(p)
+```
+
+
+#### Exposing university names with plotly
+We can also specify exactly what information we want plotly to display on hover.
+Here we add the names of the universities to our small_schools dataset with a join.
+In the aesthetic map, we define `text` that is later called by plotly by `ggplotly(p, tooltip = "text")`, rendering the value as a tooltip on hover.
+
+```{r}
+# The admissions data has IDs, not names, so we join names on first
+# (the same dir_info2020 lookup from earlier).
+small_named <- small_schools |>
+  left_join(select(dir_info2020, INSTITUTION_ID, INSTITUTION),
+            by = "INSTITUTION_ID")
+
+p <- ggplot(small_named, aes(x = APPLCN, y = ADMSSN, color = adm_tscores,
+                             text = INSTITUTION)) +
+  geom_point(alpha = 0.7, size = 3) +
+  labs(
+    title = "Applications and admissions at the smallest institutions",
+    x = "Applications received",
+    y = "Students admitted",
+    color = "Test policy"
+  ) +
+  scale_color_manual(
+    values = c(
+      "Considered_but_not_required"      = "#C7522A",
+      "Neither_required_nor_recommended" = "#799BA6",
+      "Recommended"                      = "#6A8D73",
+      "Required"                         = "#4A4A4A"
+    )
+  ) +
+  theme_minimal()
+
+ggplotly(p, tooltip = "text")
+```
