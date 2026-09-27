@@ -33,16 +33,16 @@ Central tendency refers to the middle of some values. **Spread** tells us how fa
 
 In a **symmetric** distribution, the values are balanced around the center and the mean and median sit close together. Example: In a well designed course, most students score roughly near the class average, with some scoring below or above this.
 
-![A symmetric distribution, where the mean and median are near the center.](images/chp_6_sym.png){#fig-sym height="250" width="300px" fig-align="center"}
+![A symmetric distribution, where the mean and median are near the center.](../images/chp_6_sym.png){#fig-sym height="250" width="300px" fig-align="center"}
 
 
 A distribution has a **positive (right) skew** when a few large values stretch a long tail to the right. These high values pull the mean higher, so the mean sits above the median. Example: In a difficult course, most students score low, with a few high scorers stretching a tail to the right and pulling the mean above the median. 
 
-![A positive (right) skew, where the mean is pulled above the median by some high values.](images/chp_6_pos.png){#fig-pos height="250" width="300px" fig-align="center"}
+![A positive (right) skew, where the mean is pulled above the median by some high values.](../images/chp_6_pos.png){#fig-pos height="250" width="300px" fig-align="center"}
 
 A distribution has **negative (left) skew** when a long tail stretches to the left. These low values pull the mean down, so the mean sits below the median. Example: In an easy course, most students score high, with a few low scorers stretching a tail to the left and pulling the mean below the median.
 
-![A negative (left) skew, where the mean is pulled below the median by some low values.](images/chp_6_neg.png){#fig-neg height="250" width="300px" fig-align="center"}
+![A negative (left) skew, where the mean is pulled below the median by some low values.](../images/chp_6_neg.png){#fig-neg height="250" width="300px" fig-align="center"}
 
 ## Two modes of EDA
 EDA works through two complementary modes of working and it can be helpful to move between them often.
@@ -171,7 +171,7 @@ Each point is one policy level, ordered from strictest to most lenient, and the 
 ## Guided Lab: Exploratory data analysis
 
 
-```{.r include="scripts/06.R"}
+```{.r include="../scripts/06.R"}
 ```
 
 

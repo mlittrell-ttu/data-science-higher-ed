@@ -16,41 +16,56 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - text: Courses
+        menu:
+          - href: applied-r/index.qmd
+            text: Applied R
+          - href: machine-learning/index.qmd
+            text: Machine Learning
+          - href: quarto-course/index.qmd
+            text: Quarto
+          - href: shiny/index.qmd
+            text: Shiny
       - href: setup.qmd
         text: Setup
     right:
       - icon: github
         href: https://github.com/mlittrell-ttu/data-science-higher-ed
   sidebar:
-    style: docked
-    title: "Modules"
-    collapse-level: 1
-    contents:
-      - text: "Home"
-        href: index.qmd
-      - section: "Part 1 — Applied R"
-        contents:
-          - 01.qmd
-          - 02.qmd
-          - 03.qmd
-          - 04.qmd
-          - 05.qmd
-          - 06.qmd
-          - 07.qmd
-          - 08.qmd
-          - 09.qmd
-      - section: "Part 2 — Machine Learning"
-        contents:
-          - ph1.qmd
-      - section: "Part 3 — Quarto"
-        contents:
-          - ph2.qmd
-      - section: "Part 4 — Shiny"
-        contents:
-          - ph3.qmd
-      - summary.qmd
-      - references.qmd
-      - setup.qmd
+    - id: applied-r
+      title: "Applied R"
+      style: docked
+      collapse-level: 1
+      contents:
+        - text: "Course home"
+          href: applied-r/index.qmd
+        - applied-r/01.qmd
+        - applied-r/02.qmd
+        - applied-r/03.qmd
+        - applied-r/04.qmd
+        - applied-r/05.qmd
+        - applied-r/06.qmd
+        - applied-r/07.qmd
+        - applied-r/08.qmd
+        - applied-r/09.qmd
+    - id: machine-learning
+      title: "Machine Learning"
+      style: docked
+      contents:
+        - machine-learning/index.qmd
+        - machine-learning/ph1.qmd
+    - id: quarto-course
+      title: "Quarto"
+      style: docked
+      contents:
+        - quarto-course/index.qmd
+        - quarto-course/ph2.qmd
+    - id: shiny
+      title: "Shiny"
+      style: docked
+      contents:
+        - shiny/index.qmd
+        - shiny/ph3.qmd
   page-footer:
     center: "© 2026 Michael Littrell. Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)."
 

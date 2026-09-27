@@ -1,0 +1,5 @@
+---
+title: "Machine Learning"
+---
+
+Coming soon. This course will cover applied machine learning for higher education data.

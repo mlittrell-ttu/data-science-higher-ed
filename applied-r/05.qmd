@@ -55,7 +55,7 @@ data|> function_1 |> function_2
 ## Guided Lab: Preprocessing with Dplyr
 Here is the applied data preprocessing demonstration that teaches some helpful dplyr verbs as we work through the process.
 
-```{.r include="scripts/05.R"}
+```{.r include="../scripts/05.R"}
 ```
 
 

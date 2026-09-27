@@ -12,7 +12,7 @@ Throughout the instructional content on this site, you will see two threads of w
 ### Create a new script
 For this module, create a new script file **(File > New > File R Script)** and save it to a folder where you will also save data files. An example script file is show here for how you might structure one in your work. 
 
-![An R script and CSV data file saved in the same folder.](images/chp_4_folder.png){#fig-folder width="550px" height="375" fig-align="center"}
+![An R script and CSV data file saved in the same folder.](../images/chp_4_folder.png){#fig-folder width="550px" height="375" fig-align="center"}
 
 Typically, there is some information about what the script is all about up top. The packages for the script are located before the work happens so they are pre-loaded. Data are imported, inspected, and prepared before the analysis occurs. To help the flat script file appear more visually structured, each section can be divided with continuous underscore characters creating lines, for example.
 
@@ -180,7 +180,7 @@ Commonly, datasets are in flat CSV files that we want to analyze. These files ar
 
 ### Example workflow
 Download the small student dataset here to try importing it:
-[student dataset](data/7160_module1_student_enrollment.csv){download="7160_module1_student_enrollment.csv"}
+[student dataset](../data/7160_module1_student_enrollment.csv){download="7160_module1_student_enrollment.csv"}
 
 For this import we are using the tidyverse package called **readr**. readr imports your data as a tibble and reports on the types of columns imported.It chooses these types by inspecting the data automatically and determining what is there. Sometimes this may not be right for what you want to accomplish with the data. For this workflow, we load the data, confirm it is there, change a column type, and then re-inspect to see that the type was changed as expected.
 
@@ -191,7 +191,7 @@ For complete readr documentation, visit <https://readr.tidyverse.org/index.html>
 
 **Load the data.** First, the dataset is loaded into a tibble called *enrollment*. Note that my dataset is stored in a folder called *data*, so my path starts with `data/`. If your data are in the same folder as your script, just use the filename `("7160_module1_student_enrollment.csv")`.
 ```{r}
-enrollment <- read_csv("data/7160_module1_student_enrollment.csv")
+enrollment <- read_csv("../data/7160_module1_student_enrollment.csv")
 ```
 
 **Glimpse the data.** When a dataset is first loaded, it is common to inspect it to determine if it imported cleanly.For example, the data types can be evaluated to see if they loaded as you expected. Also the row and column counts can be reviewed too. We'll learn many other ways to scrutinize the data but the glimpse() is often a useful starting point.
@@ -241,7 +241,7 @@ In this module we learned some basics about R and how to get a simple dataset in
 
 ```r
 enrollment <- read_csv(
-  "data/7160_module1_student_enrollment.csv",
+  "../data/7160_module1_student_enrollment.csv",
   col_types = cols(
     Student_ID = col_character(),
     Program = col_factor(),

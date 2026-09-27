@@ -15,7 +15,7 @@ R is widely utilized in a variety of industries including biology, pharmaceutica
 ### R and IDEs
 R is the language that interprets our typed commands into instructions that the computer carrys out. An **Integrated Developer Environment** (IDE) is an application that makes it easier to work with R. Where working with the R interpreter itself is a more minimal experience—essentially where flat text is typed into a prompt—an IDE gives us features such as display windows to see our plots and menu options to save files.
 
-![The base R console.](images/chp_3_r_console.png){#fig-rstudio width="600px" height="400" fig-align="center"}
+![The base R console.](../images/chp_3_r_console.png){#fig-rstudio width="600px" height="400" fig-align="center"}
 
 ## RStudio
 RStudio is a free and open source product created by the public benefit corporation Posit. It was officially released to the public in 2016 and is the most common IDE for R. R can be thought of as the language that sits under the hood of RStudio performing the work that we outline in the IDE. 
@@ -39,7 +39,7 @@ Plots
 
 The image shown below shows a possible configuration of the RStudio panes, which are customizable.
 
-![The base R console.](images/chp_3_rstudio.png){#fig-rstudio width="600px" height="400" fig-align="center"}
+![The base R console.](../images/chp_3_rstudio.png){#fig-rstudio width="600px" height="400" fig-align="center"}
 
 
 ### Install
@@ -62,7 +62,7 @@ Presently there are two modes of operation to consider when utilizing AI in a da
 When coding with RStudio, the **environment** refers to all of the objects (e.g., data, functions, variables) held in the computer's memory for the session. The environment pane displays these. It is always a good idea to inspect what is there when initially loading the program as objects are not by default removed from the environment when closed. This setting and others, such as the appearance of the UI in RStudio, can be updated in the menu path **Tools > Global Options**.
 
 ### Global Options
-![RStudio global options.](images/chp_3_options.png){#fig-options width="400px" height="400px" fig-align="center"}
+![RStudio global options.](../images/chp_3_options.png){#fig-options width="400px" height="400px" fig-align="center"}
 
 ### The persistent reproducible script
 The heart of working in R is the script file where code is typed and saved. To create a new script file navigate to the menu **File > New > R Script**. Setting a working directory tells R where you are working so it knows where to look for files and where to save new ones. Importantly for the new learner, saving the script file to a folder location where your other relevant files will be, such as alongside your datasets, will be the easiest way to proceed. Otherwise you will have to specify a folder path telling R how to get there. You can issue the setwd() command or right click your script file and choose the option in the UI.
@@ -78,11 +78,11 @@ setwd("/Users/yourname/Documents/my-project")
 
 The menu option is likely simpler and is accessed by right clicking the script file tab seen here.
 
-![Setting the working directory with a right-click.](images/chp_3_setwd_gui.png){#fig-setwd width="400px" fig-align="center"}
+![Setting the working directory with a right-click.](../images/chp_3_setwd_gui.png){#fig-setwd width="400px" fig-align="center"}
 
 As you are working in your script, to execute the code place the mouse cursor on the line you want to execute and type  **Ctrl+Enter**. For code statements that are several lines long, R is smart enough to run the complete statement. Remember to frequently save your scripts with **Ctrl+S**. Also, to run code outside of your script—like a simple one-off calculation for example— you can still enter code interactively in the console pane.
 
-![Entering a command interactively in the R console.](images/chp_3_console_command.png){#fig-console-command width="400px" height="350px" fig-align="center"}
+![Entering a command interactively in the R console.](../images/chp_3_console_command.png){#fig-console-command width="400px" height="350px" fig-align="center"}
 
 
 ## Packages
@@ -117,7 +117,7 @@ AI has transformed our ability get help when stuck as new learners or when engag
 ### Online function documentation
 If AI does not provide sufficient information when seeking help, the built-in documentation for a function can be accessed with `?`, such as by typing `?mean`. This type of assistance is not recommended for the new learner as it can be opaque and is organized like it was created for robots. Instead it is better to access package documentation directly on user-friendly websites. For example, if working with the dplyr package, searching for this package's documentation quickly surfaces a much easier to use reference experience at <https://dplyr.tidyverse.org/index.html>, complete with a search function and integrated AI.
 
-![Online R documentation example.](images/chp_3_dplyr_doc.png){#fig-dplyr-doc width="600px" fig-align="center"}
+![Online R documentation example.](../images/chp_3_dplyr_doc.png){#fig-dplyr-doc width="600px" fig-align="center"}
 
 ### Help Resources
 There are an abundance of R resources online that are well organized and easy to use. Just a few general ones are on the table below.
