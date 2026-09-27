@@ -1,5 +1,5 @@
 /*-- scss:defaults --*/
-// Brand your book by tweaking these.
+// color scheme
 $primary: #799BA6;          // link / accent colour
 $font-size-root: 18px;
 
@@ -15,5 +15,15 @@ div.callout-note.callout {
 div.callout-note.callout .callout-title,
 div.callout-note.callout .callout-header {
   background-color: #799BA6 !important;
+  color: black !important;
+}
+
+// Recolor tip callouts (AI boxes) to the site's green
+div.callout-tip.callout {
+  border-left-color: #6A8D73 !important;
+}
+div.callout-tip.callout .callout-title,
+div.callout-tip.callout .callout-header {
+  background-color: #6A8D73 !important;
   color: black !important;
 }
