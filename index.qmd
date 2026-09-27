@@ -4,7 +4,7 @@ title: "Applied Data Science in Higher Education with R"
 
 A free, open, hands-on digitial resource for learning practical data science with R, built for people who work with higher education data.
 
-[Start with Module 1 →](01.qmd){.btn .btn-primary .btn-lg}
+[Start with Module 1 →](applied-r/01.qmd){.btn .btn-primary .btn-lg}
 
 ## Purpose
 
