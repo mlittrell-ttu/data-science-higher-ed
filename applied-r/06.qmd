@@ -6,6 +6,44 @@ title: "6 Exploring Data"
 ## Details
 This module is about **exploratory data analysis (EDA)**, which is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spot surprises and decide what is worth investigating further. Once data are tidy, the same dplyr tools we used to clean data in the last module can also help us understand it. We will also pick up a couple of helpful preprocessing steps along the way.
 
+## Processes and questions
+
+### Order
+The cycle basically ocillates between developing questions and then answering those which then reveal new questions to seek answers to. It may begin from the baseline of formulating a question or the exploration itself. The questions surfaced to you by the data are often more helpful than preconceived ones.
+
+
+A rough order that many explorations can follow.
+
+- **Understand the structure first.** Begin by learning how many rows and columns the dataset has, what each row represents, what type each variable is, and where values are missing. This step is orienting before any real analysis.
+
+- **Look at one variable at a time.** For a numeric variable, examine its center, its spread, and the shape of its distribution. For a categorical variable, look at its categories and how often each one appears. This tells you what is normal and flags what does not belong. Essentially, variance within the variable itself.
+
+- **Look at how variables relate.** Examine how two numbers move together, how a number differs across groups, and how two categories cross. This is where patterns and comparisons can emerge. Essentially, covariance.
+
+- **Follow what surprises you.** Outliers, gaps, unexpected clusters, groups that behaves differently from the rest are often fruitful for exploring.
+
+
+### The questions exploration can ask
+EDA questions fall into a few recognizable kinds, and naming the kind can helps you know how to proceed.
+
+- **Description.** What is typical, and how much do values vary? What is the average credit load, and how spread out is it?
+
+- **Composition.** What is the data made of? What share of students fall into each major, and has that mix shifted?
+
+- **Comparison.** How do groups differ? Do retention rates differ across colleges, or admissions across test policies?
+
+- **Relationship.** Do two things move together? As applications rise, do admissions rise with them?
+
+- **Distribution and shape.** Where do values sit, and is the shape balanced or skewed? Are most students near the average, or does a long tail pull it?
+
+- **Anomaly.** What does not fit? Which values are impossible, which records are missing, and which cases are unlike the rest?
+
+
+### Considerations
+Exploration describes what is in the data. It does not on its own explain why a pattern exists or prove that one thing causes another. For example, a gap between two groups is a question to investigate further, not necessarily a conclusion.
+
+
+
 
 ## Very brief stats
 EDA leans on a handful of basic statistical ideas. A quick review is presented here that is enough to follow the chapter.
