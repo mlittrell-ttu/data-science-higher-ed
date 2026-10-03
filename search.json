@@ -84,6 +84,16 @@
     ]
   },
   {
+    "objectID": "applied-r/06.html#processes-and-questions",
+    "href": "applied-r/06.html#processes-and-questions",
+    "title": "6 Exploring Data",
+    "section": "Processes and questions",
+    "text": "Processes and questions\nOrder\nThe cycle basically ocillates between developing questions and then answering those which then reveal new questions to seek answers to. It may begin from the baseline of formulating a question or the exploration itself. The questions surfaced to you by the data are often more helpful than preconceived ones.\nA rough order that many explorations can follow.\n\nUnderstand the structure first. Begin by learning how many rows and columns the dataset has, what each row represents, what type each variable is, and where values are missing. This step is orienting before any real analysis.\nLook at one variable at a time. For a numeric variable, examine its center, its spread, and the shape of its distribution. For a categorical variable, look at its categories and how often each one appears. This tells you what is normal and flags what does not belong. Essentially, variance within the variable itself.\nLook at how variables relate. Examine how two numbers move together, how a number differs across groups, and how two categories cross. This is where patterns and comparisons can emerge. Essentially, covariance.\nFollow what surprises you. Outliers, gaps, unexpected clusters, groups that behaves differently from the rest are often fruitful for exploring.\nThe questions exploration can ask\nEDA questions fall into a few recognizable kinds, and naming the kind can helps you know how to proceed.\n\nDescription. What is typical, and how much do values vary? What is the average credit load, and how spread out is it?\nComposition. What is the data made of? What share of students fall into each major, and has that mix shifted?\nComparison. How do groups differ? Do retention rates differ across colleges, or admissions across test policies?\nRelationship. Do two things move together? As applications rise, do admissions rise with them?\nDistribution and shape. Where do values sit, and is the shape balanced or skewed? Are most students near the average, or does a long tail pull it?\nAnomaly. What does not fit? Which values are impossible, which records are missing, and which cases are unlike the rest?\nConsiderations\nExploration describes what is in the data. It does not on its own explain why a pattern exists or prove that one thing causes another. For example, a gap between two groups is a question to investigate further, not necessarily a conclusion.",
+    "crumbs": [
+      "6 Exploring Data"
+    ]
+  },
+  {
     "objectID": "applied-r/06.html#very-brief-stats",
     "href": "applied-r/06.html#very-brief-stats",
     "title": "6 Exploring Data",

@@ -243,6 +243,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
 <li><a href="#details" id="toc-details" class="nav-link active" data-scroll-target="#details">Details</a></li>
   <li>
+<a href="#processes-and-questions" id="toc-processes-and-questions" class="nav-link" data-scroll-target="#processes-and-questions">Processes and questions</a>
+  <ul class="collapse">
+<li><a href="#order" id="toc-order" class="nav-link" data-scroll-target="#order">Order</a></li>
+  <li><a href="#the-questions-exploration-can-ask" id="toc-the-questions-exploration-can-ask" class="nav-link" data-scroll-target="#the-questions-exploration-can-ask">The questions exploration can ask</a></li>
+  <li><a href="#considerations" id="toc-considerations" class="nav-link" data-scroll-target="#considerations">Considerations</a></li>
+  </ul>
+</li>
+  <li>
 <a href="#very-brief-stats" id="toc-very-brief-stats" class="nav-link" data-scroll-target="#very-brief-stats">Very brief stats</a>
   <ul class="collapse">
 <li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency">Measures of central tendency</a></li>
@@ -281,7 +289,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header><section id="details" class="level2"><h2 class="anchored" data-anchor-id="details">Details</h2>
 <p>This module is about <strong>exploratory data analysis (EDA)</strong>, which is the practice of examining data to learn what it contains and what questions it raises, before any formal modeling begins. Good EDA is where a data professional uses intuition and methodical inspection to spot surprises and decide what is worth investigating further. Once data are tidy, the same dplyr tools we used to clean data in the last module can also help us understand it. We will also pick up a couple of helpful preprocessing steps along the way.</p>
-</section><section id="very-brief-stats" class="level2"><h2 class="anchored" data-anchor-id="very-brief-stats">Very brief stats</h2>
+</section><section id="processes-and-questions" class="level2"><h2 class="anchored" data-anchor-id="processes-and-questions">Processes and questions</h2>
+<section id="order" class="level3"><h3 class="anchored" data-anchor-id="order">Order</h3>
+<p>The cycle basically ocillates between developing questions and then answering those which then reveal new questions to seek answers to. It may begin from the baseline of formulating a question or the exploration itself. The questions surfaced to you by the data are often more helpful than preconceived ones.</p>
+<p>A rough order that many explorations can follow.</p>
+<ul>
+<li><p><strong>Understand the structure first.</strong> Begin by learning how many rows and columns the dataset has, what each row represents, what type each variable is, and where values are missing. This step is orienting before any real analysis.</p></li>
+<li><p><strong>Look at one variable at a time.</strong> For a numeric variable, examine its center, its spread, and the shape of its distribution. For a categorical variable, look at its categories and how often each one appears. This tells you what is normal and flags what does not belong. Essentially, variance within the variable itself.</p></li>
+<li><p><strong>Look at how variables relate.</strong> Examine how two numbers move together, how a number differs across groups, and how two categories cross. This is where patterns and comparisons can emerge. Essentially, covariance.</p></li>
+<li><p><strong>Follow what surprises you.</strong> Outliers, gaps, unexpected clusters, groups that behaves differently from the rest are often fruitful for exploring.</p></li>
+</ul></section><section id="the-questions-exploration-can-ask" class="level3"><h3 class="anchored" data-anchor-id="the-questions-exploration-can-ask">The questions exploration can ask</h3>
+<p>EDA questions fall into a few recognizable kinds, and naming the kind can helps you know how to proceed.</p>
+<ul>
+<li><p><strong>Description.</strong> What is typical, and how much do values vary? What is the average credit load, and how spread out is it?</p></li>
+<li><p><strong>Composition.</strong> What is the data made of? What share of students fall into each major, and has that mix shifted?</p></li>
+<li><p><strong>Comparison.</strong> How do groups differ? Do retention rates differ across colleges, or admissions across test policies?</p></li>
+<li><p><strong>Relationship.</strong> Do two things move together? As applications rise, do admissions rise with them?</p></li>
+<li><p><strong>Distribution and shape.</strong> Where do values sit, and is the shape balanced or skewed? Are most students near the average, or does a long tail pull it?</p></li>
+<li><p><strong>Anomaly.</strong> What does not fit? Which values are impossible, which records are missing, and which cases are unlike the rest?</p></li>
+</ul></section><section id="considerations" class="level3"><h3 class="anchored" data-anchor-id="considerations">Considerations</h3>
+<p>Exploration describes what is in the data. It does not on its own explain why a pattern exists or prove that one thing causes another. For example, a gap between two groups is a question to investigate further, not necessarily a conclusion.</p>
+</section></section><section id="very-brief-stats" class="level2"><h2 class="anchored" data-anchor-id="very-brief-stats">Very brief stats</h2>
 <p>EDA leans on a handful of basic statistical ideas. A quick review is presented here that is enough to follow the chapter.</p>
 <section id="measures-of-central-tendency" class="level3"><h3 class="anchored" data-anchor-id="measures-of-central-tendency">Measures of central tendency</h3>
 <p>A <strong>measure of central tendency</strong> describes the “typical” value in a set of numbers. These three are common:</p>
